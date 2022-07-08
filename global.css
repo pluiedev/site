@@ -1,0 +1,67 @@
+html, body {
+    background-color: #1d1f21;
+    color: #eaeaea;
+    height: 100%;
+    margin: 0;
+    font-family: 'C059', "Times New Roman", "Times", serif;
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 55em 1fr;
+    grid-template-rows: 1fr 50px;
+}
+main {
+    background-color: #21262a;
+    grid-column: 2;
+    grid-row: 1;
+    height: fit-content;
+    margin: 1em 0em;
+    padding: 3em;
+    border-radius: 10px;
+}
+footer {
+    margin: 15px;
+    padding: 5px;
+    grid-column: 1 / 3;
+    grid-row: 2;
+    color: #666;
+}
+footer > a {
+    color: #888;
+}
+p, ol, ul {
+    line-height: 1.6em;
+}
+
+/* font things */
+a {
+    color: #eaeaea;
+    text-decoration: underline #97d8b1 solid 2px;
+    text-underline-offset: 5px;
+}
+a:visited {
+    text-decoration-color: #137239;
+}
+code {
+    font-family: "Iosevka", "Noto Mono", monospace;
+    font-stretch: expanded;
+}
+
+
+/* name colors */
+.leo {
+    color: #fcd019;
+}
+.leah {
+    color: #e89d12;
+}
+/* pronoun colors */
+.he {
+    color: #97bed8;
+}
+.they {
+    color: #b4b4b4;
+}
+.she {
+    color: #d897c0;
+}
