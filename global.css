@@ -1,13 +1,15 @@
+@import url("assets/fonts/c059/c059.css");
+
 html, body {
     background-color: #1d1f21;
     color: #eaeaea;
     height: 100%;
     margin: 0;
-    font-family: 'C059', "Times New Roman", "Times", serif;
+    font-family: "C059", "Times New Roman", "Times", serif;
 }
 body {
     display: grid;
-    grid-template-columns: 1fr 55em 1fr;
+    grid-template-columns: minmax(10em, 1fr) 55em minmax(10em, 1fr);
     grid-template-rows: 1fr 50px;
 }
 main {
