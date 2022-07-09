@@ -6,40 +6,24 @@
     <title>DichotomySys/Hello</title>
     <link rel="stylesheet" href="global.css" />
     <style>
-        .comment {
-            color: #999;
-            font-style: italic;
-        }
-
         .flex-paragraph {
             display: flex;
             align-items: center;
         }
-
         .avatar {
             display: flex;
             align-items: center;
             flex-direction: column;
             margin: 15px;
         }
-        .avatar > img {
-            height: 90%;
-            width: 90%;
-        }
-        .avatar > * {
+        .avatar>* {
             margin: 5px;
         }
-
-        .pride-flags {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .pfp {
+            transition: all ease-in-out 0.2s;
         }
-
-        .pride-flags>img {
-            margin: 5px;
-            border-radius: 5px;
-            height: 40px;
+        .pfp:hover {
+            scale: 110%;
         }
     </style>
 </head>
@@ -55,9 +39,15 @@
             and <span class="leah">Leah</span>.
             We are currently based in China and identify as ethnically Chinese.
         </p>
+        <p>
+            Click on our avatars for more info.
+        </p>
         <div class="flex-paragraph">
             <div class="avatar">
-                <img src="assets/avatars/leo.png" height="200" class="pfp-left" title="Leo" alt="Leo's avatar" />
+                <a href="./leo.html">
+                    <img src="assets/avatars/leo.png" height="150" class="pfp" title="Leo"
+                        alt="Leo's avatar" />
+                </a>
                 <div class="pride-flags">
                     <img src="assets/pride/demimale.svg" class="pride-flag" title="Demi-male" alt="Demi-male flag" />
                     <img src="assets/pride/hetero.svg" class="pride-flag" title="Heterosexual"
@@ -96,10 +86,13 @@
                 She comes up whenever we need to create some art, or if she decides to dedicate 5+
                 hours of our life drawing in the night. She primarily creates oil paintings, though she
                 also uses digital tools like <a href="https://gimp.org/">GIMP</a>.
-                <a href="./leah.html">You can find some of her works here.</a>
+                <a href="./leah.html#works">You can find some of her works here.</a>
             </p>
             <div class="avatar">
-                <img src="assets/avatars/leah.png" height="350" class="pfp-right" title="Leah" alt="Leah's avatar" />
+                <a href="./leah.html">
+                    <img src="assets/avatars/leah.png" height="300" class="pfp" title="Leah"
+                        alt="Leah's avatar" />
+                </a>
                 <div class="pride-flags">
                     <img src="assets/pride/trans.svg" class="pride-flag" title="Transgender" alt="Transgender flag" />
                     <img src="assets/pride/transfeminine.svg" class="pride-flag" title="Transfeminine"

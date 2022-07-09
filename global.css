@@ -21,6 +21,14 @@ main {
     padding: 3em;
     border-radius: 10px;
 }
+#left-nav {
+    padding: 20px;
+    grid-column: 1;
+    grid-row: 1;
+}
+#back {
+    position: fixed;
+}
 footer {
     margin: 15px;
     padding: 5px;
@@ -66,4 +74,17 @@ code {
 }
 .she {
     color: #d897c0;
+}
+
+/* other stuff */
+
+.pride-flags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pride-flag {
+    margin: 5px;
+    border-radius: 5px;
+    height: 30px;
 }
