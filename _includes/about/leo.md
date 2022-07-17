@@ -1,8 +1,7 @@
 
 <span class="leo">Leo</span>, the host of the system, is the guy who made
 this site for the two of us.
-He is demi-male and heterosexual, and uses
-<span class="he">he</span>/<span class="they">they</span>/<span class="she">she</span>
+He is demi-male and heterosexual, and uses {% include pronouns.md member="leo" %}
 pronouns (we'll use <span class="he">he</span> for consistency).
 He's a student-programmer who likes to use [Rust] as his primary programming language, 
 though he is also proficient in [Kotlin], Java, TypeScript and more.

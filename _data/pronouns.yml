@@ -2,14 +2,17 @@
 # Feel free to add more pronouns and conjugated forms of course
 
 he:
-  subject: he
-  object: him
+  isolated: he/him
+  combined: he
 she:
-  subject: she
-  object: her
+  isolated: she/her
+  combined: she
 they:
-  subject: they
-  object: them
+  isolated: they/them
+  combined: they
 it:
-  subject: it
-  object: it
+  isolated: it/it
+  combined: it
+any:
+  isolated: any pronouns
+  combined: null
