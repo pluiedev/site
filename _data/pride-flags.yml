@@ -2,8 +2,9 @@
 
 demimale:
   name: Demi-male
-heterosexual: # Disclaimer: not actually a pride flag
+heterosexual:
   name: Heterosexual
+  pride?: false
 transgender:
   name: Transgender
 transfeminine:

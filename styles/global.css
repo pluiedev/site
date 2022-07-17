@@ -1,4 +1,4 @@
-@import url("../fonts/c059/c059.css");
+@import url("../assets/fonts/c059/c059.css");
 
 html, body {
     background-color: #1d1f21;
@@ -29,7 +29,9 @@ main {
     position: fixed;
 }
 footer {
-    margin: 20px 10px;
+    display: flex;
+    align-items: flex-end;
+    margin: 10px;
     padding: 5px;
     grid-column: 1 / 3;
     grid-row: 2;
@@ -64,15 +66,3 @@ code {
 .leah {
     color: #e89d12;
 }
-/* pronoun colors */
-.he {
-    color: #97bed8;
-}
-.they {
-    color: #b4b4b4;
-}
-.she {
-    color: #d897c0;
-}
-
-/* other stuff */

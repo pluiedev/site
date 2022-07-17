@@ -1,4 +1,4 @@
-- id: leo
+leo:
   name: Leo
   pronouns:
     - he
@@ -7,10 +7,7 @@
   flags:
     - demimale
     - heterosexual
-  avatar-placement: left
-  pfp-size: 150
-
-- id: leah
+leah:
   name: Leah
   pronouns:
     - she
@@ -18,5 +15,3 @@
     - transgender
     - transfeminine
     - asexual
-  avatar-placement: right
-  pfp-size: 300

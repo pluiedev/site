@@ -8,3 +8,6 @@
     border-radius: 5px;
     height: 30px;
 }
+a.not-pride {
+    text-decoration: none;
+}

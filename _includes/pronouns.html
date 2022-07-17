@@ -1,12 +1,11 @@
-{% assign member = site.data.members | find: "id", include.member %}
-{% assign pronouns = member.pronouns %}
+{% assign pronouns = site.data.members[include.member].pronouns %}
 {% assign num-of-pronouns = pronouns | size %}
 
 {% if num-of-pronouns > 1 %}
     {% assign pronouns-formatted = '' | split: '' %}
 
     {% for pronoun in pronouns %}
-        {% capture formatted %}<span class="pronouns {{ pronoun }}">{{ pronoun }}</span>{% endcapture %}
+        {% capture formatted %}<span class="pronoun {{ pronoun }}">{{ pronoun }}</span>{% endcapture %}
         {% assign pronouns-formatted = pronouns-formatted | push: formatted %}
     {% endfor %}
 
@@ -14,7 +13,7 @@
 {% elsif num-of-pronouns == 1 %}
     {% assign pronoun = pronouns | first %}
 
-    <span class="pronouns {{ pronoun }}">
+    <span class="pronoun {{ pronoun }}">
         {{ pronoun }}/{{ site.data.pronouns[pronoun].object }}
     </span>
 {% endif %}

@@ -1,6 +1,5 @@
 <div class="pride-flags">
-    {% assign member = site.data.members | find: "id", include.member %}
-    {% for flag_id in member.flags %}
+    {% for flag_id in site.data.members[include.member].flags %}
         {% assign flag = site.data.pride-flags[flag_id] %}
         <img
             src="/assets/pride/{{ flag_id }}.svg"
@@ -9,7 +8,12 @@
             alt="{{ flag.name }}"
         />
         {% if include.show-name %}
-            {{ flag.name }}
-        {% endif %}
+            {{ flag.name }}{% if flag.pride? == false %}<sup
+            ><a
+                href="#"
+                class="not-pride"
+                title="Not actually a pride flag; this is just for completeness's sake"
+            >*</a></sup>{% endif %}
+        {% endif %} 
     {% endfor %}
 </div>

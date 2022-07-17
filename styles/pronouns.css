@@ -1,12 +1,12 @@
-.pronoun .he {
+.pronoun.he {
     color: #97bed8;
 }
-.pronoun .they {
+.pronoun.they {
     color: #b4b4b4;
 }
-.pronoun .she {
+.pronoun.she {
     color: #d897c0;
 }
-.pronoun .it {
+.pronoun.it {
     color: #e6d262;
 }

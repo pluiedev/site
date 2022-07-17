@@ -1,0 +1,6 @@
+- id: leo
+  avatar-placement: left
+  avatar-size: 150
+- id: leah
+  avatar-placement: right
+  avatar-size: 300
