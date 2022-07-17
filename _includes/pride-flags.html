@@ -1,13 +1,13 @@
 <div class="pride-flags">
     {% for flag_id in site.data.members[include.member].flags %}
     {% assign flag = site.data.pride-flags[flag_id] %}
-    
+
     <a href="https://en.pronouns.page/dictionary/terminology#{{ flag.pronouns-page-redirect | default: flag_id }}">
 
         <img src="/assets/pride/{{ flag_id }}.svg" class="pride-flag" title="{{ flag.name }}" alt="{{ flag.name }}" />
 
         {% if include.show-name %}
-        {{ flag.name }}{% if flag.pride? == false %}<sup>*</sup>{% endif %}
+        {{ flag.name }}{% if flag.pride? == false %}*{% endif %}
         {% endif %}
         
     </a>

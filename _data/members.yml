@@ -7,6 +7,8 @@ leo:
   flags:
     - demimale
     - heterosexual
+  avatar-placement: left
+  avatar-size: 150
 leah:
   name: Leah
   pronouns:
@@ -15,3 +17,5 @@ leah:
     - transgender
     - transfeminine
     - asexual
+  avatar-placement: right
+  avatar-size: 300
