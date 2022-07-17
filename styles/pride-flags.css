@@ -8,6 +8,8 @@
     border-radius: 5px;
     height: 30px;
 }
-a.not-pride {
-    text-decoration: none;
+.pride-flags a {
+    /* text-decoration: none; */
+    display: flex;
+    align-items: center;
 }
