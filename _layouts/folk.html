@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+{% assign member = site.data.members | find: "id", page.member %}
+
+<head>
+    {% include head.html %}
+    <title>Dichosys/Folks/{{ member.name }}</title>
+    <link rel="stylesheet" href="/assets/styles/headmate.css" />
+</head>
+
+<body>
+    <nav id="left-nav">
+        <a href="/" id="back">Back</a>
+    </nav>
+    <main>
+        <div id="title-bar">
+            <div id="pfp-and-name">
+                <img
+                    src="/assets/avatars/{{ member.id }}.png"
+                    id="pfp"
+                    title="{{ member.name }}"
+                    alt="{{ member.name }}'s avatar"
+                />
+                <h1 id="name" class="{{ member.id }}">{{ member.name }}</h1>
+            </div>
+            <div id="flags-and-pronouns">
+                {% include pride-flags.html member=member.id show-name=true %}
+                <div id="pronouns">
+                    {% include pronouns.html member=member.id %}
+                </div>
+            </div>
+        </div>
+        <div id="info">
+            {{ content }}
+        </div>
+    </main>
+    <footer>
+        {% include footer.html %}
+    </footer>
+</body>
+
+</html>

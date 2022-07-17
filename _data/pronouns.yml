@@ -1,0 +1,15 @@
+# Every pronoun this site knows.
+# Feel free to add more pronouns and conjugated forms of course
+
+he:
+  subject: he
+  object: him
+she:
+  subject: she
+  object: her
+they:
+  subject: they
+  object: them
+it:
+  subject: it
+  object: it

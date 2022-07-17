@@ -1,11 +1,15 @@
 <div class="pride-flags">
-    {% for flag_id in site.data.pride-flags.member-flags[include.member] %}
-    {% assign flag = site.data.pride-flags.flags[flag_id] %}
+    {% assign member = site.data.members | find: "id", include.member %}
+    {% for flag_id in member.flags %}
+        {% assign flag = site.data.pride-flags[flag_id] %}
         <img
-            src="assets/pride/{{ flag_id }}.svg"
+            src="/assets/pride/{{ flag_id }}.svg"
             class="pride-flag"
             title="{{ flag.name }}"
             alt="{{ flag.name }}"
         />
+        {% if include.show-name %}
+            {{ flag.name }}
+        {% endif %}
     {% endfor %}
 </div>

@@ -1,13 +1,12 @@
 # Every pride flag this site knows.
 
-flags:
-  demimale:
-    name: Demi-male
-  heterosexual: # Disclaimer: not actually a pride flag
-    name: Heterosexual
-  transgender:
-    name: Transgender
-  transfeminine:
-    name: Transfeminine
-  asexual:
-    name: Asexual
+demimale:
+  name: Demi-male
+heterosexual: # Disclaimer: not actually a pride flag
+  name: Heterosexual
+transgender:
+  name: Transgender
+transfeminine:
+  name: Transfeminine
+asexual:
+  name: Asexual

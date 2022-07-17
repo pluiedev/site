@@ -45,7 +45,7 @@ Click on our avatars for more info.
 <div class="flex-paragraph">
     {% capture avatar %}
         <div class="avatar">
-            <a href="./{{ member.id }}.html">
+            <a href="{% link folks/{{ member.id }}.md %}">
                 <img
                     src="assets/avatars/{{ member.id }}.png"
                     height="{{ member.pfp-size }}"
