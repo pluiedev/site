@@ -1,0 +1,23 @@
+.member-about {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.avatar>* {
+    margin: 5px;
+}
+
+.pfp {
+    transition: all ease-in-out 0.2s;
+}
+
+.pfp:hover {
+    scale: 110%;
+}
