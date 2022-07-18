@@ -21,7 +21,7 @@ Click on our avatars for more info.
 <div class="member-about">
     {% capture avatar %}
         <div class="avatar">
-            <a href="{% link folks/{{ id }}.md %}">
+            <a href="/folks/{{ id }}.html">
                 <img
                     src="assets/avatars/{{ id }}.png"
                     height="{{ member.avatar-size }}"
