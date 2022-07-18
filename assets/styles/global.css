@@ -1,4 +1,5 @@
 @import url("/assets/fonts/c059/c059.css");
+@import url("/assets/fonts/iosevka/iosevka.css");
 
 html, body {
     background-color: #1d1f21;
@@ -54,7 +55,7 @@ a:visited {
     text-decoration-color: #137239;
 }
 code {
-    font-family: "Iosevka", "Noto Mono", monospace;
+    font-family: "Iosevka", "Iosevka Web", "Noto Mono", monospace;
     font-stretch: expanded;
 }
 
