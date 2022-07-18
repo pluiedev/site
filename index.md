@@ -46,9 +46,9 @@ Click on our avatars for more info.
         <div>{{ content | markdownify }}</div>
         {{ avatar }}
     {% else %}
-        <p style="color:red">
+        <p class="error">
             <strong>
-                Error: `avatar-placement` unspecified for member {{ member.id }}.
+                Error: `avatar-placement` unspecified for member {{ id }}.
             </strong>
         </p>
     {% endcase %}
@@ -67,6 +67,12 @@ You can find us on any of these platforms:
 
 [parogenic]: https://pluralpedia.org/w/Parogenic
 [morethanone]: https://morethanone.info
+
+[rust]: https://rust-lang.org/
+[atomic-bool-fetch-not]: https://github.com/rust-lang/rust/pull/98479
+[quiltmc/teams]: https://quiltmc.org/about/teams/#moderators
+[modrinth]: https://modrinth.com/
+
 [discord]: https://discord.gg/NeNfePzCx8
 [github]: https://github.com/leocth
 [youtube]: https://www.youtube.com/channel/UCfVDQlFd1pGiNfjFdG-Gamw

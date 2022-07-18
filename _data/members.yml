@@ -1,5 +1,7 @@
 leo:
   name: Leo
+  pronunciations:
+    - ˈliːoʊ
   pronouns:
     - he
     - they
@@ -11,6 +13,9 @@ leo:
   avatar-size: 150
 leah:
   name: Leah
+  pronunciations:
+    - ˈliː
+    - ˈliːə
   pronouns:
     - she
   flags:
@@ -18,4 +23,4 @@ leah:
     - transfeminine
     - asexual
   avatar-placement: right
-  avatar-size: 300
+  avatar-size: 250

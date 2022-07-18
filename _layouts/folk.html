@@ -8,26 +8,39 @@
     <title>Dichosys/Folks/{{ member.name }}</title>
     <style>
         #title-bar {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: min-content minmax(15em, max-content) auto;
             align-items: center;
         }
-        #pfp-and-name {
-            display: flex;
-            height: 8em;
-            align-items: center;
-        }
-        #flags-and-pronouns {
-            text-align: right;
-            line-height: 1.6em;
+        #pfp-wrapper {
+            grid-column: 1;
         }
         #pfp {
             border-radius: 50%;
             height: 90%;
+            height: 8em;
             margin: 5px;
         }
-        #name {
-            margin: 0.5em;
+        #name-and-stuff {
+            grid-column: 2;
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+        }
+        #name-and-stuff h1, p {
+            margin: 0px;
+        }
+        #pronunciation {
+            font-size: small;
+            color: #bbb;
+        }
+        #flags-and-pronouns {
+            grid-column: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            line-height: 1.6em;
+            margin: 5px;
         }
     </style>
 </head>
@@ -38,14 +51,27 @@
     </nav>
     <main>
         <div id="title-bar">
-            <div id="pfp-and-name">
+            <div id="pfp-wrapper">
                 <img
                     src="/assets/avatars/{{ page.member }}.png"
                     id="pfp"
                     title="{{ member.name }}"
                     alt="{{ member.name }}'s avatar"
                 />
+            </div>
+            <div id="name-and-stuff">
                 <h1 id="name" class="{{ page.member }}">{{ member.name }}</h1>
+                <p id="pronunciation">
+                    {%- comment -%} Let's do the bullshit tango... again {%- endcomment -%}
+                    {% assign proncs-formatted = '' | split: '' %}
+                    {% for pronc in member.pronunciations %}
+                        {% capture pronc-fmt %}
+                            /{{ pronc }}/
+                        {% endcapture %}
+                        {% assign proncs-formatted = proncs-formatted | push: pronc-fmt %}
+                    {% endfor %}
+                    {{ proncs-formatted | join: ', ' }}
+                </p>
             </div>
             <div id="flags-and-pronouns">
                 {% include pride-flags.html member=page.member show-name=true %}
