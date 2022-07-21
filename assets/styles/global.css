@@ -10,7 +10,7 @@ html, body {
 }
 body {
     display: grid;
-    grid-template-columns: minmax(10em, 1fr) 65em minmax(10em, 1fr);
+    grid-template-columns: minmax(10em, 1fr) 55em minmax(10em, 1fr);
 }
 main {
     background-color: #21262a;

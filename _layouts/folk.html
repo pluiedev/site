@@ -27,7 +27,7 @@
             flex-direction: column;
             margin: 15px;
         }
-        #name-and-stuff h1, p {
+        #name-and-stuff>* {
             margin: 0px;
         }
         #pronunciation {
@@ -53,7 +53,7 @@
         <div id="title-bar">
             <div id="pfp-wrapper">
                 <img
-                    src="/assets/avatars/{{ page.member }}.png"
+                    src="/assets/avatars/{{ page.member }}/closeup.png"
                     id="pfp"
                     title="{{ member.name }}"
                     alt="{{ member.name }}'s avatar"

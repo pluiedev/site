@@ -23,7 +23,7 @@ Click on our avatars for more info.
         <div class="avatar">
             <a href="/folks/{{ id }}.html">
                 <img
-                    src="assets/avatars/{{ id }}.png"
+                    src="assets/avatars/{{ id }}/fullbody.png"
                     height="{{ member.avatar-size }}"
                     class="pfp"
                     title="{{ member.name }}"
