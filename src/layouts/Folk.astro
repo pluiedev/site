@@ -5,6 +5,7 @@ import Footer from "@components/Footer.astro";
 import { WithMemberProps } from "@data/Types";
 import Flags from "@components/Flags.astro";
 import Pronouns from "@components/Pronouns.astro";
+import '/src/styles/folk.css'
 
 const { member } = Astro.props.content as WithMemberProps
 const { name, pronunciations } = members[member]
@@ -18,7 +19,6 @@ const altText = `${name}'s avatar`;
 <head>
     <CommonHead />
     <title>Dichosys/Folks/{name}</title>
-    <link rel="stylesheet" href="/src/styles/folk.css">
 </head>
 
 <body>
