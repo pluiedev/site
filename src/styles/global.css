@@ -1,0 +1,65 @@
+@import url("/fonts/c059/c059.css");
+@import url("/fonts/iosevka/iosevka.css");
+
+html, body {
+    background-color: #1d1f21;
+    color: #eaeaea;
+    height: 100%;
+    margin: 0;
+    font-family: "C059", "Times New Roman", "Times", serif;
+}
+body {
+    display: grid;
+    grid-template-columns: minmax(10em, 1fr) 55em minmax(10em, 1fr);
+}
+main {
+    background-color: #21262a;
+    grid-column: 2;
+    grid-row: 1;
+    height: fit-content;
+    margin: 1em 0em;
+    padding: 3em;
+    border-radius: 10px;
+}
+#left-nav {
+    padding: 20px;
+    grid-column: 1;
+    grid-row: 1;
+}
+#back {
+    position: fixed;
+}
+p, ol, ul, pre {
+    line-height: 1.6em;
+}
+
+/* font things */
+a {
+    color: #eaeaea;
+    text-decoration: underline #97d8b1 solid 2px;
+    text-underline-offset: 5px;
+}
+a:visited {
+    text-decoration-color: #137239;
+}
+code, pre {
+    font-family: "Iosevka", "Iosevka Web", "Noto Mono", monospace;
+    font-stretch: expanded;
+}
+
+
+/* name colors */
+.leo {
+    color: #fcd019;
+}
+.leah {
+    color: #e89d12;
+}
+
+
+/* aaaaaaaaa */
+
+.error {
+    color: red;
+    font-weight: bold;
+}

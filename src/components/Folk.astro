@@ -1,0 +1,7 @@
+---
+import { WithMemberProps } from "@data/Types";
+import { members } from "@data/Members"
+
+const { member } = Astro.props as WithMemberProps;
+---
+<span class={`folk ${member}`}>{members[member].name}</span>

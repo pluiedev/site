@@ -1,0 +1,79 @@
+---
+import { WithMemberProps } from "@data/Types.js";
+import { MarkdownInstance } from "astro";
+import { members } from "../data/Members.js";
+
+import Flags from "./Flags.astro";
+
+const abouts = await Astro.glob<WithMemberProps>('../pages/about/*.md')
+
+---
+
+{
+    Object.entries(members).map(([key, member]) => {
+        const {
+            name,
+            avatarSize,
+            avatarPlacement
+        } = member;
+        const altText = `${name}'s avatar`;
+
+        const content = abouts.find(v => v.frontmatter.member == key)
+        //@ts-ignore this works.
+        const body = content !== undefined ? <div><content.Content /></div> : <div/>
+        const avatar = <>
+            <div class="avatar">
+                <a href={`/folks/${key}.html`}>
+                    <img
+                        src={`/avatars/${key}/fullbody.png`}
+                        height={avatarSize}
+                        class="pfp"
+                        title={name}
+                        alt={altText}
+                    />
+                </a>
+                
+                <Flags 
+                    //@ts-ignore this is in fact, a member key 
+                    member={key}
+                />
+            </div>
+        </>
+
+        if (avatarPlacement === 'left') {
+            return <div class="member-about">
+                {avatar} {body}
+            </div>;
+        } else {
+            return <div class="member-about">
+                {body} {avatar}
+            </div>;
+        }
+    })
+}
+
+<style>
+    .member-about {
+        display: flex;
+        align-items: center;
+    }
+    
+    .avatar {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 15px;
+    }
+    
+    .avatar>* {
+        margin: 5px;
+    }
+    
+    .pfp {
+        transition: all ease-in-out 0.2s;
+    }
+    
+    .pfp:hover {
+        scale: 110%;
+    }
+</style>

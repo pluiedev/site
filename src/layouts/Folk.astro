@@ -1,0 +1,58 @@
+---
+import { members } from "@data/Members";
+import CommonHead from "@components/CommonHead.astro";
+import Footer from "@components/Footer.astro";
+import { WithMemberProps } from "@data/Types";
+import Flags from "@components/Flags.astro";
+import Pronouns from "@components/Pronouns.astro";
+
+const { member } = Astro.props.content as WithMemberProps
+const { name, pronunciations } = members[member]
+
+const altText = `${name}'s avatar`;
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <CommonHead />
+    <title>Dichosys/Folks/{name}</title>
+    <link rel="stylesheet" href="/src/styles/folk.css">
+</head>
+
+<body>
+    <nav id="left-nav">
+        <a href="/" id="back">Back</a>
+    </nav>
+    <main>
+        <div id="title-bar">
+            <div id="pfp-wrapper">
+                <img
+                    src={`/avatars/${member}/closeup.png`}
+                    id="pfp"
+                    title={name}
+                    alt={altText}
+                />
+            </div>
+            <div id="name-and-stuff">
+                <h1 id="name" class={member}>{name}</h1>
+                <p id="pronunciation">
+                    { pronunciations.map(p => `/${p}/`).join(", ") }
+                </p>
+            </div>
+            <div id="flags-and-pronouns">
+                <Flags member={member} showName={true} />
+                <div id="pronouns">
+                    <Pronouns member={member} />
+                </div>
+            </div>
+        </div>
+        <div>
+            <slot />
+        </div>
+    </main>
+    <Footer />
+</body>
+
+</html>
