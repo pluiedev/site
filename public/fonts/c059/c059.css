@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "C059";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/c059/C059-Roman.otf") format("opentype");
+}
+@font-face {
+    font-family: "C059";
+    font-weight: bold;
+    font-style: normal;
+    src: url("/fonts/c059/C059-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "C059";
+    font-weight: normal;
+    font-style: italic;
+    src: url("/fonts/c059/C059-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: "C059";
+    font-weight: bold;
+    font-style: italic;
+    src: url("/fonts/c059/C059-BdIta.otf") format("opentype");
+}

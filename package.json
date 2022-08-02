@@ -1,0 +1,20 @@
+{
+  "name": "astro-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro start",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/mdx": "^0.4.0",
+    "astro": "1.0.0-rc.3",
+    "github-slugger": "^1.4.0"
+  }
+}

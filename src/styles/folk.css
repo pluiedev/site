@@ -1,0 +1,35 @@
+#title-bar {
+    display: grid;
+    grid-template-columns: min-content minmax(15em, max-content) auto;
+    align-items: center;
+}
+#pfp-wrapper {
+    grid-column: 1;
+}
+#pfp {
+    border-radius: 50%;
+    height: 90%;
+    height: 8em;
+    margin: 5px;
+}
+#name-and-stuff {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+#name-and-stuff>* {
+    margin: 0px;
+}
+#pronunciation {
+    font-size: small;
+    color: #bbb;
+}
+#flags-and-pronouns {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1.6em;
+    margin: 5px;
+}

@@ -1,0 +1,45 @@
+---
+import CommonHead from "@components/CommonHead.astro";
+const url = Astro.request.url;
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <CommonHead />
+    <title>Dichosys/404</title>
+</head>
+
+<body>
+    <main>
+        <div id="crab">
+            <h1>404 🦀</h1>
+        </div>
+        <pre>
+site@dichosys ~$ ./serve_page {url} 
+
+&gt; loading route "{url}"
+thread 'main' panicked at 'called `Option::unwrap()` on a `None` value', src/load_route.rs:420:69
+note: run with `SKILL_ISSUE=none` environment variable to get good at coding
+
+&gt; attempt to recover? [y/N] y
+&gt; redirecting to home page...
+&gt; <a href="/">return to base</a>
+        </pre>
+    </main>
+</body>
+
+</html>
+
+<style>
+    #crab { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    pre {
+        overflow: scroll;
+    }
+</style>
