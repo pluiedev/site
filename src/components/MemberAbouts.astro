@@ -22,7 +22,7 @@ const abouts = await Astro.glob<WithMemberProps>('../pages/about/*.md')
     const body = content !== undefined ? <div><content.Content /></div> : <div/>
     const avatar = <>
         <div class="avatar">
-            <a href={`/folks/${key}.html`}>
+            <a href={`/folks/${key}/`}>
                 <img
                     src={`/avatars/${key}/fullbody.png`}
                     height={avatarSize}

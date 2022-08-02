@@ -12,4 +12,4 @@ also uses digital tools like [GIMP].
 [You can find some of her works here.][works]
 
 [GIMP]: https://gimp.org/
-[works]: /folks/leah#works
+[works]: /folks/leah/#works
