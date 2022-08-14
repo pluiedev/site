@@ -23,11 +23,12 @@ const {content} = Astro.props;
                     />
                 </figure>
                 <hr/>
-                <div class="columns is-mobile">
-                    <div class="column"><a href="/" class="is-size-4">Home</a></div>
-                    <div class="column"><a href="/blog" class="is-size-4">Blog</a></div>
-                    <div class="column"><a href="/works" class="is-size-4">Works</a></div>
-                    <div class="column"><a href="/plurality" class="is-size-4">Plurality</a></div>
+                <div class="tabs is-large">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/works">Works</a></li>
+                    </ul>
                 </div>
             </div>
             <aside class="column is-narrow is-hidden-touch">
@@ -44,10 +45,9 @@ const {content} = Astro.props;
                     <a class="my-2 is-size-4" href="/">Home</a>
                     <a class="my-2 is-size-4" href="/blog">Blog</a>
                     <a class="my-2 is-size-4" href="/blog">Works</a>
-                    <a class="my-2 is-size-4" href="/plurality">Plurality</a>
                 </nav>
             </aside>
-            <main class="column content">
+            <main class="column content mx-6">
                 <slot />
             </main>
         </div>
