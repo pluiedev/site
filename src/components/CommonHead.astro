@@ -1,10 +1,13 @@
 ---
-import '/src/styles/global.css'
-import '/src/styles/pride-flags.css'
-import '/src/styles/pronouns.css'
+import '/src/styles/style.scss'
+
+const { title } = Astro.props;
 ---
 
-<meta charset="utf-8" />
-<link rel="icon" type="image/png" sizes="128x128" href="/public/favicon/128x128.png" />
-<link rel="icon" type="image/png" sizes="192x192" href="/public/favicon/192x192.png" />
-<link rel="icon" type="image/png" sizes="256x256" href="/public/favicon/256x256.png" />
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" sizes="128x128" href="/favicon/128x128.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/192x192.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="/favicon/256x256.png" />
+    <title>{title}</title>
+</head>

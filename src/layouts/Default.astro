@@ -1,6 +1,6 @@
 ---
-import CommonHead from '../components/CommonHead.astro'
-import Footer from '../components/Footer.astro'
+import CommonHead from '@components/CommonHead.astro'
+import Footer from '@components/Footer.astro'
 
 const {content} = Astro.props;
 ---
@@ -8,15 +8,50 @@ const {content} = Astro.props;
 <!DOCTYPE html>
 <html>
 
-<head>
-    <CommonHead />
-    <title>Dichosys/{content.title}</title>
-</head>
+<CommonHead title={content.title}/>
 
 <body>
-    <main>
-        <slot />
-    </main>
+    <section class="section">
+        <div class="columns is-desktop">
+            <div class="column is-hidden-desktop is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
+                <figure class="image is-250x250">
+                    <img
+                        class="is-rounded"
+                        src="/avatars/femcone.png"
+                        alt="My avatar - a feminized version of myself wearing a traffic cone, with a trans flag in the background."
+                        title="My avatar :> I drew it myself! And yes, I am wearing a traffic cone. It's called 'fashion.'"
+                    />
+                </figure>
+                <hr/>
+                <div class="columns is-mobile">
+                    <div class="column"><a href="/" class="is-size-4">Home</a></div>
+                    <div class="column"><a href="/blog" class="is-size-4">Blog</a></div>
+                    <div class="column"><a href="/works" class="is-size-4">Works</a></div>
+                    <div class="column"><a href="/plurality" class="is-size-4">Plurality</a></div>
+                </div>
+            </div>
+            <aside class="column is-narrow is-hidden-touch">
+                <figure class="image is-250x250">
+                    <img
+                        class="is-rounded"
+                        src="/avatars/femcone.png"
+                        alt="My avatar - a feminized version of myself wearing a traffic cone, with a trans flag in the background."
+                        title="My avatar :> I drew it myself! And yes, I am wearing a traffic cone. It's called 'fashion.'"
+                    />
+                </figure>
+                <hr class="mx-6 has-background-grey-light" />
+                <nav class="column is-flex is-flex-direction-column is-align-items-center">
+                    <a class="my-2 is-size-4" href="/">Home</a>
+                    <a class="my-2 is-size-4" href="/blog">Blog</a>
+                    <a class="my-2 is-size-4" href="/blog">Works</a>
+                    <a class="my-2 is-size-4" href="/plurality">Plurality</a>
+                </nav>
+            </aside>
+            <main class="column content">
+                <slot />
+            </main>
+        </div>
+    </section>
     <Footer />
 </body>
 

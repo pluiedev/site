@@ -1,5 +1,5 @@
 {
-  "name": "astro-test",
+  "name": "leocth-github-io",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,7 +14,10 @@
   "license": "ISC",
   "dependencies": {
     "@astrojs/mdx": "^0.4.0",
-    "astro": "1.0.0-rc.3",
-    "github-slugger": "^1.4.0"
+    "astro": "^1.0.4",
+    "bulma": "^0.9.4",
+    "github-slugger": "^1.4.0",
+    "rollup": "^2.77.3",
+    "sass": "^1.54.4"
   }
 }
