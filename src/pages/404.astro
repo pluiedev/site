@@ -25,7 +25,7 @@ const url = Astro.request.url;
         (function() {
             if ("{url}" === "https://leocth.github.io/404") {
                 var pre = document.getElementById("serve");
-                pre.innerText = pre.innerText.replace("https://leocth.github.io/404", location.href);
+                pre.innerText = pre.innerText.replaceAll("https://leocth.github.io/404", location.href);
             }
         })();
     </script>
