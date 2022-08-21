@@ -7,7 +7,7 @@ const url = Astro.request.url;
 <Base content={{ title: "404" }}>
     <div class="section container content has-text-centered">
         <h1>404 🦀</h1>
-        <pre class="has-text-left">
+        <pre class="has-text-left" id="serve">
         site@dichosys ~$ ./serve_page {url} 
 
         &gt; loading route "{url}"
@@ -20,5 +20,14 @@ const url = Astro.request.url;
         &gt; <a href="/">return to base</a>
         </pre>
     </div>
+    
+    <script type="application/javascript">
+        (function() {
+            if ("{url}" === "https://leocth.github.io/404") {
+                var pre = document.getElementById("serve");
+                pre.innerText = pre.innerText.replace("https://leocth.github.io/404", location.href);
+            }
+        })();
+    </script>
 </Base>
 
