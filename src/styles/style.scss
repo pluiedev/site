@@ -1,18 +1,7 @@
-@import url('https://fonts.bunny.net/css?family=ibm-plex-serif:400,800|noto-serif-sc:400,700');
+@import "colors";
 
+@import url('https://fonts.bunny.net/css?family=ibm-plex-serif:400,800');
 $family-primary: 'IBM Plex Serif', serif;
-
-@media (prefers-color-scheme: dark) {
-    $primary: hsl(299, 46%, 54%);
-    
-    $scheme-main: hsl(210, 6.5%, 12.2%);
-    $scheme-main-bis: hsl(210, 6.5%, 15.5%);
-    $scheme-main-ter: hsl(210, 6.5%, 18.5%);
-    
-    $text: hsl(210, 6.5%, 77.5%);
-    $text-strong: hsl(210, 6.5%, 97.5%);
-    $link: hsl(226, 33%, 60%);
-}
 
 @import "node_modules/bulma/sass/utilities/_all.sass";
 
