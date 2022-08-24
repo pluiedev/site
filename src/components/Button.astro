@@ -1,0 +1,36 @@
+---
+export interface Props {
+	href: URL | string,
+	target?: '_self' | '_blank' | '_parent' | '_top',
+	type?: string | string[],
+	icon?: string,
+	title?: string,
+	text?: string,
+}
+
+const {
+	href,
+	target = '_self',
+	type,
+	icon,
+	text,
+	title = text,
+} = Astro.props as Props;
+
+var buttonClasses = ["button"];
+if (typeof type === "string") {
+	buttonClasses.push(`is-${type}`)
+} else {
+	buttonClasses = buttonClasses.concat(type)
+}
+---
+
+<a {href} {title} {target} class:list={buttonClasses}>
+	{icon &&
+	<span class="icon">
+		<i class={icon}></i>
+	</span>
+	}
+
+	{text && <span>{text}</span>}
+</a>

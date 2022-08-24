@@ -1,7 +1,8 @@
 @import "colors";
 
-@import url('https://fonts.bunny.net/css?family=ibm-plex-serif:400,800');
-$family-primary: 'IBM Plex Serif', serif;
+@import url('https://fonts.bunny.net/css?family=ibm-plex-serif:400,800|inconsolata:400,800');
+$family-primary: 'IBM Plex Serif', 'Times New Roman', Times, serif;
+$family-monospace: 'Inconsolata', "Iosevka", "JetBrains Mono", "Courier", sans-serif;
 
 @import "node_modules/bulma/sass/utilities/_all.sass";
 
@@ -10,6 +11,8 @@ $family-primary: 'IBM Plex Serif', serif;
 @import "node_modules/bulma/sass/helpers/_all.sass";
 @import "node_modules/bulma/sass/elements/_all.sass";
 @import "node_modules/bulma/sass/layout/section.sass";
+
+@import "buttons";
 
 .image.is-250x250 {
     height: 250px;

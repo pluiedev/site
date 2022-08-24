@@ -1,1 +1,20 @@
 $primary: hsl(299, 46%, 54%);
+$link: hsl(226, 58%, 55%);
+
+$custom-colors: (
+	"blurple": #5865f2,
+    "youtube": #d02525,
+	"pink": #dc29dd,
+);
+
+$youtube: #d02525;
+$youtube-dark: darken($youtube, 3%);
+$youtube-light: lighten($youtube, 3%);
+
+$blurple: #5865f2;
+$blurple-dark: darken($blurple, 3%);
+$blurple-light: lighten($blurple, 3%);
+
+$twitter-blue: #1da1f2;
+$twitter-blue-dark: darken($twitter-blue, 3%);
+$twitter-blue-light: lighten($twitter-blue, 3%);

@@ -6,19 +6,11 @@ const url = Astro.request.url;
 
 <Base content={{ title: "404" }}>
     <div class="section container content has-text-centered">
-        <h1>404 🦀</h1>
-        <pre class="has-text-left">
-        site@dichosys ~$ ./serve_page {url} 
+        <h1 class="title is-1">404 🦀</h1>
+        <h2 class="subtitle is-4">Oops!</h2>
+        <p>The page you’re looking for doesn’t exist. Sorry ’bout that! :p</p>
 
-        &gt; loading route "{url}"
-        thread 'main' panicked at 'called `Option::unwrap()` on a `None` value', src/load_route.rs:420:69
-        note: run with `SKILL_ISSUE=none` environment variable to get good at coding
-
-        &gt; attempt to recover? [y/N] y
-        &gt; redirecting to home page...
-
-        &gt; <a href="/">return to base</a>
-        </pre>
+        <a class="button is-primary" href="/">Back to main page</a>
     </div>
 </Base>
 
