@@ -1,27 +1,27 @@
 ---
 export interface Props {
 	link?: string,
-	modal?: string,
 	type?: string | string[],
 	icon?: string,
 
 	id?: string,
 	title?: string
+	disabled?: boolean,
 }
 
 const {
 	link,
-	modal,
 	type = "github",
 	icon,
 	id,
 	title,
+	disabled,
 } = Astro.props as Props;
 ---
 
 {(() => {
-	let button: HTMLSpanElement = 
-	<span {id} {title} class={`button is-${type}`}>
+	let button = 
+	<button {disabled} {id} {title} class={`button is-${type}`}>
 		{icon &&
 		<span class="icon">
 			<i class={icon}></i>
@@ -30,15 +30,12 @@ const {
 		<span>
 			<slot />
 		</span>
-	</span>;
+	</button>;
 	
 	
 	if (link) {
 		const [href, target] = link.split('|', 2);
 		button = <a {href} {target}>{button}</a>;
-	}
-	if (modal) {
-		button = <label for={modal}>{button}</label>
 	}
 	return button;
 })()}

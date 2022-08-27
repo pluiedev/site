@@ -1,5 +1,6 @@
 ---
 import Button from "@components/Button.astro";
+import ModalButton from "@components/modal/ModalButton.astro";
 
 const currentYear = new Date().getFullYear();
 const firstYear = 2022;
@@ -36,9 +37,9 @@ const yearText = currentYear > firstYear ? `${firstYear}—${currentYear}` : fir
             <Button link="https://github.com/pluiedev|_blank" type="github" icon="fab fa-github" title="GitHub">
                 GitHub
             </Button>
-            <Button modal="email-modal" type="github" icon="fas fa-envelope" title="Email">
+            <ModalButton modal="email-modal" type="github" icon="fas fa-envelope" title="Email">
                 Email
-            </Button>
+            </ModalButton>
         </div>
     </div>
 </footer>

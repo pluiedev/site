@@ -11,8 +11,16 @@ import Modal from "./Modal.astro";
             </h1>
             <p>To contact me by email, please send to the address below, <strong>with all numbers removed</strong>.</p>
             <div class="my-4">
+                <noscript>
+                    <style is:inline>
+                        #copy-email { display: none; }
+                    </style>
+                </noscript>
+                
                 <h1 id="obscured-email" class="title is-5 has-text-primary">h17271i93@23pl2uie24.982me</h1>
-                <Button id="copy-email" type="primary mr-4" title="Copy email address">Copy</Button>
+                <Button id="copy-email" type="primary mr-4" title="Copy sanitized address to clipboard">
+                    Copy sanitized address to clipboard
+                </Button>
             </div>
             <p>
                 Please pardon me if I don’t respond in a punctual manner –
