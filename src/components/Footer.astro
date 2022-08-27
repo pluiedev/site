@@ -1,5 +1,5 @@
 ---
-import Button from "./Button.astro";
+import Button from "@components/Button.astro";
 
 const currentYear = new Date().getFullYear();
 const firstYear = 2022;
@@ -21,13 +21,24 @@ const yearText = currentYear > firstYear ? `${firstYear}—${currentYear}` : fir
             Made with <a href="https://bulma.io">Bulma</a>, 💜, caffeine, and E pills.
         </p>
         <div class="buttons is-centered mt-4">
-            <Button href="https://www.youtube.com/channel/UCfVDQlFd1pGiNfjFdG-Gamw"
-                target="_blank" type="youtube" icon="fab fa-youtube" text="YouTube" />
-            <Button href="https://discord.gg/NeNfePzCx8" target="_blank" type="discord" icon="fab fa-discord" text="Discord Server" />
-            <Button href="https://twitter.com/pluiedev" target="_blank" type="twitter" icon="fab fa-twitter" text="Twitter" />
-            <Button href="https://space.bilibili.com/401096522" target="_blank" type="twitter" icon="fab fa-bilibili" text="Bilibili" />
-            <Button href="https://github.com/pluiedev" target="_blank" type="github" icon="fab fa-github" text="GitHub" />
-            <Button href="mailto:hi@pluie.me" target="_blank" type="github" icon="fas fa-envelope" text="Email" />
+            <Button link="https://www.youtube.com/channel/UCfVDQlFd1pGiNfjFdG-Gamw|_blank" type="youtube" icon="fab fa-youtube" title="YouTube">
+                YouTube
+            </Button>
+            <Button link="https://discord.gg/NeNfePzCx8|_blank" type="discord" icon="fab fa-discord" title="Discord Server">
+                Discord Server
+            </Button>
+            <Button link="https://twitter.com/pluiedev|_blank" type="twitter" icon="fab fa-twitter" title="Twitter">
+                Twitter
+            </Button>
+            <Button link="https://space.bilibili.com/401096522|_blank" type="twitter" icon="fab fa-bilibili" title="Bilibili">
+                Bilibili
+            </Button>
+            <Button link="https://github.com/pluiedev|_blank" type="github" icon="fab fa-github" title="GitHub">
+                GitHub
+            </Button>
+            <Button modal="email-modal" type="github" icon="fas fa-envelope" title="Email">
+                Email
+            </Button>
         </div>
     </div>
 </footer>

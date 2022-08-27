@@ -1,0 +1,25 @@
+---
+export interface Props {
+    id: string,
+}
+
+const { id } = Astro.props as Props;
+---
+
+<input type="checkbox" id={id} class="toggle is-hidden"/>
+<div class="modal">
+    <label for={id} class="modal-background" />
+    <div class="modal-content">
+        <slot />
+    </div>
+    <label for={id} class="modal-close is-large" aria-label="close" />
+</div>
+
+<style lang="scss">
+    div.modal {
+        display: none;
+    }
+    input.toggle:checked ~ div.modal {
+        display: flex !important;
+    }
+</style>

@@ -1,36 +1,44 @@
 ---
 export interface Props {
-	href: URL | string,
-	target?: '_self' | '_blank' | '_parent' | '_top',
+	link?: string,
+	modal?: string,
 	type?: string | string[],
 	icon?: string,
-	title?: string,
-	text?: string,
+
+	id?: string,
+	title?: string
 }
 
 const {
-	href,
-	target = '_self',
-	type,
+	link,
+	modal,
+	type = "github",
 	icon,
-	text,
-	title = text,
+	id,
+	title,
 } = Astro.props as Props;
-
-var buttonClasses = ["button"];
-if (typeof type === "string") {
-	buttonClasses.push(`is-${type}`)
-} else {
-	buttonClasses = buttonClasses.concat(type)
-}
 ---
 
-<a {href} {title} {target} class:list={buttonClasses}>
-	{icon &&
-	<span class="icon">
-		<i class={icon}></i>
-	</span>
+{(() => {
+	let button: HTMLSpanElement = 
+	<span {id} {title} class={`button is-${type}`}>
+		{icon &&
+		<span class="icon">
+			<i class={icon}></i>
+		</span>
+		}
+		<span>
+			<slot />
+		</span>
+	</span>;
+	
+	
+	if (link) {
+		const [href, target] = link.split('|', 2);
+		button = <a {href} {target}>{button}</a>;
 	}
-
-	{text && <span>{text}</span>}
-</a>
+	if (modal) {
+		button = <label for={modal}>{button}</label>
+	}
+	return button;
+})()}
