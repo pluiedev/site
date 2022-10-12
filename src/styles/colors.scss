@@ -25,4 +25,4 @@ $code-size: 1em;
 $code-padding: 0.1em 0.4em 0.1em 0.4em;
 
 $background: desaturate(lighten($turquoise, 40%), 40%);
-$body-background-color: darken($primary, 25%);
+$body-background-color: mix($primary, #fff, 10);

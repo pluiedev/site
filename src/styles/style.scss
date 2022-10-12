@@ -15,8 +15,8 @@ main {
   padding: 5rem 3rem !important;
 }
 footer {
+  background-color: darken($primary, 25%);
   height: max-content;
-  background-color: inherit;
   color: $white-bis;
 
   a {
@@ -28,7 +28,6 @@ footer {
   margin-bottom: initial !important;
 }
 #navbar-container {
-  background-color: mix($primary, $white, 10);
   display: flex;
   flex-direction: column;
   align-items: center;
