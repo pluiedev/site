@@ -1,4 +1,5 @@
 $primary: hsl(299, 46%, 54%);
+$turquoise: #34d4c4;
 $link: hsl(226, 58%, 55%);
 
 $custom-colors: (
@@ -18,3 +19,10 @@ $blurple-light: lighten($blurple, 3%);
 $twitter-blue: #1da1f2;
 $twitter-blue-dark: darken($twitter-blue, 3%);
 $twitter-blue-light: lighten($twitter-blue, 3%);
+
+$code: darken(saturate($primary, 20%), 5%);
+$code-size: 1em;
+$code-padding: 0.1em 0.4em 0.1em 0.4em;
+
+$background: desaturate(lighten($turquoise, 40%), 40%);
+$body-background-color: darken($primary, 25%);

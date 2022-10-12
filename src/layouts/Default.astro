@@ -5,9 +5,9 @@ const {content} = Astro.props;
 ---
 
 <Base content={content}>
-    <section class="section">
-        <div class="columns is-desktop">
-            <div class="column is-hidden-desktop is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
+    <section class="section p-0">
+        <div id="main-container" class="columns is-desktop">
+            <aside id="navbar-container" class="column is-narrow">
                 <figure class="image is-250x250">
                     <a href="/">
                         <img
@@ -18,34 +18,14 @@ const {content} = Astro.props;
                         />
                     </a>
                 </figure>
-                <hr/>
-                <div class="tabs is-large">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/works">Works</a></li>
-                    </ul>
-                </div>
-            </div>
-            <aside class="column is-narrow is-hidden-touch">
-                <figure class="image is-250x250">
-                    <a href="/">
-                        <img
-                            class="is-rounded"
-                            src="/avatars/femcone.png"
-                            alt="My avatar - a feminized version of myself wearing a traffic cone, with a trans flag in the background."
-                            title="My avatar :> I drew it myself! And yes, I am wearing a traffic cone. It's called 'fashion.'"
-                        />
-                    </a>
-                </figure>
-                <hr class="mx-6 has-background-grey-light" />
-                <nav class="column is-flex is-flex-direction-column is-align-items-center">
-                    <a class="my-2 is-size-4" href="/">Home</a>
-                    <a class="my-2 is-size-4" href="/blog">Blog</a>
-                    <a class="my-2 is-size-4" href="/works">Works</a>
+                <hr />
+                <nav id="navbar" class="column is-flex">
+                    <a href="/">Home</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/works">Works</a>
                 </nav>
             </aside>
-            <main class="column content mx-6">
+            <main class="column content">
                 <slot />
             </main>
         </div>
