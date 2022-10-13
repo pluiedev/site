@@ -1,33 +1,36 @@
 ---
 export interface Props {
-	modal?: string,
-	type?: string | string[],
-	icon?: string,
+  modal?: string;
+  type?: string | string[];
+  icon?: string;
 
-	id?: string,
-	title?: string
-	disabled?: boolean,
+  id?: string;
+  title?: string;
+  disabled?: boolean;
 }
 
 const {
-	modal,
-	type = "github",
-	icon,
-	id,
-	title,
-	disabled,
+  modal,
+  type = "github",
+  icon,
+  id,
+  title,
+  disabled,
 } = Astro.props as Props;
 ---
 
 <label role="button" for={modal}>
-    <span {disabled} {id} {title} class={`button is-${type}`}>
-        {icon &&
+  {/*@ts-ignore*/}
+  <span disabled={disabled} id={id} title={title} class={`button is-${type}`}>
+    {
+      icon && (
         <span class="icon">
-            <i class={icon}></i>
+          <i class={icon} />
         </span>
-        }
-        <span>
-            <slot />
-        </span>
+      )
+    }
+    <span>
+      <slot />
     </span>
+  </span>
 </label>

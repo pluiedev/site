@@ -1,20 +1,18 @@
 ---
-import CommonHead from '@components/CommonHead.astro'
-import Footer from '@components/Footer.astro'
-import EmailModal from '@components/modal/EmailModal.astro';
+import CommonHead from "@components/CommonHead.astro";
+import Footer from "@components/Footer.astro";
+import EmailModal from "@components/modal/EmailModal.astro";
 
-const {content} = Astro.props;
+const { title } = Astro.props.content || Astro.props;
 ---
 
 <!DOCTYPE html>
 <html>
+  <CommonHead {title} />
 
-<CommonHead title={content.title}/>
-
-<body>
+  <body>
     <EmailModal />
     <slot />
     <Footer />
-</body>
-
+  </body>
 </html>

@@ -1,60 +1,6 @@
 @import "colors";
 @import "node_modules/bulma/sass/utilities/_all.sass";
-
-@import url("https://fonts.bunny.net/css?family=ibm-plex-serif:400,800|inconsolata:400,800");
-$family-primary: "IBM Plex Serif", "Times New Roman", Times, serif;
-$family-monospace: "Inconsolata", "Iosevka", "JetBrains Mono", "Courier",
-  sans-serif;
-
-html, body {
-  height: 100%;
-  margin: 0;
-}
-main {
-  background-color: $white;
-  padding: 5rem 3rem !important;
-}
-footer {
-  background-color: darken($primary, 25%);
-  height: max-content;
-  color: $white-bis;
-
-  a {
-    color: rgb(120, 151, 244);
-  }
-}
-
-#main-container:last-child {
-  margin-bottom: initial !important;
-}
-#navbar-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2em 3em;
-
-  figure {
-    margin: 1.5em;
-  }
-  hr {
-    background-color: $grey-light;
-    width: 70%;
-  }
-}
-#navbar {
-  flex-direction: column;
-  align-items: center;
-
-  @include touch {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  a {
-    margin: 0.5rem 0.5rem;
-    font-size: 1.5rem;
-  }
-}
+@import "fonts";
 
 @import "node_modules/bulma/sass/base/_all.sass";
 @import "node_modules/bulma/sass/components/modal.sass";
@@ -63,9 +9,7 @@ footer {
 @import "node_modules/bulma/sass/elements/_all.sass";
 @import "node_modules/bulma/sass/layout/section.sass";
 
+@import "layout";
+@import "modal";
 @import "buttons";
-
-.image.is-250x250 {
-  height: 250px;
-  width: 250px;
-}
+@import "misc";

@@ -1,41 +1,52 @@
 ---
 export interface Props {
-	link?: string,
-	type?: string | string[],
-	icon?: string,
+  link?: string;
+  type?: string | string[];
+  icon?: string;
 
-	id?: string,
-	title?: string
-	disabled?: boolean,
+  id?: string;
+  title?: string;
+  disabled?: boolean;
 }
 
 const {
-	link,
-	type = "github",
-	icon,
-	id,
-	title,
-	disabled,
+  link,
+  type = "github",
+  icon,
+  id,
+  title,
+  disabled,
 } = Astro.props as Props;
 ---
 
-{(() => {
-	let button = 
-	<button {disabled} {id} {title} class={`button is-${type}`}>
-		{icon &&
-		<span class="icon">
-			<i class={icon}></i>
-		</span>
-		}
-		<span>
-			<slot />
-		</span>
-	</button>;
-	
-	
-	if (link) {
-		const [href, target] = link.split('|', 2);
-		button = <a {href} {target}>{button}</a>;
-	}
-	return button;
-})()}
+{
+  (() => {
+    let button = (
+      <button
+        disabled={disabled}
+        id={id}
+        title={title}
+        class={`button is-${type}`}
+      >
+        {icon && (
+          <span class="icon">
+            <i class={icon} />
+          </span>
+        )}
+        <span>
+          <slot />
+        </span>
+      </button>
+    );
+
+    if (link) {
+      const [href, target] = link.split("|", 2);
+      button = (
+        <a href={href} target={target}>
+          {button}
+        </a>
+      );
+    }
+    return button;
+  })()
+}

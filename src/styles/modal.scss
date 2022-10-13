@@ -1,0 +1,6 @@
+.modal {
+  display: none;
+}
+input:checked + .modal {
+  display: flex !important;
+}
