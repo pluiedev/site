@@ -13,10 +13,6 @@ footer {
   background-color: darken($primary, 25%);
   flex: 1;
   color: $white-bis;
-
-  a {
-    color: rgb(142, 162, 220);
-  }
 }
 
 #main-container:last-child {
@@ -45,8 +41,4 @@ footer {
     justify-content: center;
   }
 
-  a {
-    margin: 0.5rem 0.5rem;
-    font-size: 1.5rem;
-  }
 }
