@@ -9,7 +9,7 @@ const props = Astro.props.content || Astro.props;
     <div id="main-container" class="columns is-desktop">
       <aside id="navbar-container" class="column is-narrow">
         <figure class="image is-250x250">
-          <a href="/">
+          <a href="/" class="nohl">
             <img
               class="is-rounded"
               src="/avatars/femcone.png"
@@ -20,9 +20,9 @@ const props = Astro.props.content || Astro.props;
         </figure>
         <hr />
         <nav id="navbar" class="column is-flex">
-          <a href="/">Home</a>
-          <a href="/blog">Blog</a>
-          <a href="/works">Works</a>
+          <a tabindex="0" href="/">Home</a>
+          <a tabindex="0" href="/blog">Blog</a>
+          <a tabindex="0" href="/works">Works</a>
         </nav>
       </aside>
       <main class="column content is-flex is-flex-direction-column">

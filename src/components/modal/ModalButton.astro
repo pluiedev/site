@@ -19,7 +19,7 @@ const {
 } = Astro.props as Props;
 ---
 
-<label role="button" for={modal}>
+<label tabindex="0" role="button" for={modal}>
   {/*@ts-ignore*/}
   <span disabled={disabled} id={id} title={title} class={`button is-${type}`}>
     {

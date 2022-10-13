@@ -12,7 +12,8 @@ main {
 footer {
   background-color: darken($primary, 25%);
   flex: 1;
-  color: $white-bis;
+  color: $grey-lightest;
+  padding: 3rem 3rem 3rem 3rem;
 }
 
 #main-container:last-child {
@@ -40,5 +41,4 @@ footer {
     flex-direction: row;
     justify-content: center;
   }
-
 }

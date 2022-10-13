@@ -22,7 +22,8 @@ const {
 {
   (() => {
     let button = (
-      <button
+      <div
+        tabindex="-1"
         disabled={disabled}
         id={id}
         title={title}
@@ -36,13 +37,13 @@ const {
         <span>
           <slot />
         </span>
-      </button>
+      </div>
     );
 
     if (link) {
       const [href, target] = link.split("|", 2);
       button = (
-        <a href={href} target={target}>
+        <a class="nohl" href={href} target={target}>
           {button}
         </a>
       );

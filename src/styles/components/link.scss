@@ -1,4 +1,4 @@
-a {
+a:not(.nohl) {
   // prevent links from breaking into multiple parts
   // and breaking the animation.
   white-space: nowrap;
@@ -25,9 +25,7 @@ a {
 }
 
 footer a {
-  a {
-    color: rgb(142, 162, 220);
-  }
+  color: rgb(182, 200, 255);
 }
 
 #navbar a {
