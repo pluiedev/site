@@ -10,6 +10,7 @@ article.blog-post {
 }
 
 .blog-post {
+
   :first-child {
     margin-top: 0em;
   }
@@ -17,6 +18,9 @@ article.blog-post {
     margin-bottom: 0em;
   }
 
+  >.title, >.subtitle>a {
+    color: darken($primary, 15%);
+  }
   > :last-child {
     margin-bottom: 0em;
   }
