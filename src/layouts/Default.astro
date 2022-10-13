@@ -1,10 +1,10 @@
 ---
 import Base from "./Base.astro";
 
-const { content } = Astro.props;
+const props = Astro.props.content || Astro.props;
 ---
 
-<Base content={content}>
+<Base {...props}>
   <section class="section p-0">
     <div id="main-container" class="columns is-desktop">
       <aside id="navbar-container" class="column is-narrow">
@@ -25,7 +25,7 @@ const { content } = Astro.props;
           <a href="/works">Works</a>
         </nav>
       </aside>
-      <main class="column content">
+      <main class="column content is-flex is-flex-direction-column">
         <slot />
       </main>
     </div>

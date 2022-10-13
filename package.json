@@ -13,10 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@astrojs/markdown-component": "^1.0.1",
     "@astrojs/mdx": "^0.4.0",
+    "@types/luxon": "^3.0.1",
     "astro": "^1.4.7",
     "bulma": "^0.9.4",
     "github-slugger": "^1.4.0",
+    "luxon": "^3.0.4",
     "rollup": "^2.79.1",
     "sass": "^1.55.0"
   }

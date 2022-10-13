@@ -13,7 +13,8 @@ const { href } = (Astro.props.content || Astro.props) as Props;
   <link id="canonical" rel="canonical" href={href} />
 
   <script is:inline>
-    window.location =
-      document.getElementById("canonical").href + window.location.hash;
+    window.location.replace(
+      document.getElementById("canonical").href + window.location.hash
+    );
   </script>
 </head>

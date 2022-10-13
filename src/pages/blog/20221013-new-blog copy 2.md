@@ -1,0 +1,21 @@
+---
+title: New Blog!
+date: 2022-10-13 09:30:00 +08:00
+authors:
+    - Leah
+layout: /src/layouts/Post.astro
+---
+
+It's here! I've finally found time to work on the site again,
+and with much encouragement from my English teacher, I've started this blog to well,
+blog about bloggy stuff.
+
+<!-- MORE -->
+
+I still don't know what to put here -- definitely open to suggestions about that --
+but I intend to talk about some interesting things I discover and some interesting
+activities I do. Technical deep dives, tutorials, opinions, how-tos, all that jazz.
+Should be mostly about the Rust programming language and art, since well, that's
+what I do.
+
+I don't know how to conclude this post! Be on the look out for new posts I guess. XD

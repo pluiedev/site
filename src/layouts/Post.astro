@@ -1,0 +1,17 @@
+---
+import Button from "@components/Button.astro";
+import PostInfo from "@components/PostInfo.astro";
+import Default from "./Default.astro";
+
+const props = Astro.props;
+---
+
+<Default content={props.content}>
+	<div class="blog-post is-flex-grow-1">
+		<h1>{props.frontmatter.title}</h1>
+		<PostInfo post={props} />
+
+		<slot />
+	</div>
+	<Button link="/blog" type="primary" icon="fas fa-arrow-left">Other articles</Button>
+</Default>
