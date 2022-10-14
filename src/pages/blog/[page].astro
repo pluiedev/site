@@ -14,24 +14,25 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 
 const current = page.currentPage;
-const indices = [];
+const last = page.lastPage;
 
+const indices = [];
 const RANGE = 2;
 
 if (current - 1 > RANGE) {
   indices.push(1, -1);
 }
 for (let i = current - RANGE; i < current + RANGE + 1; i++) {
-  if (i > 0 && i <= page.lastPage) {
+  if (i > 0 && i <= last) {
     indices.push(i);
   }
 }
-if (page.lastPage - current > RANGE) {
-  indices.push(-1, page.lastPage);
+if (last - current > RANGE) {
+  indices.push(-1, last);
 }
 ---
 
-<Default title={`Blog (${current}/${page.lastPage})`}>
+<Default title={`Blog (${current}/${last})`}>
   <h1>Blog</h1>
 
   <div id="posts" class="content container my-5">

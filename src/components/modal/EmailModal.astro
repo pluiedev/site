@@ -4,49 +4,69 @@ import Modal from "./Modal.astro";
 ---
 
 <Modal id="email-modal">
-    <div class="m-5 content">
-        <section class="box p-5 has-text-centered">
-            <h1 class="title is-3 has-text-primary">
-                <i class="fas fa-envelope"></i> Email
-            </h1>
-            <p>To contact me by email, please send to the address below, <strong>with all numbers removed</strong>.</p>
-            <div class="my-4">
-                <noscript>
-                    <style is:inline>
-                        #copy-email { display: none; }
-                    </style>
-                </noscript>
-                
-                <h1 id="obscured-email" class="title is-5 has-text-primary">h17271i93@23pl2uie24.982me</h1>
-                <noscript>
-                    <Button id="copy-email-noscript" disabled type="primary mr-4" title="Enable JavaScript to copy sanitized address">
-                        Enable JavaScript to copy sanitized address.
-                    </Button>
-                </noscript>
-                <Button id="copy-email" type="primary mr-4" title="Copy sanitized address to clipboard">
-                    Copy sanitized address to clipboard
-                </Button>
-            </div>
-            <p>
-                Please pardon me if I don’t respond in a punctual manner –
-                I have issues catching up and responding to emails.
+  <div class="m-5 content">
+    <section class="box p-5 has-text-centered">
+      <h1 class="title is-3 has-text-primary">
+        <i class="fas fa-envelope"></i> Email
+      </h1>
+      <p>
+        To contact me by email, please send to the address below, <strong
+          >with all numbers removed</strong
+        >.
+      </p>
+      <div class="my-4">
+        <noscript>
+          <style is:inline>
+            #copy-email {
+              display: none;
+            }
+          </style>
+        </noscript>
 
-                Feel free to use other ways to contact me: I heard finding me on
-                <span class="has-text-blurple">Discord</span> is often the fastest among them :p
-            </p>
-        </section>
-    </div>
-    <script is:inline>
-        function copyEmail() {
-            let email = document.getElementById("obscured-email");
-            let sanitized = email.textContent.replace(/\d/g, '');
+        <h1 id="obscured-email" class="title is-5 has-text-primary">
+          h17271i93@23pl2uie24.982me
+        </h1>
+        <noscript>
+          <Button
+            id="copy-email-noscript"
+            disabled
+            type="primary mr-4"
+            title="Enable JavaScript to copy sanitized address"
+          >
+            Enable JavaScript to copy sanitized address.
+          </Button>
+        </noscript>
+        <Button
+          id="copy-email"
+          type="primary mr-4"
+          title="Copy sanitized address to clipboard"
+        >
+          Copy sanitized address to clipboard
+        </Button>
+      </div>
+      <p>
+        Please pardon me if I don’t respond in a punctual manner – I have issues
+        catching up and responding to emails. Feel free to use other ways to
+        contact me: I heard finding me on
+        <span class="has-text-blurple">Discord</span> is often the fastest among
+        them :p
+      </p>
+    </section>
+  </div>
+  <script is:inline>
+    function copyEmail() {
+      let email = document.getElementById("obscured-email");
+      let sanitized = email.textContent.replace(/\d/g, "");
 
-            navigator.clipboard.writeText(sanitized).then(() => {  
-                alert("Successfully copied address to clipboard!")
-            },() => {
-                alert("Failed to copy to clipboard!")
-            })
+      navigator.clipboard.writeText(sanitized).then(
+        () => {
+          alert("Successfully copied address to clipboard!");
+        },
+        () => {
+          alert("Failed to copy to clipboard!");
         }
-        document.getElementById("copy-email").onclick = copyEmail;
-    </script>
+      );
+    }
+    document.getElementById("copy-email").onclick = copyEmail;
+  </script>
 </Modal>
