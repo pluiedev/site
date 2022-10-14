@@ -8,7 +8,7 @@ export async function getStaticPaths({ paginate }) {
   const allPosts = await Astro.glob("./*.md");
   sortByDescending(allPosts, (post) => new Date(post.frontmatter.date));
 
-  return paginate(allPosts, { pageSize: 2 });
+  return paginate(allPosts, { pageSize: 5 });
 }
 
 const { page } = Astro.props;
@@ -47,7 +47,7 @@ if (last - current > RANGE) {
       href={page.url.prev}
     >
       <span class="icon"><i class={`fas fa-angle-left`}></i></span>
-      <span class="is-hidden-mobile">Prev</span>
+      Prev
     </a>
 
     <a
@@ -57,7 +57,7 @@ if (last - current > RANGE) {
       href={page.url.next}
     >
       <span class="icon"><i class={`fas fa-angle-right`}></i></span>
-      <span class="is-hidden-mobile">Next</span>
+      Next
     </a>
 
     <ul class="pagination-list">
