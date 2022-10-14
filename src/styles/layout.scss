@@ -42,3 +42,8 @@ footer {
     justify-content: center;
   }
 }
+
+.pagination-list li + li {
+  // seriously what the hell
+  margin-top: 0em;
+}

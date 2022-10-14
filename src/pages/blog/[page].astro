@@ -8,17 +8,30 @@ export async function getStaticPaths({ paginate }) {
   const allPosts = await Astro.glob("./*.md");
   sortByDescending(allPosts, (post) => new Date(post.frontmatter.date));
 
-  return paginate(allPosts, { pageSize: 5 });
+  return paginate(allPosts, { pageSize: 2 });
 }
 
 const { page } = Astro.props;
-const previousPage = page.currentPage - 1;
-const nextPage = page.currentPage + 1;
-const onFirstPage = previousPage <= 0;
-const onLastPage = nextPage > page.lastPage;
+
+const current = page.currentPage;
+const indices = [];
+
+const RANGE = 2;
+
+if (current - 1 > RANGE) {
+  indices.push(1, -1);
+}
+for (let i = current - RANGE; i < current + RANGE + 1; i++) {
+  if (i > 0 && i <= page.lastPage) {
+    indices.push(i);
+  }
+}
+if (page.lastPage - current > RANGE) {
+  indices.push(-1, page.lastPage);
+}
 ---
 
-<Default title={`Blog (${page.currentPage}/${page.total})`}>
+<Default title={`Blog (${current}/${page.lastPage})`}>
   <h1>Blog</h1>
 
   <div id="posts" class="content container my-5">
@@ -27,83 +40,43 @@ const onLastPage = nextPage > page.lastPage;
 
   <nav class="pagination is-centered" role="navigation" aria-label="pagination">
     <a
-      class="pagination-previous"
+      class="nohl pagination-previous"
       {/*@ts-ignore*/}
-      disabled={onFirstPage}
-      href={!onFirstPage && "/blog/1"}
-    >
-      <span class="icon"><i class={`fas fa-angles-left`}></i></span>
-      <span class="is-hidden-mobile">First</span>
-    </a>
-
-    <a
-      class="pagination-previous"
-      {/*@ts-ignore*/}
-      disabled={onFirstPage}
-      href={!onFirstPage && `/blog/${previousPage}`}
+      disabled={!page.url.prev}
+      href={page.url.prev}
     >
       <span class="icon"><i class={`fas fa-angle-left`}></i></span>
       <span class="is-hidden-mobile">Prev</span>
     </a>
 
-    <ul class="pagination-list">
-      {
-        !onFirstPage && (
-          <li>
-            <a
-              class="pagination-link"
-              href={`/blog/${previousPage}`}
-              aria-label={`Goto page
-                ${previousPage}`}
-            >
-              {previousPage}
-            </a>
-          </li>
-        )
-      }
-
-      <li>
-        <a
-          class="pagination-link is-current"
-          aria-label={`Page ${page.currentPage}`}
-          >{page.currentPage}
-        </a>
-      </li>
-
-      {
-        !onLastPage && (
-          <li>
-            <a
-              class="pagination-link"
-              href={`/blog/${nextPage}`}
-              aria-label={`Goto page
-                ${nextPage}`}
-            >
-              {nextPage}
-            </a>
-          </li>
-        )
-      }
-    </ul>
-
     <a
-      class="pagination-next"
+      class="nohl pagination-next"
       {/*@ts-ignore*/}
-      disabled={onLastPage}
-      href={!onLastPage && `/blog/${page.lastPage}`}
+      disabled={!page.url.next}
+      href={page.url.next}
     >
       <span class="icon"><i class={`fas fa-angle-right`}></i></span>
       <span class="is-hidden-mobile">Next</span>
     </a>
 
-    <a
-      class="pagination-next"
-      {/*@ts-ignore*/}
-      disabled={onLastPage}
-      href={!onLastPage && `/blog/${nextPage}`}
-    >
-      <span class="icon"><i class={`fas fa-angles-right`}></i></span>
-      <span class="is-hidden-mobile">Last</span>
-    </a>
+    <ul class="pagination-list">
+      {
+        indices.map((num) => (
+          <li>
+            {num > 0 ? (
+              <a
+                class:list={["nohl", "pagination-link", num == current && "is-current"]}
+                aria-label={`Goto page ${num}`}
+                href={`/blog/${num}`}
+              >
+                {num}
+              </a>
+            ) : (
+              <span class="pagination-ellipsis">&hellip;</span>
+            )}
+          </li>
+        ))
+      }
+    </ul>
   </nav>
 </Default>
