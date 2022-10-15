@@ -6,7 +6,7 @@ export interface Props {
 const { id } = Astro.props as Props;
 ---
 
-<input type="checkbox" id={id} class="is-hidden" />
+<input type="checkbox" id={id} class="modal-toggle" />
 <div class="modal">
   <label for={id} class="modal-background"></label>
   <div class="modal-content">

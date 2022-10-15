@@ -1,0 +1,21 @@
+---
+export interface Props {
+  hrefs?: string[];
+}
+const { hrefs = [] } = Astro.props as Props;
+---
+
+{
+  hrefs.map((href) => (
+    <link
+      rel="preload"
+      href={href}
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+  ))
+}
+
+<noscript>
+  {hrefs.map((href) => <link rel="stylesheet" href={href} />)}
+</noscript>

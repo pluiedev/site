@@ -1,6 +1,9 @@
 .modal {
   display: none;
 }
+.modal-toggle {
+  display: none;
+}
 input:checked + .modal {
   display: flex !important;
 }
