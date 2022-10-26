@@ -1,17 +1,14 @@
 ---
-layout: /src/layouts/Default.astro
 title: Hello!
 ---
 
-import Button from "@components/Button.astro";
-
 <h1 class="title is-2">
-  Heya~ I'm <span class="has-text-primary">Leah</span>!
+	Heya~ I'm <span class="has-text-primary">Leah</span>!
 </h1>
 <h2 class="subtitle is-5">
-  You may know me better by my screen name,
-  <span class="has-text-primary">pluie</span>
-  or <span class="has-text-primary">pluiedev</span>.
+	You may know me better by my screen name,
+	<span class="has-text-primary">pluie</span>
+	or <span class="has-text-primary">pluiedev</span>.
 </h2>
 
 I'm a community moderator 🔨 / coder 💻 / amateur artist 🎨 /

@@ -1,0 +1,13 @@
+mixin modal-button(modal)
+	label(tabindex="0" role="button" for=modal)
+		span(
+			disabled=attributes.disabled,
+			id=attributes.id,
+			title=attributes.title,
+			class=["button", `is-${attributes.type || github}`]
+		)
+			if attributes.icon
+				span.icon
+					i(class=attributes.icon)
+			span
+				block

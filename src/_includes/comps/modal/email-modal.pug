@@ -1,0 +1,61 @@
+extends modal
+include ../button
+
+block content
+	.m-5.content
+		section.box.p-5.has-text-centered
+			h1.title.is-3.has-text-primary.
+				#[i.fas.fa-envelope] Email
+			p.
+				To contact me by email, please send to the address below,
+				#[strong with all numbers removed].
+			.my-4
+				noscript
+					style.
+						#copy-email {
+							display: none;
+						}
+
+				h1#obscured-email.title.is-5.has-text-primary.
+					h17271i93@23pl2uie24.982me
+
+				noscript
+					+button()(
+						type="primary"
+						id="copy-email-noscript"
+						class="mr-4"
+						disabled
+						title="Enable JavaScript to copy sanitized address"
+					).
+						Enable JavaScript to copy sanitized address.
+
+				+button()(
+					type="primary"
+					id="copy-email"
+					class="mr-4"
+					title="Copy sanitized address to clipboard"
+				).
+					Copy sanitized address to clipboard
+			p.
+				Please pardon me if I don’t respond in a punctual manner – I have issues
+				catching up and responding to emails. Feel free to use other ways to
+				contact me: I heard finding me on #[span.has-text-blurple Discord] is
+				often the fastest among them :p
+			</p>
+		</section>
+	</div>
+	script.
+		function copyEmail() {
+			let email = document.getElementById("obscured-email");
+			let sanitized = email.textContent.replace(/\d/g, "");
+
+			navigator.clipboard.writeText(sanitized).then(
+				() => {
+					alert("Successfully copied address to clipboard!");
+				},
+				() => {
+					alert("Failed to copy to clipboard!");
+				}
+			);
+		}
+		document.getElementById("copy-email").onclick = copyEmail;

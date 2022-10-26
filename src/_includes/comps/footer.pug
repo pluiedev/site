@@ -1,0 +1,52 @@
+-
+	const currentYear = new Date().getFullYear();
+	const firstYear = 2022;
+	const yearText =
+		currentYear > firstYear
+		? `${firstYear}—${currentYear}`
+		: firstYear.toString();
+
+include button
+include modal/modal-button
+
+footer.footer
+	.content.has-text-centered
+		p © #{yearText} Leah "pluie" Chen
+		p.
+			Code and contents of this page are licensed under #[br]
+			#[a(href="https://mit-license.org/") the MIT License] and
+			#[a(href="https://creativecommons.org/licenses/by-sa/4.0/") CC BY-SA 4.0] respectively.
+			#[br] #[a(href="https://github.com/pluiedev/site") Source code available at GitHub.]
+		p.
+			Made with #[a(href="https://bulma.io") Bulma], 💜, caffeine, and E pills.
+
+		.buttons.is-centered.mt-4
+			+button("https://www.youtube.com/channel/UCfVDQlFd1pGiNfjFdG-Gamw", "_blank")(
+				type="youtube"
+				icon="fab fa-youtube"
+				title="YouTube"
+			) YouTube
+			+button("https://discord.gg/NeNfePzCx8", "_blank")(
+				type="discord"
+				icon="fab fa-discord"
+				title="Discord Server"
+			) Discord Server
+			+button("https://twitter.com/pluiedev", "_blank")(
+				type="discord"
+				icon="fab fa-twitter"
+				title="Discord Server"
+			) Twitter
+			+button("https://space.bilibili.com/401096522", "_blank")(
+				type="twitter"
+				icon="fab fa-bilibili"
+				title="Bilibili"
+			) Bilibili
+			+button("https://github.com/pluiedev", "_blank")(
+				type="github"
+				icon="fab fa-github"
+				title="GitHub"
+			) GitHub
+			+modal-button("email-modal")(
+				icon="fas fa-envelope"
+				title="Email"
+			) Email
