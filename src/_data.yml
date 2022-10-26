@@ -1,1 +1,4 @@
 layout: default.pug
+
+switches:
+  email: "email-modal"

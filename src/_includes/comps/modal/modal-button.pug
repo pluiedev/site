@@ -4,7 +4,7 @@ mixin modal-button(modal)
 			disabled=attributes.disabled,
 			id=attributes.id,
 			title=attributes.title,
-			class=["button", `is-${attributes.type || github}`]
+			class=["button", `is-${attributes.type || "github"}`]
 		)
 			if attributes.icon
 				span.icon
