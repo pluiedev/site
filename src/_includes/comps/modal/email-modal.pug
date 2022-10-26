@@ -1,7 +1,7 @@
-extends modal
 include ../button
+include modal
 
-block content
++modal(switches.email)
 	.m-5.content
 		section.box.p-5.has-text-centered
 			h1.title.is-3.has-text-primary.
@@ -41,21 +41,4 @@ block content
 				catching up and responding to emails. Feel free to use other ways to
 				contact me: I heard finding me on #[span.has-text-blurple Discord] is
 				often the fastest among them :p
-			</p>
-		</section>
-	</div>
-	script.
-		function copyEmail() {
-			let email = document.getElementById("obscured-email");
-			let sanitized = email.textContent.replace(/\d/g, "");
-
-			navigator.clipboard.writeText(sanitized).then(
-				() => {
-					alert("Successfully copied address to clipboard!");
-				},
-				() => {
-					alert("Failed to copy to clipboard!");
-				}
-			);
-		}
-		document.getElementById("copy-email").onclick = copyEmail;
+	script(src="scripts/email_modal.js" async)

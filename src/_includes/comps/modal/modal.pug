@@ -1,7 +1,8 @@
-.modal
+mixin modal(id)
 	input(type="checkbox" id=id class="modal-toggle")
-	label.modal-background(for=id)
+	.modal
+		label.modal-background(for=id)
 
-	.modal-content
-		block content
-		label.modal-close.is-large(for=id aria-label="close")
+		.modal-content
+			block
+			label.modal-close.is-large(for=id aria-label="close")

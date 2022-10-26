@@ -13,6 +13,6 @@ site
   .use(sass())
   .use(imagick())
   .use(pug())
-  .copy("public", ".");
+  .copy("assets", ".");
 
 export default site;
