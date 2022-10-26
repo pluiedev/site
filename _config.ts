@@ -5,13 +5,14 @@ import imagick from "lume/plugins/imagick.ts";
 import pug from "lume/plugins/pug.ts";
 
 const site = lume({
-    src: "./src",
-  });
+  src: "./src",
+});
 
-site.use(minify_html());
-site.use(sass());
-site.use(imagick());
-site.use(pug());
-site.copy("public", ".");
+site
+  .use(minify_html())
+  .use(sass())
+  .use(imagick())
+  .use(pug())
+  .copy("public", ".");
 
 export default site;
