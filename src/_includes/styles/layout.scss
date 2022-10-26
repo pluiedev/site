@@ -46,10 +46,10 @@ footer {
   }
 }
 
+// seriously what the hell
 ul.pagination-list {
-  margin-top: 0em;
+  margin-top: 0em !important;
   li + li {
-    // seriously what the hell
-    margin-top: 0em;
+    margin-top: 0em !important;
   }
 }
