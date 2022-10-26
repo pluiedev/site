@@ -1,0 +1,11 @@
+include post-info
+
+mixin post-embed(post)
+	article.blog-post.with-divider
+		h2.subtitle
+			a(href=post.dest.path)= post.data.title
+
+		+post-info(post.data)
+
+		- const content = post.data.content;
+		!= content.slice(0, content.indexOf("<!-- MORE -->"))

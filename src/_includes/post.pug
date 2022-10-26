@@ -1,9 +1,14 @@
-extends Default
+extends default
 include comps/button
+include comps/post-info
 
-block content
+block main-content
 	.blog-post.is-flex-grow-1
 		h1.title= title
+		+post-info({
+			authors: authors,
+			date: date,
+		})
 		//- <PostInfo post={props} />
 
 		block content
