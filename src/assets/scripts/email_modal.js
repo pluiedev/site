@@ -1,6 +1,6 @@
 function copyEmail() {
-    let email = document.getElementById("obscured-email");
-    let sanitized = email.textContent.replace(/\d/g, "");
+    const email = document.getElementById("obscured-email");
+    const sanitized = email.textContent.replace(/\d/g, "");
 
     navigator.clipboard.writeText(sanitized).then(
         () => {
