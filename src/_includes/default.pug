@@ -9,9 +9,16 @@ block content
 						img.is-rounded(
 							width="250"
 							height="250"
-							src="/avatars/femcone.png"
+							src="/img/avatars/femcone-small.png"
 							alt="My avatar - a feminized version of myself wearing a traffic cone, with a trans flag in the background."
 							title="My avatar :> I drew it myself! And yes, I am wearing a traffic cone. It's called 'fashion.'"
+							loading="eager",
+							srcset=`
+							/img/avatars/femcone-small.webp 1x,
+							/img/avatars/femcone.webp 2x,
+							/img/avatars/femcone-big.webp 4x,
+							/img/avatars/femcone-huge.webp 8x,
+							`
 						)
 				hr
 				nav#navbar.column.is-flex
