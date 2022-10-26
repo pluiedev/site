@@ -1,0 +1,27 @@
+mixin button-inner(attribs)
+	-
+		const classes = typeof attribs.class === "string"
+			? [attribs.class]
+			: (attribs.class || [])
+
+	div(
+		class=["button", `is-${attribs.type}`, ...classes]
+		disabled=attribs.disabled
+		id=attribs.id
+		title=attribs.title
+		tabindex="-1"
+	)
+		if attribs.icon
+			span.icon
+				i(class=attribs.icon)
+		span
+			block
+
+mixin button(link, target)
+	if link
+		a.nohl(href=link target=target)
+			+button-inner(attributes)
+				block
+	else
+		+button-inner(attributes)
+			block

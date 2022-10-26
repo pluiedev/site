@@ -1,0 +1,23 @@
+extends base
+
+block content
+	section.section.p-0
+		#main-container.columns.is-desktop
+			aside#navbar-container.column.is-narrow
+				figure.image.is-250x250
+					a.nohl(href="/")
+						img.is-rounded(
+							width="250"
+							height="250"
+							src="/avatars/femcone.png"
+							alt="My avatar - a feminized version of myself wearing a traffic cone, with a trans flag in the background."
+							title="My avatar :> I drew it myself! And yes, I am wearing a traffic cone. It's called 'fashion.'"
+						)
+				hr
+				nav#navbar.column.is-flex
+					a(tabindex="0" href="/") Home
+					a(tabindex="0" href="/blog") Blog
+					a(tabindex="0" href="/works") Works
+			main.column.content.is-flex.is-flex-direction-column
+				block content
+					!=content

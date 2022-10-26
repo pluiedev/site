@@ -1,0 +1,11 @@
+mixin deferred-stylesheets(...hrefs)
+	each href in hrefs
+		link(
+			rel="preload"
+			href=href
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		)
+	noscript
+		each href in hrefs
+			link(rel="stylesheet" href=href)
