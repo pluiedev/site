@@ -5,6 +5,10 @@ import sass from "lume/plugins/sass.ts";
 import imagick from "lume/plugins/imagick.ts";
 import pug from "lume/plugins/pug.ts";
 
+import remark from "lume/plugins/remark.ts";
+import emoji from "npm:remark-emoji";
+import smartyPants from "npm:@ngsctt/remark-smartypants";
+
 import { datetime } from "https://deno.land/x/ptera@v1.0.2/mod.ts";
 
 const site = lume({
@@ -12,6 +16,11 @@ const site = lume({
 });
 
 site
+  .use(
+    remark({
+      remarkPlugins: [emoji, smartyPants],
+    })
+  )
   .use(minify_html())
   .use(sass())
   .use(imagick())
