@@ -33,13 +33,6 @@ site
   .use(imagick())
   .use(pug())
   .use(
-    terser({
-      options: {
-        module: false,
-      },
-    })
-  )
-  .use(
     postcss({
       keepDefaultPlugins: true,
       plugins: [
