@@ -5,7 +5,6 @@ a:not(.nohl) {
 
   position: relative;
   z-index: 2;
-  transition: 0.3s;
 
   &::after {
     content: "";
@@ -16,7 +15,7 @@ a:not(.nohl) {
     left: -0.2em;
     right: -0.2em;
     transform: translateX(-50%) scaleX(0) skew(-8.5deg);
-    transition: 0.25s;
+    transition: transform 0.25s;
     background-color: $primary;
   }
   &:hover::after {

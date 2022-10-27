@@ -1,6 +1,3 @@
-@import "styles/colors";
-@import "styles/layout";
-@import "styles/components/modal";
-@import "../_bulma/sass/grid/columns.sass";
-@import "../_bulma/sass/utilities/all.sass";
-@import "../_bulma/sass/elements/content.sass";
+@import "styles/derived-vars";
+@import "../_bulma/sass/utilities/_all.sass";
+@import "styles/diet/_all";

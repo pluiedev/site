@@ -1,0 +1,46 @@
+@import "../_bulma/sass/utilities/mixins.sass";
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  background-color: $white;
+  padding: 5rem 3rem 3rem 3rem !important;
+}
+footer {
+  background-color: $primary-dark;
+  flex: 1;
+  color: $grey-lightest;
+  padding: 3rem 3rem 4rem 3rem;
+}
+
+#main-container:last-child {
+  margin-bottom: initial !important;
+}
+#navbar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 3em;
+
+  figure {
+    margin: 1.5em;
+  }
+  hr {
+    background-color: $grey-light;
+    width: 70%;
+  }
+}
+#navbar {
+  flex-direction: column;
+  align-items: center;
+
+  @include touch {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
