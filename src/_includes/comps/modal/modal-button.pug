@@ -1,3 +1,5 @@
+include ../icon
+
 mixin modal-button(modal)
 	label(tabindex="0" role="button" for=modal)
 		span(
@@ -6,8 +8,6 @@ mixin modal-button(modal)
 			title=attributes.title,
 			class=["button", `is-${attributes.type || "github"}`]
 		)
-			if attributes.icon
-				span.icon
-					i(class=attributes.icon)
+			+maybe-icon(attributes.icon)
 			span
 				block

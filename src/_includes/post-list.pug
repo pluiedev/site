@@ -13,16 +13,14 @@ block main-content
 			disabled=!pagination.previous
 			href=pagination.previous
 		)
-			span.icon
-				i.fas.fa-angle-left
+			+icon("fas fa-angle-left")
 			| Prev
 
 		a.nohl.pagination-next(
 			disabled=!pagination.next
 			href=pagination.next
 		)
-			span.icon
-				i.fas.fa-angle-right
+			+icon("fas fa-angle-right")
 			| Next
 
 		ul.pagination-list
