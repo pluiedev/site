@@ -5,9 +5,16 @@ import sass from "lume/plugins/sass.ts";
 import imagick from "lume/plugins/imagick.ts";
 import pug from "lume/plugins/pug.ts";
 
+// remark plugins
 import remark from "lume/plugins/remark.ts";
 import emoji from "npm:remark-emoji";
 import smartyPants from "npm:@ngsctt/remark-smartypants";
+
+// postcss plugins
+import postcss from "lume/plugins/postcss.ts";
+import "npm:postcss";
+import cssnano from "npm:cssnano";
+import "npm:cssnano-preset-advanced";
 
 import { datetime } from "https://deno.land/x/ptera@v1.0.2/mod.ts";
 
@@ -25,6 +32,23 @@ site
   .use(sass())
   .use(imagick())
   .use(pug())
+  .use(
+    terser({
+      options: {
+        module: false,
+      },
+    })
+  )
+  .use(
+    postcss({
+      keepDefaultPlugins: true,
+      plugins: [
+        cssnano({
+          preset: ["advanced"],
+        }),
+      ],
+    })
+  )
   .use((site: Site) =>
     site.preprocess([".md"], (page: Page) => {
       page.data.dateString = datetime(page.data.date).toDateTimeFormat({
