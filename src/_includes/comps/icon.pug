@@ -1,0 +1,7 @@
+mixin icon(icon)
+	span.icon
+		i(class=icon)
+
+mixin maybe-icon(icon)
+	if icon
+		+icon(icon)
