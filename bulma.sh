@@ -3,7 +3,7 @@
 BULMA_VERSION=0.9.4
 BULMA_DIR=_bulma
 
-if [[ ! -d $BULMA_DIR ]]
+if [ ! -d $BULMA_DIR ]
 then
     git clone \
         --depth 1 \
