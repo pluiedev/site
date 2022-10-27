@@ -3,16 +3,20 @@ title: Hello!
 ---
 
 <h1 class="title is-2">
-	Heya~ I'm <span class="has-text-primary">Leah</span>!
+
+Heya~ I'm <span class="has-text-primary">Leah</span>!
+
 </h1>
 <h2 class="subtitle is-5">
-	You may know me better by my screen name,
-	<span class="has-text-primary">pluie</span>
-	or <span class="has-text-primary">pluiedev</span>.
+
+You may know me better by my screen name,
+<span class="has-text-primary">pluie</span>
+or <span class="has-text-primary">pluiedev</span>.
+
 </h2>
 
-I'm a community moderator 🔨 / coder 💻 / amateur artist 🎨 /
-procrastinator 💤 / etc. from China.
+I'm a community moderator :hammer: / coder :computer: / amateur artist :art: /
+procrastinator :zzz: / etc. from China.
 
 I like to code, to draw, to discover myself, and to help others discover themselves.
 More things I like include dogs and traffic cones. And linguistics.
