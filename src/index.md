@@ -51,6 +51,6 @@ the Rust mindset -- both in real life and on platforms like
 and I'm excited to see the people I helped become true Rust masters.
 
 When I'm not busy moderating a community or coding or sitting in my chair idling,
-I create drawings and paintings! I'm primarily an oil painter, though I use [GIMP](https://gimp.org)
-to create digital illustrations, like my own avatar and more.
+I create drawings and paintings! I'm primarily an oil painter, though I use
+[GIMP](https://gimp.org) to create digital illustrations, like my own avatar and more.
 [Click here to check out some of my works (that I really like)!](/works)
