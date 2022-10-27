@@ -1,8 +1,8 @@
 {
-  "importMap": "./import_map.json",
-  "tasks": {
-    "lume": "./bulma.sh && echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
-    "build": "deno task lume",
-    "serve": "deno task lume -s"
-  }
+	"importMap": "./import_map.json",
+	"tasks": {
+		"lume": "./bulma.sh && echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+		"build": "deno task lume",
+		"serve": "deno task lume -s"
+	}
 }

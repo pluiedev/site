@@ -1,55 +1,55 @@
 #posts {
-  width: 100%;
+	width: 100%;
 }
 
 article.blog-post {
-  margin: 1em 0em;
-  padding: 1.5em 1.5em;
+	margin: 1em 0em;
+	padding: 1.5em 1.5em;
 
-  background-color: lighten($pale, 2.5%);
+	background-color: lighten($pale, 2.5%);
 }
 
 .blog-post {
+	:first-child {
+		margin-top: 0em;
+	}
+	:last-child {
+		margin-bottom: 0em;
+	}
 
-  :first-child {
-    margin-top: 0em;
-  }
-  :last-child {
-    margin-bottom: 0em;
-  }
+	> .title,
+	> .subtitle > a {
+		color: darken($primary, 15%);
 
-  >.title, >.subtitle>a {
-    color: darken($primary, 15%);
+		&:hover {
+			color: lighten($link-hover, 5%);
+		}
+	}
+	> :last-child {
+		margin-bottom: 0em;
+	}
 
-    &:hover {
-      color: lighten($link-hover, 5%);
-    }
-  }
-  > :last-child {
-    margin-bottom: 0em;
-  }
-
-  > .title:first-child,
-  .subtitle:first-child,
-  h1:first-child {
-    margin-bottom: 0.5rem;
-  }
-  > .media {
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid $grey;
-  }
+	> .title:first-child,
+	.subtitle:first-child,
+	h1:first-child {
+		margin-bottom: 0.5rem;
+	}
+	> .media {
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+		border-bottom: 1px solid $grey;
+	}
 }
 
 .media {
-  .media-content {
-    overflow-y: hidden;
-  }
-  .subtitle {
-    margin-bottom: 0 !important;
-  }
+	.media-content {
+		overflow-y: hidden;
+	}
+	.subtitle {
+		margin-bottom: 0 !important;
+	}
 }
 
 ul.pagination-list {
-    margin-left: 0em;
+	margin-left: 0em;
 }

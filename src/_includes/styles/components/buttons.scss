@@ -1,3 +1,7 @@
+.button {
+	font-weight: bold;
+}
+
 .button.is-discord {
 	background-color: $blurple;
 	border-color: $blurple;
@@ -22,7 +26,6 @@
 	}
 }
 
-
 .button.is-twitter {
 	background-color: $twitter-blue;
 	border-color: $twitter-blue;
@@ -37,7 +40,7 @@
 
 .button.is-github {
 	background-color: $white;
-    border-width: 2px;
+	border-width: 2px;
 	color: $black;
 
 	&:hover,
