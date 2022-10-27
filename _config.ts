@@ -19,36 +19,36 @@ import "npm:cssnano-preset-advanced";
 import { datetime } from "https://deno.land/x/ptera@v1.0.2/mod.ts";
 
 const site = lume({
-  src: "./src",
+	src: "./src",
 });
 
 site
-  .use(
-    remark({
-      remarkPlugins: [emoji, smartyPants],
-    })
-  )
-  .use(minify_html())
-  .use(sass())
-  .use(imagick())
-  .use(pug())
-  .use(
-    postcss({
-      keepDefaultPlugins: true,
-      plugins: [
-        cssnano({
-          preset: ["advanced"],
-        }),
-      ],
-    })
-  )
-  .use((site: Site) =>
-    site.preprocess([".md"], (page: Page) => {
-      page.data.dateString = datetime(page.data.date).toDateTimeFormat({
-        dateStyle: "long",
-      });
-    })
-  )
-  .copy("assets", ".");
+	.use(
+		remark({
+			remarkPlugins: [emoji, smartyPants],
+		})
+	)
+	.use(minify_html())
+	.use(sass())
+	.use(imagick())
+	.use(pug())
+	.use(
+		postcss({
+			keepDefaultPlugins: true,
+			plugins: [
+				cssnano({
+					preset: ["advanced"],
+				}),
+			],
+		})
+	)
+	.use((site: Site) =>
+		site.preprocess([".md"], (page: Page) => {
+			page.data.dateString = datetime(page.data.date).toDateTimeFormat({
+				dateStyle: "long",
+			});
+		})
+	)
+	.copy("assets", ".");
 
 export default site;

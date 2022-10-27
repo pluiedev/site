@@ -1,33 +1,33 @@
 a:not(.nohl) {
-  // prevent links from breaking into multiple parts
-  // and breaking the animation.
-  white-space: nowrap;
+	// prevent links from breaking into multiple parts
+	// and breaking the animation.
+	white-space: nowrap;
 
-  position: relative;
-  z-index: 2;
+	position: relative;
+	z-index: 2;
 
-  &::after {
-    content: "";
-    z-index: -10;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -0.2em;
-    right: -0.2em;
-    transform: translateX(-50%) scaleX(0) skew(-8.5deg);
-    transition: transform 0.25s;
-    background-color: $primary;
-  }
-  &:hover::after {
-    transform: translateX(0%) scaleX(100%) skew(-8.5deg);
-  }
+	&::after {
+		content: "";
+		z-index: -10;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -0.2em;
+		right: -0.2em;
+		transform: translateX(-50%) scaleX(0) skew(-8.5deg);
+		transition: transform 0.25s;
+		background-color: $primary;
+	}
+	&:hover::after {
+		transform: translateX(0%) scaleX(100%) skew(-8.5deg);
+	}
 }
 
 footer a {
-  color: rgb(182, 200, 255);
+	color: rgb(182, 200, 255);
 }
 
 #navbar a {
-  margin: 0.5rem 0.5rem;
-  font-size: 1.5rem;
+	margin: 0.5rem 0.5rem;
+	font-size: 1.5rem;
 }
