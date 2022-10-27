@@ -2,8 +2,9 @@ include post-info
 
 mixin post-embed(post)
 	article.blog-post.with-divider
+		- const href = post.dest.path.match(/(.+)\/index/)[1]
 		h2.subtitle
-			a(href=post.dest.path)= post.data.title
+			a(href=href)= post.data.title
 
 		+post-info(post.data)
 

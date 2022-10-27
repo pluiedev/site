@@ -7,11 +7,10 @@ block main-content
 		h1.title= title
 		+post-info({
 			authors: authors,
-			date: date,
+			dateString: dateString,
 		})
-		//- <PostInfo post={props} />
 
-		block content
+		block post-content
 			!=content
 
 	+button("/blog")(type="primary" icon="fas fa-arrow-left").
