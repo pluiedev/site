@@ -1,16 +1,15 @@
-
 @import "../_bulma/sass/utilities/initial-variables.sass";
 
-$primary: hsl(299, 46%, 54%);
-$primary-dark: darken($primary, 25%);
+$primary: hsl(299, 76%, 38%);
+$primary-dark: darken($primary, 20%);
 $turquoise: #34d4c4;
 $link: hsl(226, 58%, 55%);
 $link-hover: hsl(225, 40%, 98%);
 $pale: mix($primary, $white, 10);
 
 $custom-colors: (
-	"blurple": #5865f2,
-    "youtube": #d02525,
+  "blurple": #5865f2,
+  "youtube": #d02525,
 );
 
 $youtube: #d02525;
@@ -31,3 +30,5 @@ $code-padding: 0.1em 0.4em 0.1em 0.4em;
 
 $background: $white-ter;
 $body-background-color: $pale;
+
+$column-gap: 0.75rem;

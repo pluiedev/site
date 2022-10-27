@@ -1,4 +1,4 @@
-@import "styles/colors";
+@import "styles/derived-vars";
 @import "../_bulma/sass/utilities/_all.sass";
 @import "styles/fonts";
 
@@ -10,4 +10,4 @@
 @import "../_bulma/sass/helpers/_all.sass";
 @import "../_bulma/sass/layout/section.sass";
 
-@import "styles/components/_all"
+@import "styles/components/_all";
