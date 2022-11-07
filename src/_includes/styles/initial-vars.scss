@@ -20,7 +20,7 @@ $blurple: #5865f2;
 $blurple-dark: darken($blurple, 3%);
 $blurple-light: lighten($blurple, 3%);
 
-$twitter-blue: #1da1f2;
+$twitter-blue: rgb(29, 155, 240);
 $twitter-blue-dark: darken($twitter-blue, 3%);
 $twitter-blue-light: lighten($twitter-blue, 3%);
 
@@ -32,3 +32,7 @@ $background: $white-ter;
 $body-background-color: $pale;
 
 $column-gap: 0.75rem;
+
+$family-primary: "IBM Plex Sans", "Helvetica Neue", "Helvetica", "Arial",
+	sans-serif;
+$family-monospace: "IBM Plex Mono", "Iosevka", "JetBrains Mono", monospace;
