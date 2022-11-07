@@ -22,9 +22,9 @@ block content
 						)
 				hr
 				nav#navbar.column.is-flex
-					a(tabindex="0" href="/") Home
-					a(tabindex="0" href="/blog") Blog
-					a(tabindex="0" href="/works") Works
+					each cat in categories
+						- const isInCategory = url === cat.url || category === cat;
+						a(tabindex="0" href=cat.url class=isInCategory && "is-active")= cat.title 
 
 			main.column.content.is-flex.is-flex-direction-column
 				block main-content

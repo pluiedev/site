@@ -2,3 +2,14 @@ layout: default.pug
 
 switches:
   email: email-modal
+
+categories:
+  home:
+    title: Home
+    url: /
+  blog:
+    title: Blog
+    url: /blog/1/
+  works:
+    title: Works
+    url: /works/

@@ -19,7 +19,7 @@ export default function* ({ search, paginate }) {
 		}
 		for (let i = current - RANGE; i < current + RANGE + 1; i++) {
 			if (i > 0 && i <= last) {
-			indices.push(i);
+				indices.push(i);
 			}
 		}
 		if (last - current > RANGE) {
@@ -28,6 +28,7 @@ export default function* ({ search, paginate }) {
 
 		page.title = `Blog (${current}/${last})`;
 		page.indices = indices;
+		page.category = "blog";
 		yield page;
 	}
 }

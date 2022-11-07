@@ -20,7 +20,11 @@ html {
 }
 main {
 	background-color: $white;
-	padding: 5rem 3rem 3rem 3rem !important;
+	padding: 5rem 4.5rem 3rem 2rem !important;
+
+	@include touch {
+		padding: 5rem 3rem 3rem 3rem !important;
+	}
 }
 footer {
 	background-color: $primary-dark;
@@ -36,10 +40,14 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 2em 3em;
+	padding: 2rem 1rem 2rem 3.5rem;
+
+	@include touch {
+		padding: 2rem !important;
+	}
 
 	figure {
-		margin: 1.5em;
+		margin: 1.5rem;
 	}
 	hr {
 		background-color: $grey-light;

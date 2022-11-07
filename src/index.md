@@ -44,7 +44,7 @@ I also help maintaining [Quilt's website](https://quiltmc.org),
 to be based on [Astro](https://astro.build) instead of [Jekyll](https://jekyllrb.com).
 
 Even though recently I've been using Kotlin, JavaScript, Sass and other languages as
-a Quilt developer, I'm still a proud [Rustacean 🦀](https://rust-lang.org/) at heart.
+a Quilt developer, I'm still a proud [Rustacean :crab:](https://rust-lang.org/) at heart.
 I often teach beginners in Rust how to improve their Rust skills and think in
 the Rust mindset -- both in real life and on platforms like
 [the Rust Community Discord Server](https://discord.gg/rust-lang-community) --
