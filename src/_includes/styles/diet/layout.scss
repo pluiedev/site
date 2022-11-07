@@ -1,5 +1,8 @@
-@import "../_bulma/sass/base/generic.sass";
+// @import "../_bulma/sass/base/generic.sass";
 @import "../_bulma/sass/utilities/mixins.sass";
+
+$body-family: $family-primary !default;
+$code-family: $family-code !default;
 
 html {
 	&,
