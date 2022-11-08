@@ -1,4 +1,4 @@
-mixin button-inner(attribs)
+mixin --button-inner(attribs)
 	-
 		const classes = typeof attribs.class === "string"
 			? [attribs.class]
@@ -20,8 +20,8 @@ mixin button-inner(attribs)
 mixin button(link, target)
 	if link
 		a.nohl(href=link target=target)
-			+button-inner(attributes)
+			+--button-inner(attributes)
 				block
 	else
-		+button-inner(attributes)
+		+--button-inner(attributes)
 			block
