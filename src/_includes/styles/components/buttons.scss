@@ -1,51 +1,31 @@
 .button {
 	font-weight: bold;
-}
 
-.button.is-discord {
-	background-color: $blurple;
-	border-color: $blurple;
-	color: $white;
+	@mixin buttons($styles) {
+		@each $id, $bg, $fg in $styles {
+			$bg-color: map-get($custom-colors, $bg);
+			$dark-color: map-get($dark-colors, $bg);
 
-	&:hover,
-	&:active {
-		background-color: $blurple-dark;
-		border-color: $blurple-dark;
+			&.is-#{bg} {
+				background-color: $bg-color;
+				border-color: $bg-color;
+				color: $fg;
+
+				&:hover,
+				&:active {
+					background-color: $dark-color;
+					border-color: $dark-color;
+				}
+			}
+		}
 	}
-}
 
-.button.is-youtube {
-	background-color: $youtube;
-	border-color: $youtube;
-	color: $white;
-
-	&:hover,
-	&:active {
-		background-color: $youtube-dark;
-		border-color: $youtube-dark;
-	}
-}
-
-.button.is-twitter {
-	background-color: $twitter-blue;
-	border-color: $twitter-blue;
-	color: $black;
-
-	&:hover,
-	&:active {
-		border-color: $twitter-blue-dark;
-		background-color: $twitter-blue-dark;
-	}
-}
-
-.button.is-github {
-	background-color: $white;
-	border-width: 2px;
-	color: $black;
-
-	&:hover,
-	&:active {
-		border-color: $grey-lightest;
-		background-color: $grey-lightest;
-	}
+	@include buttons(
+		(
+			youtube: $white,
+			twitter: $black,
+			github: $black,
+			mastodon: $white,
+		)
+	);
 }

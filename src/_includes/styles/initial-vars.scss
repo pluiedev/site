@@ -1,3 +1,4 @@
+@use "sass:map";
 @import "../_bulma/sass/utilities/initial-variables.sass";
 
 $primary: hsl(299, 76%, 38%);
@@ -8,21 +9,17 @@ $link-hover: hsl(225, 40%, 98%);
 $pale: mix($primary, $white, 10);
 
 $custom-colors: (
-	"blurple": #5865f2,
-	"youtube": #d02525,
+	discord: #5865f2,
+	youtube: #d02525,
+	twitter: rgb(29, 155, 240),
+	mastodon: #3088d4,
 );
-
-$youtube: #d02525;
-$youtube-dark: darken($youtube, 3%);
-$youtube-light: lighten($youtube, 3%);
-
-$blurple: #5865f2;
-$blurple-dark: darken($blurple, 3%);
-$blurple-light: lighten($blurple, 3%);
-
-$twitter-blue: rgb(29, 155, 240);
-$twitter-blue-dark: darken($twitter-blue, 3%);
-$twitter-blue-light: lighten($twitter-blue, 3%);
+$dark-colors: ();
+$light-colors: ();
+@each $id, $color in $custom-colors {
+	$dark-colors: map.set($dark-colors, $id, darken($color, 3%));
+	$light-colors: map.set($light-colors, $id, lighten($color, 3%));
+}
 
 $code: darken(saturate($primary, 25%), 25%);
 $code-size: 1em;
