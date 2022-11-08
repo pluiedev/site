@@ -22,8 +22,8 @@ block content
 						)
 				hr
 				nav#navbar.column.is-flex
-					each cat in categories
-						- const isInCategory = url === cat.url || category === cat;
+					each cat, catId in categories
+						- const isInCategory = url === cat.url || category === catId;
 						a(tabindex="0" href=cat.url class=isInCategory && "is-active")= cat.title 
 
 			main.column.content.is-flex.is-flex-direction-column
