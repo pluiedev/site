@@ -41,6 +41,7 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	padding: 2rem 1rem 2rem 3.5rem;
+	background-color: $pale;
 
 	@include touch {
 		padding: 2rem !important;

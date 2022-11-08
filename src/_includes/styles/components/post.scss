@@ -3,30 +3,30 @@
 }
 
 article.blog-post {
-	margin: 1em 0em;
-	padding: 1.5em 1.5em;
+	margin: 1rem 0rem;
+	padding: 1.5rem 1.5rem;
 
 	background-color: lighten($pale, 2.5%);
 }
 
 .blog-post {
 	:first-child {
-		margin-top: 0em;
+		margin-top: 0rem;
 	}
 	:last-child {
-		margin-bottom: 0em;
+		margin-bottom: 0rem;
 	}
 
 	> .title,
 	> .subtitle > a {
-		color: darken($primary, 15%);
+		color: $primary;
 
 		&:hover {
 			color: lighten($link-hover, 5%);
 		}
 	}
 	> :last-child {
-		margin-bottom: 0em;
+		margin-bottom: 0rem;
 	}
 
 	> .title:first-child,

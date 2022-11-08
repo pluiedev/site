@@ -12,6 +12,8 @@ $custom-colors: (
 	discord: #5865f2,
 	youtube: #d02525,
 	twitter: rgb(29, 155, 240),
+	github: rgb(250, 250, 250),
+	pronouns-page: #c71585,
 	mastodon: #3088d4,
 );
 $dark-colors: ();
@@ -26,7 +28,7 @@ $code-size: 1em;
 $code-padding: 0.1em 0.4em 0.1em 0.4em;
 
 $background: $white-ter;
-$body-background-color: $pale;
+$body-background-color: $primary-dark;
 
 $column-gap: 0.75rem;
 

@@ -17,7 +17,7 @@ mixin --button-inner(attribs)
 		span
 			block
 
-mixin button(link, target)
+mixin button(link, target="_blank")
 	if link
 		a.nohl(href=link target=target)
 			+--button-inner(attributes)
