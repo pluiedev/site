@@ -1,7 +1,10 @@
 mixin icon(icon)
-	span.icon
-		i(class=icon)
-
-mixin maybe-icon(icon)
 	if icon
+		span.icon
+			i(class=icon)
+
+mixin icon-with-text(icon)
+	span.icon-text
 		+icon(icon)
+		span
+			block

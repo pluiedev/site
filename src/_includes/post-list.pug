@@ -14,15 +14,13 @@ block main-content
 			disabled=!pagination.previous
 			href=pagination.previous
 		)
-			+icon("fas fa-angle-left")
-			| Prev
+			+icon-with-text("fas fa-angle-left") Prev
 
 		a.nohl.pagination-next(
 			disabled=!pagination.next
 			href=pagination.next
 		)
-			+icon("fas fa-angle-right")
-			| Next
+			+icon-with-text("fas fa-angle-right") Next
 
 		ul.pagination-list
 			each num in indices

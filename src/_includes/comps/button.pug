@@ -1,3 +1,5 @@
+include icon
+
 mixin --button-inner(attribs)
 	-
 		const classes = typeof attribs.class === "string"
@@ -11,9 +13,7 @@ mixin --button-inner(attribs)
 		title=attribs.title
 		tabindex="-1"
 	)
-		if attribs.icon
-			span.icon
-				i(class=attribs.icon)
+		+icon(attribs.icon)
 		span
 			block
 

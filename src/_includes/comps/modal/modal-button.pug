@@ -8,6 +8,6 @@ mixin modal-button(modal)
 			title=attributes.title,
 			class=["button", `is-${attributes.type || "github"}`]
 		)
-			+maybe-icon(attributes.icon)
+			+icon(attributes.icon)
 			span
 				block
