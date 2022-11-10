@@ -1,0 +1,19 @@
+@use "../vars" as v
+
+#copy-email
+	transition: 0.25s
+
+	&::after
+		font-family: "Font Awesome 6 Free"
+		margin-left: 0.5rem
+
+	&[data-success="true"]
+		background-color: v.$success
+		color: v.$success-invert
+		&::after
+			content: "\f00c"
+	&[data-success="false"]
+		background-color: v.$danger
+		color: v.$danger-invert
+		&::after
+			content: "\f00d"
