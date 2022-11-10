@@ -1,4 +1,8 @@
 @use "../vars" as v
+@use "../_album/sass/elements/button"
+@use "../_album/sass/utilities/functions" as f
+@use "sass:map"
+@use "sass:list"
 
 #copy-email
 	transition: 0.25s
@@ -7,13 +11,24 @@
 		font-family: "Font Awesome 6 Free"
 		margin-left: 0.5rem
 
-	&[data-success="true"]
-		background-color: v.$success
-		color: v.$success-invert
-		&::after
-			content: "\f00c"
-	&[data-success="false"]
-		background-color: v.$danger
-		color: v.$danger-invert
-		&::after
-			content: "\f00d"
+	=success-state($state, $color-name, $char)
+		$colors: map.get(v.$colors, $color-name)
+		$color: list.nth($colors, 1)
+		$color-invert: list.nth($colors, 2)
+
+		&[data-success=#{$state}]
+			background-color: $color
+			color: $color-invert
+			pointer-events: none
+
+			&:focus,
+			&.is-focused
+				border-color: transparent
+				color: $color-invert
+				&:not(:active)
+					box-shadow: button.$focus-box-shadow-size f.bulmaRgba($color, 0.25)
+			&::after
+				content: $char
+
+	+success-state("true", "success", "\f00c")
+	+success-state("false", "danger", "\f00d")
