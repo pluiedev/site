@@ -15,8 +15,7 @@ import smartyPants from "npm:@ngsctt/remark-smartypants";
 // postcss plugins
 import postcss from "lume/plugins/postcss.ts";
 import "npm:postcss";
-import cssnano from "npm:cssnano";
-import "npm:cssnano-preset-advanced";
+import purgecss from "npm:@fullhuman/postcss-purgecss";
 
 import { datetime } from "https://deno.land/x/ptera@v1.0.2/mod.ts";
 
@@ -43,8 +42,11 @@ site
 		postcss({
 			keepDefaultPlugins: true,
 			plugins: [
-				cssnano({
-					preset: ["advanced"],
+				purgecss({
+					content: ["./**/*.html", "./**/*.pug"],
+					safelist: {
+						greedy: [/button/],
+					},
 				}),
 			],
 		})
