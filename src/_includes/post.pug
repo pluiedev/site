@@ -5,13 +5,10 @@ include comps/post-info
 block main-content
 	.blog-post.is-flex-grow-1
 		h1.title= title
-		+post-info({
-			authors: authors,
-			dateString: dateString,
-		})
+		+post-info(authors, dateString)
 
 		block post-content
 			!=content
 
-	+button("/blog")(type="primary" icon="fas fa-arrow-left").
+	+button("/blog", "_self")(type="primary" icon="fas fa-arrow-left").
 		Other articles

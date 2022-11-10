@@ -1,9 +1,9 @@
-mixin post-info(data)
+mixin post-info(authors, dateStrinng)
 	.media
 		.media-content
-			if data.authors.length > 0
-				p.title.is-5= data.authors.join(", ")
+			if authors.length > 0
+				p.title.is-5= authors.join(", ")
 
-			if data.dateString
-				p.subtitle.is-6= data.dateString
+			if dateString
+				p.subtitle.is-6= dateString
 
