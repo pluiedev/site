@@ -1,0 +1,40 @@
+@use "sass:color"
+@use "../vars" as v
+
+@mixin highlighter
+	z-index: -10
+	position: absolute
+	top: 0
+	bottom: 0
+	left: -0.2em
+	right: -0.2em
+	transform: translateX(if(v.$rtl, 50%, -50%)) scaleX(0) skew(-8.5deg)
+	transition: transform 0.25s
+	background-color: color.scale(v.$primary, $alpha: -40%)
+
+a:not(.nohl)
+	// prevent links from breaking into multiple parts
+	// and breaking the animation.
+	white-space: nowrap
+
+	position: relative
+	z-index: 2
+
+	&::after
+		+highlighter
+		content: ""
+
+	&.is-active
+		color: v.$link-hover
+
+	&.is-active::after,
+	&:hover::after
+		transform: translateX(0%) scaleX(if(v.$rtl, -100%, 100%)) skew(-8.5deg)
+
+// TODO: dehardcode this?
+footer a
+	color: rgb(182, 200, 255)
+
+#navbar a
+	margin: 0.5rem 0.5rem
+	font-size: 1.5rem
