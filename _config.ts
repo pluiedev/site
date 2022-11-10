@@ -4,6 +4,7 @@ import minify_html from "lume/plugins/minify_html.ts";
 import sass from "lume/plugins/sass.ts";
 import imagick from "lume/plugins/imagick.ts";
 import pug from "lume/plugins/pug.ts";
+import inline from "lume/plugins/inline.ts";
 
 // remark plugins
 import remark from "lume/plugins/remark.ts";
@@ -33,6 +34,7 @@ site
 	.use(sass())
 	.use(imagick())
 	.use(pug())
+	.use(inline())
 	.use(
 		postcss({
 			keepDefaultPlugins: true,
