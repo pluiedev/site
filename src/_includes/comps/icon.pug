@@ -2,10 +2,11 @@ mixin icon(icon)
 	if icon
 		span.icon
 			//- Font Awesome icons
-			if icon.startsWith("fa")
-				i(class=icon)
+			if typeof(icon) === "string"
+				if icon.startsWith("fa")
+					i(class=icon)
 			else
-				img(src=icon alt=attribs && attribs.alt)
+				img(src=icon.src alt=icon.alt height=icon.height width=icon.width)
 
 
 mixin icon-with-text(icon)

@@ -9,12 +9,11 @@ $link-hover: hsl(225, 40%, 98%);
 $pale: mix($primary, $white, 10);
 
 $custom-colors: (
-	discord: #5865f2,
 	youtube: #d02525,
-	twitter: rgb(29, 155, 240),
-	github: rgb(250, 250, 250),
+	twitter: #0077d6,
+	github: #fafafa,
 	pronouns-page: #c71585,
-	mastodon: #3088d4,
+	blurple: #5865f2,
 );
 
 $code: darken(saturate($primary, 25%), 25%);
