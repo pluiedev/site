@@ -23,8 +23,8 @@ More things I like include dogs and traffic cones. And linguistics.
 Especially <abbr title="constructed languages (languages intentionally created by people)">conlangs</abbr>.
 They're _very_ cool.
 
-I'm transgender 🏳️‍⚧️, transfeminine and lesbian, and I use feminine pronouns
-(she/her/她) -- please keep that in mind before interacting with me,
+I'm transfeminine :transgender_flag: and lesbian, and I use she/her/她 pronouns --
+please keep that in mind before interacting with me,
 as I can only respect you if you respect me first.
 [Here's my `pronouns.page` page for more information :>](https://pronouns.page/@pluiedev)
 

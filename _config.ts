@@ -8,6 +8,7 @@ import pug from "lume/plugins/pug.ts";
 // remark plugins
 import remark from "lume/plugins/remark.ts";
 import emoji from "npm:remark-emoji";
+import a11yEmoji from "npm:@fec/remark-a11y-emoji";
 import smartyPants from "npm:@ngsctt/remark-smartypants";
 
 // postcss plugins
@@ -25,7 +26,7 @@ const site = lume({
 site
 	.use(
 		remark({
-			remarkPlugins: [emoji, smartyPants],
+			remarkPlugins: [emoji, a11yEmoji, smartyPants],
 		})
 	)
 	.use(minify_html())
