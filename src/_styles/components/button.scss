@@ -25,6 +25,7 @@
 	}
 }
 
+/*! purgecss start ignore */
 #copy-email {
 	transition: 0.25s;
 
@@ -36,3 +37,4 @@
 	@include success-state("true", "success", "\f00c");
 	@include success-state("false", "danger", "\f00d");
 }
+/*! purgecss end ignore */
