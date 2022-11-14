@@ -1,7 +1,7 @@
-@import "styles/derived-vars";
+@import "derived-vars";
 @import "../_bulma/sass/utilities/_all.sass";
-@import "styles/fonts";
-@import "styles/layout";
+@import "fonts";
+@import "layout";
 
 @import "../_bulma/sass/base/_all.sass";
 @import "../_bulma/sass/components/media.sass";
@@ -11,4 +11,4 @@
 @import "../_bulma/sass/helpers/_all.sass";
 @import "../_bulma/sass/layout/section.sass";
 
-@import "styles/components/_all";
+@import "components/_all";
