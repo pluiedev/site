@@ -31,7 +31,11 @@ site
 		})
 	)
 	.use(minify_html())
-	.use(sass())
+	.use(
+		sass({
+			includes: ["_styles"],
+		})
+	)
 	.use(imagick())
 	.use(pug())
 	.use(inline())
