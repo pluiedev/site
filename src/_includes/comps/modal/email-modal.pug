@@ -14,11 +14,8 @@ include modal
 					h17271i93@23pl2uie24.982me
 
 				noscript
-					style.
-						#copy-email {
-							display: none;
-						}
 					+button()(
+						style="display: none;"
 						type="primary"
 						id="copy-email-noscript"
 						disabled
@@ -28,6 +25,7 @@ include modal
 				+button()(
 					type="primary"
 					id="copy-email"
+					class="has-successful-states"
 					title="Copy sanitized address to clipboard"
 				) Copy sanitized address to clipboard
 			p.

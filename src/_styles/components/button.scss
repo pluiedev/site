@@ -1,32 +1,7 @@
 @use "sass:map";
 @use "sass:list";
 
-@mixin success-state($state, $color-name, $char) {
-	$colors: map.get($colors, $color-name);
-	$color: list.nth($colors, 1);
-	$color-invert: list.nth($colors, 2);
-
-	&[data-success="#{$state}"] {
-		background-color: $color;
-		color: $color-invert;
-		pointer-events: none;
-
-		&:focus,
-		&.is-focused {
-			border-color: transparent;
-			color: $color-invert;
-			&:not(:active) {
-				box-shadow: $button-focus-box-shadow-size bulmaRgba($color, 0.25);
-			}
-		}
-		&::after {
-			content: $char;
-		}
-	}
-}
-
-/*! purgecss start ignore */
-#copy-email {
+@mixin dynamic-button($states...) {
 	transition: 0.25s;
 
 	&::after {
@@ -34,7 +9,38 @@
 		margin-left: 0.5rem;
 	}
 
-	@include success-state("true", "success", "\f00c");
-	@include success-state("false", "danger", "\f00d");
+	@each $state in $states {
+		$name: list.nth($state, 1);
+		$color-name: list.nth($state, 2);
+		$char: list.nth($state, 3);
+
+		$color-list: map.get($colors, $color-name);
+		$color: list.nth($color-list, 1);
+		$color-invert: list.nth($color-list, 2);
+
+		&[data-state="#{$name}"] {
+			background-color: $color;
+			color: $color-invert;
+			pointer-events: none;
+
+			&:focus,
+			&.is-focused {
+				border-color: transparent;
+				color: $color-invert;
+				&:not(:active) {
+					box-shadow: $button-focus-box-shadow-size bulmaRgba($color, 0.25);
+				}
+			}
+			&::after {
+				content: $char;
+			}
+		}
+	}
 }
+
+/*! purgecss start ignore */
+.button.has-successful-states {
+	@include dynamic-button(true success "\f00c", false danger "\f00d");
+}
+
 /*! purgecss end ignore */

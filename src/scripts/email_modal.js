@@ -3,9 +3,9 @@
 
 	function conclude(success) {
 		button.classList.remove("is-loading");
-		button.dataset.success = success;
+		button.dataset.state = success;
 		setTimeout(() => {
-			delete button.dataset.success;
+			delete button.dataset.state;
 		}, 1500);
 	}
 	button.onclick = () => {

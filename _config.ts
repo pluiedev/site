@@ -58,6 +58,7 @@ site
 			});
 		})
 	)
-	.copy("assets", ".");
+	.copy("assets", ".")
+	.copy("scripts", "scripts");
 
 export default site;
