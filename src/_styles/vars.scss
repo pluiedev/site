@@ -17,6 +17,9 @@ $custom-colors: (
 	blurple: #5865f2,
 );
 
+$background: $white-ter;
+$body-background-color: $primary-dark;
+
 $code: darken(saturate($primary, 25%), 25%);
 $code-size: 1em;
 $code-padding: 0.1em 0.4em 0.1em 0.4em;
@@ -40,6 +43,4 @@ $content-heading-color: $text-strong;
 $content-heading-weight: $weight-semibold;
 $content-heading-line-height: 1.125;
 
-$background: $white-ter;
-$body-background-color: $primary-dark;
 $footer-background-color: $primary-dark;
