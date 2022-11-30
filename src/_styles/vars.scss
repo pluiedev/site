@@ -1,4 +1,5 @@
 @use "sass:map";
+@import "fonts";
 @import "../_bulma/sass/utilities/initial-variables.sass";
 
 $primary: hsl(299, 76%, 38%);
@@ -20,11 +21,25 @@ $code: darken(saturate($primary, 25%), 25%);
 $code-size: 1em;
 $code-padding: 0.1em 0.4em 0.1em 0.4em;
 
-$background: $white-ter;
-$body-background-color: $primary-dark;
-
 $column-gap: 0.75rem;
 
-$family-primary: "IBM Plex Sans", "Helvetica Neue", "Helvetica", "Arial",
-	sans-serif;
-$family-monospace: "IBM Plex Mono", "Iosevka", "JetBrains Mono", monospace;
+$family-sans-serif: join(
+	"IBM Plex Sans",
+	$family-sans-serif,
+	$separator: "comma"
+);
+$family-monospace: join(
+	("IBM Plex Mono", "Iosevka", "JetBrains Mono"),
+	$family-monospace,
+	$separator: "comma"
+);
+
+@import "../_bulma/sass/utilities/derived-variables.sass";
+
+$content-heading-color: $text-strong;
+$content-heading-weight: $weight-semibold;
+$content-heading-line-height: 1.125;
+
+$background: $white-ter;
+$body-background-color: $primary-dark;
+$footer-background-color: $primary-dark;

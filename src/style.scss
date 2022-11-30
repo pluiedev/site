@@ -1,14 +1,4 @@
-@import "derived-vars";
-@import "../_bulma/sass/utilities/_all.sass";
-@import "fonts";
-@import "layout";
-
-@import "../_bulma/sass/base/_all.sass";
-@import "../_bulma/sass/components/media.sass";
-@import "../_bulma/sass/components/modal.sass";
-@import "../_bulma/sass/components/pagination.sass";
-@import "../_bulma/sass/elements/_all.sass";
-@import "../_bulma/sass/helpers/_all.sass";
-@import "../_bulma/sass/layout/section.sass";
+@import "vars";
+@import "../_bulma/bulma.sass";
 
 @import "components";
