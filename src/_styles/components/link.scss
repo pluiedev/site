@@ -13,10 +13,6 @@
 }
 
 a:not(.nohl) {
-	// prevent links from breaking into multiple parts
-	// and breaking the animation.
-	white-space: nowrap;
-
 	position: relative;
 	z-index: 2;
 

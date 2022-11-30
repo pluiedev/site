@@ -3,15 +3,20 @@
 
 $body-family: $family-primary !default;
 $code-family: $family-code !default;
+$body-size: 16px !default;
 
 html {
 	&,
 	body {
 		font-family: $body-family;
+		font-size: $body-size;
 		min-height: 100vh;
+		line-height: 1.5;
 		margin: 0;
 		display: flex;
 		flex-direction: column;
+		-moz-text-size-adjust: 100%;
+		text-size-adjust: 100%;
 	}
 	code,
 	pre {
