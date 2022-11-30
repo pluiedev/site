@@ -1,13 +1,8 @@
 include icon
 
 mixin --button-inner(attribs)
-	-
-		const classes = typeof attribs.class === "string"
-			? [attribs.class]
-			: (attribs.class || [])
-
-	div(
-		class=["button", `is-${attribs.type}`, ...classes]
+	div.button(
+		class=attribs.class
 		disabled=attribs.disabled
 		id=attribs.id
 		title=attribs.title

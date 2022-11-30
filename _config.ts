@@ -42,10 +42,9 @@ site
 			keepDefaultPlugins: true,
 			plugins: [
 				purgecss({
+					keyframes: true,
+					variables: true,
 					content: ["./**/*.html", "./**/*.pug"],
-					safelist: {
-						greedy: [/button/],
-					},
 				}),
 			],
 		})
