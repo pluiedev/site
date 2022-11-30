@@ -5,3 +5,9 @@
 .button {
 	font-weight: bold;
 }
+ul.pagination-list {
+	margin-top: 0em !important;
+	li + li {
+		margin-top: 0em !important;
+	}
+}

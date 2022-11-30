@@ -20,10 +20,6 @@ article.blog-post {
 	> .title,
 	> .subtitle > a {
 		color: $primary;
-
-		&:hover {
-			color: lighten($link-hover, 5%);
-		}
 	}
 	> :last-child {
 		margin-bottom: 0rem;
