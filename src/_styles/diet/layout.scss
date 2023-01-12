@@ -1,5 +1,6 @@
 // @import "../_bulma/sass/base/generic.sass";
-@import "../_bulma/sass/utilities/mixins.sass";
+@import "../_bulma/sass/utilities/mixins";
+@import "../_bulma/sass/layout/footer";
 
 $body-family: $family-primary !default;
 $code-family: $family-code !default;
@@ -23,50 +24,86 @@ html {
 		font-family: $code-family;
 	}
 }
-main {
-	background-color: $white;
-	padding: 5rem 4.5rem 3rem 2rem !important;
 
-	@include touch {
-		padding: 5rem 3rem 3rem 3rem !important;
+#main-container {
+	background-color: $white;
+	min-height: 65vh;
+	&:last-child {
+		margin-bottom: initial !important;
 	}
 }
 
-footer {
-	background-color: $footer-background-color;
-	flex: 1;
-	color: $grey-lightest;
-	padding: 3rem 3rem 4rem 3rem;
-}
+$outer-padding: 6rem;
+$inner-padding: 2rem;
+$separator-length: 7.5rem;
+$separator-width: 1px;
+$separator-margin: 2em;
 
-#main-container:last-child {
-	margin-bottom: initial !important;
-}
-#navbar-container {
+$main-vertical-pad: 5rem;
+$navbar-vertical-pad-desktop: 3rem;
+
+main {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	padding: 2rem 1rem 2rem 3.5rem;
-	background-color: $pale;
+	padding: $main-vertical-pad $outer-padding $main-vertical-pad $inner-padding !important;
 
 	@include touch {
-		padding: 2rem !important;
-	}
-
-	figure {
-		margin: 1.5rem;
-	}
-	hr {
-		background-color: $grey-light;
-		width: 70%;
+		padding: $outer-padding 5rem !important;
 	}
 }
-#navbar {
-	flex-direction: column;
+
+#navbar-container {
+	display: flex;
 	align-items: center;
+	background-color: $pale;
+	flex-direction: column;
+	padding: 3rem $inner-padding 3rem $outer-padding;
+
+	figure {
+		width: 12.5rem;
+	}
+	.separator {
+		height: $separator-width;
+		width: $separator-length;
+		margin: $separator-margin 0rem;
+		border: 1px solid $grey-light;
+	}
 
 	@include touch {
 		flex-direction: row;
-		justify-content: center;
+		justify-content: space-between;
+		padding: $inner-padding 1rem;
+
+		figure {
+			margin-left: $inner-padding;
+			width: $separator-length;
+		}
+		.separator {
+			width: $separator-width;
+			height: $separator-length;
+			margin: 0rem $separator-margin;
+		}
+	}
+}
+#navbar {
+	display: flex;
+	flex-grow: 2;
+	flex-direction: column;
+	align-items: center;
+	padding: 0;
+
+	a {
+		margin: 0.5rem 0rem;
+		font-size: 1.5rem;
+	}
+
+	@include touch {
+		flex-direction: row;
+		justify-content: right;
+		margin-right: $inner-padding;
+
+		a {
+			margin-left: 2rem;
+		}
 	}
 }
