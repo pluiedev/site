@@ -1,30 +1,19 @@
-@use "sass:map";
-@import "fonts";
-@import "../_bulma/sass/utilities/initial-variables.sass";
+@import "../_bulma/sass/utilities/initial-variables";
 
-$primary: hsl(299, 76%, 38%);
+$primary: hsl(337, 65%, 55%);
 $primary-dark: darken($primary, 20%);
 $turquoise: #34d4c4;
 $link: hsl(226, 58%, 55%);
-$link-hover: hsl(225, 40%, 98%);
-$pale: mix($primary, $white, 10);
+$link-hover: $link;
+$pale: mix($primary, $white, 10%);
 
 $custom-colors: (
-	youtube: #d02525,
-	twitter: #0077d6,
-	github: #fafafa,
-	pronouns-page: #c71585,
-	blurple: #5865f2,
+  youtube: #d02525,
+  twitter: #0077d6,
+  github: #fafafa,
+  pronouns-page: #c71585,
+  blurple: #5865f2,
 );
-
-$background: $white-ter;
-$body-background-color: $primary-dark;
-
-$code: darken(saturate($primary, 25%), 25%);
-$code-size: 1em;
-$code-padding: 0.1em 0.4em 0.1em 0.4em;
-
-$column-gap: 0.75rem;
 
 $family-sans-serif: join(
 	"IBM Plex Sans",
@@ -37,12 +26,9 @@ $family-monospace: join(
 	$separator: "comma"
 );
 
-@import "../_bulma/sass/utilities/derived-variables.sass";
+@import "../_bulma/sass/utilities/derived-variables";
 
-$content-heading-color: $text-strong;
-$content-heading-weight: $weight-semibold;
-$content-heading-line-height: 1.125;
-
+$navbar-height: 4rem;
 $footer-background-color: $primary-dark;
-$footer-color: $grey-lightest;
-$footer-padding: 4rem 2rem 4rem;
+$footer-color: $white;
+$body-background-color: $primary-dark;

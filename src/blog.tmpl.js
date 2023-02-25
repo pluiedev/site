@@ -1,11 +1,11 @@
-export const layout = "post-list.pug";
+export const layout = "layouts/post-list.pug";
 
 const RANGE = 2;
 
 export default function* ({ search, paginate }) {
 	const pages = search.pages("post");
 	const options = {
-		url: (n) => `/blog/${n}/`,
+		url: (n) => n == 1 ? `/blog/` : `/blog/${n}/`,
 		size: 5,
 	};
 	const pagination = paginate(pages, options);

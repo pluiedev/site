@@ -14,5 +14,5 @@ then
 		$BULMA_DIR
 
 	cd $BULMA_DIR
-	git sparse-checkout set /sass
+	git sparse-checkout set sass
 fi

@@ -44,16 +44,10 @@ site
 				purgecss({
 					keyframes: true,
 					variables: true,
+					safelist: [/has-text-(youtube|twitter)/],
 					content: ["./**/*.html", "./**/*.pug"],
 				}),
 			],
-		})
-	)
-	.use((site: Site) =>
-		site.preprocess([".md"], (page: Page) => {
-			page.data.dateString = datetime(page.data.date).toDateTimeFormat({
-				dateStyle: "long",
-			});
 		})
 	)
 	.copy("assets", ".")

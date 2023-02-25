@@ -1,4 +1,4 @@
-layout: post.pug
+layout: layouts/post.pug
 tags:
   - post
 category: blog

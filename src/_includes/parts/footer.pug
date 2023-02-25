@@ -1,0 +1,18 @@
+-
+	const currentYear = new Date().getFullYear();
+	const firstYear = 2022;
+	const yearText =
+		currentYear > firstYear
+		? `${firstYear}–${currentYear}`
+		: `${firstYear}`;
+
+footer.footer
+	.content.has-text-centered
+		p © #{yearText} Leah Amelia “pluie” Chen
+		p.
+			Source code is licensed under #[a(href="https://www.mozilla.org/MPL") the Mozilla Public License]
+			and available on #[a(href="https://github.com/pluiedev/site") GitHub].
+			#[br]
+			Content is licensed under #[a(href="https://creativecommons.org/licenses/by-sa/4.0/") CC BY-SA 4.0].
+
+		p Made with #[a(href="https://bulma.io") Bulma], 💜, caffeine, and estrogen pills.

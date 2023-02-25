@@ -1,12 +1,21 @@
-img.is-rounded {
-	border-radius: 99999px;
+
+/*! purgecss start ignore */
+.main {
+  background-color: $scheme-main;
+  &.is-medium {
+    padding: 4.5rem 4.5rem 9rem !important;
+  }
 }
-.button {
-	font-weight: bold;
+
+#avatar {
+  width: 320px;
+  height: 320px;
+  img {
+    border: 2px $primary solid;
+    border-radius: $radius-rounded;
+  }
+  @include desktop {
+    float: right;
+  }
 }
-ul.pagination-list {
-	margin-top: 0em !important;
-	li + li {
-		margin-top: 0em !important;
-	}
-}
+/*! purgecss end ignore */

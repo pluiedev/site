@@ -1,0 +1,14 @@
+@include touch {
+	#navbar-toggle:checked ~ {
+		.navbar-menu {
+			display: block;
+		}
+
+		@for $i from -1 through 1 {
+			* label[for="navbar-toggle"] span:nth-child(#{$i + 2}) {
+				transform: translateY($i * -5px) rotate($i * -45deg);
+				opacity: abs($i * 100%);
+			}
+		}
+	}
+}
