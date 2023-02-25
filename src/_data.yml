@@ -1,4 +1,4 @@
-layout: default.pug
+layout: layouts/default.pug
 
 switches:
   email: email-modal
@@ -9,7 +9,7 @@ categories:
     url: /
   blog:
     title: Blog
-    url: /blog/1/
+    url: /blog/
   works:
     title: Works
     url: /works/

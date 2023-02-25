@@ -1,36 +1,34 @@
 @use "sass:color";
 
-@mixin highlighter {
-	z-index: -10;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: -0.2em;
-	right: -0.2em;
-	transform: translateX(if($rtl, 50%, -50%)) scaleX(0) skew(-8.5deg);
-	transition: transform 0.25s;
-	background-color: color.scale($primary, $alpha: -40%);
+$link-highlighter-color: $primary !default;
+$footer-link-color: hsl(226, 92%, 81%) !default;
+
+@mixin highlighter($color, $angle: 8.5deg, $opacity: 40%) {
+  &::after {
+    content: "";
+    z-index: -10;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -0.2em;
+    right: -0.2em;
+    transform: translateX(50% * if($rtl, 1, -1)) scaleX(0) skew($angle);
+    transition: transform 0.25s;
+    background-color: $color;
+    opacity: $opacity;
+  }
+  &:hover::after {
+    transform: translateX(0%) scaleX(100% * if($rtl, 1, -1)) skew($angle);
+  }
 }
 
-a:not(.nohl) {
-	position: relative;
-	z-index: 2;
+.content a {
+  position: relative;
+  z-index: 3;
+  white-space: nowrap;
+  @include highlighter($link-highlighter-color);
 
-	&::after {
-		@include highlighter();
-		content: "";
-	}
-
-	&.is-active {
-		color: $link-hover;
-	}
-
-	&.is-active::after,
-	&:hover::after {
-		transform: translateX(0%) scaleX(if($rtl, -100%, 100%)) skew(-8.5deg);
-	}
-}
-
-footer a {
-	color: rgb(182, 200, 255);
+  footer & {
+    color: $footer-link-color;
+  }
 }

@@ -1,29 +1,32 @@
 ---
-title: Hello!
+title: Heya~
 ---
 
-<h1 class="title is-2">
+<figure id="avatar" class="image mx-6 mb-4">
+	<img src="/img/avatar.webp" alt="My avatar" />
+</figure>
 
-Heya~ I'm <span class="has-text-primary">Leah</span>!
-
+<h1 class="title is-1">
+	Heya~ I'm <span class="has-text-primary">Leah</span>!
 </h1>
-<h2 class="subtitle is-5">
+<p class="subtitle is-4">
+	You may know me by my online aliases,
+	<span class="has-text-primary">pluie</span> or
+	<span class="has-text-primary">pluiedev</span>.
+</p>
 
-You may know me better by my screen name,
-<span class="has-text-primary">pluie</span>
-or <span class="has-text-primary">pluiedev</span>.
-
-</h2>
-
-I'm a community moderator :hammer: / coder :computer: / amateur artist :art: /
-procrastinator :zzz: / etc. from China.
+I'm a Chinese open-source developer :female-technologist:, community manager
+:hammer::female-construction-worker:, graphics designer and artist :female-artist:,
+dedicated to making the world of digital technology and design accessible and
+inclusive for everyone.
 
 I like to code, to draw, to discover myself, and to help others discover themselves.
 More things I like include dogs and traffic cones. And linguistics.
-Especially <abbr title="constructed languages (languages intentionally created by people)">conlangs</abbr>.
+Especially <abbr title="constructed languages, or languages intentionally created by people">conlangs</abbr>.
 They're _very_ cool.
 
-I'm transfeminine :transgender_flag: and lesbian, and I use she/her/她 pronouns --
+
+I'm a lesbian trans woman :transgender_flag: and I use she/her/她 pronouns --
 please keep that in mind before interacting with me,
 as I can only respect you if you respect me first.
 [Here's my `pronouns.page` page for more information :>](https://pronouns.page/@pluiedev)

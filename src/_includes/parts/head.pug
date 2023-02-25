@@ -1,11 +1,20 @@
-include deferred-stylesheets
+mixin deferred-stylesheets(...hrefs)
+	each href in hrefs
+		link(
+			rel="preload"
+			href=href
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		)
+	noscript
+		each href in hrefs
+			link(rel="stylesheet" href=href)
 
 head 
 	meta(charset="utf-8")
 	meta(name="viewport" content="width=device-width, initial-scale=0.75")
 	meta(name="description" content="The homepage of pluie/pluiedev!")
 
-	link(rel="stylesheet" href="/diet.css" inline)
 	link(rel="preconnect" href="https://fonts.bunny.net")
 	link(
 		rel="icon"
@@ -15,4 +24,4 @@ head
 	)
 	title= `${title} | pluie.me`
 
-	+deferred-stylesheets("/style.css")
+	+deferred-stylesheets("/style.css", "fontawesome.min.css")
