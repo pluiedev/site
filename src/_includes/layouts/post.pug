@@ -1,14 +1,13 @@
-extends base
+extends default
 include ../comps/button
 include ../comps/post-info
 
-block content
-	.blog-post.is-flex-grow-1
-		h1.title= title
-		+post-info(authors, dateString)
+block main-content
+	h1.title= title
+	+post-info(authors, date)
 
-		block post-content
-			!=content
+	block post-content
+		!=content
 
-	+button("/blog", "_self")(class="is-primary" icon="fas fa-arrow-left").
-		Other articles
+	+button("/blog", "_self")(icon="fas fa-arrow-left").is-primary
+		span Other articles

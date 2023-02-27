@@ -1,21 +1,42 @@
-
 /*! purgecss start ignore */
 .main {
-  background-color: $scheme-main;
-  &.is-medium {
-    padding: 4.5rem 4.5rem 9rem !important;
-  }
+	background-color: $scheme-main;
+	&.is-medium {
+		padding: 4.5rem 4.5rem !important;
+	}
+}
+
+.main-container {
+	flex-direction: column;
+	align-items: center;
+  min-height: 50vh;
+
+	@mixin centered {
+		display: flex;
+
+		.title,
+		.subtitle {
+			text-align: center;
+		}
+	}
+
+	&[centered] {
+		@include centered;
+	}
+	@include touch {
+		@include centered;
+	}
 }
 
 #avatar {
-  width: 320px;
-  height: 320px;
-  img {
-    border: 2px $primary solid;
-    border-radius: $radius-rounded;
-  }
-  @include desktop {
-    float: right;
-  }
+	width: 320px;
+	height: 320px;
+	img {
+		border: 2px $primary solid;
+		border-radius: $radius-rounded;
+	}
+	@include desktop {
+		float: right;
+	}
 }
 /*! purgecss end ignore */

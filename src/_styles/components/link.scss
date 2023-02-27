@@ -4,6 +4,8 @@ $link-highlighter-color: transparentize($primary, 0.75) !default;
 $footer-link-color: hsl(226, 92%, 81%) !default;
 
 .content a {
+  // adapted from https://stackoverflow.com/a/72459455
+  
 	--hl-thickness: 1rem;
 	--hl-strike: 0; 
   --hl-color: #{$link-highlighter-color};

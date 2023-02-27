@@ -1,10 +1,10 @@
-mixin icon(icon)
+mixin icon(icon, color)
 	if icon
-		span.icon
+		span.icon&attributes(attributes)
 			//- Font Awesome icons
 			if typeof(icon) === "string"
 				if icon.startsWith("fa")
-					i(class=icon)
+					i(class=[icon, color ? `has-text-${color}` : ""])
 			else
 				img(src=icon.src alt=icon.alt height=icon.height width=icon.width)
 

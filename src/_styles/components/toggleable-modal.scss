@@ -1,0 +1,7 @@
+.toggleable-modal input.modal-toggle {
+	display: none;
+
+	&:checked + .modal {
+		display: flex !important;
+	}	
+}
