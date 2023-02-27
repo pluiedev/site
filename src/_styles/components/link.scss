@@ -1,34 +1,24 @@
 @use "sass:color";
 
-$link-highlighter-color: $primary !default;
+$link-highlighter-color: transparentize($primary, 0.75) !default;
 $footer-link-color: hsl(226, 92%, 81%) !default;
 
-@mixin highlighter($color, $angle: 8.5deg, $opacity: 40%) {
-  &::after {
-    content: "";
-    z-index: -10;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -0.2em;
-    right: -0.2em;
-    transform: translateX(50% * if($rtl, 1, -1)) scaleX(0) skew($angle);
-    transition: transform 0.25s;
-    background-color: $color;
-    opacity: $opacity;
-  }
-  &:hover::after {
-    transform: translateX(0%) scaleX(100% * if($rtl, 1, -1)) skew($angle);
-  }
-}
-
 .content a {
-  position: relative;
-  z-index: 3;
-  white-space: nowrap;
-  @include highlighter($link-highlighter-color);
+	--hl-thickness: 1rem;
+	--hl-strike: 0; 
+  --hl-color: #{$link-highlighter-color};
 
-  footer & {
-    color: $footer-link-color;
-  }
+	background: linear-gradient(0deg, transparent, var(--hl-color) 0) no-repeat
+		right center / calc(var(--hl-strike) * 100%) var(--hl-thickness);
+	transition: background-size 0.2s ease;
+
+	&:hover {
+		--hl-strike: 1;
+		background-position-x: left;
+	}
+
+	footer & {
+    --hl-color: hsla(53, 100%, 63%, 0.25);
+		color: $footer-link-color;
+	}
 }

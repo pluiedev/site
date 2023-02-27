@@ -4,33 +4,36 @@ include ../comps/icon
 
 block content
 	section.main.section
-		h1.title.is-2.mb-6 Blog
+		.container.is-max-desktop.is-flex-touch.is-flex-direction-column.is-align-items-center
+			h1.title.is-2.mb-6 Blog
 
-		section#posts.section.content.container
-			each post in results
-				+post-embed(post)
+			section#posts.section.content.container
+				each post in results
+					+post-embed(post)
 
-		nav.pagination.is-centered(role="navigation" aria-label="pagination")
-			a.nohl.pagination-previous(
-				disabled=!pagination.previous
-				href=pagination.previous
-			)
-				+icon-with-text("fas fa-angle-left") Prev
+			nav.pagination.is-centered(role="navigation" aria-label="pagination")
+				a.pagination-previous(
+					disabled=!pagination.previous
+					href=pagination.previous
+				)
+					span.icon-text
+						+icon("fas fa-angle-left")
+						span Prev
 
-			a.nohl.pagination-next(
-				disabled=!pagination.next
-				href=pagination.next
-			)
-				+icon-with-text("fas fa-angle-right") Next
+				a.pagination-next(
+					disabled=!pagination.next
+					href=pagination.next
+				)
+					span.icon-text
+						span Next
+						+icon("fas fa-angle-right")
 
-			ul.pagination-list
-				each num in indices
-					li
-						if num > 0
-							a(
-								class=["nohl", "pagination-link", num == pagination.page && "is-current"]
-								aria-label=`Goto page ${num}`
-								href=url
-							)= num
-						else
-							span.pagination-ellipsis &hellip;
+				ul.pagination-list
+					each num in indices
+						li
+							if num == pagination.page
+								a.pagination-link.is-current(href=url)= num
+							else if num > 0
+								a.pagination-link(href=url)= num
+							else
+								span.pagination-ellipsis &hellip;
