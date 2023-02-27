@@ -4,13 +4,13 @@ include ../comps/icon
 
 block content
 	section.main.section
-		.container.is-max-desktop.is-flex-touch.is-flex-direction-column.is-align-items-center
-			h1.title.is-2.mb-6 Blog
+		.container.is-max-desktop.main-container(centered=centered)
+			h1.title.is-2 Blog
 
-			section#posts.section.content.container
+			.section
 				each post in results
 					+post-embed(post)
-
+			
 			nav.pagination.is-centered(role="navigation" aria-label="pagination")
 				a.pagination-previous(
 					disabled=!pagination.previous

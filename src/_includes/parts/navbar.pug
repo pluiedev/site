@@ -1,18 +1,16 @@
+include ../comps/icon
+include ../comps/modal/modal-button
+
 mixin navbar-link(link, icon, color)
 	a.navbar-item.is-flex(href=link target="_blank")
-		span.icon.mr-1(aria-hidden=true)
-			if icon.startsWith("fa")
-				i(class=[icon, color ? `has-text-${color}` : ""])
-			else
-				img(src=icon)
-
+		+icon(icon, color)(aria-hidden=true).mr-1
 		block
 
 nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
 	input#navbar-toggle.is-hidden(type="checkbox")
 	
 	.navbar-brand
-		a.navbar-item.py-0(href="/"): img(src="/icons/wordmark.svg")
+		a.navbar-item.py-0(href="/"): img(src="/icons/wordmark.svg" alt="pluie.me")
 		
 		label.navbar-burger(for="navbar-toggle" role="button" aria-label="menu")
 			//- Three empty spans here for rendering the burger icon
@@ -22,8 +20,8 @@ nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
 		
 	.navbar-menu
 		.navbar-start
-			a.navbar-item(href="/blog") Blog
-			a.navbar-item(href="/works") Works
+			each category in categories
+				a.navbar-item(href=category.url)= category.title
 
 			.navbar-item.has-dropdown.is-hoverable
 				a.navbar-link Contact / Links
@@ -31,7 +29,7 @@ nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
 				.navbar-dropdown
 					+navbar-link("https://youtube.com/@pluiedev", "fab fa-youtube", "youtube")
 						span YouTube
-					+navbar-link("https://pronouns.page/@pluiedev", "/icons/pronouns-page.svg")
+					+navbar-link("https://pronouns.page/@pluiedev", { src: "/icons/pronouns-page.svg", alt: "pronouns.page logo"})
 						span pronouns.page
 					+navbar-link("https://discord.gg/NeNfePzCx8", "fab fa-discord", "blurple")
 						span Discord Server
@@ -40,10 +38,10 @@ nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
 					+navbar-link("https://space.bilibili.com/401096522", "fab fa-bilibili", "twitter")
 						span Bilibili
 
-					//- +modal-button(switches.email)(
-					//- 	icon="fas fa-envelope"
-					//- 	title="Email"
-					//- ) Email
+					label(tabindex="0" role="button" for=switches.email)
+						a.navbar-item.is-flex
+							+icon("fas fa-envelope")(aria-hidden=true).mr-1
+							span Email
 						
 				 
 		

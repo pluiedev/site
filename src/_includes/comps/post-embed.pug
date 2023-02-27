@@ -1,12 +1,15 @@
 include post-info
 
 mixin post-embed(post)
-	article.blog-post.with-divider
-		- const href = post.dest.path.match(/(.+)\/index/)[1]
-		h2.subtitle
-			a(href=href)= post.data.title
-
-		+post-info(post.data.authors, post.data.dateString)
-
-		- const content = post.data.content;
-		!= content.slice(0, content.indexOf("<!-- MORE -->"))
+	article.card
+		.card-content
+			- const href = post.dest.path.match(/(.+)\/index/)[1]
+			
+			.media
+				.media-content
+					h2.title
+						a(href=href)= post.data.title
+					+post-info(post.data.authors, post.data.date)
+			.content
+				- const content = post.data.content;
+				!= content.slice(0, content.indexOf("<!-- MORE -->"))

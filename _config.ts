@@ -1,10 +1,10 @@
 import lume from "lume/mod.ts";
-import { Page, Site } from "lume/core.ts";
 import minify_html from "lume/plugins/minify_html.ts";
 import sass from "lume/plugins/sass.ts";
 import imagick from "lume/plugins/imagick.ts";
 import pug from "lume/plugins/pug.ts";
 import inline from "lume/plugins/inline.ts";
+import date from "lume/plugins/date.ts"
 
 // remark plugins
 import remark from "lume/plugins/remark.ts";
@@ -15,8 +15,6 @@ import smartyPants from "npm:@ngsctt/remark-smartypants";
 // postcss plugins
 import postcss from "lume/plugins/postcss.ts";
 import purgecss from "npm:@fullhuman/postcss-purgecss";
-
-import { datetime } from "https://deno.land/x/ptera@v1.0.2/mod.ts";
 
 const site = lume({
 	src: "./src",
@@ -37,6 +35,7 @@ site
 	.use(imagick())
 	.use(pug())
 	.use(inline())
+	.use(date())
 	.use(
 		postcss({
 			keepDefaultPlugins: true,

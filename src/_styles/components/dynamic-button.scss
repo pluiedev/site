@@ -4,9 +4,8 @@
 @mixin dynamic-button($states...) {
 	transition: 0.25s;
 
-	&::after {
-		font-family: "Font Awesome 6 Free";
-		margin-left: 0.5rem;
+	.is-state-specific {
+		display: none;
 	}
 
 	@each $state in $states {
@@ -31,8 +30,8 @@
 					box-shadow: $button-focus-box-shadow-size bulmaRgba($color, 0.25);
 				}
 			}
-			&::after {
-				content: $char;
+			.is-state-specific.is-#{$name} {
+				display: initial;
 			}
 		}
 	}
