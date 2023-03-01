@@ -3,16 +3,22 @@
 $primary: hsl(337, 65%, 55%);
 $primary-dark: darken($primary, 20%);
 $turquoise: #34d4c4;
-$link: hsl(226, 58%, 55%);
+$link: lighten($primary, 5%);
 $link-hover: $link;
 $pale: mix($primary, $white, 10%);
 
+$youtube: #d02525;
+$twitter: #0077d6;
+$github: #fafafa;
+$pronouns-page: #c71585;
+$blurple: #5865f2;
+
 $custom-colors: (
-  youtube: #d02525,
-  twitter: #0077d6,
-  github: #fafafa,
-  pronouns-page: #c71585,
-  blurple: #5865f2,
+  youtube: $youtube,
+  twitter: $twitter,
+  github: $github,
+  pronouns-page: $pronouns-page,
+  blurple: $blurple,
 );
 
 $family-sans-serif: join(
@@ -32,3 +38,4 @@ $navbar-height: 4rem;
 $footer-background-color: $primary-dark;
 $footer-color: $white;
 $body-background-color: $primary-dark;
+$hr-background-color: $grey-lighter;

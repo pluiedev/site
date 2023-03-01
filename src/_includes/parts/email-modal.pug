@@ -1,24 +1,22 @@
 include ../comps/button
-include ../comps/modal/modal
+include ../comps/modal
+include ../comps/icon
 
 +modal(switches.email)
-	.content
-		section.box.p-5.has-text-centered
+	section.box.has-text-centered
+		.content
 			h1.title.is-3.has-text-primary.
 				#[i.fas.fa-envelope] Email
 			p.
 				To contact me by email, please send to the address below,
 				#[strong with all numbers removed].
-			.my-4
-				h1#obscured-email.title.is-5.has-text-primary.
+			.my-5
+				h1#obscured-email.title.is-4.has-text-primary.
 					h17271i93@23pl2uie24.982me
 					
 				+button()(
-					class="is-primary"
-					id="copy-email"
-					class="has-successful-states"
 					title="Copy sanitized address to clipboard"
-				)
+				)#copy-email.is-primary.has-successful-states
 					span.icon-text
 						span Copy sanitized address to clipboard 
 						+icon("fas fa-check").is-state-specific.is-true.mr-0

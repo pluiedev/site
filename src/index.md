@@ -8,6 +8,7 @@ title: Heya~
 
 <h1 class="title is-1">
 	Heya~ I'm <span class="has-text-primary">Leah</span>!
+	<span class="subtitle">· <a class="has-text-primary" href="https://pronouns.page/@pluiedev">she/her</a> 	<span aria-label="transgender flag" role="img">🏳️‍⚧️</span></span>
 </h1>
 <p class="subtitle is-4">
 	You may know me by my online aliases,
@@ -24,12 +25,6 @@ I like to code, to draw, to discover myself, and to help others discover themsel
 More things I like include dogs and traffic cones. And linguistics.
 Especially <abbr title="constructed languages, or languages intentionally created by people">conlangs</abbr>.
 They're _very_ cool.
-
-
-I'm a lesbian trans woman :transgender_flag: and I use she/her/她 pronouns --
-please keep that in mind before interacting with me,
-as I can only respect you if you respect me first.
-[Here's my `pronouns.page` page for more information :>](https://pronouns.page/@pluiedev)
 
 ## What I'm working on
 

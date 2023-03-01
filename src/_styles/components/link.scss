@@ -1,18 +1,19 @@
 @use "sass:color";
 
-$link-highlighter-color: transparentize($primary, 0.75) !default;
+$highlighter-color: hsla(52, 94%, 48%, 0.448) !default;
+$highlighter-thickness: 1.5rem;
 $footer-link-color: hsl(226, 92%, 81%) !default;
 
 .content a {
   // adapted from https://stackoverflow.com/a/72459455
-  
-	--hl-thickness: 1rem;
 	--hl-strike: 0; 
-  --hl-color: #{$link-highlighter-color};
 
-	background: linear-gradient(0deg, transparent, var(--hl-color) 0) no-repeat
-		right center / calc(var(--hl-strike) * 100%) var(--hl-thickness);
+	background: linear-gradient(0deg, transparent, $highlighter-color 0) no-repeat
+		right center / calc(var(--hl-strike) * 100%) $highlighter-thickness;
 	transition: background-size 0.2s ease;
+
+	text-decoration: underline 1px currentColor;
+	text-underline-offset: 5px;
 
 	&:hover {
 		--hl-strike: 1;
@@ -20,7 +21,6 @@ $footer-link-color: hsl(226, 92%, 81%) !default;
 	}
 
 	footer & {
-    --hl-color: hsla(53, 100%, 63%, 0.25);
 		color: $footer-link-color;
 	}
 }

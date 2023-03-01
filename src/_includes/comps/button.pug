@@ -1,19 +1,10 @@
-include icon
-
 mixin --button-inner(attribs)
-	div.button(
-		class=attribs.class
-		disabled=attribs.disabled
-		id=attribs.id
-		title=attribs.title
-		tabindex="-1"
-	)
-		+icon(attribs.icon)
+	.button(tabindex="-1")&attributes(attribs)
 		block
 
 mixin button(link, target="_blank")
 	if link
-		a.nohl(href=link target=target)
+		a(href=link target=target)
 			+--button-inner(attributes)
 				block
 	else
