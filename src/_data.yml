@@ -2,6 +2,7 @@ layout: layouts/default.pug
 
 switches:
   email: email-modal
+  contacts: contacts
 
 categories:
   blog:

@@ -23,7 +23,9 @@ nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
 			each category in categories
 				a.navbar-item(href=category.url)= category.title
 
-			.navbar-item.has-dropdown.is-hoverable
+			label(for=switches.contacts).navbar-item.has-dropdown.has-dropdown-toggle
+				input(id=switches.contacts type="checkbox").navbar-dropdown-toggle
+
 				a.navbar-link Contact / Links
 				
 				.navbar-dropdown
