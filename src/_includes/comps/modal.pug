@@ -1,6 +1,16 @@
-include ../icon
+mixin modal(id)
+	.toggleable-modal
+		input.modal-toggle(type="checkbox" id=id)
+		.modal
+			label.modal-background(for=id)
+
+			.modal-content
+				block
+				label.modal-close.is-large(for=id aria-label="close")
 
 mixin modal-button(modal)
+	include icon
+
 	label(tabindex="0" role="button" for=modal)
 		span(
 			disabled=attributes.disabled,

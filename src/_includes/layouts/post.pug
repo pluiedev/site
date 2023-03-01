@@ -1,13 +1,17 @@
 extends default
 include ../comps/button
 include ../comps/post-info
+include ../comps/icon
 
 block main-content
-	h1.title= title
-	+post-info(authors, date)
+	.is-flex.is-justify-content-space-between.is-align-items-center
+		div
+			h1.title= title
+			+post-info(authors, date)
+		+button("/blog", "_self").is-primary
+			+icon-with-text("fas fa-arrow-turn-up fa-flip-horizontal") Other articles
+	hr
 
 	block post-content
 		!=content
 
-	+button("/blog", "_self")(icon="fas fa-arrow-left").is-primary
-		span Other articles
