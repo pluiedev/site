@@ -1,0 +1,11 @@
+.langs {
+	&:not(:last-child) {
+		margin-bottom: 1.5rem;
+	}
+	.button {
+		width: 4rem;
+		height: 4rem;
+		padding: 0.3rem;
+		margin: 0.1rem;
+	}
+}
