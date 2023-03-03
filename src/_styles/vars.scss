@@ -4,7 +4,7 @@ $primary: hsl(337, 65%, 55%);
 $primary-dark: darken($primary, 20%);
 $turquoise: #34d4c4;
 $link: lighten($primary, 5%);
-$link-hover: $link;
+$link-hover: darken($primary, 10%);
 $pale: mix($primary, $white, 10%);
 
 $youtube: #d02525;

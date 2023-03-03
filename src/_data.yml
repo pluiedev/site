@@ -11,3 +11,39 @@ categories:
   works:
     title: Works
     url: /works/
+
+languages:
+  proficiently:
+    html5: HTML5
+    css3: CSS3
+    sass: Sass
+    bulma:
+      name: Bulma
+      variant: plain
+    javascript: JavaScript
+    typescript: TypeScript
+    denojs: Deno
+    rust:
+      name: Rust
+      variant: plain
+    java: Java
+    kotlin: Kotlin
+    vim: Vim
+    vscode: VSCode
+  adequately:
+    bash: Bash
+    c: C
+    cplusplus: C++
+    csharp: C#
+    gradle:
+      name: Gradle
+      variant: plain
+    lua: Lua
+    perl: Perl
+    python: Python
+    ruby: Ruby
+  rudimentally:
+    clojure: Clojure
+    haskell: Haskell
+    scala: Scala
+    
