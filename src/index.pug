@@ -1,99 +1,107 @@
 ---
 title: Heya~
+date: Git Last Modified
 ---
 
-	
-figure#avatar.image.mx-6.mb-4
+figure#avatar.image.mx-6.mb-6
 	img(src="/img/avatar.webp" alt="Avatar")
 
 h1.title.is-1
-	| Heya~ I'm #[span.has-text-primary Leah]!
+	| Heya~ &#8232;I'm #[span.has-text-primary Leah]!
 	span.subtitle
-		| · #[a.has-text-primary(href="https://pronouns.page/@pluiedev") she/her] 🏳️‍⚧️
+		span.mx-1 ·
+		a.has-text-primary(href="https://pronouns.page/@pluiedev") she/her 🏳️‍⚧️
 
 p.subtitle.is-4.
 	You may know me by my online aliases,
 	#[span.has-text-primary pluie] or #[span.has-text-primary pluiedev].
 
-p.
+:md
 	I'm a Chinese open-source developer 👩🏼‍💻,
 	community manager 🔨👷🏼‍♀️,
 	graphics designer and artist 👩🏼‍🎨,
 	dedicated to making the world of digital technology and design accessible and
 	inclusive for everyone.
 
-p.
 	I like to code, to draw, to discover myself, and to help others discover themselves.
 	More things I like include dogs and traffic cones. And linguistics.
-	Especially #[abbr(title="constructed languages, or languages intentionally created by people") conlangs].
-	They're #[em very] cool.
+	Especially <abbr title="constructed languages, or languages intentionally created by people">conlangs</abbr>.
+	They're _very_ cool.
+	
+	I also often think way too hard about narrative video games, to the point
+	I write full articles and reviews about them. I'm not exactly professional,
+	but I still try my best to figure out what does and doesn't tick!
 
-h2 Technologies I use
 
-mixin langs(...langs)
+mixin langs(langs)
 	.langs
-		each lang in langs
-			- const [id, name, variant = "original"] = lang;
-			button.button(title=name)
-				img(alt=alt src=`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${id}/${id}-${variant}.svg`)
+		each id in Object.keys(langs)
+			if (typeof langs[id] === "string")
+				+lang-button(id, langs[id], "original")
+			else
+				- const { name, variant } = langs[id];
+				+lang-button(id, name, variant)
+			
+mixin lang-button(id, name, variant)
+	button.button.has-tooltip-arrow(data-tooltip=name)
+		img(alt=name src=`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${id}/${id}-${variant}.svg`)
 
-h3 Proficiently
-+langs(
-	["css3", "CSS 3"],
-	["sass", "Sass"],
-	["bulma", "Bulma", "plain"],
-	["javascript", "JavaScript"],
-	["typescript", "TypeScript"],
-	["denojs", "Deno"],
-	["rust", "Rust", "plain"],
-	["java", "Java"],
-	["kotlin", "Kotlin"],
-	["vim", "Vim"],
-	["vscode", "VSCode"],
-)
+.columns.is-forced-max-width.mt-5.is-flex-direction-row-reverse
+	.column.mb-6
+		h2.title.is-4 Current endeavors
+		
+		p.subtitle.is-5 Up-to-date as of: #[em= filters.date(date, "HUMAN_DATE")]
+		:md
+			Currently, I'm spending most of my attention and energy on two things:
+			community management and moderation, and contributing to and creating various
+			open-source projects.
 
-h3 Adequately
-+langs(
-	["bash", "Bash"],
-	["c", "C"],
-	["cplusplus", "C++"],
-	["csharp", "C#"],
-	["gradle", "Gradle", "plain"],
-	["lua", "Lua"],
-	["perl", "Perl"],
-	["python", "Python"],
-	["ruby", "Ruby"],
-)
+			As a [community manager of the Quilt Project](https://quiltmc.org/about/teams/#community-managers),
+			a modding toolchain project primarily designed for Minecraft,
+			I work on policies, guidelines and tooling that drives Quilt towards its goal of creating a
+			healthy, diverse, multicultural community striving to accomodate all sorts of minorities,
+			be they ethnic or racial minorities, sexual and/or gender-nonconfirming minorities, neurodivergent minorities,
+			or any other group of people facing unique challenges and adversities in the wider world.
 
-h3 Rudimentally
-+langs(
-	["clojure", "Clojure"],
-	["haskell", "Haskell"],
-	["scala", "Scala"],
-)
+			More specifically, my unique identity and lived experience provide me ample resources to
+			diversify communities beyond the dominant Western, predominantly-white cultural sphere,
+			which is unfortunately still the sole major cultural sphere in most technology-related communities.
+			I hope that through my efforts people from all sorts of different backgrounds can find
+			communities I manage comfortable and 
 
-p.
-	Currently, I'm busy working with #[a(href="https://quiltmc.org") QuiltMC] to create a safe,
-//- 	inclusive space for modded Minecraft players and developers.
-//- 	[As one of Quilt's Moderators](https://quiltmc.org/about/teams/#moderators),
-//- 	I help keep the discriminatory, hurtful, problematic people out, and the respectful,
-//- 	sincere, welcoming people in. So far, I think I'm doing an okay job.
+	.column.is-4.mb-6.has-text-centered-mobile
+		h2.title.is-4 Technologies I use
 
-//- I work with Quilt on a technical level too -- I contribute code and reviews to
-//- [Quilt Kotlin Libraries (QKL)](https://github.com/QuiltMC/quilt-kotlin-libraries),
-//- a library allowing Kotlin users such as myself to use Quilt's APIs easier and more idiomatically.
-//- I also help maintaining [Quilt's website](https://quiltmc.org),
-//- [including modernizing the codebase](https://github.com/QuiltMC/quiltmc.org/pull/58)
-//- to be based on [Astro](https://astro.build) instead of [Jekyll](https://jekyllrb.com).
+		h4.title.is-5 Proficiently
+		+langs(languages.proficiently)
+		hr
+		
+		h4.title.is-5 Adequately
+		+langs(languages.adequately)
+		hr
 
-//- Even though recently I've been using Kotlin, JavaScript, Sass and other languages as
-//- a Quilt developer, I'm still a proud [Rustacean :crab:](https://rust-lang.org/) at heart.
-//- I often teach beginners in Rust how to improve their Rust skills and think in
-//- the Rust mindset -- both in real life and on platforms like
-//- [the Rust Community Discord Server](https://discord.gg/rust-lang-community) --
-//- and I'm excited to see the people I helped become true Rust masters.
+		h4.title.is-5 Rudimentally
+		+langs(languages.rudimentally)
+		//- 	inclusive space for modded Minecraft players and developers.
+		//- 	[As one of Quilt's Moderators](https://quiltmc.org/about/teams/#moderators),
+		//- 	I help keep the discriminatory, hurtful, problematic people out, and the respectful,
+		//- 	sincere, welcoming people in. So far, I think I'm doing an okay job.
 
-//- When I'm not busy moderating a community or coding or sitting in my chair idling,
-//- I create drawings and paintings! I'm primarily an oil painter, though I use
-//- [GIMP](https://gimp.org) to create digital illustrations, like my own avatar and more.
-//- [Click here to check out some of my works (that I really like)!](/works)
+		//- I work with Quilt on a technical level too -- I contribute code and reviews to
+		//- [Quilt Kotlin Libraries (QKL)](https://github.com/QuiltMC/quilt-kotlin-libraries),
+		//- a library allowing Kotlin users such as myself to use Quilt's APIs easier and more idiomatically.
+		//- I also help maintaining [Quilt's website](https://quiltmc.org),
+		//- [including modernizing the codebase](https://github.com/QuiltMC/quiltmc.org/pull/58)
+		//- to be based on [Astro](https://astro.build) instead of [Jekyll](https://jekyllrb.com).
+
+		//- Even though recently I've been using Kotlin, JavaScript, Sass and other languages as
+		//- a Quilt developer, I'm still a proud [Rustacean :crab:](https://rust-lang.org/) at heart.
+		//- I often teach beginners in Rust how to improve their Rust skills and think in
+		//- the Rust mindset -- both in real life and on platforms like
+		//- [the Rust Community Discord Server](https://discord.gg/rust-lang-community) --
+		//- and I'm excited to see the people I helped become true Rust masters.
+
+		//- When I'm not busy moderating a community or coding or sitting in my chair idling,
+		//- I create drawings and paintings! I'm primarily an oil painter, though I use
+		//- [GIMP](https://gimp.org) to create digital illustrations, like my own avatar and more.
+		//- [Click here to check out some of my works (that I really like)!](/works)
