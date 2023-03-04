@@ -4,7 +4,7 @@ import sass from "lume/plugins/sass.ts";
 import imagick from "lume/plugins/imagick.ts";
 import pug from "lume/plugins/pug.ts";
 import inline from "lume/plugins/inline.ts";
-import date from "lume/plugins/date.ts"
+import date from "lume/plugins/date.ts";
 
 // remark plugins
 import remark from "lume/plugins/remark.ts";
@@ -16,40 +16,28 @@ import smartyPants from "npm:@ngsctt/remark-smartypants";
 import postcss from "lume/plugins/postcss.ts";
 import purgecss from "npm:@fullhuman/postcss-purgecss";
 
-const site = lume({
-	src: "./src",
-});
+const site = lume({ src: "./src" });
 
 site
-	.use(
-		remark({
-			remarkPlugins: [emoji, a11yEmoji, smartyPants],
-		})
-	)
-	.use(minify_html())
-	.use(
-		sass({
-			includes: ["_styles"],
-		})
-	)
-	.use(imagick())
-	.use(pug())
-	.use(inline())
-	.use(date())
-	.use(
-		postcss({
-			keepDefaultPlugins: true,
-			plugins: [
-				purgecss({
-					keyframes: true,
-					variables: true,
-					safelist: [/has-text-(youtube|twitter)/],
-					content: ["./**/*.html", "./**/*.pug"],
-				}),
-			],
-		})
-	)
-	.copy("assets", ".")
-	.copy("scripts", "scripts");
+  .use(remark({ remarkPlugins: [emoji, a11yEmoji, smartyPants] }))
+  .use(minify_html())
+  .use(sass({ includes: ["_styles"] }))
+  .use(imagick())
+  .use(pug())
+  .use(inline())
+  .use(date())
+  .use(postcss({
+    keepDefaultPlugins: true,
+    plugins: [
+      purgecss({
+        keyframes: true,
+        variables: true,
+        safelist: [/has-text-(youtube|twitter)/],
+        content: ["./**/*.html", "./**/*.pug"],
+      }),
+    ],
+  }))
+  .copy("assets", ".")
+  .copy("scripts", "scripts");
 
 export default site;
