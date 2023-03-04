@@ -38,12 +38,18 @@
   }
 }
 
+img.is-rounded {
+  border-radius: $radius-rounded;
+
+}
+
 #avatar {
   width: 320px;
   height: 320px;
   img {
+    @extend img, .is-rounded;
+    
     border: 2px $primary solid;
-    border-radius: $radius-rounded;
   }
   @include desktop {
     float: right;
