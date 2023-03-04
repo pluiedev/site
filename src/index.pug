@@ -3,11 +3,11 @@ title: Heya~
 date: Git Last Modified
 ---
 
-figure#avatar.image.mx-6.mb-6
+figure#avatar.image.mx-6.my-4
 	img(src="/img/avatar.webp" alt="Avatar")
 
 h1.title.is-1
-	| Heya~ &#8232;I'm #[span.has-text-primary Leah]!
+	| Heya~ I'm #[span.has-text-primary Leah]!
 	span.subtitle
 		span.mx-1 ·
 		a.has-text-primary(href="https://pronouns.page/@pluiedev") she/her 🏳️‍⚧️
@@ -23,8 +23,11 @@ p.subtitle.is-4.
 	dedicated to making the world of digital technology and design accessible and
 	inclusive for everyone.
 
-	I like to code, to draw, to discover myself, and to help others discover themselves.
-	More things I like include dogs and traffic cones. And linguistics.
+	I love coding, drawing, painting, discovering more about myself, and helping others discover and express themselves.
+	Funnily enough, I do most of my productive work in my spare time when I'm supposed to relax—apparently,
+	once I get fixated on something, I can't stop. Not sure if that's a good quality or not! ;)
+
+	More things I like include dogs, traffic cones, history, politics and linguistics.
 	Especially <abbr title="constructed languages, or languages intentionally created by people">conlangs</abbr>.
 	They're _very_ cool.
 	
@@ -46,30 +49,47 @@ mixin lang-button(id, name, variant)
 	button.button.has-tooltip-arrow(data-tooltip=name)
 		img(alt=name src=`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${id}/${id}-${variant}.svg`)
 
-.columns.is-forced-max-width.mt-5.is-flex-direction-row-reverse
-	.column.mb-6
+.columns.is-forced-max-width.is-flex-direction-row-reverse
+	.column.my-6
 		h2.title.is-4 Current endeavors
 		
 		p.subtitle.is-5 Up-to-date as of: #[em= filters.date(date, "HUMAN_DATE")]
 		:md
-			Currently, I'm spending most of my attention and energy on two things:
+			Currently, I spend most of my attention and energy on two things:
 			community management and moderation, and contributing to and creating various
 			open-source projects.
 
-			As a [community manager of the Quilt Project](https://quiltmc.org/about/teams/#community-managers),
-			a modding toolchain project primarily designed for Minecraft,
-			I work on policies, guidelines and tooling that drives Quilt towards its goal of creating a
-			healthy, diverse, multicultural community striving to accomodate all sorts of minorities,
+			As one of the [community managers](https://quiltmc.org/about/teams/#community-managers)
+			of [the Quilt Project](https://quiltmc.org), a modding toolchain project primarily designed for Minecraft,
+			I work on policies, guidelines and tooling that drives Quilt towards its goal of creating
+			a healthy, diverse, multicultural community striving to accomodate all sorts of minorities,
 			be they ethnic or racial minorities, sexual and/or gender-nonconfirming minorities, neurodivergent minorities,
-			or any other group of people facing unique challenges and adversities in the wider world.
+			or any other group of people facing various challenges and adversities in world society.
 
-			More specifically, my unique identity and lived experience provide me ample resources to
-			diversify communities beyond the dominant Western, predominantly-white cultural sphere,
-			which is unfortunately still the sole major cultural sphere in most technology-related communities.
-			I hope that through my efforts people from all sorts of different backgrounds can find
-			communities I manage comfortable and 
+			My unique identity as a queer, lesbian Chinese trans woman with an international,
+			multicultural mindset provides me with ample amounts of lived experience with
+			diversifying communities beyond the dominant Western, mostly Anglophone,
+			predominantly white, cis- and heteronormative culture,
+			which is unfortunately still the sole major cultural environment in most tech-focused communities.
+			I hope that, through my efforts, heterogeneous people from diverse backgrounds can find
+			communities that I manage comfortable, and be free from having to mask their cultural heritage,
+			like when I first ventured into international technical communities.
 
-	.column.is-4.mb-6.has-text-centered-mobile
+			As an open-source contributor, I occasionally submit patches and pull requests to
+			projects I find interesting, mostly in Rust, TypeScript and Kotlin.
+			I also maintain Quilt's community tooling, mainly [its official website](https://quiltmc.org)
+			and its [Developer Wiki](https://modder.wiki.quiltmc.org/), and sometimes its own 
+			Discord bot called [Cozy](https://github.com/QuiltMC/cozy-discord).
+			I also started some other random projects, one of which is a
+			[Rust rewrite of the `alien` tool](https://github.com/pluiedev/alien),
+			originally a Perl utility script that converts Linux software packages between various formats
+			(e.g.: `.deb`, `.rpm`, `.tgz`, ...) for different package managers (e.g.: `dpkg`/`apt`, `rpm`/`dnf`, ...)
+
+			I'm almost always coding something new, for existing projects or otherwise,
+			and I can't wait to show you more! For now, you'll just have to wait for me to update this
+			portfolio again sometime in the future...
+
+	.column.is-4.my-6.has-text-centered-mobile
 		h2.title.is-4 Technologies I use
 
 		h4.title.is-5 Proficiently
@@ -82,26 +102,3 @@ mixin lang-button(id, name, variant)
 
 		h4.title.is-5 Rudimentally
 		+langs(languages.rudimentally)
-		//- 	inclusive space for modded Minecraft players and developers.
-		//- 	[As one of Quilt's Moderators](https://quiltmc.org/about/teams/#moderators),
-		//- 	I help keep the discriminatory, hurtful, problematic people out, and the respectful,
-		//- 	sincere, welcoming people in. So far, I think I'm doing an okay job.
-
-		//- I work with Quilt on a technical level too -- I contribute code and reviews to
-		//- [Quilt Kotlin Libraries (QKL)](https://github.com/QuiltMC/quilt-kotlin-libraries),
-		//- a library allowing Kotlin users such as myself to use Quilt's APIs easier and more idiomatically.
-		//- I also help maintaining [Quilt's website](https://quiltmc.org),
-		//- [including modernizing the codebase](https://github.com/QuiltMC/quiltmc.org/pull/58)
-		//- to be based on [Astro](https://astro.build) instead of [Jekyll](https://jekyllrb.com).
-
-		//- Even though recently I've been using Kotlin, JavaScript, Sass and other languages as
-		//- a Quilt developer, I'm still a proud [Rustacean :crab:](https://rust-lang.org/) at heart.
-		//- I often teach beginners in Rust how to improve their Rust skills and think in
-		//- the Rust mindset -- both in real life and on platforms like
-		//- [the Rust Community Discord Server](https://discord.gg/rust-lang-community) --
-		//- and I'm excited to see the people I helped become true Rust masters.
-
-		//- When I'm not busy moderating a community or coding or sitting in my chair idling,
-		//- I create drawings and paintings! I'm primarily an oil painter, though I use
-		//- [GIMP](https://gimp.org) to create digital illustrations, like my own avatar and more.
-		//- [Click here to check out some of my works (that I really like)!](/works)
