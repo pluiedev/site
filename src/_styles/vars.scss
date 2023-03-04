@@ -32,7 +32,7 @@ $family-monospace: join(
 	$separator: "comma"
 );
 
-@import "../_bulma/sass/utilities/derived-variables";
+@import "../bulma/sass/utilities/derived-variables";
 
 $navbar-height: 4rem;
 $footer-background-color: $primary-dark;
