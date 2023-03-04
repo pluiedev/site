@@ -1,11 +1,7 @@
 {
   "importMap": "./import_map.json",
   "tasks": {
-    "fetchBulma": "deno run --allow-run --allow-write --allow-read fetchBulma.ts",
-    "forceFetchBulma": "deno task fetchBulma force",
-    "cleanBulma": "deno task fetchBulma clean",
-
-    "lume": "deno task fetchBulma && echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   }
