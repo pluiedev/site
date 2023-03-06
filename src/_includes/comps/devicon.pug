@@ -1,0 +1,12 @@
+mixin devicons(langs)
+	.langs
+		each id in Object.keys(langs)
+			if (typeof langs[id] === "string")
+				+devicon(id, langs[id], "original")
+			else
+				- const { name, variant } = langs[id];
+				+devicon(id, name, variant)
+			
+mixin devicon(id, name, variant)
+	button.button.has-tooltip-arrow(data-tooltip=name)
+		img(alt=name src=`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${id}/${id}-${variant}.svg`)

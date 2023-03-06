@@ -3,6 +3,8 @@ title: Heya~
 date: Git Last Modified
 ---
 
+include _includes/comps/devicon.pug
+
 figure#avatar.image.mx-6.my-4
 	img(src="/img/avatar.webp" alt="Avatar")
 
@@ -34,20 +36,6 @@ p.subtitle.is-4.
 	I also often think way too hard about narrative video games, to the point
 	I write full articles and reviews about them. I'm not exactly professional,
 	but I still try my best to figure out what does and doesn't tick!
-
-
-mixin langs(langs)
-	.langs
-		each id in Object.keys(langs)
-			if (typeof langs[id] === "string")
-				+lang-button(id, langs[id], "original")
-			else
-				- const { name, variant } = langs[id];
-				+lang-button(id, name, variant)
-			
-mixin lang-button(id, name, variant)
-	button.button.has-tooltip-arrow(data-tooltip=name)
-		img(alt=name src=`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${id}/${id}-${variant}.svg`)
 
 .columns.is-forced-max-width.is-flex-direction-row-reverse
 	.column.my-6
@@ -93,12 +81,12 @@ mixin lang-button(id, name, variant)
 		h2.title.is-4 Technologies I use
 
 		h4.title.is-5 Proficiently
-		+langs(languages.proficiently)
+		+devicons(languages.proficiently)
 		hr
 		
 		h4.title.is-5 Adequately
-		+langs(languages.adequately)
+		+devicons(languages.adequately)
 		hr
 
 		h4.title.is-5 Rudimentally
-		+langs(languages.rudimentally)
+		+devicons(languages.rudimentally)
