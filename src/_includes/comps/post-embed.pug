@@ -1,7 +1,7 @@
 mixin post-embed(post)
 	include post-info
 
-	article.card
+	article.card.mb-3
 		.card-content
 			- const href = post.dest.path.match(/(.+)\/index/)[1]
 			

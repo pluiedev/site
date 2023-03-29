@@ -33,7 +33,7 @@ nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
 					for link in links
 						a.navbar-item.is-flex(href=link.link target="_blank")
 							+icon(link.icon, link.color)(aria-hidden=true).mr-1
-							span= link.name
+							span= link.text
 
 					label(tabindex="0" role="button" for=switches.email)
 						span.navbar-item.is-flex
