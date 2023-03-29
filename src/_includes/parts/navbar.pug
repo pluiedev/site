@@ -30,16 +30,10 @@ nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
 				span.navbar-link Contact / Links
 				
 				.navbar-dropdown
-					+navbar-link("https://youtube.com/@pluiedev", "fab fa-youtube", "youtube")
-						span YouTube
-					+navbar-link("https://pronouns.page/@pluiedev", { src: "/icons/pronouns-page.svg", alt: "pronouns.page logo"})
-						span pronouns.page
-					+navbar-link("https://discord.gg/NeNfePzCx8", "fab fa-discord", "blurple")
-						span Discord Server
-					+navbar-link("https://blobfox.coffee/@pluie", "fab fa-mastodon", "blurple")
-						span Mastodon
-					+navbar-link("https://space.bilibili.com/401096522", "fab fa-bilibili", "twitter")
-						span Bilibili
+					for link in links
+						a.navbar-item.is-flex(href=link.link target="_blank")
+							+icon(link.icon, link.color)(aria-hidden=true).mr-1
+							span= link.name
 
 					label(tabindex="0" role="button" for=switches.email)
 						span.navbar-item.is-flex

@@ -12,6 +12,33 @@ categories:
     title: Works
     url: /works/
 
+links:
+  - text: YouTube
+    link: https://youtube.com/@pluiedev
+    icon: fab fa-youtube
+    color: youtube
+
+  - text: pronouns.page
+    link: https://pronouns.page/@pluiedev
+    icon:
+      src: /icons/pronouns-page.svg
+      alt: pronouns.page logo
+
+  - text: Discord Server
+    link: https://discord.gg/NeNfePzCx8
+    icon: fab fa-discord
+    color: blurple
+
+  - text: Mastodon
+    link: https://blobfox.coffee/@pluie
+    icon: fab fa-mastodon
+    color: blurple
+
+  - text: Bilibili
+    link: https://space.bilibili.com/401096522
+    icon: fab fa-bilibili
+    color: twitter
+
 languages:
   proficiently:
     html5: HTML5
@@ -30,6 +57,7 @@ languages:
     kotlin: Kotlin
     vim: Vim
     vscode: VSCode
+
   adequately:
     bash: Bash
     c: C
@@ -42,6 +70,7 @@ languages:
     perl: Perl
     python: Python
     ruby: Ruby
+
   rudimentally:
     clojure: Clojure
     haskell: Haskell
