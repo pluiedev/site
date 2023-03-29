@@ -14,9 +14,9 @@ nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
 		
 		label.navbar-burger(for="navbar-toggle" role="button" aria-label="menu")
 			//- Three empty spans here for rendering the burger icon
-			span(aria-hidden=true)
-			span(aria-hidden=true) 
-			span(aria-hidden=true)
+			span(aria-hidden="true")
+			span(aria-hidden="true") 
+			span(aria-hidden="true")
 		
 	.navbar-menu
 		.navbar-start
@@ -26,7 +26,7 @@ nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
 			label(for=switches.contacts).navbar-item.has-dropdown.has-dropdown-toggle
 				input(id=switches.contacts type="checkbox").navbar-dropdown-toggle
 
-				a.navbar-link Contact / Links
+				span.navbar-link Contact / Links
 				
 				.navbar-dropdown
 					+navbar-link("https://youtube.com/@pluiedev", "fab fa-youtube", "youtube")
@@ -41,7 +41,7 @@ nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
 						span Bilibili
 
 					label(tabindex="0" role="button" for=switches.email)
-						a.navbar-item.is-flex
+						span.navbar-item.is-flex
 							+icon("fas fa-envelope")(aria-hidden=true).mr-1
 							span Email
 						
