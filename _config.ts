@@ -30,9 +30,6 @@ site
     keepDefaultPlugins: true,
     plugins: [
       purgecss({
-        keyframes: true,
-        variables: true,
-        safelist: [/has-text-(youtube|twitter)/],
         content: ["./**/*.html", "./**/*.pug"],
       }),
     ],
