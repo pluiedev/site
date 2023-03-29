@@ -41,8 +41,8 @@ links:
 
 languages:
   proficiently:
-    html5: HTML5
-    css3: CSS3
+    html5: "HTML\xa05"
+    css3: "CSS\xa03"
     sass: Sass
     bulma:
       name: Bulma
