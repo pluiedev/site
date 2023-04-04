@@ -1,7 +1,0 @@
-mixin post-info(authors, date)
-	p.subtitle.is-5
-		strong= authors.join(", ")
-		if date
-			span.mx-1 ·
-			= filters.date(date, "HUMAN_DATE")
-
