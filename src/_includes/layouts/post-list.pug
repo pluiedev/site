@@ -1,39 +1,37 @@
-extends base
+extends default
 include ../comps/post-embed
 include ../comps/icon
 
-block content
-	section.main.section
-		.container.is-max-desktop.main-container(centered=centered)
-			h1.title.is-2 Blog
+block main-content
+	p.subtitle.is-4 Page #[=currentPage] of #[=totalPages]
 
-			.section.content
-				each post in results
-					+post-embed(post)
-			
-			nav.pagination.is-centered(role="navigation" aria-label="pagination")
-				a.pagination-previous(
-					disabled=!pagination.previous
-					href=pagination.previous
-				)
-					span.icon-text
-						+icon("fas fa-angle-left")
-						span Prev
+	.section.content
+		each post in results
+			+post-embed(post)
+	
+	nav.pagination.is-centered(role="navigation" aria-label="pagination")
+		a.pagination-previous(
+			disabled=!pagination.previous
+			href=pagination.previous
+		)
+			span.icon-text
+				+icon("fas fa-angle-left")
+				span Prev
 
-				a.pagination-next(
-					disabled=!pagination.next
-					href=pagination.next
-				)
-					span.icon-text
-						span Next
-						+icon("fas fa-angle-right")
+		a.pagination-next(
+			disabled=!pagination.next
+			href=pagination.next
+		)
+			span.icon-text
+				span Next
+				+icon("fas fa-angle-right")
 
-				ul.pagination-list
-					each num in indices
-						li
-							if num == pagination.page
-								a.pagination-link.is-current(href=url)= num
-							else if num > 0
-								a.pagination-link(href=url)= num
-							else
-								span.pagination-ellipsis &hellip;
+		ul.pagination-list
+			each num in indices
+				li
+					if num == pagination.page
+						a.pagination-link.is-current(href=url)= num
+					else if num > 0
+						a.pagination-link(href=url)= num
+					else
+						span.pagination-ellipsis &hellip;

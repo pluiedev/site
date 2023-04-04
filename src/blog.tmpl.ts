@@ -30,7 +30,9 @@ export default function* ({ search, paginate }: { search: Search, paginate: Pagi
 		}
 
 		yield {
-			title: `Blog (${current}/${last})`,
+			title: "Blog",
+			currentPage: current,
+			totalPages: last,
 			category: "blog",
 			indices,
 			...page
