@@ -1,0 +1,7 @@
+mixin post-info(page)
+	em.icon-text
+		+icon("fa-regular fa-calendar")
+		span= filters.date(page.data.date, "HUMAN_DATE")
+
+		+icon("fa-solid fa-pen-to-square")
+		span= filters.date(page.src.lastModified, "HUMAN_DATE")

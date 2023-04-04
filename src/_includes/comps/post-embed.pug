@@ -1,4 +1,7 @@
+include post-info 
+
 mixin post-embed(post)
+
 	article.card.mb-3
 		.card-content
 			- const href = post.dest.path.match(/(.+)\/index/)[1]
@@ -7,8 +10,7 @@ mixin post-embed(post)
 				.media-content
 					h2.title.is-3
 						a(href=href)= post.data.title
-					p.subtitle.is-5
-						em= filters.date(post.data.date, "HUMAN_DATE")
+					p.subtitle.is-6: +post-info(post)
 			.content
 				- const content = post.data.content;
 				!= content.slice(0, content.indexOf("<!-- MORE -->"))
