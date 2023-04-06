@@ -2,25 +2,58 @@
 title: Works
 ---
 
-h2 Artworks
+include _includes/comps/icon
+include _includes/comps/modal
 
-figure
-	img(src="/img/avatar-big.webp" width=500)
-	figcaption Ferality | Dec 2, 2018 | Oil on canvas
-figure
-	img(src="/img/avatar-big.webp" width=500)
-	figcaption Altitudinous blossoms | Feb 11, 2021 | Oil on canvas
-figure
-	img(src="/img/avatar-big.webp" width=500)
-	figcaption A piscine aura in the depths | Jun 5, 2021 | Oil on canvas
-figure
-	img(src="/img/avatar-big.webp" width=500)
-	figcaption A flower — what's her name again? | Dec 11, 2021 | Oil on canvas
-figure
-	img(src="/img/avatar-big.webp" width=500)
-	figcaption 老铁 (Laotie) | Mar 20, 2022 | Oil on canvas
-figure
-	img(src="/img/avatar-big.webp" width=500)
-	figcaption By the lake, beneath the canopies, in the beforetimes, mother and s- I mean, daughter | Jul 23, 2022 | Oil on canvas
+h2.title.is-3 Artworks
 
+mixin display(id, title)
+	-const { height, width, ...rest } = attributes;
+
+	+modal(id)
+			img(
+				src=`/img/artwork/${id}-huge.webp`
+				alt=title
+				fetchpriority="low"
+				loading="lazy"
+			)
+	figure.display&attributes(rest)
+		label(for=id role="button" tabindex="0")
+			img(
+				src=`/img/artwork/${id}-big.webp`
+				alt=title
+				width=width
+				height=height
+			)
+		
+		figcaption
+			h3.title.is-4= title
+			block
+
+mixin header(date, medium)
+	p.subtitle.is-6
+		span.icon-text
+			+icon("far fa-calendar")
+			span= filters.date(date, "PP")
+			+icon("fas fa-brush")
+			span= medium
+
++display("tiger", "Ferality").has-frame(size="large" width=500 height=510)
+	+header("2018-12-02", "Oil on canvas")
+	p Haha
++display("altitudinous_blossoms", "Altitudinous blossoms").has-frame(size="medium" rtl width=400 height=660)
+	+header("2021-02-11", "Oil on canvas")
+	p Hum
++display("tropical_fish", "A piscine aura in the depths").has-frame(size="large" width=500 height=380)
+	+header("2021-06-05", "Oil on canvas")
+	p Balls
++display("red_cotton", "A flower — what's her name again?").has-frame(size="large" rtl width=500 height=372)
+	+header("2021-12-11", "Oil on canvas")
+	p A 
++display("laotie", "老铁 (Laotie)").has-frame(size="medium" width=400 height=533)
+	+header("2022-03-20", "Oil on canvas")
+	p B
++display("mom_and_i", "By the lake, beneath the canopies, in the beforetimes").has-frame(size="medium" width=400 height=515)
+	+header("2022-07-23", "Oil on canvas")
+	p C
 

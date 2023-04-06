@@ -1,6 +1,6 @@
 mixin modal(id)
 	.toggleable-modal
-		input.modal-toggle(type="checkbox" id=id)
+		input.modal-toggle(type="checkbox" id=id aria-hidden="true")
 		.modal
 			label.modal-background(for=id)
 

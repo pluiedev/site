@@ -7,7 +7,7 @@ mixin navbar-link(link, icon, color)
 		block
 
 nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
-	input#navbar-toggle.is-hidden(type="checkbox")
+	input#navbar-toggle.is-hidden(type="checkbox" aria-hidden="true")
 	
 	.navbar-brand
 		a.navbar-item.py-0(href="/")
@@ -24,7 +24,7 @@ nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
 			each category in categories
 				a.navbar-item(href=category.url)= category.title
 
-			label(for=switches.contacts).navbar-item.has-dropdown.has-dropdown-toggle
+			label(for=switches.contacts tabindex="0" role="button").navbar-item.has-dropdown.has-dropdown-toggle
 				input(id=switches.contacts type="checkbox").navbar-dropdown-toggle
 
 				span.navbar-link Contact / Links
@@ -36,7 +36,7 @@ nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
 							span= link.text
 
 					label(tabindex="0" role="button" for=switches.email)
-						a.navbar-item.is-flex(href="")
+						span.navbar-item.is-flex.fake-link
 							+icon("fas fa-envelope")(aria-hidden=true).mr-1
 							span Email
 						

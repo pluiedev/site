@@ -1,0 +1,64 @@
+$display-frame-inner-blur: 0.5px !default;
+$display-frame-inner-width: 2.5px !default;
+$display-frame-inner-color: rgb(255, 250, 246) !default;
+$display-frame-inner: 0 0 $display-frame-inner-blur $display-frame-inner-width $display-frame-inner-color !default;
+
+$display-frame-width: 25px !default;
+$display-frame-color: rgb(53, 34, 19) !default;
+$display-frame: 0 0 0px $display-frame-width $display-frame-color !default;
+
+$display-frame-shadow-offset: 8px 5px;
+$display-frame-shadow-blur: 5px;
+$display-frame-shadow-width: $display-frame-width;
+$display-frame-shadow-color: rgb(111, 111, 111) !default;
+$display-frame-shadow: $display-frame-shadow-offset $display-frame-shadow-blur $display-frame-shadow-width $display-frame-shadow-color !default;
+
+$display-frame-margin: calc($display-frame-width + max($display-frame-shadow-offset...)) !default;
+
+figure.display {
+	display: flex;
+	
+	figcaption {
+		text-align: left;
+		margin: 1.5rem;
+		font-style: normal;	
+	}
+	
+	&.has-frame {
+		&[size=large] img {
+			max-width: 500px;
+		}
+		&[size=medium] img {
+			max-width: 400px;
+		}
+		img {
+			width: 80vw;
+			max-width: 300px;
+
+			margin: $display-frame-margin;
+			box-shadow: $display-frame-inner, $display-frame, $display-frame-shadow;
+		}
+	}
+
+	img {
+		transition: transform 0.5s;
+		&:hover, &:focus {
+			transform: scale(1.05);
+		}
+	}
+
+	@include touch {
+		flex-direction: column;
+	}
+
+	@include desktop {
+		&[rtl] {
+			flex-direction: row-reverse;
+			
+	
+			figcaption {
+				text-align: right;
+			}
+		}
+	}
+}
