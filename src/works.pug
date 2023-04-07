@@ -7,20 +7,20 @@ include _includes/comps/modal
 
 h2.title.is-3 Artworks
 
-mixin display(id, title)
+mixin display(id, title, preview_link, full_link)
 	-const { height, width, ...rest } = attributes;
 
 	+modal(id)
-			img(
-				src=`/img/artwork/${id}-huge.webp`
-				alt=title
-				fetchpriority="low"
-				loading="lazy"
-			)
+		img(
+			src=`https://i.ibb.co/${full_link}/${id}-original.webp`
+			alt=title
+			fetchpriority="low"
+			loading="lazy"
+		)
 	figure.display&attributes(rest)
 		label(for=id role="button" tabindex="0")
 			img(
-				src=`/img/artwork/${id}-big.webp`
+				src=`https://i.ibb.co/${preview_link}/${id}-original.webp`
 				alt=title
 				width=width
 				height=height
@@ -38,22 +38,22 @@ mixin header(date, medium)
 			+icon("fas fa-brush")
 			span= medium
 
-+display("tiger", "Ferality").has-frame(size="large" width=500 height=510)
++display("tiger", "Ferality", "ckL85vM", "zQJ2c5j").has-frame(size="large" width=500 height=510)
 	+header("2018-12-02", "Oil on canvas")
 	p Haha
-+display("altitudinous_blossoms", "Altitudinous blossoms").has-frame(size="medium" rtl width=400 height=660)
++display("altitudinous_blossoms", "Altitudinous blossoms", "Z8wxQ2k", "Ltq1TN2").has-frame(size="medium" rtl width=400 height=660)
 	+header("2021-02-11", "Oil on canvas")
 	p Hum
-+display("tropical_fish", "A piscine aura in the depths").has-frame(size="large" width=500 height=380)
++display("tropical_fish", "A piscine aura in the depths", "t3cjz0Y", "b7LwF4N").has-frame(size="large" width=500 height=380)
 	+header("2021-06-05", "Oil on canvas")
 	p Balls
-+display("red_cotton", "A flower — what's her name again?").has-frame(size="large" rtl width=500 height=372)
++display("red_cotton", "A flower — what's her name again?", "YW6pyd4", "thS8x2w").has-frame(size="large" rtl width=500 height=372)
 	+header("2021-12-11", "Oil on canvas")
 	p A 
-+display("laotie", "老铁 (Laotie)").has-frame(size="medium" width=400 height=533)
++display("laotie", "老铁 (Laotie)", "5hj54QN", "SwmKykh").has-frame(size="medium" width=400 height=533)
 	+header("2022-03-20", "Oil on canvas")
 	p B
-+display("mom_and_i", "By the lake, beneath the canopies, in the beforetimes").has-frame(size="medium" width=400 height=515)
++display("mom_and_i", "By the lake, beneath the canopies, in the beforetimes", "DRvWRpW", "Vqz9qm9").has-frame(size="medium" width=400 height=515)
 	+header("2022-07-23", "Oil on canvas")
 	p C
 

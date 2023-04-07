@@ -42,8 +42,11 @@ figure.display {
 
 	img {
 		transition: transform 0.5s;
-		&:hover, &:focus {
-			transform: scale(1.05);
+	}
+
+	label:hover, label:focus, label:focus-visible {
+		img {
+			transform: scale(1.035);
 		}
 	}
 
@@ -55,7 +58,6 @@ figure.display {
 		&[rtl] {
 			flex-direction: row-reverse;
 			
-	
 			figcaption {
 				text-align: right;
 			}
