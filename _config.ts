@@ -31,6 +31,9 @@ site
     plugins: [
       purgecss({
         content: ["./**/*.html", "./**/*.pug"],
+        safeList: {
+          greedy: [/youtube$/, /twitter$/]
+        }
       }),
     ],
   }))
