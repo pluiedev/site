@@ -14,6 +14,12 @@ $display-frame-shadow-color: rgb(111, 111, 111) !default;
 $display-frame-shadow: $display-frame-shadow-offset $display-frame-shadow-blur $display-frame-shadow-width $display-frame-shadow-color !default;
 
 $display-frame-margin: calc($display-frame-width + max($display-frame-shadow-offset...)) !default;
+$display-frame-sizes: (large: 500px, medium: 400px, _: 300px);
+$display-frame-hover-scale-factor: 1.035;
+$display-frame-hover-transition-length: 0.5s;
+
+$display-frame-popup-spinner-size: 8rem;
+$display-frame-popup-spinner-margin: 3rem;
 
 figure.display {
 	display: flex;
@@ -25,28 +31,53 @@ figure.display {
 	}
 	
 	&.has-frame {
-		&[size=large] img {
-			max-width: 500px;
-		}
-		&[size=medium] img {
-			max-width: 400px;
+		@each $size in $display-frame-sizes {
+			$name: nth($size, 1);
+			$px: nth($size, 2);
+			
+			@if $name == "_" {
+				img {
+					max-width: $px;
+				}
+			} @else {
+				&[size=#{$name}] img {
+					max-width: $px;
+				}
+			}
 		}
 		img {
 			width: 80vw;
-			max-width: 300px;
-
 			margin: $display-frame-margin;
 			box-shadow: $display-frame-inner, $display-frame, $display-frame-shadow;
 		}
 	}
 
 	img {
-		transition: transform 0.5s;
+		transition: transform $display-frame-hover-transition-length;
 	}
 
 	label:hover, label:focus, label:focus-visible {
 		img {
-			transform: scale(1.035);
+			transform: scale($display-frame-hover-scale-factor);
+		}
+	}
+	
+	& + * .modal  .modal-content {
+		display: flex;
+		justify-content: center;
+
+		&::before {
+			@include loader;
+			position: absolute;
+			top: calc(50% - $display-frame-popup-spinner-size + 0.5 * $display-frame-popup-spinner-margin);
+			left: calc(50% - $display-frame-popup-spinner-size + 0.5 * $display-frame-popup-spinner-margin);
+			z-index: calc($modal-z + 5);
+			height: $display-frame-popup-spinner-size;
+			width: $display-frame-popup-spinner-size;
+			margin: $display-frame-popup-spinner-margin;
+		}
+		img {
+			z-index: calc($modal-z + 10);
 		}
 	}
 

@@ -10,13 +10,6 @@ h2.title.is-3 Artworks
 mixin display(id, title, preview_link, full_link)
 	-const { height, width, ...rest } = attributes;
 
-	+modal(id)
-		img(
-			src=`https://i.ibb.co/${full_link}/${id}-original.webp`
-			alt=title
-			fetchpriority="low"
-			loading="lazy"
-		)
 	figure.display&attributes(rest)
 		label(for=id role="button" tabindex="0")
 			img(
@@ -29,6 +22,13 @@ mixin display(id, title, preview_link, full_link)
 		figcaption
 			h3.title.is-4= title
 			block
+	+modal(id)
+		img(
+			src=`https://i.ibb.co/${full_link}/${id}-original.webp`
+			alt=title
+			fetchpriority="low"
+			loading="lazy"
+		)
 
 mixin header(date, medium)
 	p.subtitle.is-6
