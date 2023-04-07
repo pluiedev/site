@@ -1,8 +1,11 @@
 ---
 title: What's up with the traffic cones?!
-date: 2023-03-03 23:00:00 +08:00
-authors:
-  - Leah
+description: ...Seriously, why?
+
+section: Misc
+tags: 
+  - post
+  - slice-of-life
 ---
 
 I got asked of that question a lot lately, even from multiple different people.

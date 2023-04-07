@@ -1,13 +1,16 @@
----
-doNotRenderTitle: true
----
-
 extends default
 include ../comps/button
 include ../comps/icon
 include ../comps/post-info
 
 block main-content
+	-
+		opengraph["article:published_time"] = date;
+		opengraph["article:modified_time"] = page.src.lastModified;
+		opengraph["article:author"] = ["Leah"];
+		opengraph["article:section"] = section;
+		opengraph["article:tag"] = tags;
+
 	.is-flex.is-justify-content-space-between.is-align-items-center
 		div
 			h1.title.has-text-primary= title

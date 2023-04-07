@@ -12,8 +12,23 @@ mixin deferred-stylesheets(...hrefs)
 
 head 
 	meta(charset="utf-8")
+
+	title= `${title} | pluie.me`
+
 	meta(name="viewport" content="width=device-width, initial-scale=0.75")
-	meta(name="description" content="The homepage of pluie/pluiedev!")
+	meta(name="description" content=description)
+	meta(name="theme-color" content="#d23773")
+	meta(property="og:title" content=title)
+	meta(property="og:description" content=description)
+	meta(property="og:url" content=`https://pluie.me${url}`)
+
+	for property in Object.keys(opengraph)
+		- const content = opengraph[property];
+		if Array.isArray(content)
+			for cont in content
+				meta(property=property content=cont)
+		else
+			meta(property=property content=content)
 
 	link(rel="preconnect" href="https://fonts.bunny.net")
 	link(
@@ -22,7 +37,6 @@ head
 		sizes="128x128"
 		href="/img/favicon/128x128-small.jpg"
 	)
-	title= `${title} | pluie.me`
 
 	link(rel="stylesheet" href="/style.css")
 

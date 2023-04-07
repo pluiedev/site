@@ -1,4 +1,6 @@
 layout: layouts/post.pug
-tags:
-  - post
 category: blog
+
+doNotRenderTitle: true
+opengraph:
+  og:type: article

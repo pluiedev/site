@@ -1,5 +1,6 @@
 ---
 title: Works
+description: Projects, artworks, and other things I've done...
 ---
 
 include _includes/comps/icon
@@ -13,6 +14,8 @@ h2.title.is-3 Projects
 
 h2.title.is-3 Artworks
 
+//- TODO: this *definitely* needs to be migrated to Cloudflare Images at some point.
+//- I don't fully trust imgbb with my art, and CF is faster anyway...
 mixin display(id, title, preview_link, full_link)
 	-const { height, width, ...rest } = attributes;
 

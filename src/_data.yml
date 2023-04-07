@@ -76,3 +76,7 @@ languages:
     haskell: Haskell
     scala: Scala
     
+# https://ogp.me
+opengraph:
+  og:type: website
+  og:image: https://pluie.me/img/avatar-big.webp
