@@ -23,13 +23,28 @@ $display-frame-popup-spinner-margin: 3rem;
 
 figure.display {
 	display: flex;
+	align-items: center;
 	
 	figcaption {
-		text-align: left;
+		text-align: justify;
 		margin: 1.5rem;
 		font-style: normal;	
+
+		h1, h2, h3, h4, h5, h6, .title, .subtitle {
+			text-align: left;
+		}
+	}
+	@include desktop {
+		&[rtl] {
+			flex-direction: row-reverse;
+
+			figcaption h1, h2, h3, h4, h5, h6, .title, .subtitle {
+				text-align: right;
+			}
+		}
 	}
 	
+
 	&.has-frame {
 		@each $size in $display-frame-sizes {
 			$name: nth($size, 1);
@@ -83,15 +98,5 @@ figure.display {
 
 	@include touch {
 		flex-direction: column;
-	}
-
-	@include desktop {
-		&[rtl] {
-			flex-direction: row-reverse;
-			
-			figcaption {
-				text-align: right;
-			}
-		}
 	}
 }
