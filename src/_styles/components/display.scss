@@ -80,6 +80,8 @@ figure.display {
 	& + * .modal  .modal-content {
 		display: flex;
 		justify-content: center;
+		width: unset;
+		max-height: calc(100vh - 80px);
 
 		&::before {
 			@include loader;
@@ -91,6 +93,7 @@ figure.display {
 			width: $display-frame-popup-spinner-size;
 			margin: $display-frame-popup-spinner-margin;
 		}
+
 		img {
 			z-index: calc($modal-z + 10);
 		}
