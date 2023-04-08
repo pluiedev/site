@@ -11,6 +11,10 @@
 }
 
 @include mobile {
+  .main.is-medium {
+    padding: 4.5rem 2.5rem !important;
+  }
+  
   .has-text-centered-mobile {
     text-align: center;
   }

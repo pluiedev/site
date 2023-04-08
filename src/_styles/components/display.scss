@@ -32,6 +32,10 @@ figure.display {
 
 		h1, h2, h3, h4, h5, h6, .title, .subtitle {
 			text-align: left;
+			
+			@include touch {
+				text-align: center;
+			}
 		}
 	}
 	@include desktop {

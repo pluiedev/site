@@ -4,11 +4,11 @@ $highlighter-color: hsla(201, 93%, 55%, 0.304) !default;
 $highlighter-thickness: 1.5rem;
 $footer-link-color: hsl(226, 92%, 81%) !default;
 
-.content a {
+.content a:not([disabled], .pagination-link) {
   // adapted from https://stackoverflow.com/a/72459455
 	--hl-strike: 0; 
 
-	background: linear-gradient(0deg, transparent, $highlighter-color 0) no-repeat
+	background: linear-gradient(0deg, inherit, $highlighter-color 0) no-repeat
 		right center / calc(var(--hl-strike) * 100%) $highlighter-thickness;
 	transition: background-size 0.2s ease;
 
