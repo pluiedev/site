@@ -32,8 +32,8 @@ site
       purgecss({
         content: ["./**/*.html", "./**/*.pug"],
         safeList: {
-          greedy: [/youtube$/, /twitter$/]
-        }
+          greedy: [/youtube$/, /twitter$/],
+        },
       }),
     ],
   }))

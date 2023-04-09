@@ -15,7 +15,7 @@ h2.title.is-3 Projects
 h2.title.is-3 Artworks
 
 mixin display(id, title, imgid)
-	-const { height, width, ...rest } = attributes;
+	-const { height, width, aspectRatio, ...rest } = attributes;
 
 	figure.display&attributes(rest)
 		label(for=id role="button" tabindex="0")
@@ -30,12 +30,13 @@ mixin display(id, title, imgid)
 			h3.title.is-4= title
 			block
 	+modal(id)
-		img(
-			src=`https://imagedelivery.net/TLP_u-wyyvTEPKkgbA6Osg/${imgid}/full`
-			alt=title
-			fetchpriority="low"
-			loading="lazy"
-		)
+		.image.is-fullwidth(class=aspectRatio)
+			img(
+				src=`https://imagedelivery.net/TLP_u-wyyvTEPKkgbA6Osg/${imgid}/full`
+				alt=title
+				fetchpriority="low"
+				loading="lazy"
+			)
 
 mixin header(date, medium)
 	p.subtitle.is-6
@@ -45,7 +46,9 @@ mixin header(date, medium)
 			+icon("fas fa-brush")
 			span= medium
 
-+display("tiger", "Ferality", "54c9dd65-99bf-46ea-ada3-f2653f927500").has-frame(size="large" width=500 height=510)
++display("tiger", "Ferality", "558e95a4-f685-4dee-32a6-8c33e49d9600").has-frame(
+	size="large" aspectRatio="is-square" width=500 height=510
+)
 	+header("2018-12-02", "Oil on canvas")
 	:md
 		One of the older works of mine — I think I'd only spent 2 years dabbling with oil paintings back then,
@@ -56,7 +59,9 @@ mixin header(date, medium)
 		laying down sweeping strokes of striking orange, I too experienced the feral fury in me.
 		Wish I could experience that again...
 
-+display("altitudinous_blossoms", "Altitudinous blossoms", "29924456-ce4d-4965-9fbc-234df7875400").has-frame(size="medium" rtl width=400 height=660)
++display("altitudinous_blossoms", "Altitudinous blossoms", "170696fd-d9b4-4652-e168-2cc80250d400").has-frame(
+	size="medium" aspectRatio="is-3by5" rtl width=400 height=660
+)
 	+header("2021-02-11", "Oil on canvas")
 	:md
 		A friend of my mother's is a hobbyist photographer, and I think he took the original photo when he went to Tibet to...
@@ -72,7 +77,9 @@ mixin header(date, medium)
 		which are actually specks of mint-scented toothpaste and not white paint!
 		Although, they look like they hold up just fine on the canvas.
 
-+display("tropical_fish", "A piscine aura in the depths", "fbb5e547-d8a1-41a8-5043-bed1e07fd600").has-frame(size="large" width=500 height=380)
++display("tropical_fish", "A piscine aura in the depths", "278a69c6-ec0a-4461-c3f3-79aa615ad800").has-frame(
+	size="large" aspectRatio="is-4by3" width=500 height=380
+)
 	+header("2021-06-05", "Oil on canvas")
 	:md
 		Some kind of tropical fish whose name I have completely forgotten. It didn't even occur to past-Leah to write these things down! *sigh*
@@ -80,7 +87,9 @@ mixin header(date, medium)
 		It's really pretty, especially for its lake-blue scales and blood-red fins! Sure did take a long time to paint though... It was around this time
 		when my style really departed from the raw, emotional expression like *Ferality*, towards a finer sort of aesthetic.
 
-+display("red_cotton", "A flower — what's her name again?", "ef82771b-8dc7-40fe-b689-c91115fe6900").has-frame(size="large" rtl width=500 height=372)
++display("red_cotton", "A flower — what's her name again?", "35db3ba1-542a-46aa-2d10-850d34463e00").has-frame(
+	size="large" aspectRatio="is-4by3" rtl width=500 height=372
+)
 	+header("2021-12-11", "Oil on canvas")
 	:md
 		Turns out it's a flower of the tree [*Bombax ceiba*](https://en.wikipedia.org/wiki/Bombax_ceiba), better known as
@@ -91,7 +100,9 @@ mixin header(date, medium)
 		facing the entrance for I hope any visitors would appreciate its vividity and life force seeping out of the canvas,
 		as much as I would.
 
-+display("laotie", "老铁 (Laotie)", "396e7120-7657-41b9-9d76-11a073d36b00").has-frame(size="medium" width=400 height=533)
++display("laotie", "老铁 (Laotie)", "d35a98e6-9215-4ca7-ac79-133c93d17700").has-frame(
+	size="medium" aspectRatio="is-3by4" width=400 height=533
+)
 	+header("2022-03-20", "Oil on canvas")
 	:md
 		He's a corgi in the studio we used to paint in, and his presence made most of our weekly painting hours turn into communal dog-petting sessions.
@@ -100,7 +111,9 @@ mixin header(date, medium)
 
 		My mother insists I painted Santa Claus in disguise of a dog! But really, he's just wearing some festive clothes...
 
-+display("mom_and_i", "By the lake, beneath the canopies, in the beforetimes", "62840fbc-3640-4e4d-86f4-0e4a6cddb900").has-frame(size="medium" width=400 height=515)
++display("mom_and_i", "By the lake, beneath the canopies, in the beforetimes", "34e6b9ba-08a0-4a1a-437c-2e8839591500").has-frame(
+	size="medium" aspectRatio="is-3by4" width=400 height=515
+)
 	+header("2022-07-23", "Oil on canvas")
 	:md
 		One summer afternoon, on the eastern shore of Jinji Lake, Suzhou. It was an awfully nice day, so my mother and I decided

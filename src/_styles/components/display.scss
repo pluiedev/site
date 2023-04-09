@@ -85,6 +85,7 @@ figure.display {
 		display: flex;
 		justify-content: center;
 		width: unset;
+		min-width: 70vw;
 		max-height: calc(100vh - 80px);
 
 		&::before {
@@ -98,7 +99,7 @@ figure.display {
 			margin: $display-frame-popup-spinner-margin;
 		}
 
-		img {
+		.image {
 			z-index: calc($modal-z + 10);
 		}
 	}
