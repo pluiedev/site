@@ -39,7 +39,7 @@ links:
     icon: fab fa-bilibili
     color: twitter
 
-languages:
+devicons:
   proficiently:
     html5: "HTML\xa05"
     css3: "CSS\xa03"
@@ -57,6 +57,10 @@ languages:
     kotlin: Kotlin
     vim: Vim
     vscode: VSCode
+    git: Git
+    linux: Linux
+    fedora: Fedora Linux
+    markdown: Markdown
 
   adequately:
     bash: Bash
@@ -70,11 +74,32 @@ languages:
     perl: Perl
     python: Python
     ruby: Ruby
+    nodejs: Node.js
+    npm:
+      name: NPM
+      variant: original-wordmark
+    vuejs: Vue
+    svelte:
+      name: Svelte
+      link: /icons/svelte.svg
+    latex: LaTeX
+    gimp: GIMP
+    inkscape: Inkscape
+    premierepro: Premiere Pro
 
   rudimentally:
+    arduino: Arduino
     clojure: Clojure
     haskell: Haskell
     scala: Scala
+    groovy: Groovy
+    blender: Blender
+    unity: Unity
+    objectivec:
+      name: Objective-C
+      variant: plain
+    zig: Zig
+    aftereffects: After Effects
     
 # https://ogp.me
 opengraph:

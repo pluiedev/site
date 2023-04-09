@@ -4,9 +4,9 @@ mixin devicons(langs)
 			if (typeof langs[id] === "string")
 				+devicon(id, langs[id], "original")
 			else
-				- const { name, variant } = langs[id];
-				+devicon(id, name, variant)
+				- const { name, variant, link } = langs[id];
+				+devicon(id, name, variant, link)
 			
-mixin devicon(id, name, variant)
+mixin devicon(id, name, variant, link)
 	button.button.has-tooltip-arrow(data-tooltip=name)
-		img(alt=name src=`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${id}/${id}-${variant}.svg` width="50" height="50")
+		img(alt=name src=link || `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${id}/${id}-${variant}.svg` width="50" height="50")
