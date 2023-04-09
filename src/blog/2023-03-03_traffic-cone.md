@@ -40,10 +40,7 @@ There was a prominent member called i509VCB (i5 for short), who'd later go on to
 His avatar is nothing but unique—a rotating red traffic cone stuck between two escalator railings: 
 
 <figure>
-<img src="https://avatars.githubusercontent.com/u/30619168" class="is-rounded my-4" width="300">
-<figcaption>
-(It was originally an animated GIF, but now all I can find is a static image. Lame.)
-</figcaption>
+<img src="/img/traffic_cone.gif" class="is-rounded my-4" width="300">
 </figure>
 
 And... can we just appreciate how surreal this is? The sight of a red traffic cone, with two railings
