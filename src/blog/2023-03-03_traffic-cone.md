@@ -1,18 +1,13 @@
 ---
 title: What's up with the traffic cones?!
-description: ...Seriously, why?
+description: "I got asked of that question a lot lately, even from multiple different people.
+Given it's apparently a Frequently Asked Question™ now, I might as well answer it here..."
 
 section: Misc
 tags: 
   - post
   - slice-of-life
 ---
-
-I got asked of that question a lot lately, even from multiple different people.
-Given it's apparently a Frequently Asked Question™ now, I might as well answer it here...
-
-<!-- MORE -->
-
 > A: Hey Leah?
 > 
 > Me: Yeah?

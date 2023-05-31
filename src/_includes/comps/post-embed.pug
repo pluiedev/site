@@ -12,5 +12,4 @@ mixin post-embed(post)
 						a(href=href)= post.data.title
 					p.subtitle.is-6: +post-info(post)
 			.content
-				- const content = post.data.content;
-				!= content.slice(0, content.indexOf("<!-- MORE -->"))
+				!=filters.md(post.data.description)

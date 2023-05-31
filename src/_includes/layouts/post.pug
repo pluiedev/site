@@ -15,11 +15,12 @@ block main-content
 		.column
 			h1.title.has-text-primary= title
 			p.subtitle.is-6: +post-info(page)
+			!= filters.md(description)
 		.column.is-narrow.is-flex.is-justify-content-center
 			+button("/blog", "_self").is-primary
 				+icon-with-text("fas fa-arrow-turn-up fa-flip-horizontal") Other articles
 	hr.is-forced-max-width.mt-1
-
+	
 	block post-content
 		!=content
 
