@@ -20,7 +20,8 @@ block main-content
 			+button("/blog", "_self").is-primary
 				+icon-with-text("fas fa-arrow-turn-up fa-flip-horizontal") Other articles
 	hr.is-forced-max-width.mt-1
-	
-	block post-content
-		!=content
+
+	.post-content
+		block post-content
+			!=content
 

@@ -5,7 +5,7 @@ include ../comps/icon
 block main-content
 	p.subtitle.is-4 Page #[=currentPage] of #[=totalPages]
 
-	.section.content
+	section.my-6
 		each post in results
 			+post-embed(post)
 	

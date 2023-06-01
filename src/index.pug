@@ -14,41 +14,38 @@ opengraph:
 
 include _includes/comps/devicon.pug
 
-.columns.is-desktop.is-forced-max-width.is-flex-direction-row-reverse
-	.column.is-narrow.is-flex.is-justify-content-center.is-align-items-center
-		figure#avatar.image
-			img(src="/img/avatar.webp" alt="Avatar" width="320" height="320")
+.is-flex.is-flex-direction-column.is-align-items-center
+	figure#avatar.image
+		img(src="/img/avatar.webp" alt="Avatar" width="320" height="320")
+	h1.title.is-2
+		| Heya~ I'm #[span.has-text-primary Leah]!
+		span.subtitle
+			span.mx-1 ·
+			a.has-text-primary(href="https://pronouns.page/@pluiedev") she/her 🏳️‍⚧️
 
-	.column
-		h1.title.is-2
-			| Heya~ I'm #[span.has-text-primary Leah]!
-			span.subtitle
-				span.mx-1 ·
-				a.has-text-primary(href="https://pronouns.page/@pluiedev") she/her 🏳️‍⚧️
+	p.subtitle.is-4.
+		You may know me by my online aliases,
+		#[span.has-text-primary pluie] or #[span.has-text-primary pluiedev].
 
-		p.subtitle.is-4.
-			You may know me by my online aliases,
-			#[span.has-text-primary pluie] or #[span.has-text-primary pluiedev].
+	.has-text-justified
+		:md
+			I'm a Chinese open-source developer 👩🏼‍💻,
+			community manager 🔨👷🏼‍♀️,
+			graphics designer and artist 👩🏼‍🎨,
+			dedicated to making the world of digital technology and design accessible and
+			inclusive for everyone.
 
-		.has-text-justified
-			:md
-				I'm a Chinese open-source developer 👩🏼‍💻,
-				community manager 🔨👷🏼‍♀️,
-				graphics designer and artist 👩🏼‍🎨,
-				dedicated to making the world of digital technology and design accessible and
-				inclusive for everyone.
+			I love coding, drawing, painting, discovering more about myself, and helping others discover and express themselves.
+			Funnily enough, I do most of my productive work in my spare time when I'm supposed to relax—apparently,
+			once I get fixated on something, I can't stop. Not sure if that's a good quality or not! ;)
 
-				I love coding, drawing, painting, discovering more about myself, and helping others discover and express themselves.
-				Funnily enough, I do most of my productive work in my spare time when I'm supposed to relax—apparently,
-				once I get fixated on something, I can't stop. Not sure if that's a good quality or not! ;)
-
-				More things I like include dogs, traffic cones, history, politics and linguistics.
-				Especially <abbr title="constructed languages, or languages intentionally created by people">conlangs</abbr>.
-				They're _very_ cool.
-				
-				I also often think way too hard about narrative video games, to the point
-				I write full articles and reviews about them. I'm not exactly professional,
-				but I still try my best to figure out what does and doesn't tick!
+			More things I like include dogs, traffic cones, history, politics and linguistics.
+			Especially <abbr title="constructed languages, or languages intentionally created by people">conlangs</abbr>.
+			They're _very_ cool.
+			
+			I also often think way too hard about narrative video games, to the point
+			I write full articles and reviews about them. I'm not exactly professional,
+			but I still try my best to figure out what does and doesn't tick!
 
 .columns.is-forced-max-width.is-flex-direction-row-reverse
 	.column.my-6

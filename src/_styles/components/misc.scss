@@ -1,66 +1,70 @@
 /*! purgecss start ignore */
 .is-forced-max-width {
-  min-width: 100%;
+	min-width: 100%;
 }
 
-.main {
-  background-color: $scheme-main;
-  &.is-medium {
-    padding: 4.5rem 4.5rem !important;
-  }
+main {
+	background-color: $scheme-main;
+	&.is-medium {
+		padding: 4.5rem 4.5rem !important;
+	}
 }
 
 @include mobile {
-  .main.is-medium {
-    padding: 4.5rem 2.5rem !important;
-  }
-  
-  .has-text-centered-mobile {
-    text-align: center;
-  }
+	main.is-medium {
+		padding: 4.5rem 2.5rem !important;
+	}
+
+	.has-text-centered-mobile {
+		text-align: center;
+	}
 }
 
 .main-container {
-  flex-direction: column;
-  align-items: center;
-  min-height: 50vh;
+	flex-direction: column;
+	align-items: center;
+	min-height: 50vh;
+  max-width: 50rem;
 
-  @mixin centered {
-    display: flex;
+	@mixin centered {
+		display: flex;
 
-    .title,
-    .subtitle {
-      text-align: center;
-    }
-  }
+		.title,
+		.subtitle {
+			text-align: center;
+		}
+	}
 
-  &[centered] {
-    @include centered;
-  }
-  @include touch {
-    @include centered;
-  }
+	&[centered] {
+		@include centered;
+	}
+	@include touch {
+		@include centered;
+	}
 }
 
 img.is-rounded {
-  border-radius: $radius-rounded;
-
+	border-radius: $radius-rounded;
 }
 
 #avatar {
-  width: 320px;
-  height: 320px;
-  img {
-    @extend img, .is-rounded;
-    
-    border: 2px $primary solid;
-  }
-  @include desktop {
-    float: right;
-  }
+	width: 320px;
+	height: 320px;
+	img {
+		@extend img, .is-rounded;
+
+		border: 2px $primary solid;
+	}
+	@include desktop {
+		float: right;
+	}
 }
 
 .fake-link {
-  cursor: pointer;
+	cursor: pointer;
+}
+
+.post-content p, ol, ul {
+  text-align: justify;
 }
 /*! purgecss end ignore */
