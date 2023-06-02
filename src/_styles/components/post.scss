@@ -1,0 +1,15 @@
+.post-content p, ol, ul {
+  text-align: justify;
+}
+.post-tag {
+	font-size: small;
+	font-weight: bold !important;
+	
+	background-color: $primary;
+	color: $white;
+
+	padding: 0 6px 0px;
+	margin-left: 5px;
+	border-radius: 9999px;
+	white-space: nowrap;
+}

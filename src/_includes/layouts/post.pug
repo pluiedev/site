@@ -14,7 +14,7 @@ block main-content
 	.columns.is-desktop.is-align-items-center
 		.column
 			h1.title.has-text-primary= title
-			p.subtitle.is-6: +post-info(page)
+			+post-info(page)
 			!= filters.md(description)
 		.column.is-narrow.is-flex.is-justify-content-center
 			+button("/blog", "_self").is-primary

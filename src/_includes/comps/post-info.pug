@@ -1,7 +1,14 @@
 mixin post-info(page)
-	span.icon-text
-		+icon("fa-regular fa-calendar")
-		span= filters.date(page.data.date, "HUMAN_DATE")
+	.subtitle.is-6.is-flex.is-justify-content-space-between
+		span.icon-text
+			+icon("fa-regular fa-calendar")
+			span= filters.date(page.data.date, "HUMAN_DATE")
 
-		+icon("fa-solid fa-pen-to-square")
-		span= filters.date(page.src.lastModified, "HUMAN_DATE")
+			+icon("fa-solid fa-pen-to-square")
+			span= filters.date(page.src.lastModified, "HUMAN_DATE")
+		span
+			for tag in page.data.tags
+				//- every post has that - ignore
+				if tag !== "post"
+					span.post-tag= tag
+		

@@ -8,8 +8,8 @@ mixin post-embed(post)
 			
 			.media
 				.media-content
-					h2.title.is-3
+					h2.title.is-4
 						a(href=href)= post.data.title
-					p.subtitle.is-6: +post-info(post)
+					+post-info(post)
 			.content
 				!=filters.md(post.data.description)
