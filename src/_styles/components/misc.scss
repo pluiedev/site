@@ -26,6 +26,7 @@ main {
 	align-items: center;
 	min-height: 50vh;
   max-width: 60rem;
+	padding: 3rem 0rem;
 
 	@mixin centered {
 		display: flex;

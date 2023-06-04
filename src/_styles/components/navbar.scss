@@ -20,8 +20,13 @@
 .navbar-item.has-dropdown-toggle input.navbar-dropdown-toggle {
 	display: none;
 	
-	&:not(:checked) ~ .navbar-link:not(.is-arrowless)::after {
-		transform: translate(-2px, 1.5px) rotateZ(225deg);
+	&:not(:checked) ~ {
+		.navbar-dropdown {
+			display: none;
+		}
+		.navbar-link:not(.is-arrowless)::after {
+			transform: translate(-2px, 1.5px) rotateZ(225deg);
+		}
 	}
 	&:checked ~ .navbar-dropdown {
 		display: block;
