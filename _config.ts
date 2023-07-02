@@ -14,7 +14,11 @@ import smartyPants from "npm:@ngsctt/remark-smartypants";
 
 // postcss plugins
 import postcss from "lume/plugins/postcss.ts";
-import purgecss from "npm:@fullhuman/postcss-purgecss";
+import tailwindcss from "lume/plugins/tailwindcss.ts";
+import tailwindConfig from "./tailwind.config.ts";
+// import purgecss from "npm:@fullhuman/postcss-purgecss";
+// import tailwindcss from "npm:tailwindcss";
+// import sass from "npm:@csstools/postcss-sass";
 
 const site = lume({ src: "./src" });
 
@@ -22,20 +26,26 @@ site
   .use(remark({ remarkPlugins: [emoji, a11yEmoji, smartyPants] }))
   .use(minify_html())
   .use(sass({ includes: ["_styles"] }))
+  .use(tailwindcss({
+    // extensions: [".html", ".pug"],
+    options: tailwindConfig,
+  }))
   .use(imagick())
   .use(pug())
   .use(inline())
   .use(date())
   .use(postcss({
     keepDefaultPlugins: true,
-    plugins: [
-      purgecss({
-        content: ["./**/*.html", "./**/*.pug"],
-        safeList: {
-          greedy: [/youtube$/, /twitter$/],
-        },
-      }),
-    ],
+    // plugins: [
+    //   sass(),
+    //   // purgecss({
+    //   //   content: ["./**/*.html", "./**/*.pug"],
+    //   //   safeList: {
+    //   //     greedy: [/youtube$/, /twitter$/],
+    //   //   },
+    //   // }),
+    //   tailwindcss(),
+    // ],
   }))
   .copy("assets", ".")
   .copy("scripts", "scripts");

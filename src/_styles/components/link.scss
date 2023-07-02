@@ -4,11 +4,11 @@ $highlighter-color: hsla(49, 93%, 55%, 0.4) !default;
 $highlighter-thickness: 1.5rem;
 $footer-link-color: hsl(226, 92%, 81%) !default;
 
-.content a:not([disabled], .pagination-link) {
+main a:not([disabled], .pagination-link) {
   // adapted from https://stackoverflow.com/a/72459455
 	--hl-strike: 0; 
 
-	color: lighten($primary, 5%);
+	@apply text-brand;
 
 	background: linear-gradient(90deg, transparent, $highlighter-color 0) no-repeat 
 	right center / calc(var(--hl-strike) * 100%) $highlighter-thickness;
@@ -20,7 +20,7 @@ $footer-link-color: hsl(226, 92%, 81%) !default;
 
 	&:hover, &:focus, &.is-active {
 		--hl-strike: 1;
-		color: darken($primary, 10%);
+		// color: darken($primary, 10%);
 		background-position-x: left;
 	}
 

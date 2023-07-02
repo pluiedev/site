@@ -1,0 +1,11 @@
+[data-tooltip] {
+	@apply relative;
+
+	&::after {
+		content: attr(data-tooltip);
+		@apply hidden absolute text-sm text-center bg-white p-1 rounded-md border-2 border-zinc-300 min-w-fit -inset-x-2 -top-5 z-20;
+	}
+	&:hover::after {
+		@apply block;
+	}
+}

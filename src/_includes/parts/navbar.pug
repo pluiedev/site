@@ -6,39 +6,36 @@ mixin navbar-link(link, icon, color)
 		+icon(icon, color)(aria-hidden=true).mr-1
 		block
 
-nav.navbar.is-fixed-top.is-primary(role="navigation" aria-label="navigation")
-	input#navbar-toggle.is-hidden(type="checkbox" aria-hidden="true")
+nav.top-0.fixed.bg-brand.flex.justify-center.h-16.min-w-full.text-white.z-30
+	input#navbar-toggle.hidden(type="checkbox" aria-hidden="true")
 	
-	.navbar-brand
-		a.navbar-item.py-0(href="/")
-			img(src="/icons/wordmark.svg" alt="pluie.me" width="100" height="28")
+	a.w-32.bg-wordmark.bg-center.bg-no-repeat(class="hover:bg-brand-dark" href="/")
 		
-		label.navbar-burger(for="navbar-toggle" role="button" aria-label="menu")
-			//- Three empty spans here for rendering the burger icon
-			span(aria-hidden="true")
-			span(aria-hidden="true") 
-			span(aria-hidden="true")
+	//- label.navbar-burger(for="navbar-toggle" role="button" aria-label="menu")
+	//- 	//- Three empty spans here for rendering the burger icon
+	//- 	span(aria-hidden="true")
+	//- 	span(aria-hidden="true") 
+	//- 	span(aria-hidden="true")
 		
-	.navbar-menu
-		.navbar-start
-			each category in categories
-				a.navbar-item(href=category.url)= category.title
+	.navbar-items
+		each category in categories
+			a(href=category.url)= category.title
 
-			label(for=switches.contacts tabindex="0" role="button").navbar-item.has-dropdown.has-dropdown-toggle
-				input(id=switches.contacts type="checkbox").navbar-dropdown-toggle
+		label.navbar-dropdown(for=switches.contacts tabindex="0" role="button")
+			input(id=switches.contacts type="checkbox").navbar-dropdown-toggle
 
-				span.navbar-link Contact / Links
-				
-				.navbar-dropdown
-					for link in links
-						a.navbar-item.is-flex(href=link.link target="_blank")
-							+icon(link.icon, link.color)(aria-hidden=true).mr-1
-							span= link.text
+			span.px-0.navbar-dropdown-label Contact / Links
+			
+			.navbar-dropdown-items.bg-white.rounded-b-lg.border-t-zinc-400.shadow-md(class="shadow-black/10")
+				for link in links
+					a.navbar-item.flex.px-2.py-4.whitespace-nowrap(href=link.link target="_blank")
+						+icon(link.icon, link.color)(aria-hidden=true).mr-1
+						span= link.text
 
-					label(tabindex="0" role="button" for=switches.email)
-						span.navbar-item.is-flex.fake-link
-							+icon("fas fa-envelope")(aria-hidden=true).mr-1
-							span Email
+				label(tabindex="0" role="button" for=switches.email)
+					span.navbar-item.is-flex.fake-link
+						+icon("fas fa-envelope")(aria-hidden=true).mr-1
+						span Email
 						
 				 
 		

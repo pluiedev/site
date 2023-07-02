@@ -29,7 +29,6 @@ $family-monospace: join(
 	$family-monospace,
 	$separator: "comma"
 );
-$body-size: 18px; // default is way too smol
 
 @import "../bulma/sass/utilities/derived-variables";
 

@@ -1,8 +1,8 @@
 doctype html
-html.has-navbar-fixed-top(lang="en")
+html(lang="en")
 	include ../parts/head
-	body
-		include ../parts/email-modal
+	body.pt-16
+		//- include ../parts/email-modal
 		include ../parts/navbar
 		block content
 			!=content
