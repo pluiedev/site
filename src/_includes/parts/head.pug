@@ -10,7 +10,7 @@ mixin deferred-stylesheets(...hrefs)
 		each href in hrefs
 			link(rel="stylesheet" href=href)
 
-head 
+head
 	meta(charset="utf-8")
 
 	title= `${title} | pluie.me`
@@ -39,5 +39,3 @@ head
 	)
 
 	link(rel="stylesheet" href="/style.css")
-
-	script(async src="https://kit.fontawesome.com/9e8f44c938.js" crossorigin="anonymous")

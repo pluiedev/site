@@ -14,66 +14,54 @@ opengraph:
 
 include _includes/comps/devicon.pug
 
-mixin brand
-	span.text-brand
-		block
+.grid.gap-20.mb-16(class="grid-cols-[20rem_auto_20rem] grid-rows-[calc(100vh-3*4rem)]")
+	figure.place-self-center
+		img.rounded-full.border-2.border-brand(src="/img/avatar.webp" alt="Avatar" width="320")
+	.col-span-2.place-self-center
+		h1.text-5xl.font-bold.mt-4
+			| Heya~ I’m #[span.text-brand Leah]!
+			span.text-xl
+				span.mx-2 ·
+				a(href="https://pronouns.page/@pluiedev") she/her 🏳️‍⚧️
 
-mixin devicons(langs)
-	h3.text-xl.my-3
-		block
-	.grid.grid-cols-5.gap-2
-		each id in Object.keys(langs)
-			if (typeof langs[id] === "string")
-				+devicon(id, langs[id], "original")
-			else
-				- const { name, variant, link } = langs[id];
-				+devicon(id, name, variant, link)
-			
-mixin devicon(id, name, variant, link)
-	- const href = link || `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${id}/${id}-${variant}.svg`;
-	.devicon(style=`background:no-repeat center/75% url('${href}')` data-tooltip=name)
-		//- img(alt=name src=link || `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${id}/${id}-${variant}.svg` width="50" height="50")
+		p.text-2xl.mt-4.
+			You may know me by my online aliases,
+			#[span.text-brand pluie] or #[span.text-brand pluiedev].
 
+	.prose.text-justify.col-span-2(class="dark:prose-invert"): :md
+		I'm a Chinese open-source developer 👩🏼‍💻,
+		community manager 🔨👷🏼‍♀️,
+		graphics designer and artist 👩🏼‍🎨,
+		dedicated to making the world of digital technology and design accessible and
+		inclusive for everyone.
 
-.flex.flex-col.items-center
-	figure#avatar.w-80.h-80.m-8.mt-0.float-right
-		img.rounded-full.border-2.border-brand(src="/img/avatar.webp" alt="Avatar" width="320" height="320")
+		I love coding, drawing, painting, discovering more about myself, and helping others discover and express themselves.
+		Funnily enough, I do most of my productive work in my spare time when I'm supposed to relax—apparently,
+		once I get fixated on something, I can't stop. Not sure if that's a good quality or not! ;)
 
-	h1.text-5xl.font-bold.my-1
-		| Heya~ I'm #[+brand Leah]!
-		span.text-xl
-			span.mx-1 ·
-			a(href="https://pronouns.page/@pluiedev") she/her 🏳️‍⚧️
+		More things I like include dogs, traffic cones, history, politics and linguistics.
+		Especially <abbr title="constructed languages, or languages intentionally created by people">conlangs</abbr>.
+		They're _very_ cool.
 
-	p.text-2xl.mb-4.
-		You may know me by my online aliases,
-		#[+brand pluie] or #[+brand pluiedev].
+		I also often think way too hard about narrative video games, to the point
+		I write full articles and reviews about them. I'm not exactly professional,
+		but I still try my best to figure out what does and doesn't tick!
 
-	.prose.text-justify
-		:md
-			I'm a Chinese open-source developer 👩🏼‍💻,
-			community manager 🔨👷🏼‍♀️,
-			graphics designer and artist 👩🏼‍🎨,
-			dedicated to making the world of digital technology and design accessible and
-			inclusive for everyone.
+	div
 
-			I love coding, drawing, painting, discovering more about myself, and helping others discover and express themselves.
-			Funnily enough, I do most of my productive work in my spare time when I'm supposed to relax—apparently,
-			once I get fixated on something, I can't stop. Not sure if that's a good quality or not! ;)
+	.text-centered.w-full(class="sm:text-left")
+		h2.text-2xl.font-bold Technologies that...
 
-			More things I like include dogs, traffic cones, history, politics and linguistics.
-			Especially <abbr title="constructed languages, or languages intentionally created by people">conlangs</abbr>.
-			They're _very_ cool.
-			
-			I also often think way too hard about narrative video games, to the point
-			I write full articles and reviews about them. I'm not exactly professional,
-			but I still try my best to figure out what does and doesn't tick!
+		.flex.divide-y.gap-4(class="sm:flex-col")
+			each techs in technologies
+				div
+					h3.text-xl.my-3= techs.title
+					+devicons(techs.icons)
 
-.flex.flex-row-reverse.min-w-full.gap-10.my-12
-	.prose.text-justify
+	.prose.text-justify.col-span-2(class="dark:prose-invert")
 		h2(class="!mb-0") Current endeavors
 		p Up-to-date as of: #[em= filters.date(date, "HUMAN_DATE")]
-	
+
 		:md
 			Currently, I spend most of my attention and energy on two things:
 			community management and moderation, and contributing to and creating various
@@ -98,7 +86,7 @@ mixin devicon(id, name, variant, link)
 			As an open-source contributor, I occasionally submit patches and pull requests to
 			projects I find interesting, mostly in Rust, TypeScript and Kotlin.
 			I also maintain Quilt's community tooling, mainly [its official website](https://quiltmc.org)
-			and its [Developer Wiki](https://modder.wiki.quiltmc.org/), and sometimes its own 
+			and its [Developer Wiki](https://modder.wiki.quiltmc.org/), and sometimes its own
 			Discord bot called [Cozy](https://github.com/QuiltMC/cozy-discord).
 			I also started some other random projects, one of which is a
 			[Rust rewrite of the `alien` tool](https://github.com/pluiedev/alien),
@@ -108,21 +96,4 @@ mixin devicon(id, name, variant, link)
 			I'm almost always coding something new, for existing projects or otherwise,
 			and I can't wait to show you more! For now, you'll just have to wait for me to update this
 			portfolio again sometime in the future...
-
-	.text-centered(class="sm:text-left").grow
-		h2.text-2xl.font-bold Technologies that...
-
-		.flex.divide-y.gap-4(class="sm:flex-col")
-			div
-				h3.text-xl.my-3 I use proficiently
-				+devicons(devicons.proficiently)
-			
-			div
-				h3.text-xl.my-3 I use adequately
-				+devicons(devicons.adequately)
-
-			div
-				h3.text-xl.my-3 I am still learning
-				+devicons(devicons.rudimentally)
-
 

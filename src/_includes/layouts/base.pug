@@ -1,9 +1,17 @@
 doctype html
 html(lang="en")
 	include ../parts/head
-	body.pt-16
+	body.pt-16(class="dark:bg-zinc-900 dark:text-zinc-200")
 		//- include ../parts/email-modal
 		include ../parts/navbar
 		block content
 			!=content
 		include ../parts/footer
+
+		script(src="https://unpkg.com/lucide@latest")
+		script.
+			lucide.createIcons({
+				attrs: {
+					'stroke-width': 1.5,
+				},
+			})

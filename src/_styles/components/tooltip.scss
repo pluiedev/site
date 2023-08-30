@@ -3,9 +3,12 @@
 
 	&::after {
 		content: attr(data-tooltip);
-		@apply hidden absolute text-sm text-center bg-white p-1 rounded-md border-2 border-zinc-300 min-w-fit -inset-x-2 -top-5 z-20;
+		@apply hidden absolute text-sm text-center inline-block align-middle bg-white/90 dark:bg-zinc-900/80;
+		@apply p-1 rounded-md border-[1px] border-brand min-w-fit -inset-x-2 bottom-[90%] z-20;
 	}
-	&:hover::after {
-		@apply block;
+	&:hover {
+		&::before, &::after {
+			@apply block;
+		}
 	}
 }

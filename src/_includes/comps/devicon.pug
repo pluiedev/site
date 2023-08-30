@@ -1,0 +1,15 @@
+mixin devicons(langs)
+	h3.text-xl.my-3
+		block
+	.grid.grid-cols-5.gap-2
+		each id in Object.keys(langs)
+			if (typeof langs[id] === "string")
+				+devicon(id, langs[id])
+			else
+				- const { name, light, dark } = langs[id];
+				+devicon(id, name, light, dark)
+
+mixin devicon(id, name, light, dark)
+	- const parts = [id, light, dark].filter(Boolean).join("/");
+	.devicon(style=`--devicon: url('https://cdn.simpleicons.org/${parts}');` data-tooltip=name)
+

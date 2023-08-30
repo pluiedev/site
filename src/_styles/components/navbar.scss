@@ -1,29 +1,42 @@
-// @include touch {
-// 	#navbar-toggle:checked ~ {
-// 		.navbar-menu {
-// 			display: block;
-// 		}
+//@include touch {
+//	#navbar-toggle:checked ~ {
+//		.navbar-menu {
+//			display: block;
+//		}
+//
+//		@for $i from -1 through 1 {
+//			* label[for="navbar-toggle"] span:nth-child(#{$i + 2}) {
+//				transform: translateY($i * -5px) rotate($i * -45deg);
+//				opacity: abs($i * 100%);
+//			}
+//		}
+//	}
+//}
 
-// 		@for $i from -1 through 1 {
-// 			* label[for="navbar-toggle"] span:nth-child(#{$i + 2}) {
-// 				transform: translateY($i * -5px) rotate($i * -45deg);
-// 				opacity: abs($i * 100%);
-// 			}
-// 		}
-// 	}
-// }
+.navbar {
+	@apply top-0 fixed z-30 bg-brand flex justify-center h-navbar min-w-full border-b-2 border-b-brand-dark text-white dark:bg-zinc-900 dark:border-b-brand;
+}
 
-.navbar-items {
-	@apply grow;
+.navbar-brand {
+  @extend .navbar-tab;
+  @apply w-32;
 
-	* {
-		@apply inline-flex h-full items-center px-3 hover:bg-brand-dark;
-	}
+  background: url('/icons/wordmark.svg') no-repeat center, linear-gradient(to top, var(--tw-gradient-stops)) no-repeat bottom !important;
+  background-size: 75%, auto calc(var(--bg-transition) * 100%) !important;
+}
+
+.navbar-tab {
+  @extend .bg-transition;
+	@apply inline-flex h-full items-center px-3 ease-out bg-no-repeat bg-bottom bg-gradient-to-t from-transparent to-brand-dark dark:to-brand-darker to-0%;
+
+  background-size: auto calc(var(--bg-transition) * 100%);
 }
 
 .navbar-dropdown {
+  @apply relative;
+
 	.navbar-dropdown-items {
-		@apply absolute left-0 top-full z-20 min-w-full min-h-fit text-sm;
+		@apply absolute left-0 z-20 min-w-full min-h-fit text-sm;
 	}
 
 	.navbar-dropdown-label::after {
@@ -32,27 +45,23 @@
 	}
 
 	input.navbar-dropdown-toggle {
-		display: none;
-		
-		&:not(:checked) ~ {
-			.navbar-dropdown-items {
-				display: none;
-			}
+    @apply hidden;
+
+		&:not(:checked) ~ .navbar-dropdown-items {
+      @apply hidden;
 		}
 		&:checked ~ {
 			.navbar-dropdown-items {
-				display: block;
+				@apply block;
 			}
-			.navbar-dropdown-label::after {
-				@apply rotate-45 -translate-y-0.5;
-			}
+      .navbar-dropdown-label {
+        --bg-transition: 1;
+
+        &::after {
+				  @apply rotate-45 -translate-y-0.5;
+        }
+      }
 		}
 	}
 }
 
-// .navbar-dropdown .fake-link.navbar-item {
-//   &:focus, &:hover {
-//     background-color:$navbar-dropdown-item-hover-background-color;
-//     color: $navbar-dropdown-item-hover-color;
-//   }
-// }

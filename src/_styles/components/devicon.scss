@@ -1,0 +1,11 @@
+.devicon {
+	@apply relative rounded-lg border-zinc-300 dark:border-zinc-700 border-2;
+
+	&::before {
+		content: "";
+		aspect-ratio: 1 / 1;
+		@apply top-0 left-0 w-full h-full inline-block cursor-pointer;
+		background: no-repeat center/75% var(--devicon);
+	}
+}
+

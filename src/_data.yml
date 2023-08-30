@@ -15,8 +15,8 @@ categories:
 links:
   - text: YouTube
     link: https://youtube.com/@pluiedev
-    icon: fab fa-youtube
-    color: youtube
+    icon: si-youtube
+    color: white
 
   - text: pronouns.page
     link: https://pronouns.page/@pluiedev
@@ -26,81 +26,120 @@ links:
 
   - text: Discord Server
     link: https://discord.gg/NeNfePzCx8
-    icon: fab fa-discord
-    color: blurple
+    icon: si-discord
+    color: 7781f6
 
   - text: Mastodon
     link: https://blobfox.coffee/@pluie
-    icon: fab fa-mastodon
-    color: blurple
+    icon: si-mastodon
+    color: 7781f6
 
   - text: Bilibili
     link: https://space.bilibili.com/401096522
-    icon: fab fa-bilibili
-    color: twitter
+    icon: si-bilibili
 
-devicons:
-  proficiently:
-    html5: "HTML\xa05"
-    css3: "CSS\xa03"
-    sass: Sass
-    bulma:
-      name: Bulma
-      variant: plain
-    javascript: JavaScript
-    typescript: TypeScript
-    denojs: Deno
-    rust:
-      name: Rust
-      variant: plain
-    java: Java
-    kotlin: Kotlin
-    vim: Vim
-    vscode: VSCode
-    git: Git
-    linux: Linux
-    fedora: Fedora Linux
-    markdown: Markdown
+technologies:
+  - title: I use proficiently
+    icons:
+      html5: "HTML\xa05"
+      css3: "CSS\xa03"
+      sass: Sass
+      bulma: Bulma
+      javascript:
+        name: JavaScript
+        light: e8cf06
+        dark: F7DF1E
+      typescript: TypeScript
+      deno:
+        name: Deno
+        light: black
+        dark: white
+      rust:
+        name: Rust
+        light: black
+        dark: white
+      openjdk:
+        name: Java
+        light: black
+        dark: white
+      kotlin: Kotlin
+      neovim: Neovim
+      visualstudiocode: VSCode
+      intellijidea:
+        name: IntelliJ IDEA
+        light: black
+        dark: white
+      git: Git
+      linux:
+        name: Linux
+        light: d9a60c
+        dark: FCC624
+      nixos: Nix(OS)
+      markdown:
+        name: Markdown
+        light: black
+        dark: white
 
-  adequately:
-    bash: Bash
-    c: C
-    cplusplus: C++
-    csharp: C#
-    gradle:
-      name: Gradle
-      variant: plain
-    lua: Lua
-    perl: Perl
-    python: Python
-    ruby: Ruby
-    nodejs: Node.js
-    npm:
-      name: NPM
-      variant: original-wordmark
-    vuejs: Vue
-    svelte:
-      name: Svelte
-      link: /icons/svelte.svg
-    latex: LaTeX
-    gimp: GIMP
-    inkscape: Inkscape
-    premierepro: Premiere Pro
+  - title: I use adequately
+    icons:
+      gnubash: Bash
+      c:
+        name: C
+        light: 00599C
+        dark: 1284d9
+      cplusplus:
+        name: C++
+        light: 00599C
+        dark: 1284d9
+      csharp: C#
+      gradle:
+        name: Gradle
+        light: 02303A
+        dark: 4298B8
+      lua:
+        name: Lua
+        light: 2C2D72
+        dark: 9798f3
+      perl:
+        name: Perl
+        light: 39457E
+        dark: 637ae4
+      python: Python
+      ruby: Ruby
+      nodedotjs: Node.js
+      npm: NPM
+      vuedotjs:
+        name: Vue
+        light: 41B883
+      svelte: Svelte
+      mongodb: MongoDB
+      graphql: GraphQL
+      latex: LaTeX
+      gimp:
+        name: GIMP
+        light: 5C5543
+        dark: a59c84
+      inkscape:
+        name: Inkscape
+        light: black
+        dark: white
+      adobepremierepro: Premiere Pro
 
-  rudimentally:
-    arduino: Arduino
-    clojure: Clojure
-    haskell: Haskell
-    scala: Scala
-    groovy: Groovy
-    blender: Blender
-    unity: Unity
-    objectivec:
-      name: Objective-C
-      variant: plain
-    zig: Zig
-    aftereffects: After Effects
-    
+  - title: I am still learning
+    icons:
+      arduino: Arduino
+      clojure: Clojure
+      haskell: Haskell
+      scala: Scala
+      apachegroovy: Groovy
+      blender: Blender
+      unity:
+        name: Unity
+        light: black
+        dark: white
+      zig: Zig
+      adobeaftereffects: After Effects
+
 # https://ogp.me
 opengraph:
   og:type: website

@@ -6,19 +6,21 @@
 }
 
 @layer components {
-	@import "components/link";
-	@import "components/navbar";
-	@import "components/tooltip";
-
-	.devicon {
-		aspect-ratio: 1 / 1;
-		@apply inline-block p-2 rounded-lg border-zinc-200 border-2 cursor-pointer;
-	}
+	@import "_styles/components/_index";
 }
 @layer utilities {
 	.bg-brand-hoverable {
 		@apply bg-brand hover:bg-brand-dark;
 	}
+
+	.bg-transition {
+	  --bg-transition: 0;
+	  &:hover, &:focus, &.is-active {
+	  	--bg-transition: 1;
+	  }
+
+	  transition: background-size 0.2s;
+	}
 }
 
-@import "fonts"
+@import "_styles/fonts";

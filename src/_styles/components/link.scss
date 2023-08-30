@@ -1,30 +1,14 @@
 @use "sass:color";
 
-$highlighter-color: hsla(49, 93%, 55%, 0.4) !default;
-$highlighter-thickness: 1.5rem;
-$footer-link-color: hsl(226, 92%, 81%) !default;
-
-main a:not([disabled], .pagination-link) {
+a:not(.navbar-tab, [disabled], .pagination-link) {
   // adapted from https://stackoverflow.com/a/72459455
-	--hl-strike: 0; 
+  @extend .bg-transition;
+	@apply text-brand ease-out bg-no-repeat bg-right-bottom bg-gradient-to-r from-transparent to-brand-dark to-0%;
 
-	@apply text-brand;
-
-	background: linear-gradient(90deg, transparent, $highlighter-color 0) no-repeat 
-	right center / calc(var(--hl-strike) * 100%) $highlighter-thickness;
-
-	transition: background-size 0.2s ease;
-
-	text-decoration: underline 1px currentColor;
-	text-underline-offset: 5px;
+	background-size: calc(var(--bg-transition) * 100%) 1.5px;
+  text-decoration: none;
 
 	&:hover, &:focus, &.is-active {
-		--hl-strike: 1;
-		// color: darken($primary, 10%);
-		background-position-x: left;
-	}
-
-	footer & {
-		color: $footer-link-color;
+    @apply bg-left-bottom;
 	}
 }

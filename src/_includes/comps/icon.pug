@@ -3,8 +3,10 @@ mixin icon(icon, color)
 		span.icon&attributes(attributes)
 			//- Font Awesome icons
 			if typeof(icon) === "string"
-				if icon.startsWith("fa")
-					i(class=[icon, color ? `has-text-${color}` : ""])
+				if icon.startsWith("lc")
+					i(data-lucide=icon.substring(3) class=[color ? `has-text-${color}` : ""])
+				if icon.startsWith("si")
+					img(width=20 height=20 src=`https://cdn.simpleicons.org/${icon.substring(3)}/${color}`)
 			else
 				img(src=icon.src alt=icon.alt height=icon.height width=icon.width)
 
