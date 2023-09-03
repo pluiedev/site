@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	// Default dark theme "Neon"
+
+	--brand: 210 55 115; // #d23773
+	--brand-dark: 186 44 99; // #ba2c63
+	--brand-darker: 133 30 70; // #851e46
+	--brand-darkest: 87 18 45; // #57122d
+
+	--bg: 24 24 27; // zinc-900
+
+	--navbar-bg: var(--bg);
+	--navbar-fg: 255 255 255; // white
+	--navbar-border: var(--brand);
+
+	--fg: 212 212 216; // zinc-200
+}
+@media (prefers-color-scheme: light) {
+	:root {
+		// Default light theme "Strawberry Marshmellow"
+
+		--bg: 255 255 255; // white
+		--navbar-bg: var(--brand);
+		--navbar-border: var(--brand-dark);
+
+		--fg: 24 24 27; // zinc-900
+		--fg-dimmed: 63 63 70; // zinc-700
+	}
+}
+
 @layer base {
 }
 

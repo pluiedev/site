@@ -1,5 +1,5 @@
 .devicon {
-	@apply relative rounded-lg border-zinc-300 dark:border-zinc-700 border-2;
+	@apply relative rounded-lg border-fg/30 border-2;
 
 	&::before {
 		content: "";
@@ -8,4 +8,3 @@
 		background: no-repeat center/75% var(--devicon);
 	}
 }
-

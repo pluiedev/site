@@ -3,7 +3,7 @@
 
 	&::after {
 		content: attr(data-tooltip);
-		@apply hidden absolute text-sm text-center inline-block align-middle bg-white/90 dark:bg-zinc-900/80;
+		@apply hidden absolute text-sm text-center inline-block align-middle bg-bg/80;
 		@apply p-1 rounded-md border-[1px] border-brand min-w-fit -inset-x-2 bottom-[90%] z-20;
 	}
 	&:hover {

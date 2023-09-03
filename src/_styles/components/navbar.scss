@@ -13,12 +13,7 @@
 //	}
 //}
 
-.navbar {
-	@apply top-0 fixed z-30 bg-brand flex justify-center h-navbar min-w-full border-b-2 border-b-brand-dark text-white dark:bg-zinc-900 dark:border-b-brand;
-}
-
 .navbar-brand {
-  @extend .navbar-tab;
   @apply w-32;
 
   background: url('/icons/wordmark.svg') no-repeat center, linear-gradient(to top, var(--tw-gradient-stops)) no-repeat bottom !important;
@@ -27,7 +22,7 @@
 
 .navbar-tab {
   @extend .bg-transition;
-	@apply inline-flex h-full items-center px-3 ease-out bg-no-repeat bg-bottom bg-gradient-to-t from-transparent to-brand-dark dark:to-brand-darker to-0%;
+	@apply inline-flex h-full items-center px-3 ease-out text-navbar-fg bg-no-repeat bg-bottom bg-gradient-to-t from-transparent to-navbar-border to-0%;
 
   background-size: auto calc(var(--bg-transition) * 100%);
 }

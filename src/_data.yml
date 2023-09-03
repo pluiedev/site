@@ -1,4 +1,4 @@
-layout: layouts/default.pug
+layout: layouts/default.vto
 
 switches:
   email: email-modal
@@ -16,27 +16,33 @@ links:
   - text: YouTube
     link: https://youtube.com/@pluiedev
     icon: si-youtube
-    color: white
+    color: youtube
 
   - text: pronouns.page
     link: https://pronouns.page/@pluiedev
-    icon:
-      src: /icons/pronouns-page.svg
-      alt: pronouns.page logo
+    icon: /icons/pronouns-page.svg
+    color: pronouns-page
 
-  - text: Discord Server
+  - text: Discord
     link: https://discord.gg/NeNfePzCx8
     icon: si-discord
-    color: 7781f6
+    color: discord
 
   - text: Mastodon
     link: https://blobfox.coffee/@pluie
     icon: si-mastodon
-    color: 7781f6
+    color: mastodon
 
   - text: Bilibili
     link: https://space.bilibili.com/401096522
     icon: si-bilibili
+    color: bilibili
+
+  - text: GitHub
+    link: https://github.com/pluiedev
+    icon: si-github
+    color: zinc-200
+    fg: black
 
 technologies:
   - title: I use proficiently

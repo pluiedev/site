@@ -1,0 +1,12 @@
+{{ layout "layouts/base.vto" }}
+
+<main class="py-20 max-w-screen-lg mx-auto sm:py-10">
+	{{ if it.title && !it.doNotRenderTitle }}
+		<h1 class="text-5xl font-bold my-20">{{ title }}</h1>
+	{{ /if }}
+
+	{{ content }}
+</main>
+
+{{ /layout }}
+

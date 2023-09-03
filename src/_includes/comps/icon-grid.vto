@@ -1,0 +1,23 @@
+{{ export function icon_grid(icons) }}
+	<div class="grid grid-cols-5 gap-2">
+		{{ for id, lang of icons }}
+			{{ if typeof lang === "string" }}
+				{{ devicon(id, lang) }}
+			{{ else }}
+				{{> const { name, light, dark } = lang }}
+				{{ devicon(id, name, light, dark) }}
+			{{ /if }}
+		{{ /for }}
+	</div>
+{{ /export }}
+
+{{ function devicon(id, name, light, dark) }}
+	{{ set parts = [id, light, dark].filter(Boolean).join("/") }}
+	{{ set style = `"--devicon: url('https://cdn.simpleicons.org/${parts}');"` }}
+	<div
+		class="devicon"
+		style={{ style }}
+		data-tooltip={{ name }}
+	></div>
+{{ /function }}
+

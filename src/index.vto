@@ -1,0 +1,177 @@
+---
+layout: layouts/base.vto
+title: Heya~
+description: I'm Leah, also known as pluie or pluiedev!
+
+date: Git Last Modified
+doNotRenderTitle: true
+opengraph:
+  og:type: profile
+  profile:first_name: Leah
+  profile:last_name: Chen
+  profile:username: pluie
+  profile:gender: female
+---
+{{ import { icon_grid } from "comps/icon-grid.vto" }}
+
+<link rel="stylesheet" href="main.css" />
+
+<div class="top-detector"></div>
+<main class="grid splash justify-items-center gap-x-16 gap-y-10 mx-auto max-w-screen-lg mb-16 grid-cols-main-screen">
+	<figure class="intro place-self-center">
+		<img class="rounded-full border-2 border-brand" src="/img/avatar.webp" alt="Avatar" width="320" height="320" />
+	</figure>
+
+	<div class="intro col-span-2 place-self-center flex flex-col gap-y-4">
+		<h1 class="text-5xl font-bold">
+			Heya~ I’m <span class="text-brand">Leah</span>!
+			<span class="text-xl">
+				<span class="mx-2">·</span>
+				<a href="https://pronouns.page/@pluiedev">she/her 🏳️‍⚧️</a>
+			</span>
+		</h1>
+
+		<p class="text-2xl">
+			You may know me by my online aliases,
+			<span class="text-brand">pluie</span> or
+			<span class="text-brand">pluiedev</span>.
+		</p>
+		<p class="text-xl">
+			I'm a Chinese open-source <span class="text-brand">developer 👩🏼‍💻</span>,
+			community <span class="text-brand">manager 🔨👷🏼‍♀️</span>,
+			graphics designer and <span class="text-brand">artist 👩🏼‍🎨</span>,
+			dedicated to making the world of technology and design accessible and
+			inclusive for <span class="text-brand">everyone</span>.
+		</p>
+	</div>
+
+	<div class="scroll-down">
+		Scroll down
+		<div class="bottom-detector"></div>
+	</div>
+
+	<div id="scroll-indicator-vanish-point" class="prose text-justify col-span-2 dark:prose-invert">
+		{{ filter strip_indent |> md }}
+			I love coding, drawing, painting, discovering more about myself, and helping others discover and express themselves.
+			Funnily enough, I do most of my productive work in my spare time when I'm supposed to relax—apparently,
+			once I get fixated on something, I can't stop. Not sure if that's a good quality or not! ;)
+
+			More things I like include dogs, traffic cones, history, politics and linguistics.
+			Especially <abbr title="constructed languages, or languages intentionally created by people">conlangs</abbr>.
+			They're _very_ cool.
+
+			I also often think way too hard about narrative video games, to the point
+			I write full articles and reviews about them. I'm not exactly professional,
+			but I still try my best to figure out what does and doesn't tick!
+		{{ /filter }}
+	</div>
+
+	<div class="flex flex-col w-full place-content-center gap-2">
+		{{ for link of links }}
+			{{ set fg = link.fg ?? "white" }}
+			{{ if link.icon.startsWith("si-") }}
+				{{ set icon = `https://cdn.simpleicons.org/${link.icon.substring(3)}/${fg}` }}
+			{{ else }}
+				{{ set icon = link.icon }}
+			{{ /if }}
+
+			<a
+				href={{ link.link }}
+				class="button arrow-button has-icon bg-{{ link.color }} py-2 px-3 text-{{ fg }}"
+				style="--icon: url({{ icon }})"
+			>
+				{{ link.text }}
+			</a>
+		{{ /for }}
+	</div>
+
+	<div class="text-centered w-full sm:text-left">
+		<h2 class="text-2xl font-bold">Technologies that...</h2>
+
+		<div class="flex divide-y gap-4 sm:flex-col">
+			{{ for techs of technologies }}
+				<div>
+					<h3 class="text-xl my-3">{{ techs.title }}</h3>
+					{{ icon_grid(techs.icons) }}
+				</div>
+			{{ /for }}
+		</div>
+	</div>
+
+	<div class="prose text-justify col-span-2 dark:prose-invert">
+		<h2 class="!mb-0">Current endeavors</h2>
+		<p>Up-to-date as of: <em>{{ it.date |> date("HUMAN_DATE") }}</em></p>
+
+		{{ filter strip_indent |> md }}
+			Currently, I spend most of my attention and energy on two things:
+			community management and moderation, and contributing to and creating various
+			open-source projects.
+
+			As one of the [community managers](https://quiltmc.org/about/teams/#community-managers)
+			of [the Quilt Project](https://quiltmc.org), a modding toolchain project primarily designed for Minecraft,
+			I work on policies, guidelines and tooling that drives Quilt towards its goal of creating
+			a healthy, diverse, multicultural community striving to accomodate all sorts of minorities,
+			be they ethnic or racial minorities, sexual and/or gender-nonconfirming minorities, neurodivergent minorities,
+			or any other group of people facing various challenges and adversities in world society.
+
+			My unique identity as a queer, lesbian Chinese trans woman with an international,
+			multicultural mindset provides me with ample amounts of lived experience with
+			diversifying communities beyond the dominant Western, mostly Anglophone,
+			predominantly white, cis- and heteronormative culture,
+			which is unfortunately still the sole major cultural environment in most tech-focused communities.
+			I hope that, through my efforts, heterogeneous people from diverse backgrounds can find
+			communities that I manage comfortable, and be free from having to mask their cultural heritage,
+			like when I first ventured into international technical communities.
+
+			As an open-source contributor, I occasionally submit patches and pull requests to
+			projects I find interesting, mostly in Rust, TypeScript and Kotlin.
+			I also maintain Quilt's community tooling, mainly [its official website](https://quiltmc.org)
+			and its [Developer Wiki](https://modder.wiki.quiltmc.org/), and sometimes its own
+			Discord bot called [Cozy](https://github.com/QuiltMC/cozy-discord).
+			I also started some other random projects, one of which is a
+			[Rust rewrite of the \`alien\` tool](https://github.com/pluiedev/alien),
+			originally a Perl utility script that converts Linux software packages between various formats
+			(e.g.: \`.deb\`, \`.rpm\`, \`.tgz\`, ...) for different package managers (e.g.: \`dpkg\`/\`apt\`, \`rpm\`/\`dnf\`, ...)
+
+			I'm almost always coding something new, for existing projects or otherwise,
+			and I can't wait to show you more! For now, you'll just have to wait for me to update this
+			portfolio again sometime in the future...
+		{{ /filter }}
+	</div>
+</main>
+
+<script>
+	const scroll = document.querySelector('.scroll-down');
+  const intro = document.querySelector('main');
+
+	const t = new IntersectionObserver(entries => {
+  	entries.forEach(entry => {
+    	if (entry.isIntersecting) {
+	    	scroll.classList.remove('opacity-0');
+      	intro.classList.remove('compact');
+	    }
+	  });
+	});
+	const b = new IntersectionObserver(entries => {
+  	entries.forEach(entry => {
+    	if (entry.isIntersecting) {
+      	scroll.classList.add('opacity-0');
+      	intro.classList.add('compact');
+	    }
+	  });
+	});
+
+	function init(ev) {
+		if (window.innerHeight < 600) {
+      scroll.classList.add('opacity-0');
+			t.disconnect();
+			b.disconnect();
+		} else {
+			t.observe(document.querySelector('.top-detector'));
+			b.observe(document.querySelector('.bottom-detector'));
+		}
+	}
+
+	window.addEventListener('resize', init)
+	window.addEventListener('load', init)
+</script>

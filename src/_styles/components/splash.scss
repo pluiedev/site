@@ -1,0 +1,44 @@
+// Like that fancy expanding/contracting splash screen I have in the main page?
+// Now you can have it too! Just uh... this is not really that adaptable
+// Good luck!!!
+// JavaScript *is* required. There's no way you can do this in CSS without some
+// seriously evil crimes
+
+.splash {
+	padding-top: 0;
+	transition: padding 0.5s ease-out;
+
+	.intro {
+		padding: calc(50vh - 3 * 4rem) 0;
+		transition: padding 0.5s ease-out;
+	}
+
+	&.compact {
+		padding-top: calc(2.5rem + 3 * 4rem);
+		.intro {
+			padding: 0;
+		}
+	}
+
+	.scroll-down {
+		@apply text-fg-dimmed transition absolute;
+		bottom: 3rem;
+		animation: 0.75s infinite alternate bob;
+
+		&::after {
+			@apply mx-auto block h-6 w-6 border-2 border-fg rounded-sm border-l-0 border-t-0 origin-center;
+			transform: scale(1.5, 1.25) rotate(45deg);
+			content: "";
+		}
+	}
+	.bottom-detector {
+		position: absolute;
+		bottom: -5rem;
+	}
+}
+
+@keyframes bob {
+	from { transform: translateY(0px); }
+	to { transform: translateY(10px); }
+}
+
