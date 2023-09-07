@@ -16,23 +16,4 @@
 			{{ category.title }}
 		</a>
 	{{ /for }}
-
-	<label class="navbar-dropdown" for={{ switches.contacts }} tabindex="0" role="button">
-		<input id={{ switches.contacts }} type="checkbox" class="navbar-dropdown-toggle" />
-
-		<span class="navbar-dropdown-label navbar-tab">Contact / Links</span>
-
-		<div class="navbar-dropdown-items bg-white border-t-2 rounded-b-lg shadow-md shadow-black/10 dark:bg-brand-darker dark:border-t-brand-darkest">
-			{{ for link of links }}
-				<a class="navbar-item flex items-center px-4 py-3 whitespace-nowrap" href={{ link.link }} target="_blank">
-					{{# icon #}}
-					<span>{{ link.text }}</span>
-				</a>
-			{{ /for }}
-			<label class="navbar-item flex items-center px-4 py-3 whitespace-nowrap" tabindex="0" role="button" for={{ switches.email }}>
-				{{# icon #}}
-				<span>Email</span>
-			</label>
-		</div>
-	</label>
 </nav>

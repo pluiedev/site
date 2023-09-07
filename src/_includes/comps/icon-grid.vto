@@ -13,11 +13,10 @@
 
 {{ function devicon(id, name, light, dark) }}
 	{{ set parts = [id, light, dark].filter(Boolean).join("/") }}
-	{{ set style = `"--devicon: url('https://cdn.simpleicons.org/${parts}');"` }}
 	<div
 		class="devicon"
-		style={{ style }}
-		data-tooltip={{ name }}
+		style="--devicon: url('https://cdn.simpleicons.org/{{ parts }}');"
+		data-tooltip="{{ name }}"
 	></div>
 {{ /function }}
 

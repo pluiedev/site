@@ -26,7 +26,7 @@ opengraph:
 		<h1 class="text-5xl font-bold">
 			Heya~ I’m <span class="text-brand">Leah</span>!
 			<span class="text-xl">
-				<span class="mx-2">·</span>
+				<span class="mx-1">·</span>
 				<a href="https://pronouns.page/@pluiedev">she/her 🏳️‍⚧️</a>
 			</span>
 		</h1>
@@ -38,7 +38,6 @@ opengraph:
 		</p>
 		<p class="text-xl">
 			I'm a Chinese open-source <span class="text-brand">developer 👩🏼‍💻</span>,
-			community <span class="text-brand">manager 🔨👷🏼‍♀️</span>,
 			graphics designer and <span class="text-brand">artist 👩🏼‍🎨</span>,
 			dedicated to making the world of technology and design accessible and
 			inclusive for <span class="text-brand">everyone</span>.
@@ -51,7 +50,7 @@ opengraph:
 	</div>
 
 	<div id="scroll-indicator-vanish-point" class="prose text-justify col-span-2 dark:prose-invert">
-		{{ filter strip_indent |> md }}
+		{{ echo |> strip_indent |> md }}
 			I love coding, drawing, painting, discovering more about myself, and helping others discover and express themselves.
 			Funnily enough, I do most of my productive work in my spare time when I'm supposed to relax—apparently,
 			once I get fixated on something, I can't stop. Not sure if that's a good quality or not! ;)
@@ -63,7 +62,7 @@ opengraph:
 			I also often think way too hard about narrative video games, to the point
 			I write full articles and reviews about them. I'm not exactly professional,
 			but I still try my best to figure out what does and doesn't tick!
-		{{ /filter }}
+		{{ /echo }}
 	</div>
 
 	<div class="flex flex-col w-full place-content-center gap-2">
@@ -102,17 +101,8 @@ opengraph:
 		<h2 class="!mb-0">Current endeavors</h2>
 		<p>Up-to-date as of: <em>{{ it.date |> date("HUMAN_DATE") }}</em></p>
 
-		{{ filter strip_indent |> md }}
-			Currently, I spend most of my attention and energy on two things:
-			community management and moderation, and contributing to and creating various
-			open-source projects.
-
-			As one of the [community managers](https://quiltmc.org/about/teams/#community-managers)
-			of [the Quilt Project](https://quiltmc.org), a modding toolchain project primarily designed for Minecraft,
-			I work on policies, guidelines and tooling that drives Quilt towards its goal of creating
-			a healthy, diverse, multicultural community striving to accomodate all sorts of minorities,
-			be they ethnic or racial minorities, sexual and/or gender-nonconfirming minorities, neurodivergent minorities,
-			or any other group of people facing various challenges and adversities in world society.
+		{{ echo |> strip_indent |> md }}
+      I dedicate most of my time to
 
 			My unique identity as a queer, lesbian Chinese trans woman with an international,
 			multicultural mindset provides me with ample amounts of lived experience with
@@ -129,14 +119,28 @@ opengraph:
 			and its [Developer Wiki](https://modder.wiki.quiltmc.org/), and sometimes its own
 			Discord bot called [Cozy](https://github.com/QuiltMC/cozy-discord).
 			I also started some other random projects, one of which is a
-			[Rust rewrite of the \`alien\` tool](https://github.com/pluiedev/alien),
+			[Rust rewrite of the `alien` tool](https://github.com/pluiedev/alien),
 			originally a Perl utility script that converts Linux software packages between various formats
-			(e.g.: \`.deb\`, \`.rpm\`, \`.tgz\`, ...) for different package managers (e.g.: \`dpkg\`/\`apt\`, \`rpm\`/\`dnf\`, ...)
+			(e.g.: `.deb`, `.rpm`, `.tgz`, ...) for different package managers (e.g.: `dpkg`/`apt`, `rpm`/`dnf`, ...)
 
 			I'm almost always coding something new, for existing projects or otherwise,
 			and I can't wait to show you more! For now, you'll just have to wait for me to update this
 			portfolio again sometime in the future...
-		{{ /filter }}
+		{{ /echo }}
+
+		<h2 class="mb-2">Past experiences</h2>
+    {{ echo |> strip_indent |> md }}
+      From August 2022 to August 2023, I served as one of the community managers
+			of [the Quilt Project](https://quiltmc.org), a Minecraft modding toolchain project.
+			I was responsible for drafting policies and guidelines, moderating community spaces,
+      organizing events and maintaining and developing the project's website.
+
+      My goal as a leader was to offer my Chinese perspective to a primarily white, English-speaking,
+      European/North American community, as a part of Quilt's diversification efforts -- after all,
+      such efforts can only work if the leadership accomodates and balances viewpoints from diverse perspectives.
+      I believe I've accomplished that goal fairly well, though I find the mishaps we've made along the
+      way more insightful as a lesson on conflict management and
+    {{ /echo }}
 	</div>
 </main>
 

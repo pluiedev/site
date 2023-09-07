@@ -10,9 +10,9 @@ url: /404.html
 <div class="flex flex-col text-center place-content-center place-items-center h-main-screen">
 	<h1 class="text-6xl font-bold mb-4">404 🦀</h1>
 	<h2 class="text-3xl mb-4">Oops!</h2>
-	{{ filter strip_indent |> md }}
+	{{ echo |> strip_indent |> md }}
 		The page you're looking for doesn't exist. Sorry 'bout that! :p
-	{{ /filter }}
+	{{ /echo }}
 
 	<a class="button rounded-full mt-8 px-10 py-3 bg-brand" href="/" target="_self">
 		Back to main page

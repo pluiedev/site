@@ -10,7 +10,7 @@ $display-frame: 0 0 0px $display-frame-width $display-frame-color !default;
 $display-frame-shadow-offset: 8px 5px;
 $display-frame-shadow-blur: 5px;
 $display-frame-shadow-width: $display-frame-width;
-$display-frame-shadow-color: rgb(111, 111, 111) !default;
+$display-frame-shadow-color: rgb(0 0 0 / 0.25) !default;
 $display-frame-shadow: $display-frame-shadow-offset $display-frame-shadow-blur $display-frame-shadow-width $display-frame-shadow-color !default;
 
 $display-frame-margin: calc($display-frame-width + max($display-frame-shadow-offset...)) !default;
@@ -22,44 +22,35 @@ $display-frame-popup-spinner-size: 8rem;
 $display-frame-popup-spinner-margin: 3rem;
 
 figure.display {
-	display: flex;
-	align-items: center;
-	
+  @apply flex items-center;
+
 	figcaption {
-		text-align: justify;
-		margin: 1.5rem;
-		font-style: normal;	
+    @apply text-justify m-6 font-normal;
 
-		h1, h2, h3, h4, h5, h6, .title, .subtitle {
-			text-align: left;
-			
-			@include touch {
-				text-align: center;
-			}
+		:nth-child(-n+2) {
+      @apply text-center lg:text-left;
 		}
 	}
-	@include desktop {
-		&[rtl] {
-			flex-direction: row-reverse;
+	&.rtl {
+    @apply lg:flex-row-reverse;
 
-			figcaption h1, h2, h3, h4, h5, h6, .title, .subtitle {
-				text-align: right;
-			}
+		figcaption :nth-child(-n+2) {
+      @apply lg:text-right;
 		}
 	}
-	
+
 
 	&.has-frame {
 		@each $size in $display-frame-sizes {
 			$name: nth($size, 1);
 			$px: nth($size, 2);
-			
+
 			@if $name == "_" {
 				img {
 					max-width: $px;
 				}
 			} @else {
-				&[size=#{$name}] img {
+				&[data-size=#{$name}] img {
 					max-width: $px;
 				}
 			}
@@ -80,31 +71,26 @@ figure.display {
 			transform: scale($display-frame-hover-scale-factor);
 		}
 	}
-	
+
 	& + * .modal  .modal-content {
-		display: flex;
-		justify-content: center;
+    @apply flex justify-center flex-col lg:flex-row;
 		width: unset;
 		min-width: 70vw;
 		max-height: calc(100vh - 80px);
 
 		&::before {
-			@include loader;
+			//@include loader;
 			position: absolute;
 			top: calc(50% - $display-frame-popup-spinner-size + 0.5 * $display-frame-popup-spinner-margin);
 			left: calc(50% - $display-frame-popup-spinner-size + 0.5 * $display-frame-popup-spinner-margin);
-			z-index: calc($modal-z + 5);
+			z-index: 35;
 			height: $display-frame-popup-spinner-size;
 			width: $display-frame-popup-spinner-size;
 			margin: $display-frame-popup-spinner-margin;
 		}
 
 		.image {
-			z-index: calc($modal-z + 10);
+			z-index: 40;
 		}
-	}
-
-	@include touch {
-		flex-direction: column;
 	}
 }

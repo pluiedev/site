@@ -10,7 +10,7 @@ artworks:
     aspect_ratio: square
     width: 400
     height: 408
-  
+
   - id: blossoms
     name: Altitudinous blossoms
     imgid: 170696fd-d9b4-4652-e168-2cc80250d400
@@ -18,7 +18,8 @@ artworks:
     aspect_ratio: 3by5
     width: 400
     height: 660
-  
+    rtl: true
+
   - id: fish
     name: A piscine aura in the depths
     imgid: 278a69c6-ec0a-4461-c3f3-79aa615ad800
@@ -26,30 +27,30 @@ artworks:
     aspect_ratio: 4by3
     width: 500
     height: 380
-  
+
   - id: red_cotton
     name: A flower — what's her name again?
-    imgid: 35db3ba1-542a-46aa-2d10-850d34463e00"
-    size: large 
+    imgid: 35db3ba1-542a-46aa-2d10-850d34463e00
+    size: large
     aspect_ratio: 4by3
-    rtl: true 
-    width: 500 
+    width: 500
     height: 372
+    rtl: true
 
   - id: laotie
     name: 老铁 (Laotie)
     imgid: d35a98e6-9215-4ca7-ac79-133c93d17700
     size: medium
-    aspect_ratio: 3by4 
+    aspect_ratio: 3by4
     width: 400
     height: 533
 
   - id: mom_and_i
-    name: By the lake, beneath the canopies, in the beforetimes 
+    name: By the lake, beneath the canopies, in the beforetimes
     imgid: 34e6b9ba-08a0-4a1a-437c-2e8839591500
-    size: medium 
-    aspect_ratio: 3by4 
-    width: 400 
+    size: medium
+    aspect_ratio: 3by4
+    width: 400
     height: 515
 ---
 
@@ -58,19 +59,19 @@ include _includes/comps/icon
 include _includes/comps/modal
 #}}
 
-<h2 class="text-3xl font-bold">Projects</h2>
+<h2 class="text-4xl font-bold my-6">Projects</h2>
 
-{{ filter strip_indent |> md }}
+{{ echo |> strip_indent |> md }}
 	Under construction! :purple_heart:
 	(Yeah, I know, it's been ages, gimme some more time)
-{{ /filter }}
+{{ /echo }}
 
-<h2 class="text-3xl font-bold">Artworks</h2>
+<h2 class="text-4xl font-bold my-6">Artworks</h2>
 
 {{ function display(attrs) }}
-	{{> const { id, title, imgid, height, width, aspect_ratio } = attrs }}
+	{{> const { id, name, imgid, height, width, aspect_ratio, rtl, size } = attrs }}
 
-	<figure class="display">
+	<figure class="display has-frame {{ rtl ? "rtl" : "" }}" data-size={{size}}>
 		<label for={{ id }} role="button" tabindex="0">
 			<img
 				src="https://imagedelivery.net/TLP_u-wyyvTEPKkgbA6Osg/{{ imgid }}/public"
@@ -80,8 +81,8 @@ include _includes/comps/modal
 			/>
 		</label>
 
-		<figcaption>
-			<h3 class="text-2xl font-bold">{{ title }}</h3>
+		<figcaption class="prose dark:prose-invert">
+			<h3 class="text-3xl font-bold mb-0">{{ name }}</h3>
 			{{ it[id] }}
 		</figcaption>
 	{{#
@@ -94,10 +95,11 @@ include _includes/comps/modal
 				loading="lazy"
 			)
 	#}}
+  </figure>
 {{ /function }}
 
 {{ function header(date, medium) }}
-	<p class="text-xl">
+	<p class="text-lg mb-6">
 		<i data-lucide="calendar"></i>
 		{{ date |> date("PP") }}
 		<i data-lucide="brush"></i>
@@ -107,7 +109,7 @@ include _includes/comps/modal
 
 {{ set tiger }}
 	{{ header("2018-12-02", "Oil on canvas") }}
-	{{ filter strip_indent |> md }}
+	{{ echo |> strip_indent |> md }}
 		One of the older works of mine — I think I'd only spent 2 years dabbling with oil paintings back then,
 		and the technical inexpertise definitely shows — but a brazen and unpolished technique does not
 		necessarily hinder expressiveness. ;)
@@ -115,12 +117,12 @@ include _includes/comps/modal
 		I really wanted to capture the anger in the tiger, and as I exaggerated its features and started furiously
 		laying down sweeping strokes of striking orange, I too experienced the feral fury in me.
 		Wish I could experience that again...
-	{{ /filter }}
+	{{ /echo }}
 {{ /set }}
 
 {{ set blossoms }}
 	{{ header("2021-02-11", "Oil on canvas") }}
-	{{ filter strip_indent |> md }}
+	{{ echo |> strip_indent |> md }}
 		A friend of my mother's is a hobbyist photographer, and I think he took the original photo when he went to Tibet to...
 		well, take pictures of the wild flora and fauna and the majestic landscape.
 		(Y'know, like a photographer? Why else would he be there anyway?)
@@ -133,22 +135,22 @@ include _includes/comps/modal
 		I did take a while to figure it out though. I also used a toothbrush to ~~paint~~ *spray* the white dots on,
 		which are actually specks of mint-scented toothpaste and not white paint!
 		Although, they look like they hold up just fine on the canvas.
-	{{ /filter }}
+	{{ /echo }}
 {{ /set }}
 
 {{ set fish }}
 	{{ header("2021-06-05", "Oil on canvas") }}
-	{{ filter strip_indent |> md }}
+	{{ echo |> strip_indent |> md }}
 		Some kind of tropical fish whose name I have completely forgotten. It didn't even occur to past-Leah to write these things down! *sigh*
 
 		It's really pretty, especially for its lake-blue scales and blood-red fins! Sure did take a long time to paint though... It was around this time
 		when my style really departed from the raw, emotional expression like *Ferality*, towards a finer sort of aesthetic.
-	{{ /filter }}
+	{{ /echo }}
 {{ /set }}
 
 {{ set red_cotton }}
 	{{ header("2021-12-11", "Oil on canvas") }}
-	{{ filter strip_indent |> md }}
+	{{ echo |> strip_indent |> md }}
 		Turns out it's a flower of the tree [*Bombax ceiba*](https://en.wikipedia.org/wiki/Bombax_ceiba), better known as
 		the red cotton tree, or <ruby>木棉 <rp>(</rp><rt>mù mián</rt><rp>)</rp></ruby> in Chinese.
 		I was going to leave it unidentified, but my mother's a bonafide botanist and identified it for me.
@@ -156,23 +158,23 @@ include _includes/comps/modal
 		Its striking red color is honestly captivating, and I still have it displayed on the wall of my room,
 		facing the entrance for I hope any visitors would appreciate its vividity and life force seeping out of the canvas,
 		as much as I would.
-	{{ /filter }}
+	{{ /echo }}
 {{ /set }}
 
 {{ set laotie }}
 	{{ header("2022-03-20", "Oil on canvas") }}
-	{{ filter strip_indent |> md }}
+	{{ echo |> strip_indent |> md }}
 		He's a corgi in the studio we used to paint in, and his presence made most of our weekly painting hours turn into communal dog-petting sessions.
 		It was lovely to paint with such an adorable cutie around, and time and stress all went away so swiftly with him.
 		I still have like, *so* many photos of him playing around with us... Too bad that that studio was shut down about 2 months ago, on February 2023.
 
 		My mother insists I painted Santa Claus in disguise of a dog! But really, he's just wearing some festive clothes...
-	{{ /filter }}
+	{{ /echo }}
 {{ /set }}
 
 {{ set mom_and_i }}
 	{{ header("2022-07-23", "Oil on canvas") }}
-	{{ filter strip_indent |> md }}
+	{{ echo |> strip_indent |> md }}
 		One summer afternoon, on the eastern shore of Jinji Lake, Suzhou. It was an awfully nice day, so my mother and I decided
 		to take a selfie on our daily stroll outside.
 		Originally, I decided to paint this as a work of memorabilia, to make me cherish the good times I spent with my mother at home,
@@ -183,7 +185,7 @@ include _includes/comps/modal
 
 		However, I have to remain truthful to myself — regardless of who I am now, I *was* like that back then, and this fossilized image
 		of me is one that I can't, and don't want to change. The past is not to be changed — the future, however, is.
-	{{ /filter }}
+	{{ /echo }}
 {{ /set }}
 
 {{ for artwork of artworks }}

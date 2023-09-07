@@ -1,4 +1,4 @@
-layout: layouts/post.pug
+#layout: layouts/post.pug
 category: blog
 
 doNotRenderTitle: true

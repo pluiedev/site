@@ -5,7 +5,8 @@ import imagick from "lume/plugins/imagick.ts";
 import pug from "lume/plugins/pug.ts";
 import inline from "lume/plugins/inline.ts";
 import date from "lume/plugins/date.ts";
-import vento from "./vento-improved.ts";
+import vento from "lume/plugins/vento.ts";
+import esbuild from "lume/plugins/esbuild.ts";
 
 // remark plugins
 import remark from "lume/plugins/remark.ts";
@@ -21,6 +22,7 @@ import stripIndent from "npm:strip-indent";
 
 const site = lume({ src: "./src" });
 site
+  .copy("assets", ".")
   .use(remark({ remarkPlugins: [emoji, a11yEmoji, smartyPants] }))
   .use(minify_html())
   .use(sass({ includes: "_styles" }))
@@ -34,9 +36,8 @@ site
   .use(inline())
   .use(date())
   .use(postcss())
+  .use(esbuild())
   .use(vento())
-  .filter("strip_indent", stripIndent)
-  .copy("assets", ".")
-  .copy("scripts", "scripts");
+  .filter("strip_indent", stripIndent);
 
 export default site;
