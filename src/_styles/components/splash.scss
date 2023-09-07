@@ -21,12 +21,12 @@
 	}
 
 	.scroll-down {
-		@apply text-fg-dimmed transition absolute;
+		--at-apply: text-fg-dimmed transition absolute;
 		bottom: 3rem;
 		animation: 0.75s infinite alternate bob;
 
 		&::after {
-			@apply mx-auto block h-6 w-6 border-2 border-fg rounded-sm border-l-0 border-t-0 origin-center;
+			--at-apply: mx-auto block h-6 w-6 border-2 border-fg rounded-sm border-l-0 border-t-0 origin-center;
 			transform: scale(1.5, 1.25) rotate(45deg);
 			content: "";
 		}

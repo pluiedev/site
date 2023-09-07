@@ -7,6 +7,8 @@ import inline from "lume/plugins/inline.ts";
 import date from "lume/plugins/date.ts";
 import vento from "lume/plugins/vento.ts";
 import esbuild from "lume/plugins/esbuild.ts";
+import unocss from "./ersatz/unocss.ts";
+import unoConfig from "./uno.config.ts";
 
 // remark plugins
 import remark from "lume/plugins/remark.ts";
@@ -16,8 +18,6 @@ import smartyPants from "npm:@ngsctt/remark-smartypants";
 
 // postcss plugins
 import postcss from "lume/plugins/postcss.ts";
-import tailwindcss from "lume/plugins/tailwindcss.ts";
-import tailwindConfig from "./tailwind.config.ts";
 import stripIndent from "npm:strip-indent";
 
 const site = lume({ src: "./src" });
@@ -26,18 +26,18 @@ site
   .use(remark({ remarkPlugins: [emoji, a11yEmoji, smartyPants] }))
   .use(minify_html())
   .use(sass({ includes: "_styles" }))
-  .use(
-    tailwindcss({
-      options: tailwindConfig,
-    })
-  )
   .use(imagick())
   .use(pug())
-  .use(inline())
   .use(date())
   .use(postcss())
   .use(esbuild())
+  .use(inline())
   .use(vento())
+  .use(
+    unocss({
+      config: unoConfig,
+    })
+  )
   .filter("strip_indent", stripIndent);
 
 export default site;

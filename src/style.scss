@@ -1,55 +1,43 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
 	// Default dark theme "Neon"
 
-	--brand: 210 55 115; // #d23773
-	--brand-dark: 186 44 99; // #ba2c63
-	--brand-darker: 133 30 70; // #851e46
-	--brand-darkest: 87 18 45; // #57122d
+	--brand: 210, 55, 115; // #d23773
+	--brand-dark: 186, 44, 99; // #ba2c63
+	--brand-darker: 133, 30, 70; // #851e46
+	--brand-darkest: 87, 18, 45; // #57122d
 
-	--bg: 24 24 27; // zinc-900
+	--bg: 24, 24, 27; // zinc-900
 
 	--navbar-bg: var(--bg);
-	--navbar-fg: 255 255 255; // white
+	--navbar-fg: 255, 255, 255; // white
 	--navbar-border: var(--brand);
 
-	--fg: 212 212 216; // zinc-200
+	--fg: 212, 212, 216; // zinc-200
 }
 @media (prefers-color-scheme: light) {
 	:root {
 		// Default light theme "Strawberry Marshmellow"
 
-		--bg: 255 255 255; // white
+		--bg: 255, 255, 255; // white
 		--navbar-bg: var(--brand);
 		--navbar-border: var(--brand-dark);
 
-		--fg: 24 24 27; // zinc-900
-		--fg-dimmed: 63 63 70; // zinc-700
+		--fg: 24, 24, 27; // zinc-900
+		--fg-dimmed: 63, 63, 70; // zinc-700
 	}
 }
 
-@layer base {
+@import "_styles/components/_index";
+
+.bg-brand-hoverable {
+	@apply bg-brand hover:bg-brand-dark;
 }
 
-@layer components {
-	@import "_styles/components/_index";
+.bg-transition {
+  --bg-transition: 0;
+  &:hover, &:focus, &.is-active {
+  	--bg-transition: 1;
+  }
+
+  transition: background-size 0.2s;
 }
-@layer utilities {
-	.bg-brand-hoverable {
-		@apply bg-brand hover:bg-brand-dark;
-	}
-
-	.bg-transition {
-	  --bg-transition: 0;
-	  &:hover, &:focus, &.is-active {
-	  	--bg-transition: 1;
-	  }
-
-	  transition: background-size 0.2s;
-	}
-}
-
-@import "_styles/fonts";
