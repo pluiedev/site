@@ -8,7 +8,6 @@ import date from "lume/plugins/date.ts";
 import vento from "lume/plugins/vento.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import unocss from "lume/plugins/unocss.ts";
-// import unocss from "./ersatz/unocss.ts";
 import unoConfig from "./uno.config.ts";
 
 // remark plugins
