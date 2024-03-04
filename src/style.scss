@@ -29,6 +29,14 @@
 
 @import "_styles/components/_index";
 
+html {font-size:18px;}
+body {
+  @apply font-sans;
+}
+code {
+  @apply font-mono;
+}
+
 .bg-brand-hoverable {
 	@apply bg-brand hover:bg-brand-dark;
 }

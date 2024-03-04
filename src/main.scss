@@ -1,14 +1,18 @@
 .arrow-button {
-	@apply relative;
+	@apply relative transition;
 
 	&::after {
 		@apply absolute w-0 h-0 right-0 border-bg border-l-transparent;
 		content: "";
+    top: 0;
 		transition: border-width 0.25s;
-		border-width: 1.35rem 2rem 1.35rem 1rem;
+		border-width: 1.3rem 2rem 1.3rem 1rem;
 	}
 
-	&:hover::after {
-		border-right-width: 0rem;
-	}
+	&:hover {
+    filter: brightness(1.1);
+    &::after {
+	  	border-right-width: 0rem;
+	  }
+  }
 }

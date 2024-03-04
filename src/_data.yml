@@ -14,138 +14,190 @@ categories:
 
 links:
   - text: YouTube
-    link: https://youtube.com/@pluiedev
-    icon: si-youtube
+    link: https://youtube.com/@pluieuwu
+    icon: i-simple-icons:youtube
     color: youtube
 
-  - text: pronouns.page
-    link: https://pronouns.page/@pluiedev
-    icon: /icons/pronouns-page.svg
-    color: pronouns-page
+  - text: pronouns.cc
+    link: https://pronouns.cc/@pluieuwu
+    icon: i-twemoji:sparkles
+    color: violet-700
 
   - text: Discord
     link: https://discord.gg/NeNfePzCx8
-    icon: si-discord
-    color: discord
-
-  - text: Mastodon
-    link: https://blobfox.coffee/@pluie
-    icon: si-mastodon
-    color: mastodon
+    icon: i-simple-icons:discord
+    color: indigo-600
 
   - text: Bilibili
     link: https://space.bilibili.com/401096522
-    icon: si-bilibili
-    color: bilibili
+    icon: i-simple-icons:bilibili
+    color: sky-600
 
   - text: GitHub
     link: https://github.com/pluiedev
-    icon: si-github
+    icon: i-simple-icons:github
     color: zinc-700
 
 technologies:
   - title: I use proficiently
     icons:
-      html5: "HTML\xa05"
-      css3: "CSS\xa03"
-      sass: Sass
-      bulma: Bulma
-      javascript:
+      html5:
+        name: HTML 5
+        icon: i-devicon:html5
+      css3:
+        name: CSS 3
+        icon: i-devicon:css3
+      sass:
+        name: Sass
+        icon: i-devicon:sass
+      js:
         name: JavaScript
-        light: e8cf06
-        dark: F7DF1E
-      typescript: TypeScript
+        icon: i-devicon:javascript
+      ts:
+        name: TypeScript
+        icon: i-devicon:typescript
       deno:
         name: Deno
-        light: black
-        dark: white
+        icon: i-simple-icons:deno
+      svelte:
+        name: Svelte
+        icon: i-logos:svelte-icon
       rust:
         name: Rust
-        light: black
-        dark: white
-      openjdk:
+        icon: i-simple-icons:rust
+      java:
         name: Java
-        light: black
-        dark: white
-      kotlin: Kotlin
-      neovim: Neovim
-      visualstudiocode: VSCode
-      intellijidea:
-        name: "IntelliJ IDEA"
-        light: black
-        dark: white
-      git: Git
+        icon: i-logos:java
+      kotlin:
+        name: Kotlin
+        icon: i-logos:kotlin-icon
+      neovim:
+        name: Neovim
+        icon: i-devicon:neovim
+      vscode:
+        name: VS Code
+        icon: i-devicon:vscode
+      idea:
+        name: IntelliJ IDEA
+        icon: i-logos:intellij-idea
+      git:
+        name: Git
+        icon: i-logos:git-icon
       linux:
         name: Linux
-        light: d9a60c
-        dark: FCC624
-      nixos: Nix(OS)
+        icon: i-logos:linux-tux
+      nix:
+        name: Nix(OS)
+        icon: i-devicon:nixos
       markdown:
         name: Markdown
-        light: black
-        dark: white
+        icon: i-simple-icons:markdown
 
   - title: I use adequately
     icons:
-      gnubash: Bash
+      bash:
+        name: Bash
+        icon: i-logos:bash-icon
       c:
         name: C
-        light: 00599C
-        dark: 1284d9
-      cplusplus:
+        icon: i-logos:c
+      cpp:
         name: C++
-        light: 00599C
-        dark: 1284d9
-      csharp: C#
+        icon: i-logos:c-plusplus
+      csharp:
+        name: C#
+        icon: i-devicon:csharp
       gradle:
         name: Gradle
-        light: 02303A
-        dark: 4298B8
+        icon: i-logos:gradle?mask text-[#4298B8]
       lua:
         name: Lua
-        light: 2C2D72
-        dark: 9798f3
+        icon: i-logos:lua
+      haskell:
+        name: Haskell
+        icon: i-logos:haskell-icon
       perl:
         name: Perl
-        light: 39457E
-        dark: 637ae4
-      python: Python
-      ruby: Ruby
-      nodedotjs: Node.js
-      npm: NPM
-      vuedotjs:
+        icon: i-vscode-icons:file-type-perl2
+      python:
+        name: Python
+        icon: i-logos:python
+      ruby:
+        name: Ruby
+        icon: i-logos:ruby
+      nodejs:
+        name: Node.js
+        icon: i-logos:nodejs-icon
+      npm:
+        name: NPM
+        icon: i-logos:npm-2
+      pnpm:
+        name: pnpm
+        icon: i-devicon:pnpm
+      vue:
         name: Vue
-        light: 41B883
-      svelte: Svelte
-      mongodb: MongoDB
-      graphql: GraphQL
-      latex: LaTeX
+        icon: i-logos:vue
+      unocss:
+        name: UnoCSS
+        icon: i-vscode-icons:file-type-unocss
+      mongodb:
+        name: MongoDB
+        icon: i-logos:mongodb-icon
+      postgres:
+        name: PostgreSQL
+        icon: i-logos:postgresql
+      graphql:
+        name: GraphQL
+        icon: i-logos:graphql
+      latex:
+        name: LaTeX
+        icon: i-simple-icons:latex text-[#008080] !bg-[length:110%]
       gimp:
         name: GIMP
-        light: 5C5543
-        dark: a59c84
+        icon: i-devicon:gimp
       inkscape:
         name: Inkscape
-        light: black
-        dark: white
-      adobepremierepro: Premiere Pro
-
+        icon: i-devicon:inkscape
+      blender:
+        name: Blender
+        icon: i-logos:blender
+      premiere-pro:
+        name: Premiere Pro
+        icon: i-devicon:premierepro !rounded-none
   - title: I am still learning
     icons:
-      arduino: Arduino
-      clojure: Clojure
-      haskell: Haskell
-      scala: Scala
-      apachegroovy: Groovy
-      blender: Blender
+      arduino:
+        name: Arduino
+        icon: i-logos:arduino
+      clojure:
+        name: Clojure
+        icon: i-logos:clojure
+      elixir:
+        name: Elixir
+        icon: i-devicon:elixir
+      scala:
+        name: Scala
+        icon: i-devicon:scala
+      groovy:
+        name: Groovy
+        icon: i-devicon:groovy !bg-[length:120%]
+      zig:
+        name: Zig
+        icon: i-devicon:zig
       unity:
         name: Unity
-        light: black
-        dark: white
-      zig: Zig
-      adobeaftereffects: After Effects
+        icon: i-simple-icons:unity
+      godot:
+        name: Godot
+        icon: i-logos:godot-icon
+      unreal:
+        name: Unreal Engine 4/5
+        icon: i-simple-icons:unrealengine
+      after-effects:
+        name: After Effects
+        icon: i-devicon:aftereffects !rounded-none
 
 # https://ogp.me
 opengraph:
   og:type: website
-  og:image: https://pluie.me/img/avatar-big.webp
+  og:image: https://pluie.me/img/avatar.png

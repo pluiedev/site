@@ -1,7 +1,0 @@
-[submodule "bulma"]
-	path = bulma
-	url = https://github.com/jgthms/bulma
-	branch = "0.9.4"
-[submodule "bulma-tooltip"]
-	path = bulma-tooltip
-	url = https://github.com/CreativeBulma/bulma-tooltip

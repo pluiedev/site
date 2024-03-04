@@ -12,7 +12,7 @@
   in {
     devShells = forAllSystems (pkgs: {
       default = pkgs.mkShell {
-        buildInputs = [pkgs.deno];
+        buildInputs = with pkgs; [deno];
       };
     });
   };

@@ -1,10 +1,34 @@
-.devicon {
-	@apply relative rounded-lg border-fg/30 border-2;
+.icon-grid {
+  @apply grid grid-cols-4 grid-auto-rows-[1fr] gap-1;
 
-	&::before {
-		content: "";
-		aspect-ratio: 1 / 1;
-		@apply top-0 left-0 w-full h-full inline-block cursor-pointer;
-		background: no-repeat center/75% var(--devicon);
-	}
+  .icon {
+  	@apply rounded-lg border-fg/30 border-2 cursor-pointer;
+    padding: 0.25rem;
+
+    div {
+  	  @apply relative rounded-md aspect-ratio-square;
+      background-position: center;
+      background-size: 90%;
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+  input.icon-selector:checked +, .icon:hover, .icon:active, .icon:focus {
+    div::after {
+      content: attr(data-name);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      backdrop-filter: brightness(0.2);
+      color: white;
+      font-size: 0.9cqw;
+      word-break: break-word;
+      line-height: 1.1;
+    }
+  }
 }
+

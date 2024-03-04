@@ -2,7 +2,7 @@
 {{ set firstYear = 2022 }}
 {{ set yearText = currentYear > firstYear ? `${firstYear}–${currentYear}` : `${firstYear}` }}
 
-<footer class="p-12 pb-20 text-center bg-brand-darker dark:bg-zinc-900 prose prose-invert max-w-none prose-a:text-blue-300 dark:prose-a:text-brand dark:border-t-2 dark:border-t-brand-dark">
+<footer class="p-12 pb-20 text-center bg-brand-darker @dark:bg-zinc-900 prose prose-invert max-w-none prose-a:text-blue-300 @dark:prose-a:text-brand @dark:border-t-2 @dark:border-t-brand-dark">
 	<p>© {{yearText}} Leah Amelia “pluie” Chen</p>
 
 	{{ echo |> strip_indent |> md }}
@@ -10,6 +10,6 @@
 		and available on [GitHub](https://github.com/pluiedev/site).<br>
 		Content is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
-		Made with [Lume](https://lume.land), [Tailwind CSS](https://tailwindcss.com), 💜, caffeine, and estrogen pills.
+		Made with [Lume](https://lume.land), [Tailwind CSS](https://tailwindcss.com), <span class="i-twemoji:purple-heart inline-block vertical-sub"></span>, caffeine, and estrogen pills.
 	{{ /echo }}
 </footer>

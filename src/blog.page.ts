@@ -1,8 +1,4 @@
-import { Page } from "lume/core.ts";
-import { Search } from "lume/plugins/search.ts";
-import { Paginator } from "lume/plugins/paginate.ts";
-
-export const layout = "layouts/post-list.pug";
+export const layout = "layouts/post-list.vto";
 
 const RANGE = 2;
 
@@ -10,10 +6,10 @@ export default function* ({
   search,
   paginate,
 }: {
-  search: Search;
-  paginate: Paginator;
+  search: Lume.Search;
+  paginate: Lume.Paginator;
 }) {
-  const pages = search.pages("post", "date=desc") as Page[];
+  const pages = search.pages("post", "date=desc") as Lume.Page[];
   const options = {
     url: (n: number) => (n == 1 ? `/blog/` : `/blog/${n}/`),
     size: 5,
@@ -35,13 +31,13 @@ export default function* ({
       indices.push(-1, last);
     }
 
-    //yield {
-    //	title: "Blog",
-    //	currentPage: current,
-    //	totalPages: last,
-    //	category: "blog",
-    //	indices,
-    //	...page
-    //};
+    yield {
+      title: "Blog",
+      currentPage: current,
+      totalPages: last,
+      category: "blog",
+      indices,
+      ...page,
+    };
   }
 }
