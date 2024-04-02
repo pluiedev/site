@@ -1,4 +1,4 @@
-export const layout = "layouts/post-list.vto";
+export const layout = "layouts/blog.vto";
 
 const RANGE = 2;
 

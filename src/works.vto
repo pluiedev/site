@@ -1,6 +1,7 @@
 ---
 title: Works
 description: Projects, artworks, and other things I've done...
+draft: true
 
 artworks:
   - id: tiger
@@ -54,19 +55,21 @@ artworks:
     height: 515
 ---
 
+
+
 {{#
 include _includes/comps/icon
 include _includes/comps/modal
 #}}
 
-<h2 class="text-4xl font-bold my-6">Projects</h2>
+<h2 class="text-4xl font-bold mb-6 mt-24">Projects</h2>
 
 {{ echo |> strip_indent |> md }}
 	Under construction! :purple_heart:
 	(Yeah, I know, it's been ages, gimme some more time)
 {{ /echo }}
 
-<h2 class="text-4xl font-bold my-6">Artworks</h2>
+<h2 class="text-4xl font-bold mb-6 mt-24">Artworks</h2>
 
 {{ function display(attrs) }}
 	{{> const { id, name, imgid, height, width, aspect_ratio, rtl, size } = attrs }}

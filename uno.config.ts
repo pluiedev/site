@@ -24,18 +24,13 @@ const themeColors = [
   "navbar-bg",
   "navbar-fg",
   "navbar-border",
+  "footer-bg",
+  "footer-fg",
   "bg",
   "bg-deemphasized",
 ];
 
-const colors: Record<string, string> = {
-  youtube: "#d02525",
-  bilibili: "#00a1d6",
-  github: "#fafafa",
-  "pronouns-page": "#c71585",
-  discord: "#5865f2",
-  mastodon: "#6364ff",
-};
+const colors: Record<string, string> = {};
 for (const themeColor of themeColors) {
   colors[themeColor] = `rgba(var(--${themeColor}) / <alpha-value>)`;
 }
@@ -51,8 +46,8 @@ export default {
         "grid-cols-main-screen",
         { "grid-template-columns": "20rem auto 20rem" },
       ],
-      ["h-main-screen", { height: "calc(100vh - 4 * 4rem)" }],
-      ["h-navbar", { height: "4rem" }],
+      ["h-main-screen", { height: "calc(100vh - 4 * 3.5rem)" }],
+      ["h-navbar", { height: "3.5rem" }],
     ],
     presets: [
       presetUno(),

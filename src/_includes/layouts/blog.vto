@@ -1,0 +1,87 @@
+{{ layout "layouts/default.vto" }}
+
+<div class="flex gap-8 mt-24">
+  <nav class="shrink-0 basis-60 text-2xl">
+    <h1 class="text-4xl font-bold">Blog</h1>
+    <p>Page {{ currentPage }} of {{ totalPages }}</p>
+
+    <div class="flex justify-between items-center mt-8">
+      {{ if pagination.previous }}
+        <a class="i-mdi:chevron-left" href={{ pagination.previous }}></a>
+      {{ else }}
+        <span class="i-mdi:chevron-left text-fg-dimmed"></span>
+      {{ /if }}
+
+      <ul class="flex gap-2">
+        {{ for num of indices }}
+          {{ if num === pagination.page }}
+            <span class="pagination-link bg-brand-dark px-3 py-2 text-lg text-white rounded" href="{{ pagination.url }}">{{ num }}</span>
+          {{ else if num > 0 }}
+            <a class="pagination-link bg-zinc-700 px-3 py-2 text-lg text-fg rounded hover:bg-brand-darker transition" href="{{ pagination.url }}">{{ num }}</a>
+          {{ else }}
+            <span class="text-fg-dimmed">&hellip;</span>
+          {{ /if }}
+        {{ /for }}
+      </ul>
+
+      {{ if pagination.next }}
+        <a class="i-mdi:chevron-right" href={{ pagination.next }}></a>
+      {{ else }}
+        <span class="inline-block i-mdi:chevron-right text-fg-dimmed"></span>
+      {{ /if }}
+    </div>
+  </nav>
+
+
+  <section class="flex flex-col gap-8">
+    {{ for post of results }}
+      <div class="p-4 rounded-lg bg-zinc-800">
+        <a class="text-2xl" href="{{ post.page.src.path }}">{{ post.title }}</a>
+        <p class="text-md">
+          <span class="i-mdi:calendar inline-block vertical-sub"></span>
+          {{ post.date |> date("HUMAN_DATE") }}
+
+          {{ for tag of post.tags }}
+            {{ if tag !== "post" }}
+  			      <span class="bg-brand text-white text-xs rounded-full px-2 inline-flex">{{ tag }}</span>
+            {{ /if }}
+          {{ /for }}
+        </p>
+        <div class="mt-4">
+          {{ post.description |> strip_indent |> md }}
+        </div>
+      </div>
+    {{ /for }}
+  </section>
+</div>
+
+{{ /layout }}
+
+<!--
+	nav.pagination.is-centered(role="navigation" aria-label="pagination")
+		a.pagination-previous(
+			disabled=!pagination.previous
+			href=pagination.previous
+		)
+			span.icon-text
+				+icon("fas fa-angle-left")
+				span Prev
+
+		a.pagination-next(
+			disabled=!pagination.next
+			href=pagination.next
+		)
+			span.icon-text
+				span Next
+				+icon("fas fa-angle-right")
+
+		ul.pagination-list.m-0
+			each num in indices
+				li
+					if num == pagination.page
+						a.pagination-link.is-current(href=url)= num
+					else if num > 0
+						a.pagination-link(href=url)= num
+					else
+						span.pagination-ellipsis &hellip;
+  -->

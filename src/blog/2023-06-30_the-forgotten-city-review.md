@@ -2,6 +2,8 @@
 title: The Forgotten City Review
 description: A consise, philosophical adventure into a draconian utopia that caters to history and mythology nerds like me particularly well. Flawed it may be, it is still an unforgettable experience.
 
+draft: true
+
 section: Essays
 tags: 
   - post

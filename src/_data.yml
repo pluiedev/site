@@ -8,20 +8,25 @@ categories:
   blog:
     title: Blog
     url: /blog/
-  works:
-    title: Works
-    url: /works/
+  # works:
+  #   title: Works
+  #   url: /works/
 
 links:
   - text: YouTube
     link: https://youtube.com/@pluieuwu
     icon: i-simple-icons:youtube
-    color: youtube
+    color: rose-600
+
+  - text: Instagram
+    link: https://instagram.com/pluieuwu
+    icon: i-simple-icons:instagram
+    color: fuchsia-600
 
   - text: pronouns.cc
     link: https://pronouns.cc/@pluieuwu
     icon: i-twemoji:sparkles
-    color: violet-700
+    color: purple-600
 
   - text: Discord
     link: https://discord.gg/NeNfePzCx8
@@ -32,6 +37,11 @@ links:
     link: https://space.bilibili.com/401096522
     icon: i-simple-icons:bilibili
     color: sky-600
+
+  - text: Telegram
+    link: https://t.me/@pluieowo
+    icon: i-simple-icons:telegram
+    color: sky-700
 
   - text: GitHub
     link: https://github.com/pluiedev

@@ -3,8 +3,6 @@ layout: layouts/base.vto
 title: Heya~
 description: I'm Leah, also known as pluie or pluiedev!
 
-date: Git Last Modified
-doNotRenderTitle: true
 opengraph:
   og:type: profile
   profile:first_name: Leah
@@ -15,32 +13,28 @@ opengraph:
 <link rel="stylesheet" href="main.css" />
 
 <div class="top-detector"></div>
-<main class="grid splash justify-items-center gap-x-16 gap-y-10 mx-auto max-w-screen-lg mb-16 grid-cols-main-screen">
+<main class="grid splash justify-items-center gap-y-20 gap-x-12 mx-auto max-w-screen-lg mb-16 grid-cols-main-screen">
 	<figure class="intro place-self-center">
 		<img class="rounded-full border-2 border-brand" src="/img/avatar.png" alt="Avatar" width="320" height="320" />
 	</figure>
 
-	<div class="intro col-span-2 place-self-center flex flex-col gap-y-4">
+	<div class="intro col-span-2 place-self-center flex flex-col">
 		<h1 class="text-5xl font-bold font-sans">
 			Heya~ I’m <span class="text-brand">Leah</span>!
-			<span class="text-xl">
-				<span class="mx-1">·</span>
-        <a href="https://pronouns.cc/@pluieuwu" class="inline-flex gap-1 items-center"
-          >she/her <span class="i-twemoji:transgender-flag inline-block"></span>
-        </a>
-			</span>
+			<a href="https://pronouns.cc/@pluieuwu" class="text-xl text-brand">
+			  · she/her <span class="i-twemoji:transgender-flag inline-block vertical-sub"></span>
+			</a>
 		</h1>
 
-		<p class="text-2xl">
-			You may know me by my online aliases,
-			<span class="text-brand">pluie</span> or
-			<span class="text-brand">pluiedev</span>.
+		<p class="text-2xl mt-2">
+			You may know me by my online alias,
+			<span class="text-brand">pluie</span>.
 		</p>
-		<p class="text-xl">
+		<p class="text-xl mt-8">
       I'm a Chinese open-source <span class="inline-flex gap-1 items-center text-brand">developer
         <span class="i-twemoji:woman-technologist-light-skin-tone inline-block"></span></span>,
 			graphics designer and <span class="inline-flex gap-1 items-center text-brand">artist
-        <span class="i-twemoji:woman-artist-light-skin-tone inline-block"></span></span>
+        <span class="i-twemoji:woman-artist-light-skin-tone inline-block"></span></span>,
       currently based in <span class="text-brand">Berlin, Germany</span>,
 			aspiring to make the world of technology and design more accessible and
 			inclusive for <span class="text-brand">everyone</span>.
@@ -52,13 +46,14 @@ opengraph:
 		<div class="bottom-detector"></div>
 	</div>
 
-	<div id="scroll-indicator-vanish-point" class="mt-6 prose text-justify col-span-2 dark:prose-invert">
+	<div id="scroll-indicator-vanish-point" class="prose text-justify col-span-2 dark:prose-invert">
 		{{ echo |> strip_indent |> md }}
-			I love coding, drawing, painting, discovering more about myself, and helping others discover and express themselves.
+			I love coding, drawing, painting, indulging in my nerdy hobbies,
+      discovering more about myself, and helping others discover and express themselves.
 			Funnily enough, I do most of my productive work in my spare time when I'm supposed to relax—apparently,
 			once I get fixated on something, I can't stop. Not sure if that's a good quality or not! ;)
 
-			More things I like include dogs, traffic cones, history, politics and linguistics.
+			More things I like include dogs, cats, foxes, traffic cones, history, politics and linguistics.
 			Especially <abbr title="constructed languages, or languages intentionally created by people">conlangs</abbr>.
 			They're _very_ cool.
 

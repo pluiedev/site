@@ -12,21 +12,27 @@
 	--navbar-fg: 255, 255, 255; // white
 	--navbar-border: var(--brand);
 
+	--footer-bg: var(--bg);
+	--footer-fg: var(--navbar-fg);
+
 	--fg: 212, 212, 216; // zinc-200
+	--fg-dimmed: 161, 161, 170; // zinc-400
 }
-@media (prefers-color-scheme: light) {
-	:root {
-		// Default light theme "Strawberry Marshmellow"
-
-		--bg: 255, 255, 255; // white
-		--navbar-bg: var(--brand);
-		--navbar-border: var(--brand-dark);
-
-		--fg: 24, 24, 27; // zinc-900
-		--fg-dimmed: 63, 63, 70; // zinc-700
-	}
-}
-
+// @media (prefers-color-scheme: light) {
+// 	:root {
+// 		// Default light theme "Strawberry Marshmellow"
+//
+// 		--bg: 255, 255, 255; // white
+// 		--navbar-bg: var(--brand);
+// 		--navbar-border: var(--brand-dark);
+//
+// 	  --footer-bg: var(--brand-darker);
+//
+// 		--fg: 24, 24, 27; // zinc-900
+// 		--fg-dimmed: 63, 63, 70; // zinc-700
+// 	}
+// }
+//
 @import "_styles/components/_index";
 
 html {font-size:18px;}
