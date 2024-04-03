@@ -13,21 +13,21 @@ opengraph:
 <link rel="stylesheet" href="main.css" />
 
 <div class="top-detector"></div>
-<main class="grid splash justify-items-center gap-y-20 gap-x-12 mx-auto max-w-screen-lg mb-16 grid-cols-main-screen">
+<main class="main-grid splash">
 	<figure class="intro place-self-center">
 		<img class="rounded-full border-2 border-brand" src="/img/avatar.png" alt="Avatar" width="320" height="320" />
 	</figure>
 
 	<div class="intro col-span-2 place-self-center flex flex-col">
-		<h1 class="text-5xl font-bold font-sans">
+		<h1 class="text-4xl lg:text-5xl font-bold font-sans">
 			Heya~ I’m <span class="text-brand">Leah</span>!
-			<a href="https://pronouns.cc/@pluieuwu" class="text-xl text-brand">
+			<a href="https://pronouns.cc/@pluieuwu" class="text-lg lg:text-xl text-brand">
 			  · she/her <span class="i-twemoji:transgender-flag inline-block vertical-sub"></span>
 			</a>
 		</h1>
 
 		<p class="text-2xl mt-2">
-			You may know me by my online alias,
+			You may know me better by my online alias,
 			<span class="text-brand">pluie</span>.
 		</p>
 		<p class="text-xl mt-8">
@@ -41,7 +41,7 @@ opengraph:
 		</p>
 	</div>
 
-	<div class="scroll-down">
+	<div class="scroll-down hidden lg:block">
 		Scroll down
 		<div class="bottom-detector"></div>
 	</div>
@@ -63,30 +63,34 @@ opengraph:
 		{{ /echo }}
 	</div>
 
-	<div class="flex flex-col w-full place-content-center gap-2">
+	<div class="w-full">
+    <h2 class="text-xl mb-2">Links <span class="inline-block vertical-sub i-mdi:arrow-bottom-right"></span></h2>
+	  <div class="grid grid-cols-2 lg:grid-cols-1 w-full gap-2">
 		{{ for link of links }}
 			{{ set fg = link.fg ?? "white" }}
 			<a
-				href={{ link.link }}
+				href="{{ link.link }}"
+        target="_blank"
 				class="button arrow-button bg-{{ link.color }} py-2 px-3 text-{{ fg }} flex items-center gap-1"
 			>
         <div class="inline-block {{ link.icon }}"></div>
 				{{ link.text }}
 			</a>
 		{{ /for }}
+    </div>
 	</div>
 
 	<div class="text-centered w-full sm:text-left col-span-3">
     <h2 class="text-2xl font-bold">Technologies that...</h2>
-    <div class="grid grid-cols-3 gap-16">
+    <div class="grid gap-y-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
 		  {{ for techs of technologies }}
 		  	<div>
 		  		<h3 class="text-xl my-3">{{ techs.title }}</h3>
 
-	        <div class="icon-grid">
+	        <div class="icon-grid w-3/4 lg:w-auto mx-auto">
 	        	{{ for id, icon of techs.icons }}
               <label for="lang-{{ id }}" class="icon">
-                <input id="lang-{{ id }}" type="checkbox" class="hidden icon-selector">
+                <input id="lang-{{ id }}" name="icon-select" type="radio" class="hidden icon-selector">
                 <div class="{{ icon.icon }}" data-name="{{ icon.name }}"></div>
               </label>
 	        	{{ /for }}
@@ -119,7 +123,7 @@ opengraph:
 	});
 
 	function init(ev) {
-		if (window.innerHeight < 600) {
+		if (window.innerHeight < 600 || window.innerWidth < 1024) {
       scroll.classList.add('opacity-0');
 			t.disconnect();
 			b.disconnect();

@@ -1,22 +1,18 @@
 :root {
 	// Default dark theme "Neon"
 
-	--brand: 210, 55, 115; // #d23773
-	--brand-dark: 186, 44, 99; // #ba2c63
-	--brand-darker: 133, 30, 70; // #851e46
-	--brand-darkest: 87, 18, 45; // #57122d
+	--brand: 210, 55, 115;        // #d23773
+	--brand-dark: 186, 44, 99;    // #ba2c63
+	--brand-darker: 133, 30, 70;  // #851e46
+	--brand-darkest: 87, 18, 45;  // #57122d
 
-	--bg: 24, 24, 27; // zinc-900
+	--bg: 18, 18, 20;             // #121214
+  --fg: 255, 255, 255;          // white
 
-	--navbar-bg: var(--bg);
-	--navbar-fg: 255, 255, 255; // white
-	--navbar-border: var(--brand);
-
-	--footer-bg: var(--bg);
-	--footer-fg: var(--navbar-fg);
-
-	--fg: 212, 212, 216; // zinc-200
-	--fg-dimmed: 161, 161, 170; // zinc-400
+  --main-bg: 24, 24, 27;        // zinc-900
+  --main-fg: 212, 212, 216;     // zinc-200
+  --main-fg-sub: 161, 161, 170; // zinc-400
+  --main-border: var(--brand);
 }
 // @media (prefers-color-scheme: light) {
 // 	:root {
@@ -35,12 +31,18 @@
 //
 @import "_styles/components/_index";
 
-html {font-size:18px;}
+html {
+  @apply bg-bg;
+  font-size: 18px;
+}
 body {
   @apply font-sans;
 }
 code {
   @apply font-mono;
+}
+main {
+  @apply bg-main-bg text-main-fg;
 }
 
 .bg-brand-hoverable {

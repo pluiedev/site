@@ -2,15 +2,19 @@
 	@apply relative transition;
 
 	&::before {
-		@apply absolute w-0 h-0 right-0 border-bg border-l-transparent;
+		@apply absolute w-0 h-0 right-0 border-main-bg border-l-transparent;
 		content: "";
     top: 0;
     filter: opacity(0.8);
 		transition: border-width 0.25s;
-		border-width: 1.3rem 3rem 1.3rem 1rem;
+		border-width: 1.3rem 2rem 1.3rem 1rem;
+
+    @media (min-width: 640px) {
+      border-right-width: 3rem;
+    }
 	}
 	&::after {
-		@apply absolute w-0 h-0 right-0 border-bg border-l-transparent;
+		@apply absolute w-0 h-0 right-0 border-main-bg border-l-transparent;
 		content: "";
     top: 0;
 		transition: border-width 0.25s;
@@ -22,5 +26,21 @@
     &::before {
 	  	border-right-width: 0rem;
 	  }
+  }
+}
+
+.main-grid {
+  margin-top: 3.5rem;
+  @apply \
+    flex flex-col items-center justify-center gap-y-12 gap-x-12 py-16 \
+    lg:(grid grid-cols-main-screen w-full gap-y-20 pt-0);
+
+  --max-width: 65ch;
+
+  padding-left: max(1.5rem, calc(50% - var(--max-width) / 2));
+  padding-right: max(1.5rem, calc(50% - var(--max-width) / 2));
+
+  @media (min-width: 1024px) {
+    --max-width: 1024px;
   }
 }

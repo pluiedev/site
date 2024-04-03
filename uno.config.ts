@@ -20,14 +20,11 @@ const themeColors = [
   "brand-darker",
   "brand-darkest",
   "fg",
-  "fg-dimmed",
-  "navbar-bg",
-  "navbar-fg",
-  "navbar-border",
-  "footer-bg",
-  "footer-fg",
   "bg",
-  "bg-deemphasized",
+  "main-bg",
+  "main-fg",
+  "main-fg-sub",
+  "main-border",
 ];
 
 const colors: Record<string, string> = {};

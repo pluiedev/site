@@ -22,7 +22,7 @@
 
 .navbar-tab {
   @extend .bg-transition;
-	@apply inline-flex h-full items-center px-3 ease-out text-navbar-fg bg-no-repeat bg-bottom bg-gradient-to-t from-transparent to-navbar-border to-0%;
+	@apply inline-flex h-full items-center px-3 ease-out bg-no-repeat bg-bottom bg-gradient-to-t from-transparent to-navbar-border to-0%;
 
   background-size: auto calc(var(--bg-transition) * 100%);
 }
