@@ -1,0 +1,58 @@
+---
+layout: layouts/default.vto
+---
+{{ import { post_embed } from "../comps/post_embed.vto" }}
+
+{{> opengraph["article:published_time"] = date; }}
+{{> opengraph["article:modified_time"] = page.src.lastModified; }}
+{{> opengraph["article:author"] = ["Leah"]; }}
+{{> opengraph["article:section"] = section; }}
+{{> opengraph["article:tag"] = tags; }}
+
+<style>
+  .post-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "back"
+      "info"
+      "desc";
+  }
+  .post-grid .info { grid-area: info; }
+  .post-grid .back { grid-area: back; }
+  .post-grid .desc { grid-area: desc; }
+
+  @media (min-width: 640px) {
+    .post-grid {
+      grid-template-areas:
+        "info back"
+        "desc desc";
+      column-gap: 3rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .post-grid {
+      grid-template-areas:
+        "info back"
+        "desc -";
+    }
+  }
+</style>
+
+<div class="post-grid items-center">
+  <div class="grow info">
+    <h1 class="text-3xl text-brand">{{ page.data.title }}</h1>
+    {{ post_embed(page.data) }}
+  </div>
+  <a class="back mb-4 w-fit shrink-0 arrow-button rtl bg-brand-dark flex items-center gap-1" href="..">Other posts</a>
+
+  <div class="desc mt-4">
+    {{ page.data.description |> strip_indent |> md }}
+  </div>
+</div>
+
+<hr class="border-brand-dark mt-6 mb-12"/>
+
+<div class="prose mx-auto">
+  {{ content }}
+</div>

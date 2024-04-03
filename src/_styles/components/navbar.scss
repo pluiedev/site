@@ -1,17 +1,4 @@
-//@include touch {
-//	#navbar-toggle:checked ~ {
-//		.navbar-menu {
-//			display: block;
-//		}
-//
-//		@for $i from -1 through 1 {
-//			* label[for="navbar-toggle"] span:nth-child(#{$i + 2}) {
-//				transform: translateY($i * -5px) rotate($i * -45deg);
-//				opacity: abs($i * 100%);
-//			}
-//		}
-//	}
-//}
+@use "../util/bg-transition";
 
 .navbar-brand {
   @apply w-32;
@@ -21,8 +8,8 @@
 }
 
 .navbar-tab {
-  @extend .bg-transition;
-	@apply inline-flex h-full items-center px-3 ease-out bg-no-repeat bg-bottom bg-gradient-to-t from-transparent to-navbar-border to-0%;
+  @include bg-transition.bg-transition;
+	@apply inline-flex h-full items-center px-3 ease-out bg-no-repeat bg-bottom bg-gradient-to-t from-transparent to-main-border to-0%;
 
   background-size: auto calc(var(--bg-transition) * 100%);
 }

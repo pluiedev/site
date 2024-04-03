@@ -1,0 +1,12 @@
+{{ export function post_embed(post) }}
+  <p class="text-md">
+    <span class="i-mdi:calendar inline-block vertical-sub"></span>
+    {{ post.date |> date("HUMAN_DATE") }}
+  
+    {{ for tag of post.tags }}
+      {{ if tag !== "post" }}
+        <span class="bg-brand text-white text-xs rounded-full px-2 inline-flex">{{ tag }}</span>
+      {{ /if }}
+    {{ /for }}
+  </p>
+{{ /export }}

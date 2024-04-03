@@ -1,0 +1,8 @@
+@mixin bg-transition {
+  --bg-transition: 0;
+  &:hover, &:focus, &.is-active {
+  	--bg-transition: 1;
+  }
+
+  transition: background-size 0.2s;
+}

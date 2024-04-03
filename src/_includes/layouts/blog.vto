@@ -1,6 +1,9 @@
-{{ layout "layouts/default.vto" }}
+---
+layout: layouts/default.vto
+---
+{{ import { post_embed } from "../comps/post_embed.vto" }}
 
-<div class="flex flex-col m-8 lg:mt-24 lg:flex-row lg:mx-auto gap-8">
+<div class="flex flex-col lg:flex-row gap-8">
   <nav class="flex justify-between lg:flex-col lg:justify-start lg:shrink-0 lg:basis-60 text-2xl">
     <div>
       <h1 class="text-4xl font-bold">Blog</h1>
@@ -39,16 +42,7 @@
     {{ for post of results }}
       <div class="p-4 rounded-lg bg-zinc-800">
         <a class="text-2xl" href="{{ post.url }}">{{ post.title }}</a>
-        <p class="text-md">
-          <span class="i-mdi:calendar inline-block vertical-sub"></span>
-          {{ post.date |> date("HUMAN_DATE") }}
-
-          {{ for tag of post.tags }}
-            {{ if tag !== "post" }}
-  			      <span class="bg-brand text-white text-xs rounded-full px-2 inline-flex">{{ tag }}</span>
-            {{ /if }}
-          {{ /for }}
-        </p>
+        {{ post_embed(post) }}
         <div class="mt-4">
           {{ post.description |> strip_indent |> md }}
         </div>
@@ -56,5 +50,3 @@
     {{ /for }}
   </section>
 </div>
-
-{{ /layout }}

@@ -7,18 +7,9 @@ tags:
   - post
   - game-review
   - persona
-  - persona4-golden
-  - p4g
 ---
 
 Apparently, Steam thinks I'm too verbose and I should get a life instead of spending an hour writing a game review.
-
-<figure>
-
-![Steam rejected my review: "Your review is 1,489 characters too long. Please shorten it and try again."](https://media.discordapp.net/attachments/1090522646157987841/1113494225808543744/image.png)
-
-<figcaption>When I hit submit: *sad trombone noises*</figcaption>
-</figure>
 
 How. Dare. You. It's just 1630 words! I haven't even *started* dissecting the themes and how they work out throughout the story! I haven't even talked about how I feel about the ending and the twist! This is *brief*!
 

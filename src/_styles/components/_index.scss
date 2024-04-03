@@ -1,10 +1,11 @@
-@import "devicon";
-@import "display";
+@use "arrow-button";
+@use "devicon";
+@use "display";
 //@import "dynamic-button";
 //@import "langs";
-@import "link";
+@use "link";
 //@import "message";
-@import "navbar";
+@use "navbar";
 //@import "toggleable-modal";
-@import "splash";
-@import "tooltip";
+@use "splash";
+@use "tooltip";

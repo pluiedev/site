@@ -7,6 +7,7 @@ section: Misc
 tags: 
   - post
   - slice-of-life
+  - faq
 ---
 > A: Hey Leah?
 > 
@@ -34,11 +35,8 @@ the Fabric Community Discord Server (or Fabricord for short) back in 2020.
 There was a prominent member called i509VCB (i5 for short), who'd later go on to found Quilt with a couple of other people.
 His avatar is nothing but unique—a rotating red traffic cone stuck between two escalator railings: 
 
-<figure>
-<img src="https://avatars.githubusercontent.com/u/30619168" class="is-rounded my-4" width="300">
-<figcaption>
-(It was originally an animated GIF, but now all I can find is a static image. Lame.)
-</figcaption>
+<figure class="my-8">
+<img src="https://avatars.githubusercontent.com/u/30619168" class="rounded-full mx-auto" width="300">
 </figure>
 
 And... can we just appreciate how surreal this is? The sight of a red traffic cone, with two railings
@@ -64,8 +62,8 @@ as an interesting entity, and without it, my avatar became oddly spacious and in
 It lodged onto me as an important part of my internet persona, somehow.
 
 
-<figure>
-<img src="/img/avatar-big.webp" class="is-rounded my-4" width="300">
+<figure class="my-8 flex flex-col items-center gap-4">
+<img src="/img/avatar.png" class="rounded-full mx-auto" width="300">
 <figcaption>
 Where we are now! :3
 </figcaption>
