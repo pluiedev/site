@@ -3,11 +3,11 @@ layout: layouts/default.vto
 ---
 {{ import { post_embed } from "../comps/post_embed.vto" }}
 
-{{> opengraph["article:published_time"] = date; }}
-{{> opengraph["article:modified_time"] = page.src.lastModified; }}
-{{> opengraph["article:author"] = ["Leah"]; }}
-{{> opengraph["article:section"] = section; }}
-{{> opengraph["article:tag"] = tags; }}
+{{# opengraph["article:published_time"] = date; }}
+{{# opengraph["article:modified_time"] = page.src.lastModified; }}
+{{# opengraph["article:author"] = ["Leah"]; }}
+{{# opengraph["article:section"] = section; }}
+{{# opengraph["article:tag"] = tags; }}
 
 <style>
   .post-grid {

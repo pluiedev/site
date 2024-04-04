@@ -5,6 +5,7 @@ import inline from "lume/plugins/inline.ts";
 import date from "lume/plugins/date.ts";
 import vento from "lume/plugins/vento.ts";
 import unocss from "lume/plugins/unocss.ts";
+import metas from "lume/plugins/metas.ts";
 import unoConfig from "./uno.config.ts";
 
 // remark plugins
@@ -15,8 +16,7 @@ import smartyPants from "npm:@ngsctt/remark-smartypants";
 
 import stripIndent from "npm:strip-indent";
 
-const site = lume({ src: "./src" });
-site
+const site = lume({ src: "./src" })
   .copy("assets", ".")
   .use(remark({ remarkPlugins: [emoji, a11yEmoji, smartyPants] }))
   .use(minify_html())
@@ -24,6 +24,7 @@ site
   .use(date())
   .use(inline())
   .use(vento())
+  .use(metas())
   .use(unocss(unoConfig))
   .filter("strip_indent", stripIndent);
 

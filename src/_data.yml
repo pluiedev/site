@@ -4,6 +4,16 @@ switches:
   email: email-modal
   contacts: contacts
 
+lang: en
+
+metas:
+  title: "=title"
+  description: "=description"
+  lang: "=lang"
+  color: "#d23773"
+  site: pluie.me
+  icon: /img/avatar.png
+
 categories:
   blog:
     title: Blog
@@ -206,8 +216,3 @@ technologies:
       after-effects:
         name: After Effects
         icon: i-devicon:aftereffects !rounded-none
-
-# https://ogp.me
-opengraph:
-  og:type: website
-  og:image: https://pluie.me/img/avatar.png

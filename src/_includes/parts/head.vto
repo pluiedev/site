@@ -4,23 +4,7 @@
 	<title>{{it.title}} | pluie.me</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=0.75" />
-	<meta name="description" content="{{ it.description }}" />
-	<meta name="theme-color" content="#d23773" />
-	<meta property="og:title" content="{{ it.title }}" />
-	<meta property="og:description" content="{{ it.description }}" />
-	<meta property="og:url" content="https://pluie.me{{ url }}" />
 
-	{{ for prop, val of it.opengraph }}
-		{{ if Array.isArray(val) }}
-			{{ for cont of val }}
-				<meta property={{prop}} content="{{cont}}" />
-			{{ /for }}
-		{{ else }}
-			<meta property={{prop}} content="{{val}}" />
-		{{ /if }}
-	{{ /for }}
-
-	<link rel="preconnect" href="https://fonts.bunny.net" />
 	<link
 		rel="icon"
 		type="image/png"
