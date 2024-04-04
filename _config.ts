@@ -20,7 +20,7 @@ site
   .copy("assets", ".")
   .use(remark({ remarkPlugins: [emoji, a11yEmoji, smartyPants] }))
   .use(minify_html())
-  .use(sass({ includes: "_styles" }))
+  .use(sass({ includes: "_styles", format: "expanded" }))
   .use(date())
   .use(inline())
   .use(vento())
