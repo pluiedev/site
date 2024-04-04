@@ -13,27 +13,26 @@
       height: auto !important;
     }
   }
-  input.icon-selector:checked +, .icon:hover, .icon:active, .icon:focus {
-    div::after {
-      content: attr(data-name);
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+}
 
-      background-color: rgba(0, 0, 0, 0.7);
-      z-index: 10;
-      mask: revert;
+.icon-grid input.icon-selector:checked +, .icon:hover, .icon:active, .icon:focus {
+  div::after {
+    content: attr(data-name);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-      // backdrop-filter: brightness(0.2);
-      // -webkit-backdrop-filter: brightness(0.2);
-      color: white;
-      font-size: 10pt;
-      word-break: break-word;
-      line-height: 1.1;
-    }
+    background-color: rgba(0, 0, 0, 0.7);
+
+    // backdrop-filter: brightness(0.2);
+    // -webkit-backdrop-filter: brightness(0.2);
+    color: white;
+    font-size: 10pt;
+    word-break: break-word;
+    line-height: 1.1;
   }
 }
 
