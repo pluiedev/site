@@ -1,10 +1,6 @@
 layout: layouts/default.vto
 
-switches:
-  email: email-modal
-  contacts: contacts
-
-lang: en
+lang: [en, zh]
 
 metas:
   title: "=title"
@@ -14,205 +10,48 @@ metas:
   site: pluie.me
   icon: /img/avatar.png
 
+source: https://github.com/pluiedev/site
+
+# === Strings ===
+
 categories:
   blog:
     title: Blog
-    url: /blog/
+    url: blog/
   # works:
   #   title: Works
   #   url: /works/
 
-links:
-  - text: YouTube
-    link: https://youtube.com/@pluieuwu
-    icon: i-simple-icons:youtube
-    color: rose-600
+blog:
+  page_a_of_b: Page {0} of {1}
+footer:
+  license: >
+    Source code is licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/MPL/2.0)
+    and available on [GitHub](https://github.com/pluiedev/site).<br>
+    Content is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
+  credits: >
+    Made with [Lume](https://lume.land), [UnoCSS](https://unocss.dev), <span class="i-twemoji:purple-heart inline-block vertical-sub"></span>, caffeine, and a smudge of estradiol.
+navbar:
+  theme_switcher: Toggle light/dark theme
+  language_switcher: 切换至中文
+  source: Source
+  no_translation: No translations available
 
-  - text: Instagram
-    link: https://instagram.com/pluieuwu
-    icon: i-simple-icons:instagram
-    color: fuchsia-600
+zh:
+  blog:
+    page_a_of_b: 第{0}页，共{1}页
+  footer:
+    license: >
+      源代码在[Mozilla公共许可证 (MPL) 2.0](https://www.mozilla.org/MPL/2.0)的条款下发布于[GitHub](https://github.com/pluiedev/site)，以便浏览。<br/>
+      网站内容在[知识共享 署名-相同方式共享4.0协议 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans)的条款下提供，未经署名不得转载。
+    credits: >
+      本站由[Lume](https://lume.land)、[UnoCSS](https://unocss.dev)、<span class="i-twemoji:purple-heart inline-block vertical-sub"></span>、咖啡因、与一小抹雌二醇联合制成。
+  navbar:
+    theme_switcher: 切换亮色/暗色模式
+    language_switcher: Switch to English
+    source: 网页源代码
+    no_translation: 暂无其他语言版本
 
-  - text: pronouns.cc
-    link: https://pronouns.cc/@pluieuwu
-    icon: i-twemoji:sparkles
-    color: purple-600
-
-  - text: Discord Server
-    link: https://discord.gg/NeNfePzCx8
-    icon: i-simple-icons:discord
-    color: indigo-600
-
-  - text: Bilibili
-    link: https://space.bilibili.com/401096522
-    icon: i-simple-icons:bilibili
-    color: sky-600
-
-  - text: Telegram
-    link: https://t.me/@pluieowo
-    icon: i-simple-icons:telegram
-    color: sky-700
-
-  - text: GitHub
-    link: https://github.com/pluiedev
-    icon: i-simple-icons:github
-    color: zinc-700
-
-technologies:
-  - title: I use proficiently
-    icons:
-      html5:
-        name: HTML 5
-        icon: i-devicon:html5
-      css3:
-        name: CSS 3
-        icon: i-devicon:css3
-      sass:
-        name: Sass
-        icon: i-devicon:sass
-      js:
-        name: JavaScript
-        icon: i-devicon:javascript
-      ts:
-        name: TypeScript
-        icon: i-devicon:typescript
-      deno:
-        name: Deno
-        icon: i-simple-icons:deno
-      svelte:
-        name: Svelte
-        icon: i-logos:svelte-icon
-      rust:
-        name: Rust
-        icon: i-simple-icons:rust
-      java:
-        name: Java
-        icon: i-logos:java
-      kotlin:
-        name: Kotlin
-        icon: i-logos:kotlin-icon
-      neovim:
-        name: Neovim
-        icon: i-devicon:neovim
-      vscode:
-        name: VS Code
-        icon: i-devicon:vscode
-      idea:
-        name: IntelliJ IDEA
-        icon: i-logos:intellij-idea
-      git:
-        name: Git
-        icon: i-logos:git-icon
-      linux:
-        name: Linux
-        icon: i-logos:linux-tux
-      nix:
-        name: Nix(OS)
-        icon: i-devicon:nixos
-      markdown:
-        name: Markdown
-        icon: i-simple-icons:markdown
-
-  - title: I use adequately
-    icons:
-      bash:
-        name: Bash
-        icon: i-logos:bash-icon
-      c:
-        name: C
-        icon: i-logos:c
-      cpp:
-        name: C++
-        icon: i-logos:c-plusplus
-      csharp:
-        name: C#
-        icon: i-devicon:csharp
-      gradle:
-        name: Gradle
-        icon: i-logos:gradle?mask text-[#4298B8]
-      lua:
-        name: Lua
-        icon: i-logos:lua
-      haskell:
-        name: Haskell
-        icon: i-logos:haskell-icon
-      perl:
-        name: Perl
-        icon: i-vscode-icons:file-type-perl2
-      python:
-        name: Python
-        icon: i-logos:python
-      ruby:
-        name: Ruby
-        icon: i-logos:ruby
-      nodejs:
-        name: Node.js
-        icon: i-logos:nodejs-icon
-      npm:
-        name: NPM
-        icon: i-logos:npm-2
-      pnpm:
-        name: pnpm
-        icon: i-devicon:pnpm
-      vue:
-        name: Vue
-        icon: i-logos:vue
-      unocss:
-        name: UnoCSS
-        icon: i-vscode-icons:file-type-unocss
-      mongodb:
-        name: MongoDB
-        icon: i-logos:mongodb-icon
-      postgres:
-        name: PostgreSQL
-        icon: i-logos:postgresql
-      graphql:
-        name: GraphQL
-        icon: i-logos:graphql
-      latex:
-        name: LaTeX
-        icon: i-simple-icons:latex text-[#008080] !bg-[length:110%]
-      gimp:
-        name: GIMP
-        icon: i-devicon:gimp
-      inkscape:
-        name: Inkscape
-        icon: i-devicon:inkscape
-      blender:
-        name: Blender
-        icon: i-logos:blender
-      premiere-pro:
-        name: Premiere Pro
-        icon: i-devicon:premierepro !rounded-none
-  - title: I am still learning
-    icons:
-      arduino:
-        name: Arduino
-        icon: i-logos:arduino
-      clojure:
-        name: Clojure
-        icon: i-logos:clojure
-      elixir:
-        name: Elixir
-        icon: i-devicon:elixir
-      scala:
-        name: Scala
-        icon: i-devicon:scala
-      groovy:
-        name: Groovy
-        icon: i-devicon:groovy !bg-[length:120%]
-      zig:
-        name: Zig
-        icon: i-devicon:zig
-      unity:
-        name: Unity
-        icon: i-simple-icons:unity
-      godot:
-        name: Godot
-        icon: i-logos:godot-icon
-      unreal:
-        name: Unreal Engine 4/5
-        icon: i-simple-icons:unrealengine
-      after-effects:
-        name: After Effects
-        icon: i-devicon:aftereffects !rounded-none
+  categories:
+    blog:
+      title: 文章

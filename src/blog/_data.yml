@@ -1,6 +1,4 @@
 layout: layouts/post.vto
 category: blog
 
-doNotRenderTitle: true
-opengraph:
-  og:type: article
+lang: [en, zh]

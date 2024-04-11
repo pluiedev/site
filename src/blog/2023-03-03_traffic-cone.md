@@ -1,22 +1,24 @@
 ---
 title: What's up with the traffic cones?!
-description: "I got asked of that question a lot lately, even from multiple different people.
-Given it's apparently a Frequently Asked Question™ now, I might as well answer it here..."
+description: >
+  I got asked of that question a lot lately, even from multiple different people.
+  Given it's apparently a Frequently Asked Question™ now, I might as well answer it here...
 
 section: Misc
-tags: 
+tags:
   - post
   - slice-of-life
   - faq
 ---
+
 > A: Hey Leah?
-> 
+>
 > Me: Yeah?
-> 
+>
 > A: I see your avatar is wearing a traffic cone... why is that?
-> 
+>
 > Me: Well-
-> 
+>
 > A: Like, please don't tell me you've worn a traffic cone before in real life...?
 >
 > Me: Uhm, I have, but-
@@ -27,13 +29,13 @@ tags:
 >
 > A: Ugh, kids these days...
 >
-> Me: *audible silence*
+> Me: _audible silence_
 
 Now, I'll admit that this meme is kinda strange, but it all started when I was in
 the Fabric Community Discord Server (or Fabricord for short) back in 2020.
 
 There was a prominent member called i509VCB (i5 for short), who'd later go on to found Quilt with a couple of other people.
-His avatar is nothing but unique—a rotating red traffic cone stuck between two escalator railings: 
+His avatar is nothing but unique—a rotating red traffic cone stuck between two escalator railings:
 
 <figure class="my-8">
 <img src="/img/traffic_cone.gif" class="rounded-full mx-auto" width="300">
@@ -60,7 +62,6 @@ But I remained enamored with the traffic cone. When everyone else has taken the 
 I kept it on my old avatar. Somehow, the traffic cone made my crude stick figure pop out more
 as an interesting entity, and without it, my avatar became oddly spacious and incomplete.
 It lodged onto me as an important part of my internet persona, somehow.
-
 
 <figure class="my-8 flex flex-col items-center gap-4">
 <img src="/img/avatar.png" class="rounded-full mx-auto" width="300">

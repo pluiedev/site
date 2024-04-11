@@ -1,18 +1,29 @@
 <nav class="top-0 fixed z-30 h-navbar flex min-w-full bg-bg border-b-2 border-b-main-border">
   <div class="flex grow">
-    <a class="navbar-tab navbar-brand" href="/" title="pluie.me"></a>
+    {{> const pfx = lang === "en" ? "/" : `/${lang}/`; }}
+    <a class="navbar-tab navbar-brand" href="{{ pfx }}" title="pluie.me"></a>
 
 	  {{ for category of categories }}
-	  	<a class="navbar-tab text-lg" href="{{ category.url }}" title="{{ category.title }}">
+	  	<a class="navbar-tab text-lg" href="{{ pfx }}{{ category.url }}" title="{{ category.title }}">
 	  		{{ category.title }}
 	  	</a>
 	  {{ /for }}
   </div>
-  
+
   </div>
   <div class="flex items-center gap-4 me-6 text-main-fg-sub text-2xl">
-    <button class="i-mdi:theme-light-dark" title="Light/Dark theme"></button> 
-    <button class="i-mdi:translate" title="Change language"></button> 
-    <a href="https://github.com/pluiedev/site" class="button i-mdi:github" target="_blank" title="Source"></a> 
+    <button id="theme-switcher" title="{{ it.navbar.theme_switcher }}">
+      <img class="split-icon scale-90 left" inline src="/icons/mdi-theme-light-dark-split.svg" />
+    </button>
+    {{> const counterpart = it.alternates?.find(p => p.lang != lang) }}
+    {{ if counterpart?.url }}
+      {{> const dir = lang === "en" ? "right" : "left"; }}
+      <a class="button" id="language-switcher" href="{{counterpart.url}}" title="{{ it.navbar.language_switcher }}">
+        <img class="split-icon scale-90 {{dir}}" inline src="/icons/mdi-translate-split.svg" />
+      </a>
+    {{ else }}
+      <div class="i-mdi:translate-off" title="{{ it.navbar.no_translation }}"></div>
+    {{ /if }}
+    <a href="{{ it.source }}" class="button i-mdi:github" target="_blank" title="{{ it.navbar.source }}"></a>
   </div>
 </nav>

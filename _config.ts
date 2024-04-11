@@ -6,6 +6,9 @@ import date from "lume/plugins/date.ts";
 import vento from "lume/plugins/vento.ts";
 import unocss from "lume/plugins/unocss.ts";
 import metas from "lume/plugins/metas.ts";
+import multilanguage from "lume/plugins/multilanguage.ts";
+import esbuild from "lume/plugins/esbuild.ts";
+
 import unoConfig from "./uno.config.ts";
 
 // remark plugins
@@ -26,6 +29,13 @@ const site = lume({ src: "./src" })
   .use(vento())
   .use(metas())
   .use(unocss(unoConfig))
+  .use(
+    multilanguage({
+      languages: ["en", "zh"],
+      defaultLanguage: "en",
+    }),
+  )
+  .use(esbuild())
   .filter("strip_indent", stripIndent);
 
 export default site;

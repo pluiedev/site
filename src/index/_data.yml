@@ -1,0 +1,266 @@
+layout: layouts/base.vto
+url: "/"
+
+links:
+  youtube:
+    text: YouTube
+    link: https://youtube.com/@pluieuwu
+    icon: i-simple-icons:youtube
+    color: rose-600
+  instagram:
+    text: Instagram
+    link: https://instagram.com/pluieuwu
+    icon: i-simple-icons:instagram
+    color: fuchsia-600
+  pronounscc:
+    text: pronouns.cc
+    link: https://pronouns.cc/@pluieuwu
+    icon: i-twemoji:sparkles
+    color: purple-600
+  discord:
+    text: Discord Server
+    link: https://discord.gg/NeNfePzCx8
+    icon: i-simple-icons:discord
+    color: indigo-600
+  bilibili:
+    text: Bilibili
+    link: https://space.bilibili.com/401096522
+    icon: i-simple-icons:bilibili
+    color: sky-600
+  github:
+    text: GitHub
+    link: https://github.com/pluiedev
+    icon: i-simple-icons:github
+    color: zinc-700
+
+technologies:
+  proficiently:
+    title: I use proficiently
+    icons:
+      html5:
+        name: HTML 5
+        icon: i-devicon:html5
+      css3:
+        name: CSS 3
+        icon: i-devicon:css3
+      sass:
+        name: Sass
+        icon: i-devicon:sass
+      js:
+        name: JavaScript
+        icon: i-devicon:javascript
+      ts:
+        name: TypeScript
+        icon: i-devicon:typescript
+      deno:
+        name: Deno
+        icon: i-simple-icons:deno
+      svelte:
+        name: Svelte
+        icon: i-logos:svelte-icon
+      rust:
+        name: Rust
+        icon: i-simple-icons:rust
+      java:
+        name: Java
+        icon: i-logos:java
+      kotlin:
+        name: Kotlin
+        icon: i-logos:kotlin-icon
+      neovim:
+        name: Neovim
+        icon: i-devicon:neovim
+      vscode:
+        name: VS Code
+        icon: i-devicon:vscode
+      idea:
+        name: IntelliJ IDEA
+        icon: i-logos:intellij-idea
+      git:
+        name: Git
+        icon: i-logos:git-icon
+      linux:
+        name: Linux
+        icon: i-logos:linux-tux
+      nix:
+        name: Nix(OS)
+        icon: i-devicon:nixos
+      markdown:
+        name: Markdown
+        icon: i-simple-icons:markdown
+  adequately:
+    title: I use adequately
+    icons:
+      bash:
+        name: Bash
+        icon: i-logos:bash-icon
+      c:
+        name: C
+        icon: i-logos:c
+      cpp:
+        name: C++
+        icon: i-logos:c-plusplus
+      csharp:
+        name: C#
+        icon: i-devicon:csharp
+      gradle:
+        name: Gradle
+        icon: i-logos:gradle?mask text-[#4298B8]
+      lua:
+        name: Lua
+        icon: i-logos:lua
+      haskell:
+        name: Haskell
+        icon: i-logos:haskell-icon
+      perl:
+        name: Perl
+        icon: i-vscode-icons:file-type-perl2
+      python:
+        name: Python
+        icon: i-logos:python
+      ruby:
+        name: Ruby
+        icon: i-logos:ruby
+      nodejs:
+        name: Node.js
+        icon: i-logos:nodejs-icon
+      npm:
+        name: NPM
+        icon: i-logos:npm-2
+      pnpm:
+        name: pnpm
+        icon: i-devicon:pnpm
+      vue:
+        name: Vue
+        icon: i-logos:vue
+      unocss:
+        name: UnoCSS
+        icon: i-vscode-icons:file-type-unocss
+      mongodb:
+        name: MongoDB
+        icon: i-logos:mongodb-icon
+      postgres:
+        name: PostgreSQL
+        icon: i-logos:postgresql
+      graphql:
+        name: GraphQL
+        icon: i-logos:graphql
+      latex:
+        name: LaTeX
+        icon: i-simple-icons:latex text-[#008080] !bg-[length:110%]
+      gimp:
+        name: GIMP
+        icon: i-devicon:gimp
+      inkscape:
+        name: Inkscape
+        icon: i-devicon:inkscape
+      blender:
+        name: Blender
+        icon: i-logos:blender
+      premiere-pro:
+        name: Premiere Pro
+        icon: i-devicon:premierepro !rounded-none
+  learning:
+    title: I am still learning
+    icons:
+      arduino:
+        name: Arduino
+        icon: i-logos:arduino
+      clojure:
+        name: Clojure
+        icon: i-logos:clojure
+      elixir:
+        name: Elixir
+        icon: i-devicon:elixir
+      scala:
+        name: Scala
+        icon: i-devicon:scala
+      groovy:
+        name: Groovy
+        icon: i-devicon:groovy !bg-[length:120%]
+      zig:
+        name: Zig
+        icon: i-devicon:zig
+      unity:
+        name: Unity
+        icon: i-simple-icons:unity
+      godot:
+        name: Godot
+        icon: i-logos:godot-icon
+      unreal:
+        name: Unreal Engine 4/5
+        icon: i-simple-icons:unrealengine
+      after-effects:
+        name: After Effects
+        icon: i-devicon:aftereffects !rounded-none
+
+#=== Translatable strings ===#
+
+title: Heya~ I'm Leah!
+description: You may know me better by my online alias, pluie.
+
+intro:
+  hi: Heya~ I'm <em>Leah</em>!
+  alias: You may know me better by my online alias, <em>pluie</em>.
+  pronouns: she/her
+  desc: >
+    I'm a Chinese open-source 
+    <em>developer <span class="i-twemoji:woman-technologist-light-skin-tone inline-block"></span></em>,
+    graphics designer and 
+    <em>artist <span class="i-twemoji:woman-artist-light-skin-tone inline-block"></span></em>,
+    currently based in <em>Berlin, Germany</em>,
+    aspiring to make the world of technology and design more accessible and
+    inclusive for <em>everyone</em>.
+  scroll_down: Scroll down
+
+desc: |
+  I love coding, drawing, painting, indulging in my nerdy hobbies,  discovering more about myself, and helping others discover themselves. Funnily enough, I do most of my productive work in my spare time when I'm supposed to relax—apparently, once I get fixated on something, I can't stop. Not sure if that's a good quality or not! ;)
+
+  More things I like include dogs, cats, foxes, traffic cones, history, philosophy, politics, linguistics and game design. Especially <abbr title="constructed languages, or languages intentionally created by people">conlangs</abbr>. They're _very_ cool.
+
+  I also often think way too hard about narrative video games, to the point I write full articles and reviews about them. I'm not exactly professional, but I still try my best to figure out what does and doesn't tick!
+
+sections:
+  links: Links
+  technologies: Technologies that...
+
+zh:
+  title: 哈喽～我叫Leah！
+  description: 你有可能会更熟悉我的网名，pluie。
+
+  intro:
+    hi: 哈喽～我叫<em>Leah</em>!
+    alias: 你有可能会更熟悉我的网名，<em>pluie</em>。
+    pronouns: 她 · she/her
+    # 中文里出现空格会很奇怪呢…… 唉
+    desc: >
+      我是一名现居<em>德国柏林</em>的开源<em>软件开发者<span
+        class="i-twemoji:woman-technologist-light-skin-tone inline-block"></span></em
+      >、视觉设计师兼<em>画家<span class="i-twemoji:woman-artist-light-skin-tone inline-block"></span></em
+      >，致力于让科技与设计行业对<em>所有人</em>都变得更加开放、友好。
+    scroll_down: 向下滑
+
+  desc: |
+    喜爱编程、绘画、钻研自己的小众爱好，并且每天不断地去进一步认识自己，并帮助别人一并认识自己。 好笑的是，我在我理应休息的时候反倒工作上最为高效——貌似自己一旦集中精力，就很难让自己的干劲停下来了呢。不清楚这是不是件好事呢（笑
+
+    除此之外还喜欢小动物（小狗小猫小狐狸都很可爱！）、标志锥、历史、哲学、政治、语言学、电子游戏设计、等等。尤其是<abbr title="人类自己编造出来的，而非自然演化出来的语言">人造语言（conlangs）</abbr>，相当的有意思呢～
+
+    我也经常会去过度分析一些玩过的，叙事元素强的电子游戏，分析着分析着，就有些时候会关于这些游戏写一些评测文章。虽然我还不是很专业，但我还是会尽力去剖析，这些游戏是怎么打动我的呢！
+
+  sections:
+    links: 社媒链接
+    technologies: 技术经验
+
+  links:
+    discord:
+      text: Discord 服务器
+    bilibili:
+      text: 哔哩哔哩
+
+  technologies:
+    proficiently:
+      title: 驾轻就熟
+    adequately:
+      title: 能力尚可
+    learning:
+      title: 仍在学习

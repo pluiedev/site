@@ -3,9 +3,8 @@ title: The Forgotten City Review
 description: A consise, philosophical adventure into a draconian utopia that caters to history and mythology nerds like me particularly well. Flawed it may be, it is still an unforgettable experience.
 
 draft: true
-
 section: Essays
-tags: 
+tags:
   - post
   - game-review
   - nerds-rejoice
@@ -21,9 +20,9 @@ I couldn't have had high hopes for recent time loop games until something truly 
 And that's where _The Forgotten City_ shines. It explores topics in philosophy, mythology, history, anthropology and culture that are getting increasingly sidelined in video games,
 triple-A or indie. More and more people treat period settings as mere backdrops for exotic adventures in a different time and space, but they are so much more than that.
 Culture, ideology, mindset, thought processes -- they are all things that cannot be depicted if you solely imitate the sights and sounds and scenery and semblances, and not touch on
-the minds of the humans that belong to this era. 
+the minds of the humans that belong to this era.
 The experience was definitely elevated by the dedication to stay true to historical facts and events,
-which are surprisingly critical to the plot and how the game plays. 
+which are surprisingly critical to the plot and how the game plays.
 
 It's been a while since my history nerd brain has been activated in a video game. Let's dive right in.
 
@@ -46,7 +45,7 @@ There are also underground sections where you have to explore caverns, undergrou
 They make you anxious and ponder what's going to appear at every twist and turn, but they never quite reach pitch darkness. This makes me feel a lot less
 unnerved compared to some other games, which is a double-edged sword.
 
-I like when games permit you to relax a little while uncovering the truth, especially in a non-horror game, 
+I like when games permit you to relax a little while uncovering the truth, especially in a non-horror game,
 but that comes at the cost of reducing the oppressive and unknown atmosphere. It's a personal preference thing, and I can sense the dev team probably has
 the same preference as I do, when it comes to horror elements. (We'll circle back to this later.)
 
@@ -59,11 +58,11 @@ except even worse because all the facial textures and features are remarkably de
 encountered more animation issues in the game.
 
 During one optional (we'll circle back to this later) section of the game, you'll learn how to mount over ledges. And whenever you do that, it looks like you just glided
-up the ledge without any effort or even reaching out to the top of the ledge with your hands. 
+up the ledge without any effort or even reaching out to the top of the ledge with your hands.
 What's worse, is that you can glide up a ledge even with something in your hand, which looks _utterly ludicrous_ and suggests that you don't need your hands to climb at all.
 Accidental superhuman powers!
 
-Yeah, this game could do with some more polishing for character animations. I don't think it's that hard if the devs commit to it, but I doubt it. 
+Yeah, this game could do with some more polishing for character animations. I don't think it's that hard if the devs commit to it, but I doubt it.
 That's hardly the focus, after all.
 
 ## Music and Soundscape
@@ -77,7 +76,6 @@ As your vision suddenly turns black and white, save for the reanimated golden st
 again, _the many shall suffer for the sins of one_. HURRY! RUN! YOU SCREWED UP!
 It's such a succinct musical portrayal of doom and gloom and getting up your ass and start running.
 
-
 # Gameplay
 
 Even though the city itself is minuscule, the variety is high and exploration alone should trigger your interest in the setting and the daily lives of the citizens.
@@ -86,7 +84,7 @@ as you will have a lot more insight and knowledge of inscriptions, texts and ran
 
 On top of that, what objects you find seem very true to the setting. In the game, you'll find a lot of produce bowls, and the game will explain that
 the Romans ate purple carrots because the familiar orange cultivar didn't exist in the time period. The game will spend time telling you if a vase is Greek made,
-and that the jugs of wine you're holding are called _amphorae_. 
+and that the jugs of wine you're holding are called _amphorae_.
 
 You'll find _lararia_ (singular: _lararium_), small household shrines for praying, next to all Roman homes. You'll find garum and loaves of bread styled after the
 _panis quadratus_ uncovered from the ruins of Pompeii and Herculaneum. You'll find open brewing vats of crude beer with some... questionable things floating on top.

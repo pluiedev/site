@@ -3,12 +3,6 @@ layout: layouts/default.vto
 ---
 {{ import { post_embed } from "../comps/post_embed.vto" }}
 
-{{# opengraph["article:published_time"] = date; }}
-{{# opengraph["article:modified_time"] = page.src.lastModified; }}
-{{# opengraph["article:author"] = ["Leah"]; }}
-{{# opengraph["article:section"] = section; }}
-{{# opengraph["article:tag"] = tags; }}
-
 <style>
   .post-grid {
     display: grid;
@@ -44,7 +38,7 @@ layout: layouts/default.vto
     <h1 class="text-3xl text-brand">{{ page.data.title }}</h1>
     {{ post_embed(page.data) }}
   </div>
-  <a class="back mb-4 w-fit shrink-0 arrow-button rtl bg-brand-dark flex items-center gap-1" href="/blog">Other posts</a>
+  <a class="back mb-4 w-fit shrink-0 arrow-button rtl text-white bg-brand-dark flex items-center gap-1" href="/blog">Other posts</a>
 
   <div class="desc mt-4">
     {{ page.data.description |> strip_indent |> md }}

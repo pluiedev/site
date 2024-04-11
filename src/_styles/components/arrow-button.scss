@@ -23,7 +23,7 @@
 		  border-right-width: 1rem;
       border-left-width: 0rem;
     }
-	
+
     &:hover::before {
 	  	border-left-width: 0rem;
 	  }
@@ -35,11 +35,7 @@
     top: 0;
     filter: opacity(0.8);
 		transition: border-width 0.25s;
-		border-width: 1.3rem 2rem 1.3rem 1rem;
-
-    @media (min-width: 640px) {
-      border-right-width: 3rem;
-    }
+		border-width: 1.3rem 3rem 1.3rem 1rem;
 	}
 	&::after {
 		@apply absolute w-0 h-0 right-0 border-main-bg border-l-transparent;
@@ -50,7 +46,9 @@
 	}
 
 	&:hover {
-    filter: brightness(1.1);
+    .body {
+      filter: brightness(1.1);
+    }
     &::before {
 	  	border-right-width: 0rem;
 	  }

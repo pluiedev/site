@@ -29,7 +29,7 @@ const themeColors = [
 
 const colors: Record<string, string> = {};
 for (const themeColor of themeColors) {
-  colors[themeColor] = `rgba(var(--${themeColor}) / <alpha-value>)`;
+  colors[themeColor] = `rgb(var(--${themeColor}) / <alpha-value>)`;
 }
 
 
@@ -62,7 +62,7 @@ export default {
       presetWebFonts({
         provider: "google",
         fonts: {
-          sans: "Rethink Sans:400,700",
+          sans: ["Rethink Sans:400,700", "Noto Sans SC:400,700"],
           mono: ["Iosevka Nerd Font", "Iosevka", "JetBrains Mono"],
         },
       }),

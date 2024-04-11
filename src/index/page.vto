@@ -1,0 +1,114 @@
+<style>
+  .em-brand em {
+    font-style: normal;
+    color: rgb(var(--brand) / var(--un-text-opacity));
+  }
+</style>
+
+<div class="top-detector"></div>
+<main class="splash flex flex-col items-center justify-center gap-y-12 gap-x-12 py-16 lg:grid lg:grid-cols-main-screen lg:gap-y-20 lg:pt-0">
+	<figure class="intro place-self-center">
+		<img class="rounded-full border-2 border-brand" src="/img/avatar.png" alt="Avatar" width="320" height="320" />
+	</figure>
+
+	<div class="intro col-span-2 place-self-center flex flex-col em-brand">
+		<h1 class="text-4xl lg:text-5xl font-bold font-sans">
+			{{ intro.hi }}
+			<a href="https://pronouns.cc/@pluieuwu" class="text-lg lg:text-xl text-brand">
+			  · {{ intro.pronouns }} <span class="i-twemoji:transgender-flag inline-block vertical-sub"></span>
+			</a>
+		</h1>
+
+		<p class="text-2xl mt-2">
+      {{ intro.alias }}
+		</p>
+		<p class="text-xl mt-8">
+      {{ intro.desc }}
+		</p>
+	</div>
+
+	<div class="scroll-down hidden lg:block">
+		{{ intro.scroll_down }}
+		<div class="bottom-detector"></div>
+	</div>
+
+	<div id="scroll-indicator-vanish-point" class="prose text-justify col-span-2 dark:prose-invert">
+		{{ it.desc |> strip_indent |> md }}
+	</div>
+
+	<div class="w-full">
+    <h2 class="text-xl mb-2">{{ sections.links }} <span class="inline-block vertical-sub i-mdi:arrow-bottom-right"></span></h2>
+	  <div class="grid sm:grid-cols-2 lg:grid-cols-1 w-full gap-2">
+		{{ for _, link of links }}
+			{{ set fg = link.fg ?? "white" }}
+			<a
+				href="{{ link.link }}"
+        target="_blank"
+				class="arrow-button bg-{{ link.color }} text-{{ fg }} flex items-center gap-1"
+			>
+        <span class="body inline-flex items-center gap-1">
+          <div class="inline-block {{ link.icon }}"></div>
+				  {{ link.text }}
+        </span>
+			</a>
+		{{ /for }}
+    </div>
+	</div>
+
+	<div class="text-centered w-full sm:text-left col-span-3">
+    <h2 class="text-2xl font-bold">{{ sections.technologies }}</h2>
+    <div class="grid gap-y-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
+		  {{ for _, techs of technologies }}
+		  	<div>
+		  		<h3 class="text-xl my-3">{{ techs.title }}</h3>
+
+	        <div class="icon-grid w-3/4 lg:w-auto mx-auto">
+	        	{{ for id, icon of techs.icons }}
+              <label for="lang-{{ id }}" class="icon">
+                <input id="lang-{{ id }}" name="icon-select" type="radio" class="hidden">
+                <div class="name">{{ icon.name }}</div>
+                <div class="{{ icon.icon }}" data-name="{{ icon.name }}"></div>
+              </label>
+	        	{{ /for }}
+	        </div>
+		  	</div>
+		  {{ /for }}
+    </div>
+	</div>
+</main>
+
+<script>
+	const scroll = document.querySelector('.scroll-down');
+  const intro = document.querySelector('main');
+
+	const t = new IntersectionObserver(entries => {
+  	entries.forEach(entry => {
+    	if (entry.isIntersecting) {
+	    	scroll.classList.remove('opacity-0');
+      	intro.classList.remove('compact');
+	    }
+	  });
+	});
+	const b = new IntersectionObserver(entries => {
+  	entries.forEach(entry => {
+    	if (entry.isIntersecting) {
+      	scroll.classList.add('opacity-0');
+      	intro.classList.add('compact');
+	    }
+	  });
+	});
+
+	function init(ev) {
+		if (window.innerHeight < 600 || window.innerWidth < 1024) {
+      scroll.classList.add('opacity-0');
+			t.disconnect();
+			b.disconnect();
+		} else {
+			t.observe(document.querySelector('.top-detector'));
+			b.observe(document.querySelector('.bottom-detector'));
+		}
+	}
+
+	window.addEventListener('resize', init)
+	window.addEventListener('load', init)
+</script>

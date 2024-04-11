@@ -5,11 +5,6 @@
 <footer class="px-16 pt-12 pb-20 text-center prose max-w-none w-full border-t-2 border-t-main-border">
 	<p>© {{yearText}} Leah Amelia “pluie” Chen</p>
 
-	{{ echo |> strip_indent |> md }}
-		Source code is licensed under the [Mozilla Public License](https://www.mozilla.org/MPL)
-		and available on [GitHub](https://github.com/pluiedev/site).<br>
-		Content is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
-
-		Made with [Lume](https://lume.land), [UnoCSS](https://unocss.dev), <span class="i-twemoji:purple-heart inline-block vertical-sub"></span>, caffeine, and a smudge of estradiol.
-	{{ /echo }}
+	{{ footer.license |> strip_indent |> md }}
+	{{ footer.credits |> strip_indent |> md }}
 </footer>
