@@ -27,11 +27,7 @@ const themeColors = [
   "main-border",
 ];
 
-const colors: Record<string, string> = {};
-for (const themeColor of themeColors) {
-  colors[themeColor] = `rgb(var(--${themeColor}) / <alpha-value>)`;
-}
-
+const colors = Object.fromEntries(themeColors.map((c) => [c, `rgb(var(--${c}) / <alpha-value>)`]));
 
 export default {
   options: {
