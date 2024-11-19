@@ -8,22 +8,16 @@ layout: layouts/default.vto
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-      "back"
-      "info"
-      "desc";
+      "- back"
+      "info info"
+      "desc desc"
+      ;
+    column-gap: 3rem;
   }
   .post-grid .info { grid-area: info; }
   .post-grid .back { grid-area: back; }
   .post-grid .desc { grid-area: desc; }
 
-  @media (min-width: 640px) {
-    .post-grid {
-      grid-template-areas:
-        "info back"
-        "desc desc";
-      column-gap: 3rem;
-    }
-  }
   @media (min-width: 1024px) {
     .post-grid {
       grid-template-areas:
