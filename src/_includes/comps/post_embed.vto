@@ -5,7 +5,7 @@
   
     {{ for tag of post.tags }}
       {{ if tag !== "post" }}
-        <span class="bg-brand text-white text-xs rounded-full px-2 inline-flex">{{ tag }}</span>
+        <span class="border-brand-dark border-1 text-brand-dark dark:border-brand dark:text-brand text-xs rounded-full px-2 inline-flex">{{ tag }}</span>
       {{ /if }}
     {{ /for }}
   </p>

@@ -58,7 +58,7 @@ export default {
       presetWebFonts({
         provider: "google",
         fonts: {
-          sans: ["Rethink Sans:400,700", "Noto Sans SC:400,700"],
+          sans: ["DM Sans:400,700", "Noto Sans SC:400,700"],
           mono: ["Iosevka Nerd Font", "Iosevka", "JetBrains Mono"],
         },
       }),
