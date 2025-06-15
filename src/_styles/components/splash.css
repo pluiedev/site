@@ -30,8 +30,8 @@
     animation: 0.75s infinite alternate bob;
 
     &::after {
-      @apply mx-auto block h-6 w-6 border-2 border-main-fg-sub rounded-sm
-        border-l-0 border-t-0 origin-center;
+      @apply mx-auto block h-6 w-6 border-2 border-main-fg-sub border-l-0
+        border-t-0 origin-center;
       transform: scale(1.5, 1.25) rotate(45deg);
       content: "";
     }
