@@ -5,41 +5,45 @@
 // seriously evil crimes
 
 .splash {
-	transition: padding 0.5s ease-out;
+  transition: padding 0.5s ease-out;
 
-	.intro {
-		padding: calc(50vh - 3 * 4rem) 0;
+  .intro {
+    padding: calc(50vh - 3 * 4rem) 0;
     @media (max-width: 1024px) {
       padding: 0;
     }
-		transition: padding 0.5s ease-out;
-	}
+    transition: padding 0.5s ease-out;
+  }
 
-	&.compact .intro {
-		padding: 0;
-	}
+  &.compact .intro {
+    padding: 0;
+  }
 
-	.scroll-down {
-		@apply text-main-fg-sub transition absolute;
-		bottom: 3rem;
+  .scroll-down {
+    @apply text-main-fg-sub transition absolute;
+    bottom: 3rem;
     left: 50%;
     transform: translate(-50%, 0);
-		animation: 0.75s infinite alternate bob;
+    animation: 0.75s infinite alternate bob;
 
-		&::after {
-			@apply mx-auto block h-6 w-6 border-2 border-main-fg-sub rounded-sm border-l-0 border-t-0 origin-center;
-			transform: scale(1.5, 1.25) rotate(45deg);
-			content: "";
-		}
-	}
-	.bottom-detector {
-		position: absolute;
-		bottom: -5rem;
-	}
+    &::after {
+      @apply mx-auto block h-6 w-6 border-2 border-main-fg-sub rounded-sm
+        border-l-0 border-t-0 origin-center;
+      transform: scale(1.5, 1.25) rotate(45deg);
+      content: "";
+    }
+  }
+  .bottom-detector {
+    position: absolute;
+    bottom: -5rem;
+  }
 }
 
 @keyframes bob {
-	from { transform: translateY(0px); }
-	to { transform: translateY(10px); }
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(10px);
+  }
 }
-

@@ -4,12 +4,13 @@
 a:not(.button, .arrow-button, .navbar-tab, [disabled], .pagination-link) {
   // adapted from https://stackoverflow.com/a/72459455
   @include bg-transition.bg-transition;
-	@apply text-brand ease-out bg-no-repeat bg-right-bottom bg-gradient-to-r from-transparent to-brand-dark to-0%;
+  @apply text-brand ease-out bg-no-repeat bg-right-bottom bg-gradient-to-r
+    from-transparent to-brand-dark to-0%;
 
-	background-size: calc(var(--bg-transition) * 100%) 1.5px;
+  background-size: calc(var(--bg-transition) * 100%) 1.5px;
   text-decoration: none;
 
-	&:hover, &:focus, &.is-active {
+  &:hover, &:focus, &.is-active {
     @apply bg-left-bottom;
-	}
+  }
 }

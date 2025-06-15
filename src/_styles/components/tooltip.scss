@@ -1,14 +1,16 @@
 [data-tooltip] {
-	@apply relative;
+  @apply relative;
 
-	&::after {
-		content: attr(data-tooltip);
-		@apply hidden absolute text-sm text-center inline-block align-middle bg-bg/90;
-		@apply py-1 px-2 rounded-md border-[1px] border-brand min-w-fit -inset-x-2 bottom-[90%] z-20;
-	}
-	&:hover {
-		&::before, &::after {
-			@apply block;
-		}
-	}
+  &::after {
+    content: attr(data-tooltip);
+    @apply hidden absolute text-sm text-center inline-block align-middle
+      bg-bg/90;
+    @apply py-1 px-2 rounded-md border-[1px] border-brand min-w-fit -inset-x-2
+      bottom-[90%] z-20;
+  }
+  &:hover {
+    &::before, &::after {
+      @apply block;
+    }
+  }
 }

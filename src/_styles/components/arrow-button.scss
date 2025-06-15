@@ -1,5 +1,5 @@
 .arrow-button {
-	@apply relative transition;
+  @apply relative transition;
   height: 2.5rem;
   padding: 0.5rem 4.5rem 0.5rem 0.75rem;
 
@@ -10,48 +10,47 @@
     }
     padding-right: 0.75rem;
 
-	  &::before {
+    &::before {
       @apply left-0 border-l-main-bg border-r-transparent;
-		  border-right-width: 1rem;
+      border-right-width: 1rem;
       border-left-width: 2rem;
       @media (min-width: 640px) {
         border-left-width: 3rem;
       }
     }
-	  &::after {
+    &::after {
       @apply left-0 border-l-main-bg border-r-transparent;
-		  border-right-width: 1rem;
+      border-right-width: 1rem;
       border-left-width: 0rem;
     }
 
     &:hover::before {
-	  	border-left-width: 0rem;
-	  }
+      border-left-width: 0rem;
+    }
   }
 
-	&::before {
-		@apply absolute w-0 h-0 right-0 border-main-bg border-l-transparent;
-		content: "";
+  &::before {
+    @apply absolute w-0 h-0 right-0 border-main-bg border-l-transparent;
+    content: "";
     top: 0;
     filter: opacity(0.8);
-		transition: border-width 0.25s;
-		border-width: 1.3rem 3rem 1.3rem 1rem;
-	}
-	&::after {
-		@apply absolute w-0 h-0 right-0 border-main-bg border-l-transparent;
-		content: "";
+    transition: border-width 0.25s;
+    border-width: 1.3rem 3rem 1.3rem 1rem;
+  }
+  &::after {
+    @apply absolute w-0 h-0 right-0 border-main-bg border-l-transparent;
+    content: "";
     top: 0;
-		transition: border-width 0.25s;
-		border-width: 1.3rem 0rem 1.3rem 1rem;
-	}
+    transition: border-width 0.25s;
+    border-width: 1.3rem 0rem 1.3rem 1rem;
+  }
 
-	&:hover {
+  &:hover {
     .body {
       filter: brightness(1.1);
     }
     &::before {
-	  	border-right-width: 0rem;
-	  }
+      border-right-width: 0rem;
+    }
   }
 }
-

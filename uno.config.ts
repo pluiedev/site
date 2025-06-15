@@ -8,10 +8,18 @@ import {
   transformerVariantGroup,
 } from "npm:unocss";
 import logos from "npm:@iconify-json/logos/icons.json" with { type: "json" };
-import simpleIcons from "npm:@iconify-json/simple-icons/icons.json" with { type: "json" };
-import devicon from "npm:@iconify-json/devicon/icons.json" with { type: "json" };
-import vscodeIcons from "npm:@iconify-json/vscode-icons/icons.json" with { type: "json" };
-import twemoji from "npm:@iconify-json/twemoji/icons.json" with { type: "json" };
+import simpleIcons from "npm:@iconify-json/simple-icons/icons.json" with {
+  type: "json",
+};
+import devicon from "npm:@iconify-json/devicon/icons.json" with {
+  type: "json",
+};
+import vscodeIcons from "npm:@iconify-json/vscode-icons/icons.json" with {
+  type: "json",
+};
+import twemoji from "npm:@iconify-json/twemoji/icons.json" with {
+  type: "json",
+};
 import mdi from "npm:@iconify-json/mdi/icons.json" with { type: "json" };
 
 const themeColors = [
@@ -27,7 +35,9 @@ const themeColors = [
   "main-border",
 ];
 
-const colors = Object.fromEntries(themeColors.map((c) => [c, `rgb(var(--${c}) / <alpha-value>)`]));
+const colors = Object.fromEntries(
+  themeColors.map((c) => [c, `rgb(var(--${c}) / <alpha-value>)`]),
+);
 
 export default {
   options: {

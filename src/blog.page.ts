@@ -2,13 +2,7 @@ export const layout = "layouts/blog.vto";
 
 const RANGE = 2;
 
-export default function* ({
-  search,
-  paginate,
-}: {
-  search: Lume.Search;
-  paginate: Lume.Paginator;
-}) {
+export default async function* ({ search, paginate }: Lume.Helpers) {
   const langs = {
     en: "Blog",
     zh: "文章",

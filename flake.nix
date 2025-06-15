@@ -1,7 +1,7 @@
 {
   description = "Source code of pluie.me";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs.nixpkgs.url = "https://channels.nixos.org/nixos-25.05/nixexprs.tar.xz";
 
   outputs = {
     self,

@@ -10,11 +10,19 @@
 
   #left {
     filter: opacity(calc(0.5 * (2 - var(--side))));
-    fill: color-mix(in srgb, currentColor calc(100% * (1 - var(--highlight) * (1 - var(--side)))), var(--highlight-color));
+    fill: color-mix(
+      in srgb,
+      currentColor calc(100% * (1 - var(--highlight) * (1 - var(--side)))),
+      var(--highlight-color)
+    );
   }
   #right {
     filter: opacity(calc(0.5 * (1 + var(--side))));
-    fill: color-mix(in srgb, currentColor calc(100% * (1 - var(--highlight) * var(--side))), var(--highlight-color));
+    fill: color-mix(
+      in srgb,
+      currentColor calc(100% * (1 - var(--highlight) * var(--side))),
+      var(--highlight-color)
+    );
   }
 
   &.left {

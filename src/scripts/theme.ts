@@ -4,8 +4,7 @@ const isDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 const theme = new Proxy(
   {
-    value:
-      localStorage.getItem("theme") ??
+    value: localStorage.getItem("theme") ??
       (isDark.matches ? "neon" : "strawberry-milkshake"),
   },
   {

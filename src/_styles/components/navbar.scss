@@ -3,15 +3,22 @@
 .navbar-brand {
   @apply w-32;
 
-  background: url('/icons/wordmark.svg') no-repeat center, linear-gradient(to top, var(--un-gradient-stops)) no-repeat bottom !important;
+  background:
+    url("/icons/wordmark.svg") no-repeat center,
+    linear-gradient(to top, var(--un-gradient-stops)) no-repeat bottom
+    !important;
   background-size: 75%, auto calc(var(--bg-transition) * 100%) !important;
 }
 
 .navbar-tab {
   @include bg-transition.bg-transition;
-	@apply inline-flex h-full items-center px-3 ease-out bg-no-repeat bg-bottom bg-gradient-to-t from-transparent to-main-border to-0%;
+  @apply inline-flex h-full items-center px-3 ease-out bg-no-repeat bg-bottom
+    bg-gradient-to-t from-transparent to-main-border to-0%;
 
   background-size: auto calc(var(--bg-transition) * 100%);
-  color: color-mix(in srgb, currentColor calc((1 - var(--bg-transition)) * 100%), white);
+  color: color-mix(
+    in srgb,
+    currentColor calc((1 - var(--bg-transition)) * 100%),
+    white
+  );
 }
-

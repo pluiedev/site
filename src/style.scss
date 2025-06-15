@@ -2,41 +2,40 @@
 
 :root {
   &, .neon {
-	  // Default dark theme "Neon"
+    // Default dark theme "Neon"
 
-	  --brand: 210 55 115;        // #d23773
-	  --brand-dark: 186 44 99;    // #ba2c63
-	  --brand-darker: 133 30 70;  // #851e46
-	  --brand-darkest: 87 18 45;  // #57122d
+    --brand: 210 55 115; // #d23773
+    --brand-dark: 186 44 99; // #ba2c63
+    --brand-darker: 133 30 70; // #851e46
+    --brand-darkest: 87 18 45; // #57122d
 
-	  --bg: 18 18 20;             // #121214
-    --fg: 255 255 255;          // white
+    --bg: 18 18 20; // #121214
+    --fg: 255 255 255; // white
 
-    --main-bg: 24 24 27;        // zinc-900
-    --main-fg: 212 212 216;     // zinc-200
+    --main-bg: 24 24 27; // zinc-900
+    --main-fg: 212 212 216; // zinc-200
     --main-fg-sub: 161 161 170; // zinc-400
     --main-border: var(--brand);
   }
   @media (prefers-color-scheme: light) {
-		// Default light theme "Strawberry Milkshake"
+    // Default light theme "Strawberry Milkshake"
 
-    --bg: 231 229 228;          // stone-200
-    --fg: 41 37 36;             // stone-800
-    --main-bg: 231 229 228;     // stone-200
-    --main-fg: 68 64 60;        // stone-700
+    --bg: 231 229 228; // stone-200
+    --fg: 41 37 36; // stone-800
+    --main-bg: 231 229 228; // stone-200
+    --main-fg: 68 64 60; // stone-700
     --main-fg-sub: 120 113 108; // stone-500
-	}
+  }
   .strawberry-milkshake {
-		// Default light theme "Strawberry Milkshake"
+    // Default light theme "Strawberry Milkshake"
 
-    --bg: 231 229 228;          // stone-200
-    --fg: 41 37 36;             // stone-800
-    --main-bg: 231 229 228;     // stone-200
-    --main-fg: 68 64 60;        // stone-700
+    --bg: 231 229 228; // stone-200
+    --fg: 41 37 36; // stone-800
+    --main-bg: 231 229 228; // stone-200
+    --main-fg: 68 64 60; // stone-700
     --main-fg-sub: 120 113 108; // stone-500
-	}
+  }
 }
-
 
 html {
   @apply bg-bg;
@@ -65,5 +64,5 @@ main {
 }
 
 .bg-brand-hoverable {
-	@apply bg-brand hover:bg-brand-dark;
+  @apply bg-brand hover:bg-brand-dark;
 }
