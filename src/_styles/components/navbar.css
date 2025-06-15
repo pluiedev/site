@@ -1,0 +1,18 @@
+.navbar-tab {
+  @apply inline-flex h-full items-center px-3 ease-out bg-no-repeat bg-bottom
+    bg-linear-to-t from-transparent to-main-border to-0%;
+
+  transition: background-size 0.2s;
+
+  background-size: auto calc(var(--bg-transition) * 100%);
+
+  &.navbar-brand {
+    @apply w-32;
+
+    background:
+      url("/icons/wordmark.svg") no-repeat center,
+      linear-gradient(var(--tw-gradient-stops)) no-repeat bottom;
+
+    background-size: 75%, auto calc(var(--bg-transition) * 100%);
+  }
+}

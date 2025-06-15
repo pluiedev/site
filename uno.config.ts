@@ -1,12 +1,12 @@
 import {
-  defineConfig,
   presetIcons,
   presetTypography,
-  presetUno,
   presetWebFonts,
-  transformerDirectives,
   transformerVariantGroup,
 } from "npm:unocss";
+
+import presetWind4 from "npm:@unocss/preset-wind4";
+
 import logos from "npm:@iconify-json/logos/icons.json" with { type: "json" };
 import simpleIcons from "npm:@iconify-json/simple-icons/icons.json" with {
   type: "json",
@@ -23,10 +23,6 @@ import twemoji from "npm:@iconify-json/twemoji/icons.json" with {
 import mdi from "npm:@iconify-json/mdi/icons.json" with { type: "json" };
 
 const themeColors = [
-  "brand",
-  "brand-dark",
-  "brand-darker",
-  "brand-darkest",
   "fg",
   "bg",
   "main-bg",
@@ -53,7 +49,11 @@ export default {
       ["h-navbar", { height: "3.5rem" }],
     ],
     presets: [
-      presetUno(),
+      presetWind4({
+        preflights: {
+          reset: true,
+        },
+      }),
       presetIcons({
         collections: {
           logos: () => logos,
@@ -66,6 +66,7 @@ export default {
       }),
       presetTypography(),
       presetWebFonts({
+        themeKey: "font", // Required by Wind4
         provider: "google",
         fonts: {
           sans: ["DM Sans:400,700", "Noto Sans SC:400,700"],
@@ -75,6 +76,5 @@ export default {
     ],
   },
   cssFile: "uno.css",
-  transformers: [transformerDirectives(), transformerVariantGroup()],
-  reset: "tailwind",
+  transformers: [transformerVariantGroup()],
 };

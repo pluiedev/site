@@ -1,6 +1,6 @@
 {{ export function post_embed(post) }}
   <p class="text-md">
-    <span class="i-mdi:calendar inline-block vertical-sub"></span>
+    <span class="icon-[mdi--calendar] align-icon-offset inline-block vertical-sub"></span>
     {{ post.date |> date("HUMAN_DATE") }}
   
     {{ for tag of post.tags }}

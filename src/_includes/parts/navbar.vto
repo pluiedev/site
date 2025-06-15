@@ -4,7 +4,7 @@
     <a class="navbar-tab navbar-brand" href="{{ pfx }}" title="pluie.me"></a>
 
 	  {{ for category of categories }}
-	  	<a class="navbar-tab text-lg" href="{{ pfx }}{{ category.url }}" title="{{ category.title }}">
+	  	<a class="navbar-tab bg-transition text-lg" href="{{ pfx }}{{ category.url }}" title="{{ category.title }}">
 	  		{{ category.title }}
 	  	</a>
 	  {{ /for }}
@@ -12,7 +12,7 @@
 
   </div>
   <div class="flex items-center gap-4 me-6 text-main-fg-sub text-2xl">
-    <button id="theme-switcher" title="{{ it.navbar.theme_switcher }}">
+    <button id="theme-switcher" class="cursor-pointer" title="{{ it.navbar.theme_switcher }}">
       <img class="split-icon scale-90 left" inline src="/icons/mdi-theme-light-dark-split.svg" />
     </button>
     {{> const counterpart = it.alternates?.find(p => p.lang != lang) }}
@@ -24,6 +24,6 @@
     {{ else }}
       <div class="i-mdi:translate-off" title="{{ it.navbar.no_translation }}"></div>
     {{ /if }}
-    <a href="{{ it.source }}" class="button i-mdi:github" target="_blank" title="{{ it.navbar.source }}"></a>
+    <a href="{{ it.source }}" class="button icon-[mdi--github] hover:text-brand transition-colors duration-100" target="_blank" title="{{ it.navbar.source }}"></a>
   </div>
 </nav>

@@ -1,0 +1,26 @@
+.arrow-button {
+  @apply transition;
+
+  position: relative;
+  height: 2.5rem;
+  padding: 0.5rem 4.5rem 0.5rem 0.75rem;
+
+  &::before {
+    @apply absolute w-0 h-0 right-0 border-main-bg border-l-transparent;
+    content: "";
+    top: 0;
+    filter: opacity(0.8);
+    transition: border-width 0.2s;
+
+    --bg-transition: inherit;
+    border-width: 1.3rem calc(3rem * (1 - var(--bg-transition))) 1.3rem 1rem;
+  }
+
+  &::after {
+    @apply absolute w-0 h-0 right-0 border-main-bg border-l-transparent;
+    content: "";
+    top: 0;
+    transition: border-width 0.2s;
+    border-width: 1.3rem 0rem 1.3rem 1rem;
+  }
+}

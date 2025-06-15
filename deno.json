@@ -1,7 +1,8 @@
 {
   "imports": {
     "lume/": "https://deno.land/x/lume@v3.0.1/",
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.9/jsx-runtime.ts"
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.9/jsx-runtime.ts",
+    "@iconify/json": "npm:@iconify/json"
   },
   "unstable": ["temporal"],
   "compilerOptions": {

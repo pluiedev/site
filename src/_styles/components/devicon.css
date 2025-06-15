@@ -1,0 +1,38 @@
+.icon-grid {
+  @apply grid grid-cols-4 gap-1 auto-rows-[1fr];
+
+  .icon {
+    @apply relative rounded-lg border-fg/30 border-2 cursor-pointer
+      aspect-square flex items-center justify-center;
+
+    div[class^="icon-"] {
+      @apply rounded-md aspect-square;
+      background-position: center;
+      width: 80% !important;
+      height: auto !important;
+      --bg-transition: inherit;
+
+      filter: opacity(calc(1 - 0.7 * var(--bg-transition))) blur(
+        calc(4px * var(--bg-transition))
+      );
+      transition: 0.1s filter;
+    }
+
+    .name {
+      @apply absolute top-0 left-0 w-full h-full z-10 p-2 flex items-center
+        justify-center text-center text-fg text-xs break-words;
+      --bg-transition: inherit;
+
+      color: color-mix(
+        in oklab,
+        currentcolor calc(var(--bg-transition) * 100%),
+        transparent
+      );
+      transition: 0.1s color;
+    }
+
+    &:has(input[name="icon-select"]:checked) {
+      --bg-transition: 1;
+    }
+  }
+}

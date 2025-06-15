@@ -3,6 +3,10 @@ name = "json"
 formatter = { command = "deno", args = ["fmt", "--ext", "json", "-"] }
 
 [[language]]
+name = "css"
+formatter = { command = "deno", args = ["fmt", "--ext", "css", "-"] }
+
+[[language]]
 name = "typescript"
 roots = ["deno.json", "deno.jsonc", "package.json"]
 file-types = ["ts", "tsx"]

@@ -5,32 +5,32 @@ links:
   youtube:
     text: YouTube
     link: https://youtube.com/@pluieuwu
-    icon: i-simple-icons:youtube
+    icon: simple-icons--youtube
     color: rose-600
   instagram:
     text: Instagram
     link: https://instagram.com/pluieuwu
-    icon: i-simple-icons:instagram
+    icon: simple-icons--instagram
     color: fuchsia-600
   pronounscc:
     text: pronouns.cc
     link: https://pronouns.cc/@pluieuwu
-    icon: i-twemoji:sparkles
+    icon: twemoji--sparkles
     color: purple-600
   discord:
     text: Discord Server
     link: https://discord.gg/NeNfePzCx8
-    icon: i-simple-icons:discord
+    icon: simple-icons--discord
     color: indigo-600
   bilibili:
     text: Bilibili
     link: https://space.bilibili.com/401096522
-    icon: i-simple-icons:bilibili
+    icon: simple-icons--bilibili
     color: sky-600
   github:
     text: GitHub
     link: https://github.com/pluiedev
-    icon: i-simple-icons:github
+    icon: simple-icons--github
     color: zinc-700
 
 technologies:
@@ -39,160 +39,151 @@ technologies:
     icons:
       html5:
         name: HTML 5
-        icon: i-devicon:html5
+        icon: devicon--html5
       css3:
         name: CSS 3
-        icon: i-devicon:css3
+        icon: devicon--css3
       sass:
         name: Sass
-        icon: i-devicon:sass
+        icon: devicon--sass
       js:
         name: JavaScript
-        icon: i-devicon:javascript
+        icon: devicon--javascript
       ts:
         name: TypeScript
-        icon: i-devicon:typescript
+        icon: devicon--typescript
       deno:
         name: Deno
-        icon: i-simple-icons:deno
+        icon: simple-icons--deno
       svelte:
         name: Svelte
-        icon: i-logos:svelte-icon
+        icon: logos--svelte-icon
       rust:
         name: Rust
-        icon: i-simple-icons:rust
+        icon: simple-icons--rust
       java:
         name: Java
-        icon: i-logos:java
+        icon: logos--java
       kotlin:
         name: Kotlin
-        icon: i-logos:kotlin-icon
+        icon: logos--kotlin-icon
       neovim:
         name: Neovim
-        icon: i-devicon:neovim
+        icon: devicon--neovim
       vscode:
         name: VS Code
-        icon: i-devicon:vscode
+        icon: devicon--vscode
       idea:
         name: IntelliJ IDEA
-        icon: i-logos:intellij-idea
+        icon: logos--intellij-idea
       git:
         name: Git
-        icon: i-logos:git-icon
+        icon: logos--git-icon
       linux:
         name: Linux
-        icon: i-logos:linux-tux
+        icon: logos--linux-tux
       nix:
         name: Nix(OS)
-        icon: i-devicon:nixos
+        icon: devicon--nixos
       markdown:
         name: Markdown
-        icon: i-simple-icons:markdown
+        icon: simple-icons--markdown
   adequately:
     title: I use adequately
     icons:
       bash:
         name: Bash
-        icon: i-logos:bash-icon
+        icon: logos--bash-icon
       c:
         name: C
-        icon: i-logos:c
+        icon: logos--c
       cpp:
         name: C++
-        icon: i-logos:c-plusplus
+        icon: logos--c-plusplus
       csharp:
         name: C#
-        icon: i-devicon:csharp
-      gradle:
-        name: Gradle
-        icon: i-logos:gradle?mask text-[#4298B8]
+        icon: devicon--csharp
       lua:
         name: Lua
-        icon: i-logos:lua
+        icon: logos--lua
       haskell:
         name: Haskell
-        icon: i-logos:haskell-icon
+        icon: logos--haskell-icon
       perl:
         name: Perl
-        icon: i-vscode-icons:file-type-perl2
+        icon: vscode-icons--file-type-perl2
       python:
         name: Python
-        icon: i-logos:python
+        icon: logos--python
       ruby:
         name: Ruby
-        icon: i-logos:ruby
+        icon: logos--ruby
       nodejs:
         name: Node.js
-        icon: i-logos:nodejs-icon
+        icon: logos--nodejs-icon
       npm:
         name: NPM
-        icon: i-logos:npm-2
+        icon: logos--npm-2
       pnpm:
         name: pnpm
-        icon: i-devicon:pnpm
+        icon: devicon--pnpm
       vue:
         name: Vue
-        icon: i-logos:vue
+        icon: logos--vue
       unocss:
         name: UnoCSS
-        icon: i-vscode-icons:file-type-unocss
+        icon: vscode-icons--file-type-unocss
       mongodb:
         name: MongoDB
-        icon: i-logos:mongodb-icon
+        icon: logos--mongodb-icon
       postgres:
         name: PostgreSQL
-        icon: i-logos:postgresql
+        icon: logos--postgresql
       graphql:
         name: GraphQL
-        icon: i-logos:graphql
-      latex:
-        name: LaTeX
-        icon: i-simple-icons:latex text-[#008080] !bg-[length:110%]
+        icon: logos--graphql
       gimp:
         name: GIMP
-        icon: i-devicon:gimp
+        icon: devicon--gimp
       inkscape:
         name: Inkscape
-        icon: i-devicon:inkscape
+        icon: devicon--inkscape
       blender:
         name: Blender
-        icon: i-logos:blender
+        icon: logos--blender
       premiere-pro:
         name: Premiere Pro
-        icon: i-devicon:premierepro !rounded-none
+        icon: devicon--premierepro
   learning:
     title: I am still learning
     icons:
       arduino:
         name: Arduino
-        icon: i-logos:arduino
+        icon: logos--arduino
       clojure:
         name: Clojure
-        icon: i-logos:clojure
+        icon: logos--clojure
       elixir:
         name: Elixir
-        icon: i-devicon:elixir
+        icon: devicon--elixir
       scala:
         name: Scala
-        icon: i-devicon:scala
-      groovy:
-        name: Groovy
-        icon: i-devicon:groovy !bg-[length:120%]
+        icon: devicon--scala
       zig:
         name: Zig
-        icon: i-devicon:zig
+        icon: devicon--zig
       unity:
         name: Unity
-        icon: i-simple-icons:unity
+        icon: simple-icons--unity
       godot:
         name: Godot
-        icon: i-logos:godot-icon
+        icon: logos--godot-icon
       unreal:
         name: Unreal Engine 4/5
-        icon: i-simple-icons:unrealengine
+        icon: simple-icons--unrealengine
       after-effects:
         name: After Effects
-        icon: i-devicon:aftereffects !rounded-none
+        icon: devicon--aftereffects
 
 #=== Translatable strings ===#
 
@@ -205,9 +196,9 @@ intro:
   pronouns: she/her
   desc: >
     I'm a Chinese open-source
-    <em>developer <span class="i-twemoji:woman-technologist-light-skin-tone inline-block"></span></em>,
+    <em>developer <span class="icon-[twemoji--woman-technologist-light-skin-tone] align-icon-offset"></span></em>,
     graphics designer and
-    <em>artist <span class="i-twemoji:woman-artist-light-skin-tone inline-block"></span></em>,
+    <em>artist <span class="icon-[twemoji--woman-artist-light-skin-tone] align-icon-offset"></span></em>,
     currently based in <em>Berlin, Germany</em>,
     aspiring to make the world of technology and design more accessible and
     inclusive for <em>everyone</em>.
@@ -235,8 +226,8 @@ zh:
     # 中文里出现空格会很奇怪呢…… 唉
     desc: >
       我是一名现居<em>德国柏林</em>的开源<em>软件开发者<span
-        class="i-twemoji:woman-technologist-light-skin-tone inline-block"></span></em
-      >、视觉设计师兼<em>画家<span class="i-twemoji:woman-artist-light-skin-tone inline-block"></span></em
+        class="icon-[twemoji--woman-technologist-light-skin-tone] align-icon-offset"></span></em
+      >、视觉设计师兼<em>画家<span class="icon-[twemoji--woman-artist-light-skin-tone] align-icon-offset"></span></em
       >，致力于让科技与设计行业对<em>所有人</em>都变得更加开放、友好。
     scroll_down: 向下滑
 

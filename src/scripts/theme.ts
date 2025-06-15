@@ -1,6 +1,5 @@
 const themes = ["neon", "strawberry-milkshake"];
-type Theme = (typeof themes)[number];
-const isDark = window.matchMedia("(prefers-color-scheme: dark)");
+const isDark = globalThis.matchMedia("(prefers-color-scheme: dark)");
 
 const theme = new Proxy(
   {
@@ -14,7 +13,7 @@ const theme = new Proxy(
       if (target.value === newValue) return true;
 
       target.value = newValue;
-      applyTheme(newValue);
+      document.body.dataset.theme = newValue;
       localStorage.setItem("theme", newValue);
 
       return true;
@@ -22,30 +21,12 @@ const theme = new Proxy(
   },
 );
 
-const sfxs = ["/audio/switch-off.mp3", "/audio/switch-on.mp3"].map(
-  (s) => new Audio(s),
-);
-
-window.addEventListener("DOMContentLoaded", () => {
+globalThis.addEventListener("DOMContentLoaded", () => {
   const themeSwitcher = document.querySelector("#theme-switcher");
+  document.body.dataset.theme = theme.value;
 
-  applyTheme(theme.value);
-
-  themeSwitcher.addEventListener("click", () => {
-    // NOTE: it's alright if indexOf returns -1
+  themeSwitcher!.addEventListener("click", () => {
     const idx = (themes.indexOf(theme.value) + 1) % themes.length;
-    sfxs[idx].play();
     theme.value = themes[idx];
   });
-
-  const langSwitcher = document.querySelector("#language-switcher");
-  langSwitcher.addEventListener("click", () => {
-    // FIXME somehow this doesnt work
-    new Audio("/audio/lang-switch.mp3").play();
-  });
 });
-
-function applyTheme(theme: Theme) {
-  document.body.classList.remove(...themes);
-  document.body.classList.add(theme);
-}

@@ -1,8 +1,10 @@
-// Like that fancy expanding/contracting splash screen I have in the main page?
-// Now you can have it too! Just uh... this is not really that adaptable
-// Good luck!!!
-// JavaScript *is* required. There's no way you can do this in CSS without some
-// seriously evil crimes
+/*
+  Like that fancy expanding/contracting splash screen I have in the main page?
+  Now you can have it too! Just uh... this is not really that adaptable
+  Good luck!!!
+  JavaScript *is* required. There's no way you can do this in CSS without some
+  seriously evil crimes
+*/
 
 .splash {
   transition: padding 0.5s ease-out;
@@ -37,14 +39,5 @@
   .bottom-detector {
     position: absolute;
     bottom: -5rem;
-  }
-}
-
-@keyframes bob {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(10px);
   }
 }

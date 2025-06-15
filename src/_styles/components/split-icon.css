@@ -11,7 +11,7 @@
   #left {
     filter: opacity(calc(0.5 * (2 - var(--side))));
     fill: color-mix(
-      in srgb,
+      in oklab,
       currentColor calc(100% * (1 - var(--highlight) * (1 - var(--side)))),
       var(--highlight-color)
     );
@@ -19,7 +19,7 @@
   #right {
     filter: opacity(calc(0.5 * (1 + var(--side))));
     fill: color-mix(
-      in srgb,
+      in oklab,
       currentColor calc(100% * (1 - var(--highlight) * var(--side))),
       var(--highlight-color)
     );
@@ -37,11 +37,4 @@
     --side: calc(1 - var(--base-side)) !important;
     --highlight: 1;
   }
-}
-
-body.neon #theme-switcher .split-icon {
-  --base-side: 0;
-}
-body.strawberry-milkshake #theme-switcher .split-icon {
-  --base-side: 1;
 }

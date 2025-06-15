@@ -2,7 +2,7 @@
 {{ set firstYear = 2022 }}
 {{ set yearText = currentYear > firstYear ? `${firstYear}–${currentYear}` : `${firstYear}` }}
 
-<footer class="px-16 pt-12 pb-20 text-center prose max-w-none w-full border-t-2 border-t-main-border">
+<footer class="px-16 pt-12 pb-20 text-center prose dark:prose-invert prose-a:text-brand prose-a:no-underline max-w-none w-full border-t-2 border-t-main-border">
 	<p>© {{yearText}} Leah Amelia “pluie” Chen</p>
 
 	{{ footer.license |> strip_indent |> md }}
