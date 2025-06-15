@@ -10,7 +10,7 @@ metas:
   site: pluie.me
   icon: /img/avatar.png
 
-source: https://github.com/pluiedev/site
+source: https://tangled.sh/@pluie.me/site
 
 # === Strings ===
 
@@ -26,9 +26,10 @@ blog:
   page_a_of_b: Page {0} of {1}
 footer:
   license: >
-    Source code is licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/MPL/2.0)
-    and available on [GitHub](https://github.com/pluiedev/site).<br>
-    Content is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
+    This site is [open-source software](https://tangled.sh/@pluie.me/site). <br>
+    Source code and contents are licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/MPL/2.0) <br>
+    and the [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) license respectively.
+
   credits: >
     Made with [Lume](https://lume.land), [Tailwind](https://tailwindcss.com/), <span class="icon-[twemoji--purple-heart] align-icon-offset"></span>, caffeine, and a smudge of estradiol.
 navbar:
@@ -42,8 +43,10 @@ zh:
     page_a_of_b: 第{0}页，共{1}页
   footer:
     license: >
-      源代码在[Mozilla公共许可证 (MPL) 2.0](https://www.mozilla.org/MPL/2.0)的条款下发布于[GitHub](https://github.com/pluiedev/site)，以便浏览。<br/>
-      网站内容在[知识共享 署名-相同方式共享4.0协议 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans)的条款下提供，未经署名不得转载。
+      本网页是[开源软件](https://tangled.sh/@pluie.me/site)，未经署名不得转载。<br>
+      源代码与网站内容分别在[Mozilla 公共许可证2.0](https://www.mozilla.org/MPL/2.0)<br>
+      与[知识共享 署名-相同方式共享4.0协议 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans)
+      的条款下发布。
     credits: >
       本站由[Lume](https://lume.land)、[Tailwind](https://tailwindcss.com/)、<span class="icon-[twemoji--purple-heart]"></span>、咖啡因、与一小抹雌二醇联合制成。
   navbar:

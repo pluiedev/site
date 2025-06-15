@@ -7,11 +7,6 @@ links:
     link: https://youtube.com/@pluieuwu
     icon: simple-icons--youtube
     color: rose-600
-  instagram:
-    text: Instagram
-    link: https://instagram.com/pluieuwu
-    icon: simple-icons--instagram
-    color: fuchsia-600
   pronounscc:
     text: pronouns.cc
     link: https://pronouns.cc/@pluieuwu
@@ -27,6 +22,11 @@ links:
     link: https://space.bilibili.com/401096522
     icon: simple-icons--bilibili
     color: sky-600
+  tangled:
+    text: Tangled
+    link: https://tangled.sh/@pluie.me
+    icon: simple-icons--git
+    color: slate-700
   github:
     text: GitHub
     link: https://github.com/pluiedev
@@ -199,7 +199,7 @@ intro:
     <em>developer <span class="icon-[twemoji--woman-technologist-light-skin-tone] align-icon-offset"></span></em>,
     graphics designer and
     <em>artist <span class="icon-[twemoji--woman-artist-light-skin-tone] align-icon-offset"></span></em>,
-    currently based in <em>Berlin, Germany</em>,
+    currently based in <em>Germany</em>,
     aspiring to make the world of technology and design more accessible and
     inclusive for <em>everyone</em>.
   scroll_down: Scroll down
@@ -225,7 +225,7 @@ zh:
     pronouns: 她 · she/her
     # 中文里出现空格会很奇怪呢…… 唉
     desc: >
-      我是一名现居<em>德国柏林</em>的开源<em>软件开发者<span
+      我是一名现居<em>德国</em>的开源<em>软件开发者<span
         class="icon-[twemoji--woman-technologist-light-skin-tone] align-icon-offset"></span></em
       >、视觉设计师兼<em>画家<span class="icon-[twemoji--woman-artist-light-skin-tone] align-icon-offset"></span></em
       >，致力于让科技与设计行业对<em>所有人</em>都变得更加开放、友好。
