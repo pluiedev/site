@@ -1,3 +1,6 @@
+@use "sass:math";
+@use "sass:list";
+
 $display-frame-inner-blur: 0.5px !default;
 $display-frame-inner-width: 2.5px !default;
 $display-frame-inner-color: rgb(255, 250, 246) !default;
@@ -21,7 +24,7 @@ $display-frame-shadow: $display-frame-shadow-offset
   $display-frame-shadow-color !default;
 
 $display-frame-margin: calc(
-  $display-frame-width + max($display-frame-shadow-offset...)
+  $display-frame-width + math.max($display-frame-shadow-offset...)
 ) !default;
 $display-frame-sizes: (large: 500px, medium: 400px, _: 300px);
 $display-frame-hover-scale-factor: 1.035;
@@ -50,8 +53,8 @@ figure.display {
 
   &.has-frame {
     @each $size in $display-frame-sizes {
-      $name: nth($size, 1);
-      $px: nth($size, 2);
+      $name: list.nth($size, 1);
+      $px: list.nth($size, 2);
 
       @if $name == "_" {
         img {

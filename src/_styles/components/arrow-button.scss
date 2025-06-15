@@ -5,10 +5,11 @@
 
   &.rtl {
     padding-left: 4.5rem;
+    padding-right: 0.75rem;
+
     @media (min-width: 640px) {
       padding-left: 5.5rem;
     }
-    padding-right: 0.75rem;
 
     &::before {
       @apply left-0 border-l-main-bg border-r-transparent;

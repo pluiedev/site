@@ -9,10 +9,11 @@
 
   .intro {
     padding: calc(50vh - 3 * 4rem) 0;
+    transition: padding 0.5s ease-out;
+
     @media (max-width: 1024px) {
       padding: 0;
     }
-    transition: padding 0.5s ease-out;
   }
 
   &.compact .intro {
