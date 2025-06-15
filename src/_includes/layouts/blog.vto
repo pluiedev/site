@@ -21,10 +21,12 @@ layout: layouts/default.vto
 
       <ul class="flex gap-2">
         {{ for num of indices }}
+          {{ set page = search.page(`id=blog-${num} lang=` + lang) }}
+
           {{ if num === pagination.page }}
             <span class="pagination-link bg-brand-dark px-3 py-2 text-lg text-white rounded" href="{{ pagination.url }}">{{ num }}</span>
           {{ else if num > 0 }}
-            <a class="pagination-link border-1 border-brand-dark px-3 py-2 text-lg text-fg rounded hover:bg-brand-darker hover:text-white transition" href="{{ pagination.url }}">{{ num }}</a>
+            <a class="pagination-link border-1 border-brand-dark px-3 py-2 text-lg text-fg rounded hover:bg-brand-darker hover:text-white transition" href="{{ page.url }}">{{ num }}</a>
           {{ else }}
             <span class="text-main-fg-sub">&hellip;</span>
           {{ /if }}

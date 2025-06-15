@@ -2,68 +2,33 @@ export const layout = "layouts/blog.vto";
 
 const RANGE = 2;
 
-export default async function* ({ search, paginate }: Lume.Helpers) {
-  const langs = {
-    en: "Blog",
-    zh: "文章",
-  };
+// TODO: figure out all the types here
 
-  for (const lang of Object.keys(langs)) {
-    const pfx = lang === "en" ? "" : `/${lang}`;
-    const pages = search.pages(`post lang=${lang}`, "date=desc") as Lume.Page[];
+export default async function* ({ search, paginate, lang }: Lume.Helpers) {
+  const pages = search.pages(`post lang=${lang}`, "date=desc");
 
-    const options = {
-      url: (n: number) => (n === 1 ? `/${lang}/blog/` : `/${lang}/blog/${n}/`),
-      size: 5,
-    };
-    for (const page of paginate(pages, options)) {
-      const { page: currentPage, totalPages } = page.pagination;
+  yield* paginate(pages, {
+    url: (n: number) => (n === 1 ? `/blog/` : `/blog/${n}/`),
+    size: 5,
+    each(page: any, n: number) {
+      const { totalPages } = page.pagination;
 
-      const indices = [];
-      if (currentPage - 1 > RANGE) {
-        indices.push(1, -1);
+      page.id = `blog-${n}`;
+      page.currentPage = n;
+      page.totalPages = totalPages;
+
+      page.indices = [];
+      if (n - 1 > RANGE) {
+        page.indices.push(1, -1);
       }
-      for (let i = currentPage - RANGE; i < currentPage + RANGE + 1; i++) {
+      for (let i = n - RANGE; i < n + RANGE + 1; i++) {
         if (i > 0 && i <= totalPages) {
-          indices.push(i);
+          page.indices.push(i);
         }
       }
-      if (totalPages - currentPage > RANGE) {
-        indices.push(-1, totalPages);
+      if (totalPages - n > RANGE) {
+        page.indices.push(-1, totalPages);
       }
-
-      yield {
-        lang,
-        id: `blog-${currentPage}`,
-        title: langs[lang],
-        currentPage,
-        totalPages,
-        indices,
-        ...page,
-      };
-    }
-    // const options = {
-    //   url: (n: number) => {
-    //     const a = n === 1 ? `${pfx}/blog/` : `${pfx}/blog/${n}/`;
-    //     console.log(a, n);
-    //     return a;
-    //   },
-    //   size: 5,
-    // };
-    //
-    // for (const page of paginate(pages, options)) {
-    //   const { page: current, totalPages: last } = page.pagination;
-    //
-    //
-    //   yield {
-    //     title: "Blog",
-    //     currentPage: current,
-    //     totalPages: last,
-    //     category: "blog",
-    //     id: `blog-${current}`,
-    //     indices,
-    //     ...page,
-    //   };
-    // }
-  }
+    },
+  });
 }
