@@ -2,9 +2,11 @@
 
 <html>
   {{ include "parts/head.vto" }}
-  <body class="pt-navbar bg-bg text-fg flex flex-col items-center">
-    {{ include "parts/navbar.vto" }}
-    {{ content }}
-    {{ include "parts/footer.vto" }}
+  <body class="bg-bg text-fg flex flex-col items-center">
+    <div class="pt-navbar flex flex-col min-h-[100vh] bg-bg-sub lg:max-w-content-width mx-auto shadow-xl">
+      {{ include "parts/navbar.vto" }}
+      {{ content }}
+      {{ include "parts/footer.vto" }}
+    </div>
   </body>
 </html>

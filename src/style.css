@@ -19,9 +19,10 @@
   --color-brand-darkest: oklch(0.4667 0.1955 2.08);
 
   --color-bg: oklch(0.1831 0.004 285.99);
-  --color-fg: oklch(0.9911 0.004 285.99);
+  --color-bg-sub: oklch(0.1931 0.004 285.99);
+  --color-main-bg: oklch(0.2031 0.004 285.99);
 
-  --color-main-bg: var(--color-zinc-900);
+  --color-fg: oklch(0.9911 0.004 285.99);
   --color-main-fg: var(--color-zinc-200);
   --color-main-fg-sub: var(--color-zinc-400);
   --color-main-border: var(--color-brand);
@@ -29,6 +30,7 @@
   --font-body: DM Sans, Noto Sans SC, sans-serif;
   --font-mono: Iosevka, sans-serif;
 
+  --spacing-content-width: 100ch;
   --spacing-main-screen: calc(100vh - 4 * var(--spacing-navbar));
   --spacing-navbar: 3.5rem;
 
@@ -57,9 +59,11 @@
     /* Default light theme "Strawberry Milkshake" */
     /* TODO: `prefer-color-scheme` */
     [data-theme="strawberry-milkshake"] {
-      --color-bg: var(--color-stone-200);
-      --color-fg: var(--color-stone-800);
+      --color-bg: var(--color-stone-300);
+      --color-bg-sub: var(--color-stone-200);
       --color-main-bg: var(--color-stone-200);
+
+      --color-fg: var(--color-stone-800);
       --color-main-fg: var(--color-stone-700);
       --color-main-fg-sub: var(--color-stone-500);
     }
@@ -70,22 +74,12 @@
   }
 
   html {
-    background: var(--color-bg);
     font-size: 18px;
   }
 
   main {
     background: var(--color-main-bg);
     color: var(--color-main-fg);
-    --max-width: 65ch;
-
-    padding-left: max(1.5rem, calc(50% - var(--max-width) / 2));
-    padding-right: max(1.5rem, calc(50% - var(--max-width) / 2));
-
-    @variant lg {
-      width: 100%;
-      --max-width: 1024px;
-    }
   }
 
   a.animated, .prose a {
