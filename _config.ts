@@ -6,9 +6,9 @@ import metas from "lume/plugins/metas.ts";
 import extractDate from "lume/plugins/extract_date.ts";
 import multilanguage from "lume/plugins/multilanguage.ts";
 import esbuild from "lume/plugins/esbuild.ts";
-
-// Due to how Deno works we must manually import icons to add them in the dependency pool.
 import tailwindcss from "lume/plugins/tailwindcss.ts";
+import feed from "lume/plugins/feed.ts";
+import sitemap from "lume/plugins/sitemap.ts";
 
 // Remark plugins
 import remark from "lume/plugins/remark.ts";
@@ -26,6 +26,7 @@ const site = lume({ src: "./src" })
   .use(date())
   .use(tailwindcss({
     includes: "_styles",
+    minify: true,
   }))
   .use(inline())
   .use(vento())
@@ -34,6 +35,21 @@ const site = lume({ src: "./src" })
   .use(multilanguage({
     languages: ["en", "zh"],
     defaultLanguage: "en",
+  }))
+  .use(feed({
+    output: ["/posts.rss", "/posts.json"],
+    query: "post",
+    info: {
+      title: "=site.title",
+      description: "=site.description",
+    },
+    items: {
+      title: "=title",
+      description: "=excerpt",
+    },
+  }))
+  .use(sitemap({
+    query: "post|main",
   }))
   .filter("strip_indent", stripIndent);
 

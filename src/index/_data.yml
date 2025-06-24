@@ -1,5 +1,7 @@
 layout: layouts/base.vto
 url: "/"
+tags:
+  - main
 
 links:
   youtube:
@@ -196,15 +198,15 @@ technologies:
 
 #=== Translatable strings ===#
 
-title: Heya~ I'm Leah!
+title: Heya~ I’m Leah!
 description: You may know me better by my online alias, pluie.
 
 intro:
-  hi: Heya~ I'm <em>Leah</em>!
+  hi: Heya~ I’m <em>Leah</em>!
   alias: You may know me better by my online alias, <em>pluie</em>.
   pronouns: she/her
   desc: >
-    I'm a Chinese open-source
+    I’m a Chinese open-source
     <em>developer <span class="icon-[twemoji--woman-technologist-light-skin-tone] align-icon-offset"></span></em>,
     graphics designer and
     <em>artist <span class="icon-[twemoji--woman-artist-light-skin-tone] align-icon-offset"></span></em>,
