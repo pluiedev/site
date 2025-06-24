@@ -10,16 +10,14 @@
 	  {{ /for }}
   </div>
 
-  </div>
   <div class="flex items-center gap-4 me-6 text-main-fg-sub text-2xl">
     <button id="theme-switcher" class="cursor-pointer" title="{{ it.navbar.theme_switcher }}">
-      <img class="split-icon scale-90 left" inline src="/icons/mdi-theme-light-dark-split.svg" />
+      <img class="split-icon theme scale-90" inline src="/icons/mdi-theme-light-dark-split.svg" />
     </button>
     {{> const counterpart = it.alternates?.find(p => p.lang != lang) }}
     {{ if counterpart?.url }}
-      {{> const dir = lang === "en" ? "right" : "left"; }}
       <a class="button" id="language-switcher" href="{{counterpart.url}}" title="{{ it.navbar.language_switcher }}">
-        <img class="split-icon scale-90 {{dir}}" inline src="/icons/mdi-translate-split.svg" />
+        <img class="split-icon lang scale-90" inline src="/icons/mdi-translate-split.svg" />
       </a>
     {{ else }}
       <div class="i-mdi:translate-off" title="{{ it.navbar.no_translation }}"></div>

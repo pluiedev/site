@@ -15,7 +15,7 @@ Dimension_. If you have not played these games, by all means please play them.
 Play them _all_. Form your own opinion on these games, and then read what I have
 to say. You'll find it much more impactful this way.
 
-<hr style="border: 1px solid rgb(var(--brand))"/>
+<hr style="border: 1px solid var(--color-brand)"/>
 
 There's been a trend among the indie gaming scene, which is the increasing use
 of metanarratives: while some are laughably primitive — for example, when a
