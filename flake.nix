@@ -7,12 +7,14 @@
     self,
     nixpkgs,
   }: let
-    systems = ["x86_64-linux" "x86_64-darwin"];
-    forAllSystems = f: nixpkgs.lib.genAttrs systems (s: f (import nixpkgs {system = s;}));
+    forAllSystems = f: with nixpkgs.lib; genAttrs systems.flakeExposed (s: f (import nixpkgs {system = s;}));
   in {
     devShells = forAllSystems (pkgs: {
       default = pkgs.mkShell {
-        buildInputs = with pkgs; [deno];
+        buildInputs = with pkgs; [
+          deno
+          dprint
+        ];
       };
     });
   };

@@ -1,20 +1,20 @@
 import lume from "lume/mod.ts";
-import inline from "lume/plugins/inline.ts";
 import date from "lume/plugins/date.ts";
-import vento from "lume/plugins/vento.ts";
-import metas from "lume/plugins/metas.ts";
-import extractDate from "lume/plugins/extract_date.ts";
-import multilanguage from "lume/plugins/multilanguage.ts";
 import esbuild from "lume/plugins/esbuild.ts";
-import tailwindcss from "lume/plugins/tailwindcss.ts";
+import extractDate from "lume/plugins/extract_date.ts";
 import feed from "lume/plugins/feed.ts";
+import inline from "lume/plugins/inline.ts";
+import metas from "lume/plugins/metas.ts";
+import multilanguage from "lume/plugins/multilanguage.ts";
 import sitemap from "lume/plugins/sitemap.ts";
+import tailwindcss from "lume/plugins/tailwindcss.ts";
+import vento from "lume/plugins/vento.ts";
 
 // Remark plugins
 import remark from "lume/plugins/remark.ts";
-import emoji from "npm:remark-emoji";
 import a11yEmoji from "npm:@fec/remark-a11y-emoji";
 import smartyPants from "npm:@ngsctt/remark-smartypants";
+import emoji from "npm:remark-emoji";
 
 import stripIndent from "npm:strip-indent";
 

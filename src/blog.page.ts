@@ -4,7 +4,7 @@ const RANGE = 2;
 
 // TODO: figure out all the types here
 
-export default async function* ({ search, paginate, lang }: Lume.Helpers) {
+export default async function*({ search, paginate, lang }: Lume.Helpers) {
   const pages = search.pages(`post lang=${lang}`, "date=desc");
 
   yield* paginate(pages, {

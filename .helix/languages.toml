@@ -1,10 +1,17 @@
 [[language]]
 name = "json"
-formatter = { command = "deno", args = ["fmt", "--ext", "json", "-"] }
+formatter = { command = "dprint", args = ["fmt", "--stdin", "json"] }
 
 [[language]]
 name = "css"
-formatter = { command = "deno", args = ["fmt", "--ext", "css", "-"] }
+formatter = { command = "dprint", args = ["fmt", "--stdin", "css"] }
+
+[[language]]
+name = "vento"
+file-types = ["vto"]
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+formatter = { command = "dprint", args = ["fmt", "--stdin", "vto"] }
 
 [[language]]
 name = "typescript"

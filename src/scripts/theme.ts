@@ -3,8 +3,8 @@ const isDark = globalThis.matchMedia("(prefers-color-scheme: dark)");
 
 const theme = new Proxy(
   {
-    value: localStorage.getItem("theme") ??
-      (isDark.matches ? "neon" : "strawberry-milkshake"),
+    value: localStorage.getItem("theme")
+      ?? (isDark.matches ? "neon" : "strawberry-milkshake"),
   },
   {
     set(target, p, newValue) {

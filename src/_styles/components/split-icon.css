@@ -1,54 +1,52 @@
-@layer components {
-  .split-icon {
-    path {
-      transition-duration: 0.1s;
-      transition-property: fill, filter;
-    }
-    --base-side: 0;
-    --side: var(--base-side);
-    --highlight: 0;
-    --highlight-color: var(--color-brand);
+.split-icon {
+  path {
+    transition-duration: 0.1s;
+    transition-property: fill, filter;
+  }
+  --base-side: 0;
+  --side: var(--base-side);
+  --highlight: 0;
+  --highlight-color: var(--color-brand);
 
-    #left {
-      filter: opacity(calc(0.5 * (2 - var(--side))));
-      fill: color-mix(
-        in oklab,
-        currentColor calc(100% * (1 - var(--highlight) * (1 - var(--side)))),
-        var(--highlight-color)
-      );
-    }
-    #right {
-      filter: opacity(calc(0.5 * (1 + var(--side))));
-      fill: color-mix(
-        in oklab,
-        currentColor calc(100% * (1 - var(--highlight) * var(--side))),
-        var(--highlight-color)
-      );
-    }
-
-    &:hover {
-      --side: calc(1 - var(--base-side)) !important;
-      --highlight: 1;
-    }
-
-    /* Theme-based split icon */
-
-    &.theme {
-      --base-side: 1;
-
-      @variant dark {
-        --base-side: 0;
-      }
-    }
+  #left {
+    filter: opacity(calc(0.5 * (2 - var(--side))));
+    fill: color-mix(
+      in oklab,
+      currentColor calc(100% * (1 - var(--highlight) * (1 - var(--side)))),
+      var(--highlight-color)
+    );
+  }
+  #right {
+    filter: opacity(calc(0.5 * (1 + var(--side))));
+    fill: color-mix(
+      in oklab,
+      currentColor calc(100% * (1 - var(--highlight) * var(--side))),
+      var(--highlight-color)
+    );
   }
 
-  /* Language based split icon */
-
-  [lang="zh"] .split-icon.lang {
-    --base-side: 0;
+  &:hover {
+    --side: calc(1 - var(--base-side)) !important;
+    --highlight: 1;
   }
 
-  [lang="en"] .split-icon.lang {
+  /* Theme-based split icon */
+
+  &.theme {
     --base-side: 1;
+
+    @variant dark {
+      --base-side: 0;
+    }
   }
+}
+
+/* Language based split icon */
+
+[lang="zh"] .split-icon.lang {
+  --base-side: 0;
+}
+
+[lang="en"] .split-icon.lang {
+  --base-side: 1;
 }

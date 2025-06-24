@@ -4,27 +4,33 @@ layout: layouts/default.vto
 {{ import { post_embed } from "../comps/post_embed.vto" }}
 
 <style>
-  .post-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "- back"
-      "info info"
-      "desc desc"
-      ;
-    column-gap: 3rem;
-  }
-  .post-grid .info { grid-area: info; }
-  .post-grid .back { grid-area: back; }
-  .post-grid .desc { grid-area: desc; }
+.post-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "- back"
+    "info info"
+    "desc desc";
 
-  @media (min-width: 1024px) {
-    .post-grid {
-      grid-template-areas:
-        "info back"
-        "desc -";
-    }
+  column-gap: 3rem;
+}
+.post-grid .info {
+  grid-area: info;
+}
+.post-grid .back {
+  grid-area: back;
+}
+.post-grid .desc {
+  grid-area: desc;
+}
+
+@media (min-width: 1024px) {
+  .post-grid {
+    grid-template-areas:
+      "info back"
+      "desc -";
   }
+}
 </style>
 
 <div class="post-grid items-center">
@@ -32,14 +38,17 @@ layout: layouts/default.vto
     <h1 class="text-3xl text-brand">{{ page.data.title }}</h1>
     {{ post_embed(page.data) }}
   </div>
-  <a class="back mb-4 w-fit shrink-0 arrow-button rtl text-white bg-brand-dark flex items-center gap-1" href="/blog">Other posts</a>
+  <a
+    class="back mb-4 w-fit shrink-0 arrow-button rtl text-white bg-brand-dark flex items-center gap-1"
+    href="/blog"
+  >Other posts</a>
 
   <div class="desc mt-4">
-    {{ page.data.description |> strip_indent |> md }}
+    {{ page.data.description |> md }}
   </div>
 </div>
 
-<hr class="border-brand-dark mt-6 mb-12"/>
+<hr class="border-brand-dark mt-6 mb-12" />
 
 <div class="prose dark:prose-invert mx-auto">
   {{ content }}

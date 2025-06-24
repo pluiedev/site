@@ -7,7 +7,7 @@
 @import "components/langs.css" layer(components);
 @import "components/navbar.css" layer(components);
 @import "components/splash.css" layer(components);
-@import "components/split-icon.css";
+@import "components/split-icon.css" layer(components);
 
 @custom-variant dark (&:where([data-theme=neon], [data-theme=neon] *));
 
@@ -18,8 +18,8 @@
   --color-brand-darker: oklch(0.5067 0.1955 2.08);
   --color-brand-darkest: oklch(0.4667 0.1955 2.08);
 
-  --color-bg: #121214;
-  --color-fg: white;
+  --color-bg: oklch(0.1831 0.004 285.99);
+  --color-fg: oklch(0.9911 0.004 285.99);
 
   --color-main-bg: var(--color-zinc-900);
   --color-main-fg: var(--color-zinc-200);

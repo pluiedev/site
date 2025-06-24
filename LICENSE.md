@@ -8,6 +8,7 @@ license; the source code portion of this site is licensed under
 The full texts of each license are included below:
 
 # Mozilla Public License, version 2.0
+
 ```
 Mozilla Public License Version 2.0
 ==================================
