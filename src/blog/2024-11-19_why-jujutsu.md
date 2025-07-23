@@ -48,7 +48,7 @@ repository, reliably and intuitively.
 
 In order to see why, we have to see what's wrong with Git first:
 
-## Prelude. Unravelling the Flawed Predecessor
+# _Prelude._ Unravelling the Flawed Predecessor
 
 Now, I understand that many people (including myself) use Git just fine on a
 day-to-day basis to get code submitted, reviewed and fixed, and many may not
@@ -109,7 +109,7 @@ an entire screenful of text?
 
 You just run `jj abandon`. One command to rule them all.
 
-## Chapter I. Offloading the Cognitive Overload
+# _Chapter I._ Offloading the Cognitive Overload
 
 The reason why Jujutsu is able to replace a handful of disparate Git commands
 with just one is mainly because it got rid of many conceptualizations that Git
@@ -176,7 +176,7 @@ Well, I am about to embark on a tirade about the most frustrating parts of Git
 that I encountered in the specific use case of Nixpkgs. If you're allergic to
 that kind of thing, too bad — here goes:
 
-## Chapter II. Combating the Mindnumbing Tedium
+# _Chapter II._ Combating the Mindnumbing Tedium
 
 Nixpkgs has a commit policy that I would really describe as Draconian in its
 pursuit for commit hygiene and separating changes based on what areas they
@@ -322,7 +322,7 @@ provides that makes me feel like I'm hitting a brick wall every time I want to
 fix my commits, I have to admit that Jujutsu is not perfect — nothing is,
 really.
 
-## Chapter III. Determining the Ultimate Verdict
+# _Chapter III._ Determining the Ultimate Verdict
 
 Despite its many, many advantages I've outlined above, Jujutsu is admittedly
 still a beta/experimental project — while it probably won't corrupt your files
@@ -370,7 +370,7 @@ nobody would be inspecting every nook and cranny of your commits and demand
 microscopic fixes for each of them? What I just described is _my_ reality, and
 it did not line up with theirs, and it might not line up with yours.
 
-## Epilogue. Concluding the Superfluous Tirade
+# _Epilogue._ Concluding the Superfluous Tirade
 
 If you find the features I've praised here any bit interesting, you should give
 Jujutsu a try.

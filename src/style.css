@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap");
+
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
 @plugin "@iconify/tailwind4";
 
 @import "components/arrow-button.css" layer(components);
@@ -27,8 +28,9 @@
   --color-main-fg-sub: var(--color-zinc-400);
   --color-main-border: var(--color-brand);
 
-  --font-body: DM Sans, Noto Sans SC, sans-serif;
-  --font-mono: Iosevka, sans-serif;
+  --font-body: Manrope, Noto Sans SC, sans-serif;
+  --font-serif: Bitter, Noto Serif SC, serif;
+  --font-mono: Iosevka, monospace;
 
   --spacing-content-width: 100ch;
   --spacing-main-screen: calc(100vh - 4 * var(--spacing-navbar));
@@ -51,6 +53,7 @@
 }
 
 @utility align-icon-offset {
+  /* Determined empirically. TODO: Why do I need to do this...? */
   vertical-align: -3px;
 }
 
@@ -117,4 +120,60 @@
 
 @utility grid-cols-main-screen {
   grid-template-columns: 20rem auto 20rem;
+}
+
+@layer components {
+  .prose {
+    line-height: 2rem;
+    max-width: 75ch;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    font-weight: 350;
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 750;
+      margin-top: 2rem;
+    }
+
+    ol, ul {
+      margin-inline-start: 2rem;
+      list-style: outside;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      li ul {
+        margin-top: 1rem;
+      }
+    }
+
+    b, strong {
+      font-weight: 600;
+    }
+
+    code {
+      padding-inline: 0.25rem;
+      background: var(--color-bg);
+
+      /* If we don't add this then breaking across e.g. command flags would look really strange */
+      word-break: keep-all;
+    }
+
+    pre {
+      background: var(--color-bg);
+      padding: 0.5rem 1rem;
+
+      code {
+        padding: 0;
+      }
+    }
+  }
 }
