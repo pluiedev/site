@@ -170,6 +170,10 @@
     pre {
       background: var(--color-bg);
       padding: 0.5rem 1rem;
+      overflow: scroll;
+
+      /* Make Chromium/Webkit scrollbars look more like Firefox ones */
+      scrollbar-width: thin;
 
       code {
         padding: 0;

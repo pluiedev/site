@@ -4,9 +4,11 @@
   set yearText = currentYear > firstYear ? `${firstYear}–${currentYear}` : `${firstYear}`
 }}
 
-<footer class="px-16 pt-12 pb-20 text-center prose dark:prose-invert prose-a:text-brand prose-a:no-underline max-w-none w-full border-t-2 border-t-main-border">
-  <p>© {{ yearText }} Leah Amelia “pluie” Chen</p>
+<footer class="px-8 pt-16 pb-20 border-t-2 border-t-main-border">
+  <div class="prose max-w-128 mx-auto text-center">
+    <p>© {{ yearText }} Leah Amelia “pluie” Chen</p>
 
-  {{ footer.license |> md }}
-  {{ footer.credits |> md }}
+    {{ footer.license |> md }}
+    {{ footer.credits |> md }}
+  </div>
 </footer>

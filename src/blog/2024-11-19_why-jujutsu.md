@@ -98,7 +98,7 @@ on the internet that explains only _some_ of the operations you could achieve
 with Git via a smattering of discreet and discrete commands
 ([Image credit: Tarun Yadav](https://tarunyadav.hashnode.dev/git-cheat-sheet-advanced)):
 
-<figure class="my-8">
+<figure>
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--QNbMdq1B--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/fgviyzh10boel5s7rwfb.png" class="mx-auto" width="700">
 </figure>
 
