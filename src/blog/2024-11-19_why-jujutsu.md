@@ -133,7 +133,7 @@ abandoned. (Technically, it's not the commit ID, but we'll discuss it later.)
 Simple. Because you're _**always**_ working on a commit. When you run
 `jj status`, you may get a message like so:
 
-```console
+```shell-session
 M flake.lock
 M hm-modules/hm-plus/programs/1password.nix
 M roles/base/default.nix
@@ -211,7 +211,7 @@ first individually format them, then add each file to its own commit, then using
 change, changing them to `fixup`, and then wait for rebasing to slowly amend
 those existing commits.
 
-```console
+```shell-session
 $ nvim # Work work work
 $ git add pkgs/by-name/fo/foo/package.nix
 $ git commit -m "foo fixes"
@@ -234,7 +234,7 @@ Successfully rebased and updated refs/heads/my-feature.
 
 With Jujutsu, all I have to do:
 
-```console
+```shell-session
 $ jj fix
 Fixed 3 commits of 3 checked.
 Working copy now at: x[urmpxnpkzzu] 6[287ecba8978] (empty) (no description set)
@@ -252,7 +252,7 @@ commit it belongs to with the `jj log` command, fork out a new commit after it,
 make my changes, then squash it onto the existing commit, amending it, instead
 of going through `git rebase -i` hell again.
 
-```console
+```shell-session
 $ jj log
 @  x[urmpxnpkzzu] Leah Amelia Chen <hi@pluie.me> 5 minutes ago 6[287ecba8978]
 │  (empty) (no description set)
