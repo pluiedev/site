@@ -143,6 +143,12 @@
       margin-top: 2rem;
     }
 
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
     ol, ul {
       margin-inline-start: 2rem;
       list-style: outside;
@@ -153,6 +159,10 @@
       li ul {
         margin-top: 1rem;
       }
+    }
+
+    ol {
+      list-style: number;
     }
 
     b, strong {
@@ -171,6 +181,7 @@
       background: var(--color-bg);
       padding: 0.5rem 1rem;
       overflow: scroll;
+      line-height: 1.25rem;
 
       /* Make Chromium/Webkit scrollbars look more like Firefox ones */
       scrollbar-width: thin;
