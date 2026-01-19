@@ -1,0 +1,38 @@
+---
+title: "Friends"
+---
+
+<style>
+  .slide-gradient {
+    --percentage: calc(var(--bg-transition) * 100%);
+    background: linear-gradient(135deg, var(--color-brand-darkest) var(--percentage), var(--percentage), black);
+    transition: 0.25s --bg-transition;
+  }
+</style>
+
+<h1 class="text-4xl font-bold">Friends</h1>
+
+<div class="flex flex-col gap-4 my-6"> 
+{{ echo |> md }}
+A list of cool people who I know and trust active on the Internet,
+in alphabetical order.
+
+Note that I'll only be including people who have some sort of
+publicly-accessible personal profile page (with a few exceptions) since
+otherwise this list will get *way* too long. Sorry!!
+
+If I'm missing someone here (which is honestly kind of hard to avoid), please
+let me know ;)
+{{ /echo }}
+</div>
+
+<ul class="grid grid-cols-2 md:grid-cols-3 gap-4">
+  {{ for friend of friends.friends.sort((a, b) => a.name.localeCompare(b.name)) }}
+    <li>
+      <a href="{{friend.href}}" class="border-2 border-brand-darkest block rounded-lg p-2 slide-gradient">
+        <p class="text-xl font-bold">{{ friend.name }}</p>
+        <p class="text-gray">@{{ friend.handle }}</p>
+      </a>
+    </li>
+  {{ /for }}
+</ul>

@@ -18,6 +18,9 @@ categories:
   blog:
     title: Blog
     url: blog/
+  friends:
+    title: Friends
+    url: friends/
   # works:
   #   title: Works
   #   url: /works/
@@ -26,7 +29,7 @@ blog:
   page_a_of_b: Page {0} of {1}
 footer:
   license: >
-    This site is [open-source software](https://tangled.sh/@pluie.me/site).
+    This site is [open-source software](https://tangled.org/@pluie.me/site).
 
 
     Source code and contents are licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/MPL/2.0)
@@ -60,3 +63,5 @@ zh:
   categories:
     blog:
       title: 文章
+    friends:
+      title: 友链
