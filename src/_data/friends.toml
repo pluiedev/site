@@ -153,3 +153,8 @@ href = "https://bsky.app/profile/did:plc:r3cudusqgf77v5xpnq5v7g3i"
 name = "clover caruso"
 handle = "paperclover"
 href = "https://paperclover.net"
+
+[[friends]]
+name = "Guanran Wang"
+handle = "guanranwang"
+href = "https://blog.ny4.dev"
