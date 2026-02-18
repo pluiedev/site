@@ -105,6 +105,11 @@
   body.strawberry-milkshake #theme-switcher .split-icon {
     --base-side: 1;
   }
+
+  blockquote {
+    padding-left: 1em;
+    border-left: 2px solid var(--color-brand);
+  }
 }
 
 /*
