@@ -33,7 +33,7 @@ probably never happen. Enough said, there goes:
 
 Remember the North Pole Expedition that the Endmin went on 10 years before
 the game started? That, I think, was likely an attempt at trying to fix
-the Cosmic Gate that Terran used to colonize Talos-II, which was destroyed
+the Cosmic Gate that Terrans used to colonize Talos-II, which was destroyed
 in the First Aggeloi War. It makes a lot of sense why the Endmin would
 personally go on this trip, as one of the first colonizers of Talos-II,
 and likely one of the people directly responsible for introducing Originium
