@@ -211,5 +211,10 @@
       border-color: var(--color-brand);
       margin-block: 1.5rem;
     }
+
+    figure {
+      margin-inline: auto;
+      margin-block: 1.5rem;
+    }
   }
 }
