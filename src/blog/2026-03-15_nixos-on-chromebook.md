@@ -8,6 +8,7 @@ tags:
   - nixos
   - tinkering
   - chromebook
+lang: en
 ---
 
 **Heads up:** this is a *long* (~5000 words), rambly tale that documents all
@@ -54,6 +55,10 @@ much to do this week anyway."
 And oh boy, what a week it had been.
 
 # I. The Device
+
+<figure>
+  <img alt="The 'Wormdingler' displaying the ChromeOS installer screen, in Japanese for some reason." src="https://peanut-butter.nbg1.your-objectstorage.com/nixos-on-chromebook/chromebook_init.jpg" width="450" height="600">
+</figure>
 
 The exact model of this cute little number is the Lenovo IdeaPad Duet 3 (2021),
 more commonly known among homebrew Linux turbonerds by its codename,
@@ -163,6 +168,10 @@ but for some inexplicable reason once I hit "Update", the screen went dark,
 and streaks and stripes of differently colored pixels started pulsating on
 the screen, arranged in rows that will pulsate periodically from left to right.
 
+<figure>
+  <img alt="Image of an obviously broken screen that I had misguided faith in" src="https://peanut-butter.nbg1.your-objectstorage.com/nixos-on-chromebook/oops.jpg" width="450" height="600">
+</figure>
+
 "Oh, I didn't know that ChromeOS updates involved testing the display systems,"
 I thought to myself, "I know Google is pretty great with making sure things
 don't break willy-nilly, but this seems overkill." Then a minute passed.
@@ -193,6 +202,10 @@ recovery media that is known to restore the device to its original state, and
 only *then* were we successful in completely fixing the issue, wasting a grand
 total of 2 days of our lives going back to the exact same spot we came back to
 earlier.
+
+<figure>
+  <img alt="Powerwashing with the seller's recovery ROM. Notice how the edge of the screen is still a bit fucked." src="https://peanut-butter.nbg1.your-objectstorage.com/nixos-on-chromebook/powerwashing.jpg" width="450" height="600">
+</figure>
 
 So, lessons learned, never install any *ChromeOS* updates on this machine,
 right?
@@ -289,6 +302,10 @@ the deal:
 
 **It lives.**
 
+<figure>
+  <img alt="Output of `uname -a` showing that yes, indeed, we are in NixOS." src="https://peanut-butter.nbg1.your-objectstorage.com/nixos-on-chromebook/nixos_hype.jpg" width="800" height="600">
+</figure>
+
 # IV. NixOS, Ahoy!
 
 So! We are in NixOS. Hooray!
@@ -343,9 +360,14 @@ speeds?
 At long last, my Chromebook was ready to see some action, armed with
 NixOS, GNOME, and all the software I usually need. I decided to forgo
 my usual Niri-based setup since it's somewhat limited in terms of
-touchscreen gestures, but that could be a project in and of itself.
-Aleksana told me to just copy her Niri fork, but I declined for want
-of my own limited sanity.
+touchscreen gestures, but that could be a project in and of itself[^niri].
+
+[^niri]: Aleksana told me to just copy her Niri fork, but I declined
+for want of my own limited sanity.
+
+<figure>
+  <img alt="fastfetch running under Ghostty on GNOME, showing the glorious Nix snowflake" src="https://peanut-butter.nbg1.your-objectstorage.com/nixos-on-chromebook/fastfetch.jpg" width="800" height="600">
+</figure>
 
 I even discovered that the Arm CPU was more than powerful enough to
 compile its own software, so that's what I did to minimize occupying
