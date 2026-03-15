@@ -85,7 +85,7 @@
     color: var(--color-main-fg);
   }
 
-  a.animated, .prose a {
+  a.animated, .prose a[href] {
     /* adapted from https://stackoverflow.com/a/72459455 */
     @apply text-brand ease-out bg-no-repeat bg-right-bottom bg-linear-to-r
       from-transparent to-brand-dark to-0%;
@@ -205,6 +205,11 @@
       color: var(--color-brand);
       border-bottom: 1px solid var(--color-brand);
       margin-bottom: 1rem;
+    }
+
+    hr {
+      border-color: var(--color-brand);
+      margin-block: 1.5rem;
     }
   }
 }

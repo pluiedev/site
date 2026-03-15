@@ -10,6 +10,14 @@ tags:
   - chromebook
 ---
 
+**Heads up:** this is a *long* (~5000 words), rambly tale that documents all
+the fun mishaps with the gizmo I've been playing with lately. If you're
+interested in just the steps of how to get one of these working, you can skip
+to the [Appendix](#appendix) where I lay the steps out more succinctly. I hope you'll find
+the rest of this fun to read, though.
+
+---
+
 I recently received a truly wondrous and unexpected gift from one of my close
 friends, [Aleksana](https://aleksana.moe), which some of you might know from
 her involvement with [Nix](https://nixos.org), who might just have a *bit* too
@@ -52,7 +60,7 @@ more commonly known among homebrew Linux turbonerds by its codename,
 "Wormdingler." At its core belies a [Qualcomm Snapdragon 7c (SC7180)] SOC,
 with an 8-core (2P6E) Kryo 468 CPU (of course it has to be one of *those*
 Chromebooks based on Arm and not x86), an Adreno 618 GPU, a built-in LTE modem,
-Wi-Fi 5 and Bluetooth 5.0 connectivity, and more, all paired with 8 GB of RAM
+Wi-Fi 5 and Bluetooth 5.0 support, and more, all paired with 8 GB of RAM
 and 64 GB of eMMC internal storage. Connectivity-wise it has two USB-C 3.0 ports,
 plus bottom contact pins for the built-in detachable keyboard.
 
@@ -234,20 +242,25 @@ ancient history at this point. Even longterm's at 6.12."
 
 "You know I don't have the answer to that." I let out a defeated sigh.
 
-"Maybe there was a kernel regression between then and now..." She replied
-while she typed out a prompt for Gemini as a last resort: "Search for a Linux
-kernel commit responsible for screen malfunction on my friend's `wormdingler`
-Chromebook (rev1+ INX panel board) between version 5.15 and 6.12."
+"Maybe there was a kernel regression between then and now..." she replied
+calmly, while she began to type out a prompt into Gemini as a last resort:
+"Search for a Linux kernel commit responsible for screen malfunction on my
+friend's `wormdingler` Chromebook (rev1+ INX panel board) between version
+5.15 and 6.12."
 
-"Actually, I think the seller mentioned that they put the Chromebook on sale in
-the first place because they tried to update the kernel and 'the screen went
-nuts'. I guess we now know how that looks like."
+She continues while the LLM parses her request, "Actually, I think the
+seller mentioned that they put the Chromebook on sale in the first place
+because they tried to update the kernel and 'the screen went nuts'. I guess
+we now know how that looks like." Guess that **one does not simply update
+*Linux* either, not just ChromeOS**. Makes me wonder if ChromeOS really were
+to blame for the episode earlier, or had I just been too quick to assign the blame.
 
-Words sprung onto her screen with that typical LLM-flavored polite cocksureness
-that only serves to unnerve me, about the possibility that I will be in for a
-long bisecting session that will surely take up the rest of my midnight coding
-time and then some. How am I (or the glorified word reassembly algorithm)
-going to find which exact thing broke in the thousands of commits in between?
+Words then sprung onto her screen with that typical LLM-flavored polite
+cocksureness that only serves to unnerve me, about the possibility that I will
+be in for a long bisecting session that will surely take up the rest of my
+midnight coding time and then some. How am I (or the glorified word reassembly
+algorithm) going to find which exact thing broke in the thousands of commits
+in between?
 
 And yet, in the midst of my contemplation, a miracle happened.
 
@@ -336,7 +349,7 @@ of my own limited sanity.
 
 I even discovered that the Arm CPU was more than powerful enough to
 compile its own software, so that's what I did to minimize occupying
-even more public resources and further deterioration of my own sanity,
+even more shared resources and further deterioration of my own sanity,
 gradually building up from a bare environment to the setup I'm more
 familiar with. Every time I perform this manual bootstrapping process
 I *wish* I had set up some sort of basic, network-ready system that can
@@ -481,7 +494,7 @@ You have the patience and generosity of a saint. Hopefully you, the reader,
 might also be inspired to pick up one yourself one day. May the sanctity of
 Nix bless more machines to come.
 
-# Appendix. An Actual Walkthrough
+<a id="appendix"><h1>Appendix. An Actual Walkthrough</h1></a>
 
 If you're just here to see me suffer, then I think the vast majority of this
 post has demonstrated *why* I normally dislike tinkering with non-mainstream
