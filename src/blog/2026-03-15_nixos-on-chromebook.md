@@ -65,8 +65,8 @@ and 64 GB of eMMC internal storage. Connectivity-wise it has two USB-C 3.0 ports
 plus bottom contact pins for the built-in detachable keyboard.
 
 In my opinion, 100 USD for all of *that*, plus a 2000 x 1200 resolution
-11-inch touchscreen, a built-in detachable keyboard and kickstand which double
-as a protective case, is an absolute steal. It almost seems too good to be true.
+11-inch touchscreen, a keyboard and kickstand which together double as a
+protective case, is an absolute steal. It almost seems too good to be true.
 I mean, this model is apparently common enough among Linux enjoyers that there's
 a fairly well-documented [postmarketOS wiki page] outlining everything you need to
 know to get Linux working. Surely it can't be that hard, right?
