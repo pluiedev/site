@@ -21,10 +21,5 @@
     "plugins": [
       "https://deno.land/x/lume@v3.0.1/lint.ts"
     ]
-  },
-  "compilerOptions": {
-    "types": [
-      "lume/types.ts"
-    ]
   }
 }
