@@ -69,6 +69,12 @@ href = "https://requiem.garden"
 met_irl = true
 
 [[friends]]
+name = "Asai Neko / 白翼"
+handle = "AsaiNeko"
+href = "https://home.sne.moe"
+met_irl = true
+
+[[friends]]
 name = "Shanwer"
 handle = "Shanwer"
 href = "https://blog.shanwer.top"
@@ -150,7 +156,7 @@ handle = "mercie.dev"
 href = "https://bsky.app/profile/did:plc:r3cudusqgf77v5xpnq5v7g3i"
 
 [[friends]]
-name = "clover caruso"
+name = "clover"
 handle = "paperclover"
 href = "https://paperclover.net"
 

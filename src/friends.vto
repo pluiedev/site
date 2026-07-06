@@ -5,7 +5,8 @@ title: "Friends"
 <style>
   .slide-gradient {
     --percentage: calc(var(--bg-transition) * 100%);
-    background: linear-gradient(135deg, var(--color-brand-darkest) var(--percentage), var(--percentage), black);
+    background: linear-gradient(135deg, var(--color-main-border) var(--percentage), var(--percentage), var(--color-bg-sub));
+    color: color-mix(in lab, white var(--percentage), var(--color-main-fg));
     transition: 0.25s --bg-transition;
   }
 </style>
@@ -29,7 +30,7 @@ let me know ;)
 <ul class="grid grid-cols-2 md:grid-cols-3 gap-4">
   {{ for friend of friends.friends.sort((a, b) => a.name.localeCompare(b.name)) }}
     <li>
-      <a href="{{friend.href}}" class="border-2 border-brand-darkest block rounded-lg p-2 slide-gradient">
+      <a href="{{friend.href}}" class="border-2 border-main-border block rounded-lg p-2 slide-gradient">
         <p class="text-xl font-bold">{{ friend.name }}</p>
         <p class="text-gray">@{{ friend.handle }}</p>
       </a>
