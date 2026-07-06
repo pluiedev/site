@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap");
 
 @import "tailwindcss";
 @plugin "@iconify/tailwind4";
@@ -28,7 +28,7 @@
   --color-main-fg-sub: var(--color-zinc-400);
   --color-main-border: var(--color-brand);
 
-  --font-body: Manrope, Noto Sans SC, sans-serif;
+  --font-sans: Atkinson Hyperlegible Next, Noto Sans SC, sans-serif;
   --font-serif: Bitter, Noto Serif SC, serif;
   --font-mono: Iosevka, monospace;
 
