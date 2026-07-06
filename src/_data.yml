@@ -30,6 +30,7 @@ blog:
 footer:
   license: >
     This site is [open-source software](https://tangled.org/@pluie.me/site).
+    Contains [0% AI-generated content](/noai).
 
 
     Source code and contents are licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/MPL/2.0)
@@ -48,7 +49,9 @@ zh:
     page_a_of_b: 第{0}页，共{1}页
   footer:
     license: >
-      本网页是[开源软件](https://tangled.sh/@pluie.me/site)，未经署名不得转载。<br>
+      本网页是[开源软件](https://tangled.sh/@pluie.me/site)。不包含任何[AI生成内容](/zh/noai)。
+
+      
       源代码与网站内容分别在[Mozilla 公共许可证2.0](https://www.mozilla.org/MPL/2.0)<br>
       与[知识共享 署名-相同方式共享4.0协议 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans)
       的条款下发布。
