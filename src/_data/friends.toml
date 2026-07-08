@@ -19,6 +19,7 @@ href = "https://getchoo.com"
 name = "Sefa"
 handle = "Scrumplex"
 href = "https://scrumplex.net"
+met_irl = true
 
 [[friends]]
 name = "dish"
@@ -85,6 +86,7 @@ name = "Aleksana"
 handle = "Aleksanaa"
 href = "https://aleksana.moe"
 met_irl = true
+hover_text = "忠！诚！"
 
 [[friends]]
 name = "Kagura"
@@ -164,3 +166,4 @@ href = "https://paperclover.net"
 name = "Guanran Wang"
 handle = "guanranwang"
 href = "https://blog.ny4.dev"
+met_irl = true
