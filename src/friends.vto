@@ -1,4 +1,5 @@
 ---
+id: friends
 title: "Friends"
 body: |
   A list of cool people who I know and trust active on the Internet,
@@ -28,7 +29,7 @@ zh:
   --percentage: calc(var(--bg-transition) * 100%);
   background: linear-gradient(
     135deg,
-    var(--color-main-border) var(--percentage),
+    var(--color-brand) var(--percentage),
     var(--percentage),
     var(--color-bg-sub)
   );
@@ -50,7 +51,7 @@ zh:
     <li>
       <a
         href="{{friend.href}}"
-        class="border-2 border-main-border block rounded-lg p-2 slide-gradient"
+        class="border-2 border-brand block rounded-lg p-2 slide-gradient"
         title="{{friend.hover_text}}"
       >
         <p class="text-xl font-bold">

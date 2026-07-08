@@ -1,4 +1,5 @@
 layout: layouts/base.vto
+id: index
 url: "/"
 tags:
   - main

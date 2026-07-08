@@ -4,7 +4,7 @@ const RANGE = 2;
 
 // TODO: figure out all the types here
 
-export default async function*({ search, paginate, lang }: Lume.Helpers) {
+export default async function* ({ search, paginate, lang }: Lume.Helpers) {
   const pages = search.pages(`post lang=${lang}`, "date=desc");
 
   yield* paginate(pages, {
@@ -14,6 +14,8 @@ export default async function*({ search, paginate, lang }: Lume.Helpers) {
       const { totalPages } = page.pagination;
 
       page.id = `blog-${n}`;
+      page.title = "Blog";
+      page.zh = { title: "文章" };
       page.currentPage = n;
       page.totalPages = totalPages;
 

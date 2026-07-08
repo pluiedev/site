@@ -3,7 +3,11 @@
     bg-linear-to-t from-transparent to-main-border to-0%;
 
   transition: background-size 0.2s;
-
+  color: color-mix(
+    in lab,
+    white calc(var(--bg-transition) * 100%),
+    var(--color-fg)
+  );
   background-size: auto calc(var(--bg-transition) * 100%);
 
   &.navbar-brand {

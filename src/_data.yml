@@ -17,10 +17,9 @@ source: https://tangled.sh/@pluie.me/site
 categories:
   blog:
     title: Blog
-    url: blog/
+    id: blog-1
   friends:
-    title: Friends
-    url: friends/
+    id: friends
   # works:
   #   title: Works
   #   url: /works/

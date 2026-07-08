@@ -1,15 +1,21 @@
 <nav class="h-navbar flex bg-bg-sub border-b-2 border-b-main-border">
   <div class="flex grow">
-    {{> const pfx = lang === "en" ? "/" : `/${lang}/` }}
-    <a class="navbar-tab navbar-brand" href="{{ pfx }}" title="pluie.me"></a>
+    {{ set index = search.page(`id=index lang=${lang}`) }}
+    <a
+      class="navbar-tab navbar-brand"
+      href="{{ index.url }}"
+      title="pluie.me"
+    ></a>
 
     {{ for category of categories }}
+      {{ set page = search.page(`id=${category.id} lang=${lang}`) }}
+
       <a
-        class="navbar-tab bg-transition text-lg"
-        href="{{ pfx }}{{ category.url }}"
-        title="{{ category.title }}"
+        class='navbar-tab bg-transition text-lg {{ it.id == page.id && "is-active" }}'
+        href="{{ page.url }}"
+        title="{{ page.title }}"
       >
-        {{ category.title }}
+        {{ page.title }}
       </a>
     {{ /for }}
   </div>
