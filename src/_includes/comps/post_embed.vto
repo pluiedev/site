@@ -3,7 +3,7 @@
     <span
       class="icon-[mdi--calendar] align-icon-offset inline-block vertical-sub"
     ></span>
-    {{ post.date |> date("HUMAN_DATE") }}
+    {{ post.date |> date("d MMM ''yy") }}
 
     {{ for tag of post.tags }}
       {{ if tag !== "post" }}

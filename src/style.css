@@ -28,8 +28,9 @@
   --color-main-fg-sub: var(--color-zinc-400);
   --color-main-border: var(--color-brand);
 
-  --font-sans: Atkinson Hyperlegible Next, Noto Sans SC, sans-serif;
-  --font-serif: Bitter, Noto Serif SC, serif;
+  --font-sans:
+    Atkinson Hyperlegible Next, WenYuan Sans SC VF, Noto Sans SC, sans-serif;
+  --font-serif: Bitter, WenYuan Serif SC VF, Noto Serif SC, serif;
   --font-mono: Iosevka, monospace;
 
   --spacing-content-width: 100ch;
@@ -131,7 +132,7 @@
     flex-direction: column;
     gap: 1.5rem;
 
-    font-weight: 350;
+    font-weight: 320;
 
     h1, h2, h3, h4, h5, h6 {
       margin-bottom: 0.5rem;
