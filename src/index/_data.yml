@@ -8,34 +8,28 @@ links:
   youtube:
     text: YouTube
     link: https://youtube.com/@pluieuwu
-    icon: youtube
-    source: simple-icons
     color: rose-600
-  # pronounscc:
-  #   text: pronouns.cc
-  #   link: https://pronouns.cc/@pluieuwu
-  #   icon: twemoji--sparkles
-  #   color: purple-600
-  # discord:
-  #   text: Discord Server
-  #   link: https://discord.gg/NeNfePzCx8
-  #   icon: simple-icons--discord
-  #   color: indigo-600
-  # bilibili:
-  #   text: Bilibili
-  #   link: https://space.bilibili.com/401096522
-  #   icon: simple-icons--bilibili
-  #   color: sky-600
-  # tangled:
-  #   text: Tangled
-  #   link: https://tangled.sh/@pluie.me
-  #   icon: simple-icons--git
-  #   color: slate-700
-  # github:
-  #   text: GitHub
-  #   link: https://github.com/pluiedev
-  #   icon: simple-icons--github
-  #   color: zinc-700
+  pronounsdotpage:
+    text: pronouns.cc
+    link: https://pronouns.cc/@pluieuwu
+    color: purple-600
+  discord:
+    text: Discord Server
+    link: https://discord.gg/NeNfePzCx8
+    color: indigo-600
+  bilibili:
+    text: Bilibili
+    link: https://space.bilibili.com/401096522
+    color: sky-600
+  tangled:
+    text: Tangled
+    link: https://tangled.org/@pluie.me
+    icon: git:mono
+    color: slate-700
+  github:
+    text: GitHub
+    link: https://github.com/pluiedev
+    color: zinc-700
 
 technologies:
   proficiently:
@@ -43,161 +37,113 @@ technologies:
     icons:
       html5:
         name: HTML 5
-        icon: html5
-        source: thesvg
-      # css3:
-      #   name: CSS 3
-      #   icon: devicon--css3
-      # sass:
-      #   name: Sass
-      #   icon: devicon--sass
-      # unocss:
-      #   name: Tailwind
-      #   icon: logos--tailwindcss-icon
-      # js:
-      #   name: JavaScript
-      #   icon: devicon--javascript
-      # ts:
-      #   name: TypeScript
-      #   icon: devicon--typescript
-      # deno:
-      #   name: Deno
-      #   icon: simple-icons--deno
-      # svelte:
-      #   name: Svelte
-      #   icon: logos--svelte-icon
-      # rust:
-      #   name: Rust
-      #   icon: simple-icons--rust
-      # zig:
-      #   name: Zig
-      #   icon: devicon--zig
-      # java:
-      #   name: Java
-      #   icon: logos--java
-      # kotlin:
-      #   name: Kotlin
-      #   icon: logos--kotlin-icon
-      # neovim:
-      #   name: Neovim
-      #   icon: devicon--neovim
-      # vscode:
-      #   name: VS Code
-      #   icon: devicon--vscode
-      # idea:
-      #   name: IntelliJ IDEA
-      #   icon: logos--intellij-idea
-      # git:
-      #   name: Git
-      #   icon: logos--git-icon
-      # linux:
-      #   name: Linux
-      #   icon: logos--linux-tux
-      # nix:
-      #   name: Nix(OS)
-      #   icon: devicon--nixos
-      # markdown:
-      #   name: Markdown
-      #   icon: simple-icons--markdown
-      # typst:
-      #   name: Typst
-      #   icon: material-icon-theme--typst
-  # adequately:
-  #   title: I use adequately
-  #   icons:
-  #     bash:
-  #       name: Bash
-  #       icon: logos--bash-icon
-  #     c:
-  #       name: C
-  #       icon: logos--c
-  #     cpp:
-  #       name: C++
-  #       icon: logos--c-plusplus
-  #     csharp:
-  #       name: C#
-  #       icon: devicon--csharp
-  #     lua:
-  #       name: Lua
-  #       icon: logos--lua
-  #     haskell:
-  #       name: Haskell
-  #       icon: logos--haskell-icon
-  #     perl:
-  #       name: Perl
-  #       icon: vscode-icons--file-type-perl2
-  #     python:
-  #       name: Python
-  #       icon: logos--python
-  #     ruby:
-  #       name: Ruby
-  #       icon: logos--ruby
-  #     nodejs:
-  #       name: Node.js
-  #       icon: logos--nodejs-icon
-  #     npm:
-  #       name: NPM
-  #       icon: logos--npm-2
-  #     pnpm:
-  #       name: pnpm
-  #       icon: devicon--pnpm
-  #     bun:
-  #       name: Bun
-  #       icon: devicon--bun
-  #     react:
-  #       name: React
-  #       icon: logos--react
-  #     vue:
-  #       name: Vue
-  #       icon: logos--vue
-  #     mongodb:
-  #       name: MongoDB
-  #       icon: logos--mongodb-icon
-  #     postgres:
-  #       name: PostgreSQL
-  #       icon: logos--postgresql
-  #     graphql:
-  #       name: GraphQL
-  #       icon: logos--graphql
-  #     gimp:
-  #       name: GIMP
-  #       icon: devicon--gimp
-  #     inkscape:
-  #       name: Inkscape
-  #       icon: devicon--inkscape
-  #     blender:
-  #       name: Blender
-  #       icon: logos--blender
-  #     premiere-pro:
-  #       name: Premiere Pro
-  #       icon: devicon--premierepro
-  # learning:
-  #   title: I am still learning
-  #   icons:
-  #     arduino:
-  #       name: Arduino
-  #       icon: logos--arduino
-  #     clojure:
-  #       name: Clojure
-  #       icon: logos--clojure
-  #     elixir:
-  #       name: Elixir
-  #       icon: devicon--elixir
-  #     scala:
-  #       name: Scala
-  #       icon: devicon--scala
-  #     unity:
-  #       name: Unity
-  #       icon: simple-icons--unity
-  #     godot:
-  #       name: Godot
-  #       icon: logos--godot-icon
-  #     unreal:
-  #       name: Unreal Engine 4/5
-  #       icon: simple-icons--unrealengine
-  #     after-effects:
-  #       name: After Effects
-  #       icon: devicon--aftereffects
+      css3:
+        name: CSS 3
+      sass:
+        name: Sass
+      tailwind-css:
+        name: Tailwind
+      javascript:
+        name: JavaScript
+      typescript:
+        name: TypeScript
+      deno:
+        name: Deno
+        themed: true
+      svelte:
+        name: Svelte
+      rust:
+        name: Rust
+        themed: true
+      zig:
+        name: Zig
+      java:
+        name: Java
+      kotlin:
+        name: Kotlin
+      neovim:
+        name: Neovim
+      visual-studio-code:
+        name: VS Code
+      intellij-idea:
+        name: IntelliJ IDEA
+      git:
+        name: Git
+      linux:
+        name: Linux
+      nixos:
+        name: Nix(OS)
+      markdown:
+        name: Markdown
+        themed: true
+      typst:
+        name: Typst
+  adequately:
+    title: I use adequately
+    icons:
+      bash:
+        name: Bash
+        themed: true
+      c:
+        name: C
+      cplusplus:
+        name: C++
+      csharp:
+        name: C#
+      lua:
+        name: Lua
+      haskell:
+        name: Haskell
+      perl:
+        name: Perl
+      python:
+        name: Python
+      ruby:
+        name: Ruby
+      nodedotjs:
+        name: Node.js
+      npm:
+        name: NPM
+      pnpm:
+        name: pnpm
+        themed: true
+      react:
+        name: React
+      vue:
+        name: Vue
+      mongodb:
+        name: MongoDB
+      postgresql:
+        name: PostgreSQL
+      graphql:
+        name: GraphQL
+      gimp:
+        name: GIMP
+      blender:
+        name: Blender
+      premierepro:
+        name: Premiere Pro
+  learning:
+    title: I am still learning
+    icons:
+      arduino:
+        name: Arduino
+      clojure:
+        name: Clojure
+      elixir:
+        name: Elixir
+      scala:
+        name: Scala
+      unity:
+        name: Unity
+        themed: true
+      godot:
+        name: Godot
+      unreal-engine:
+        name: Unreal Engine 4/5
+        themed: true
+      after-effects:
+        name: After Effects
 
 #=== Translatable strings ===#
 
@@ -207,12 +153,11 @@ description: You may know me better by my online alias, pluie.
 intro:
   hi: Heya~ I’m <em>Leah</em>!
   alias: You may know me better by my online alias, <em>pluie</em>.
-  pronouns: she/her
+  pronouns: she/her 🏳️‍⚧️
   desc: >
     I’m a Chinese open-source
-    <em>developer <span class="icon-[twemoji--woman-technologist-light-skin-tone] align-icon-offset"></span></em>,
-    graphics designer and
-    <em>artist <span class="icon-[twemoji--woman-artist-light-skin-tone] align-icon-offset"></span></em>,
+    <em>developer 👩‍💻</em>, graphics designer and
+    <em>artist 👩‍🎨</em>,
     currently based in <em>Germany</em>,
     aspiring to make the world of technology and design more accessible and
     inclusive for <em>everyone</em>.
@@ -236,12 +181,10 @@ zh:
   intro:
     hi: 哈喽～我叫<em>Leah</em>!
     alias: 你有可能会更熟悉我的网名，<em>pluie</em>。
-    pronouns: 她 · she/her
-    # 中文里出现空格会很奇怪呢…… 唉
+    pronouns: 她 · she/her 🏳️‍⚧️    
     desc: >
-      我是一名现居<em>德国</em>的开源<em>软件开发者<span
-        class="icon-[twemoji--woman-technologist-light-skin-tone] align-icon-offset"></span></em
-      >、视觉设计师兼<em>画家<span class="icon-[twemoji--woman-artist-light-skin-tone] align-icon-offset"></span></em
+      我是一名现居<em>德国</em>的开源<em>软件开发者👩‍💻</em
+      > 、视觉设计师兼<em>画家👩‍🎨</em
       >，致力于让科技与设计行业对<em>所有人</em>都变得更加开放、友好。
     scroll_down: 向下滑
 

@@ -37,33 +37,43 @@
     <div class="bottom-detector"></div>
   </div>
 
-  <div
+  <section
     id="scroll-indicator-vanish-point"
     class="prose text-justify col-span-2 dark:prose-invert"
   >
     {{ it.desc |> md }}
-  </div>
+  </section>
 
-  <div class="w-full">
-    <h2 class="text-xl mb-2">{{ sections.links }} ↘</h2>
+  <section class="w-full">
+    <h2 class="text-xl mb-2">
+      {{ sections.links }}
+      <img
+        class="inline-icon mb-1"
+        src='{{ "arrow-down-right" |> icon("heroicons") }}'
+        inline
+      >
+    </h2>
     <div class="sm:columns-2 lg:columns-1 w-full">
-      {{ for _, link of links }}
+      {{ for id, link of links }}
         {{ set fg = link.fg ?? "white" }}
         <a
           href="{{ link.link }}"
           target="_blank"
-          class="arrow-button bg-{{ link.color }} text-{{ fg }} m-be-2 flex items-center gap-1"
+          class="arrow-button bg-{{ link.color }} text-{{ fg }} mbe-1 flex items-center gap-1"
         >
-          <span class="body inline-flex items-center gap-1">
-            <div class="inline-block icon-[{{ link.icon }}]"></div>
-            {{ link.text }}
-          </span>
+          <img
+            src='{{ `${link.icon ?? id}:mono` |> icon(link.source ?? "thesvg") }}'
+            class="inline-icon"
+            alt="{{link.text}}"
+            inline
+          >
+          {{ link.text }}
         </a>
       {{ /for }}
     </div>
-  </div>
+  </section>
 
-  <div class="text-centered w-full sm:text-left col-span-3">
+  <section class="text-centered w-full sm:text-left col-span-3">
     <h2 class="text-2xl font-bold">{{ sections.technologies }}</h2>
     <div class="grid gap-y-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
       {{ for _, techs of technologies }}
@@ -80,17 +90,36 @@
                   class="hidden"
                 >
                 <div class="name" inert>{{ icon.name }}</div>
-                <img
-                  src="{{ icon.icon |> icon(icon.source) }}"
-                  data-name="{{ icon.name }}"
-                >
+
+                {{ set actual_icon = icon.icon ?? id }}
+                {{ set actual_source = icon.source ?? "thesvg" }}
+                {{ if icon.themed }}
+                  <img
+                    src="{{ `${actual_icon}:light` |> icon(actual_source) }}"
+                    data-name="{{ icon.name }}"
+                    class="dark:hidden"
+                    alt="{{icon.name}}"
+                  >
+                  <img
+                    src="{{ `${actual_icon}:dark` |> icon(actual_source) }}"
+                    data-name="{{ icon.name }}"
+                    class="hidden dark:block"
+                    alt="{{icon.name}}"
+                  >
+                {{ else }}
+                  <img
+                    src="{{ actual_icon |> icon(actual_source) }}"
+                    data-name="{{ icon.name }}"
+                    alt="{{icon.name}}"
+                  >
+                {{ /if }}
               </label>
             {{ /for }}
           </div>
         </div>
       {{ /for }}
     </div>
-  </div>
+  </section>
 </main>
 
 <script>

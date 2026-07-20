@@ -4,72 +4,72 @@ layout: layouts/default.vto
 {{ import { post_embed } from "../comps/post_embed.vto" }}
 {{> it.title = it.categories.blog.title }}
 
-<div class="flex flex-col lg:flex-row gap-8">
-  <nav class="flex justify-between lg:flex-col lg:justify-start lg:shrink-0 lg:basis-60 text-2xl">
-    <div>
-      <h1 class="text-4xl font-bold">{{ categories.blog.title }}</h1>
-      <p>
-        {{
-          it.blog.page_a_of_b.replace("{0}", currentPage).replace(
-            "{1}",
-            totalPages,
-          )
-        }}
-      </p>
-    </div>
+<nav class="flex text-2xl gap-4 mb-8">
+  <div>
+    <h1 class="text-4xl font-bold">{{ categories.blog.title }}</h1>
+  </div>
 
-    <div class="flex justify-between items-center lg:mt-8 basis-1/3 lg:basis-auto">
-      {{ if pagination.previous }}
-        <a
-          class="icon-[mdi--chevron-left] text-brand"
-          href="{{ pagination.previous }}"
-        ></a>
-      {{ else }}
-        <span class="icon-[mdi--chevron-left] text-main-fg-sub"></span>
-      {{ /if }}
+  <ul class="flex items-center gap-2 text-xl transition-colors duration-150">
+    {{ if pagination.previous }}
+      <a href="{{ pagination.previous }}">
+        <img
+          class="inline-icon text-brand-darker hover:text-brand w-8 h-8"
+          src='{{ "chevron_left" |> icon("material") }}'
+          inline
+        >
+      </a>
+    {{ else }}
+      <img
+        class="inline-icon text-main-fg-sub w-8 h-8 cursor-not-allowed"
+        src='{{ "chevron_left" |> icon("material") }}'
+        inline
+      >
+    {{ /if }}
 
-      <ul class="flex gap-2">
-        {{ for num of indices }}
-          {{ set page = search.page(`id=blog-${num} lang=` + lang) }}
+    {{ for num of indices }}
+      {{ set page = search.page(`id=blog-${num} lang=` + lang) }}
 
-          {{ if num === pagination.page }}
-            <span
-              class="pagination-link bg-brand-dark px-3 py-2 text-lg text-white rounded-sm"
-              href="{{ pagination.url }}"
-            >{{ num }}</span>
-          {{ else if num > 0 }}
-            <a
-              class="pagination-link border-1 border-brand-dark px-3 py-2 text-lg text-fg rounded-sm hover:bg-brand-darker hover:text-white transition"
-              href="{{ page.url }}"
-            >{{ num }}</a>
-          {{ else }}
-            <span class="text-main-fg-sub">&hellip;</span>
-          {{ /if }}
-        {{ /for }}
-      </ul>
-
-      {{ if pagination.next }}
-        <a
-          class="icon-[mdi--chevron-right] text-brand"
-          href="{{ pagination.next }}"
-        ></a>
-      {{ else }}
+      {{ if num === pagination.page }}
         <span
-          class="inline-block icon-[mdi--chevron-right] text-main-fg-sub"
-        ></span>
+          class="bg-brand w-10 h-10 text-white font-black rounded-full flex items-center justify-center"
+          href="{{ pagination.url }}"
+        >{{ num }}</span>
+      {{ else if num > 0 }}
+        <a
+          class="border-2 border-main-fg-sub w-10 h-10 text-main-fg-sub rounded-full flex items-center justify-center hover:border-brand-darkest hover:bg-brand-darkest hover:text-white"
+          href="{{ page.url }}"
+        >{{ num }}</a>
+      {{ else }}
+        <span class="text-main-fg-sub">&hellip;</span>
       {{ /if }}
-    </div>
-  </nav>
-
-  <section class="flex flex-col gap-8">
-    {{ for post of results }}
-      <div class="p-4 rounded-lg border-1 border-brand-dark">
-        <a class="text-2xl animated" href="{{ post.url }}">{{ post.title }}</a>
-        {{ post_embed(post) }}
-        <div class="mt-4">
-          {{ post.description |> strip_indent |> md }}
-        </div>
-      </div>
     {{ /for }}
-  </section>
-</div>
+
+    {{ if pagination.next }}
+      <a href="{{ pagination.next }}">
+        <img
+          class="inline-icon text-brand-darker hover:text-brand w-8 h-8"
+          src='{{ "chevron_right" |> icon("material") }}'
+          inline
+        >
+      </a>
+    {{ else }}
+      <img
+        class="inline-icon text-main-fg-sub w-8 h-8 cursor-not-allowed"
+        src='{{ "chevron_right" |> icon("material") }}'
+        inline
+      >
+    {{ /if }}
+  </ul>
+</nav>
+
+<section class="flex flex-col gap-8">
+  {{ for post of results }}
+    <div class="p-4 rounded-lg border-s-2 border-brand-dark">
+      <a class="text-2xl animated" href="{{ post.url }}">{{ post.title }}</a>
+      {{ post_embed(post) }}
+      <div class="mt-4">
+        {{ post.description |> strip_indent |> md }}
+      </div>
+    </div>
+  {{ /for }}
+</section>

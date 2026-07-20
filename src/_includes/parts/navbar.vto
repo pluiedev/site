@@ -9,9 +9,10 @@
 
     {{ for category of categories }}
       {{ set page = search.page(`id=${category.id} lang=${lang}`) }}
+      {{ set matches = it.id == category.id || it.tags.includes(category.tag) }}
 
       <a
-        class='navbar-tab bg-transition text-lg {{ it.id == page.id && "is-active" }}'
+        class='navbar-tab bg-transition text-lg {{ matches && "is-active" }}'
         href="{{ page.url }}"
         title="{{ page.title }}"
       >
@@ -35,7 +36,6 @@
     {{> const counterpart = it.alternates?.find(p => p.lang != lang) }}
     {{ if counterpart?.url }}
       <a
-        class="button"
         id="language-switcher"
         href="{{counterpart.url}}"
         title="{{ it.navbar.language_switcher }}"
@@ -50,11 +50,18 @@
       <div class="i-mdi:translate-off" title="{{ it.navbar.no_translation }}">
       </div>
     {{ /if }}
+
     <a
       href="{{ it.source }}"
-      class="button icon-[mdi--git] hover:text-brand transition-colors duration-100"
+      class="inline-flex text-main-fg-sub hover:text-brand transition-colors duration-150"
       target="_blank"
       title="{{ it.navbar.source }}"
-    ></a>
+    >
+      <img
+        src='{{ "git:mono" |> icon("thesvg") }}'
+        class="inline-icon place-self-center"
+        inline
+      >
+    </a>
   </div>
 </nav>

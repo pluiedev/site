@@ -2,7 +2,6 @@
 
 @import "components/arrow-button.css" layer(components);
 @import "components/devicon.css" layer(components);
-@import "components/langs.css" layer(components);
 @import "components/navbar.css" layer(components);
 @import "components/slide-gradient.css" layer(components);
 @import "components/splash.css" layer(components);
@@ -215,5 +214,12 @@
       margin-inline: auto;
       margin-block: 1.5rem;
     }
+  }
+
+  .inline-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
   }
 }

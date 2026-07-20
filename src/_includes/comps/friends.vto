@@ -10,10 +10,12 @@
           title="{{friend.hover_text}}"
         >
           <p class="text-xl font-bold">
-            {{ friend.name }} {{ if friend.met_irl }}<span
-                class="met-irl ml-1 text-yellow-500 icon-[material-symbols--star-shine] align-icon-offset"
+            {{ friend.name }} {{ if friend.met_irl }}<img
+                src='{{"star:solid" |> icon("heroicons")}}'
+                class="met-irl ml-1 mb-1 fill-amber-500 w-5 h-5 inline-block"
                 title="{{met_irl}}"
-              ></span>{{ /if }}
+                inline
+              >{{ /if }}
           </p>
           <p class="font-light">@{{ friend.handle }}</p>
         </a>

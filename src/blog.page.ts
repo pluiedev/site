@@ -14,6 +14,7 @@ export default async function* ({ search, paginate, lang }: Lume.Helpers) {
       const { totalPages } = page.pagination;
 
       page.id = `blog-${n}`;
+      page.tags = ["blog"];
       page.title = "Blog";
       page.zh = { title: "文章" };
       page.currentPage = n;

@@ -5,10 +5,10 @@
     @apply relative rounded-lg border-fg/30 border-2 cursor-pointer
       aspect-square flex items-center justify-center;
 
-    div[class^="icon-"] {
-      @apply rounded-md aspect-square;
+    img, svg {
+      aspect-ratio: 1;
       background-position: center;
-      width: 80% !important;
+      width: 75% !important;
       height: auto !important;
       --bg-transition: inherit;
 

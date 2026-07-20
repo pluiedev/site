@@ -18,11 +18,11 @@ categories:
   blog:
     title: Blog
     id: blog-1
+    tag: blog
   friends:
     id: friends
+    tag: friends
 
-blog:
-  page_a_of_b: Page {0} of {1}
 footer:
   license: >
     This site is [open-source software](https://tangled.org/@pluie.me/site).
@@ -41,8 +41,6 @@ navbar:
   no_translation: No translations available
 
 zh:
-  blog:
-    page_a_of_b: 第{0}页，共{1}页
   footer:
     license: >
       本网页是[开源软件](https://tangled.sh/@pluie.me/site)。不包含任何[AI生成内容](/zh/noai)。
