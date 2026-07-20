@@ -20,9 +20,6 @@ categories:
     id: blog-1
   friends:
     id: friends
-  # works:
-  #   title: Works
-  #   url: /works/
 
 blog:
   page_a_of_b: Page {0} of {1}
@@ -36,7 +33,7 @@ footer:
     and the [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) license respectively.
 
   credits: >
-    Made with [Lume](https://lume.land), [Tailwind](https://tailwindcss.com/), <span class="icon-[twemoji--purple-heart] align-icon-offset"></span>, caffeine, and a smudge of estradiol.
+    Made with [Lume](https://lume.land), [Tailwind](https://tailwindcss.com/), 💜, caffeine, and a smudge of estradiol.
 navbar:
   theme_switcher: Toggle light/dark theme
   language_switcher: 切换至中文
@@ -55,7 +52,7 @@ zh:
       与[知识共享 署名-相同方式共享4.0协议 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans)
       的条款下发布。
     credits: >
-      本站由[Lume](https://lume.land)、[Tailwind](https://tailwindcss.com/)、<span class="icon-[twemoji--purple-heart]"></span>、咖啡因、与一小抹雌二醇联合制成。
+      本站由[Lume](https://lume.land)、[Tailwind](https://tailwindcss.com/)、💜、咖啡因、与一小抹雌二醇联合制成。
   navbar:
     theme_switcher: 切换亮色/暗色模式
     language_switcher: Switch to English

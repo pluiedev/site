@@ -80,11 +80,10 @@
                   class="hidden"
                 >
                 <div class="name" inert>{{ icon.name }}</div>
-                <div
-                  class="icon-[{{ icon.icon }}] rounded-none"
+                <img
+                  src="{{ icon.icon |> icon(icon.source) }}"
                   data-name="{{ icon.name }}"
                 >
-                </div>
               </label>
             {{ /for }}
           </div>

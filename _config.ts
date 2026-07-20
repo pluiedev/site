@@ -12,6 +12,7 @@ import vento from "lume/plugins/vento.ts";
 import checkUrls from "lume/plugins/check_urls.ts";
 import googleFonts from "lume/plugins/google_fonts.ts";
 import icons from "lume/plugins/icons.ts";
+import sri from "lume/plugins/sri.ts";
 
 // Remark plugins
 import remark from "lume/plugins/remark.ts";
@@ -24,7 +25,13 @@ import stripIndent from "npm:strip-indent";
 const site = lume({ src: "./src" })
   .add("assets", ".")
   .add([".css", ".ts"])
-  .use(remark({ remarkPlugins: [emoji, a11yEmoji, smartyPants] }))
+  .use(remark({
+    remarkPlugins: [
+      emoji,
+      a11yEmoji,
+      smartyPants,
+    ],
+  }))
   .use(esbuild())
   .use(date())
   .use(googleFonts({
@@ -60,6 +67,7 @@ const site = lume({ src: "./src" })
   .use(sitemap({
     query: "post|main",
   }))
+  .use(sri())
   .filter("strip_indent", stripIndent);
 
 export default site;

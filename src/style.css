@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "@iconify/tailwind4";
 
 @import "components/arrow-button.css" layer(components);
 @import "components/devicon.css" layer(components);
