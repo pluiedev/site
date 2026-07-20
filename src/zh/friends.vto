@@ -1,0 +1,19 @@
+---
+id: friends
+title: "友链"
+---
+{{ import { friends_list } from "comps/friends.vto" }}
+
+<h1 class="text-4xl font-bold">{{ it.title }}</h1>
+
+<div class="flex flex-col gap-4 my-6">
+  {{ echo |> md }}
+  以下是一些我在线上有幸结识的好朋友（按首字母排序）。标星表示线下见过面。
+
+  需要注意的是，名单上仅列出了有公开个人主页的好友（少数除外），不然名字太多了列举不过来（不好意思x
+
+  如果不小心（难免）有遗漏的话请留言告诉我（
+  {{ /echo }}
+</div>
+
+{{ friends_list("线下见过面")}}

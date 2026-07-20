@@ -1,0 +1,11 @@
+.slide-gradient {
+  --percentage: calc(var(--bg-transition) * 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-brand) var(--percentage),
+    var(--percentage),
+    var(--color-bg-sub)
+  );
+  color: color-mix(in lab, white var(--percentage), var(--color-main-fg));
+  transition: 0.25s --bg-transition;
+}

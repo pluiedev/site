@@ -1,0 +1,23 @@
+{{ export function friends_list(met_irl) }}
+  <ul class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    {{
+      for friend of friends.friends.sort((a, b) => a.name.localeCompare(b.name))
+    }}
+      <li>
+        <a
+          href="{{friend.href}}"
+          class="border-2 border-brand block rounded-lg p-2 slide-gradient"
+          title="{{friend.hover_text}}"
+        >
+          <p class="text-xl font-bold">
+            {{ friend.name }} {{ if friend.met_irl }}<span
+                class="met-irl ml-1 text-yellow-500 icon-[material-symbols--star-shine] align-icon-offset"
+                title="{{met_irl}}"
+              ></span>{{ /if }}
+          </p>
+          <p class="font-light">@{{ friend.handle }}</p>
+        </a>
+      </li>
+    {{ /for }}
+  </ul>
+{{ /export }}

@@ -1,0 +1,23 @@
+---
+id: friends
+title: "Friends"
+---
+{{ import { friends_list } from "comps/friends.vto" }}
+
+<h1 class="text-4xl font-bold">{{ it.title }}</h1>
+
+<div class="flex flex-col gap-4 my-6">
+  {{ echo |> md }}
+  A list of cool people who I know and trust active on the Internet,
+  in alphabetical order. A star next to the name means I've met them in person before.
+  
+  Note that I'll only be including people who have some sort of
+  publicly-accessible personal profile page (with a few exceptions) since
+  otherwise this list will get *way* too long. Sorry!!
+  
+  If I'm missing someone here (which is honestly kind of hard to avoid), please
+  let me know ;)
+  {{ /echo }}
+</div>
+
+{{ friends_list("Have met in person")}}

@@ -5,6 +5,7 @@
 @import "components/devicon.css" layer(components);
 @import "components/langs.css" layer(components);
 @import "components/navbar.css" layer(components);
+@import "components/slide-gradient.css" layer(components);
 @import "components/splash.css" layer(components);
 @import "components/split-icon.css" layer(components);
 
