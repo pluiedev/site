@@ -1,0 +1,169 @@
+layout = "layouts/base.vto"
+id = "index"
+url = "/"
+tags = ["main"]
+
+#=== Translatable strings ===#
+
+title = "Heya~ I’m Leah!"
+description = "You may know me better by my online alias, pluie."
+
+desc = """
+  I love coding, drawing, painting, indulging in my nerdy hobbies,  discovering more about myself, and helping others discover themselves. Funnily enough, I do most of my productive work in my spare time when I'm supposed to relax—apparently, once I get fixated on something, I can't stop. Not sure if that's a good quality or not! ;)
+
+  More things I like include dogs, cats, foxes, traffic cones, history, philosophy, politics, linguistics and game design. Especially <abbr title="constructed languages, or languages intentionally created by people">conlangs</abbr>. They're _very_ cool.
+
+  I also often think way too hard about narrative video games, to the point I write full articles and reviews about them. I'm not exactly professional, but I still try my best to figure out what does and doesn't tick!
+"""
+
+[intro]
+hi = "Heya~ I’m <em>Leah</em>!"
+alias = "You may know me better by my online alias, <em>pluie</em>."
+pronouns = "she/her 🏳️‍⚧️"
+desc = """
+  I’m a Chinese open-source
+  <em>developer 👩‍💻</em>, graphics designer and
+  <em>artist 👩‍🎨</em>,
+  currently based in <em>Germany</em>,
+  aspiring to make the world of technology and design more accessible and
+  inclusive for <em>everyone</em>.
+"""
+scroll_down = "Scroll down"
+
+[sections]
+links = "Links"
+technologies = "Technologies that..."
+
+[zh]
+title = "哈喽～我叫Leah！"
+description = "你有可能会更熟悉我的网名，pluie。"
+
+desc = """
+  喜爱编程、绘画、钻研自己的小众爱好，并且每天不断地去进一步认识自己，并帮助别人一并认识自己。 好笑的是，我在我理应休息的时候反倒工作上最为高效——貌似自己一旦集中精力，就很难让自己的干劲停下来了呢。不清楚这是不是件好事呢（笑
+
+  除此之外还喜欢小动物（小狗小猫小狐狸都很可爱！）、标志锥、历史、哲学、政治、语言学、电子游戏设计、等等。尤其是<abbr title="人类自己编造出来的，而非自然演化出来的语言">人造语言（conlangs）</abbr>，相当的有意思呢～
+
+  我也经常会去过度分析一些玩过的，叙事元素强的电子游戏，分析着分析着，就有些时候会关于这些游戏写一些评测文章。虽然我还不是很专业，但我还是会尽力去剖析，这些游戏是怎么打动我的呢！
+"""
+
+[zh.intro]
+hi = "哈喽～我叫<em>Leah</em>!"
+alias = "你有可能会更熟悉我的网名，<em>pluie</em>。"
+pronouns = "她 · she/her 🏳️‍⚧️    "
+desc = """
+  我是一名现居<em>德国</em>的开源<em>软件开发者👩‍💻</em
+  > 、视觉设计师兼<em>画家👩‍🎨</em
+  >，致力于让科技与设计行业对<em>所有人</em>都变得更加开放、友好。
+"""
+scroll_down = "向下滑"
+
+[zh.sections]
+links = "社媒链接"
+technologies = "技术经验"
+
+[zh.links]
+discord.text = "Discord 服务器"
+bilibili.text = "哔哩哔哩"
+
+[zh.technologies]
+proficiently.title = "驾轻就熟"
+adequately.title = "能力尚可"
+learning.title = "仍在学习"
+
+[links.youtube]
+text = "YouTube"
+link = "https://youtube.com/@pluieuwu"
+color = "rose-600"
+
+[links.pronounsdotpage]
+text = "pronouns.cc"
+link = "https://pronouns.cc/@pluieuwu"
+color = "purple-600"
+
+[links.discord]
+text = "Discord Server"
+link = "https://discord.gg/NeNfePzCx8"
+color = "indigo-600"
+
+[links.bilibili]
+text = "Bilibili"
+link = "https://space.bilibili.com/401096522"
+color = "sky-600"
+
+[links.tangled]
+text = "Tangled"
+link = "https://tangled.org/@pluie.me"
+icon = "git:mono"
+color = "slate-700"
+
+[links.github]
+text = "GitHub"
+link = "https://github.com/pluiedev"
+color = "zinc-700"
+
+[technologies.proficiently]
+title = "I use proficiently"
+
+[technologies.proficiently.icons]
+html5 = { name = "HTML 5" }
+css3 = { name = "CSS 3" }
+sass = { name = "Sass" }
+tailwind-css = { name = "Tailwind" }
+javascript = { name = "JavaScript" }
+typescript = { name = "TypeScript" }
+deno = { name = "Deno", themed = true }
+svelte = { name = "Svelte" }
+rust = { name = "Rust", themed = true }
+zig = { name = "Zig" }
+java = { name = "Java" }
+kotlin = { name = "Kotlin" }
+neovim = { name = "Neovim" }
+visual-studio-code = { name = "VS Code" }
+intellij-idea = { name = "IntelliJ IDEA" }
+git = { name = "Git" }
+linux = { name = "Linux" }
+nixos = { name = "Nix(OS)" }
+markdown = { name = "Markdown", themed = true }
+typst = { name = "Typst" }
+
+[technologies.adequately]
+title = "I use adequately"
+
+[technologies.adequately.icons]
+bash = { name = "Bash", themed = true }
+c = { name = "C" }
+cplusplus = { name = "C++" }
+csharp = { name = "C#" }
+gleam = { name = "Gleam" }
+go = { name = "Go", themed = true }
+lua = { name = "Lua" }
+haskell = { name = "Haskell" }
+perl = { name = "Perl" }
+python = { name = "Python" }
+ruby = { name = "Ruby" }
+nodedotjs = { name = "Node.js" }
+npm = { name = "NPM" }
+pnpm = { name = "pnpm", themed = true }
+react = { name = "React" }
+vue = { name = "Vue" }
+solidjs = { name = "Solid" }
+mongodb = { name = "MongoDB" }
+postgresql = { name = "PostgreSQL" }
+graphql = { name = "GraphQL" }
+gimp = { name = "GIMP" }
+blender = { name = "Blender" }
+premierepro = { name = "Premiere Pro" }
+
+[technologies.learning]
+title = "I am still learning"
+
+[technologies.learning.icons]
+arduino = { name = "Arduino" }
+apl = { name = "APL" }
+clojure = { name = "Clojure" }
+elixir = { name = "Elixir" }
+julia = { name = "Julia" }
+scala = { name = "Scala" }
+swift = { name = "Swift" }
+unity = { name = "Unity", themed = true }
+godot = { name = "Godot" }
