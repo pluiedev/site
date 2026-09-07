@@ -22,7 +22,7 @@ import emoji from "npm:remark-emoji";
 
 import stripIndent from "npm:strip-indent";
 
-const site = lume({ src: "./src" })
+const site = lume({ src: "./src", location: new URL("https://pluie.me/") })
   .add("assets", ".")
   .add([".css", ".ts"])
   .use(remark({
