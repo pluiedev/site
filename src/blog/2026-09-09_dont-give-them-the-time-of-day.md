@@ -49,7 +49,7 @@ and even tried to commit ban evasion by making PRs to Nix under extremely
 [obvious alt accounts][jr-ban-evasion] as if we're all imperceptive imbeciles.
 
 Or Sridhar "srid" Ratnakumar, who got [banned][srid-nixos-mod] for insisting
-that [queer identities aren't real and is only a malformed political ideology][srid-gender]
+that [queer identities aren't real and are only a malformed political ideology][srid-gender]
 and that [systemic racism is only a figment of your imagination][srid-crt].
 They rally around DHH's move while parasitizing on his popularity in the
 Tech Bro Ecosphere™, in order to regain legitimacy for themselves.
