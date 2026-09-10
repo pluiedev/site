@@ -10,7 +10,7 @@ tags:
 ---
 
 Recently, there's been more news on the techbro side of Twitter, that apparently
-David Heinemeier Hansson (commonly known as DHH)'s Omarchy "distro"[^omarchy] is
+David Heinemeier Hansson (commonly known as DHH)’s Omarchy "distro"[^omarchy] is
 seeking to adopt Nix for declarative system management, as an alternative (or in
 parallel) to Arch, which they currently use.
 
@@ -18,7 +18,7 @@ parallel) to Arch, which they currently use.
 marketing compaign a "distro", that is.
 
 As someone who hasn't been a fan of DHH since the last couple years, I know
-exactly what is modus operandi is: his expertise is in generating hype in the
+exactly what his modus operandi is: his expertise is in generating hype in the
 tech-equivalent of the Twitter Manosphere, and not in making sound technical
 decisions. In this case, if his goal is to base a distro on Nix without making
 people spend the time learning how Nix works, I fear that he will be in for a
@@ -29,8 +29,10 @@ completely natural for his opponents to feel intimidated, and for his proponents
 vindicated. This is already quite evident by the outbreak of hysteria coming
 largely from the political left in the Nix Community[^comm] who rightfully
 criticize him for his increasingly [reactionary][dhh-london] and [appalling ideas][dhh-romani]
-regarding ethnicity and immigration, who fear that Nix will face an onslaught
-of right-wing fanatics that oppose our Code of Conduct. **We must resist this fear.**
+regarding ethnicity and immigration, which are [extreme even within his cultural context][dhh-way-worse].
+Many fear that Nix will face an onslaught of right-wing fanatics that oppose
+our [Code of Conduct][nix-coc] on respect and inclusivity.
+**We must resist this fear.**
 
 [^comm]: I use "Nix Community" as a collective noun for every single user
 interested in Nix in some way, shape or form. See my response to ["Who are
@@ -39,6 +41,8 @@ from the Steering Committee election last year.
 
 [dhh-london]: https://world.hey.com/dhh/as-i-remember-london-e7d38e64
 [dhh-romani]: https://world.hey.com/dhh/wolves-sheep-and-gypsies-ba44af6a
+[dhh-way-worse]: https://jakelazaroff.com/words/dhh-is-way-worse-than-i-thought/
+[nix-coc]: https://github.com/NixOS/nix-constitutional-assembly/blob/main/CODE_OF_CONDUCT.md
 
 On the other hand, figures who have long been exiled from the Nix Community
 are beginning to crawl out of the shadows again. Like Jon Ringer, who stood
@@ -94,9 +98,10 @@ Some might criticize this as being inactive, passive, counterproductive or
 even lazy. Eagerness is exactly how we fall in their trap. It's what boosts
 the algorithms into drawing more people into the "controversy" and agreeing
 with people like Jon Ringer that "Nix needs less drama", all the while
-sowing more chaos and political discord in their wake. These are all
-intentional memetic tactics that many of us still unfortunately are unable to
-comprehend, let alone counteract.
+disobeying the political establishment, targeting vulnerable minorities, and
+sowing more chaos and discord in their wake. These are all intentional memetic
+tactics that many of us still unfortunately are unable to comprehend, let alone
+counteract.
 
 Some might also naïvely suggest that we should preemptively ban these figures
 from using Nix. This is worse than simply engaging in pointless debates
