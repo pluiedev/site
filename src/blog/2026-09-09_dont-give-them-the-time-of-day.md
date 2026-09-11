@@ -15,7 +15,7 @@ seeking to adopt Nix for declarative system management, as an alternative (or in
 parallel) to Arch, which they currently use.
 
 [^omarchy]: If you count a bunch of shoddy personal dotfiles with a concerted
-marketing compaign a "distro", that is.
+marketing campaign a "distro", that is.
 
 As someone who hasn't been a fan of DHH since the last couple years, I know
 exactly what his modus operandi is: his expertise is in generating hype in the
@@ -131,10 +131,20 @@ beliefs**. We need to subvert *their* legitimacy and talking points and stop the
 from subverting our own, and stop them from turning our own user base (and voter
 base for the 2026 Steering Committee Election) against ourselves.
 
-[^woke]: I use "woke" in quotes because I refuse to give legitimacy to a term
-explicitly made up by alt-right and far-right groups to villainize human
-respect for all people. Also I can assure you, many people in the Nix
-Community simultaneously think that Nix is actually not "woke" enough. Fun, huh?
+[^woke]: I use "woke" in quotes in this case because I refuse to ~~give
+legitimacy to a term explicitly made up by~~[^erratum] allow alt-right and far-right groups
+to villainize human respect for all people. Also I can assure you, many people
+in the Nix Community simultaneously think that Nix is actually not "woke"
+enough. Fun, huh?
+
+[^erratum]: **ERRATUM**: Thanks to @nosferatu and @waffle8946 on the NixOS
+Discourse for correcting me in that "woke" was originally used by Black
+Americans to mean being aware of racism and social injustice within American
+society. Wiktionary cites this original sense from the 1930s, with the
+derogatory, accusatory sense from the 2020s. I'd like to therefore sincerely
+apologize for this grave error. If anything, this only makes the extent to
+which right-wing "woke deniers" have successfully co-opted and twisted the
+word and obscured its origin even more alarming and disgusting.
 
 So don't give them the time of day. They're not worthy of our attention.
 Build our defenses through solid, reliable, inscrutinizable work that is
