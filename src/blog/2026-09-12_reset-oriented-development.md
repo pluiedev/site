@@ -8,7 +8,7 @@ tags:
 ---
 
 <figure>
-  <img src="/img/xkcd_edit.png">
+  <img alt="the xkcd 'compiling' comic but with 'I ran out resets' instead of 'my code is compiling" src="/img/xkcd_edit.png">
 </figure>
 
 It is getting rather frightening that a lot of my friends working in
